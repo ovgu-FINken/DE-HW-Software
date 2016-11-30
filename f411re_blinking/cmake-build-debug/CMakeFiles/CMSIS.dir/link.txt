@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libCMSIS.a  CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.obj
+C:\MinGW\bin\ranlib.exe libCMSIS.a
