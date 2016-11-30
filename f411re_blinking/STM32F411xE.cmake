@@ -4,11 +4,11 @@ SET(CMAKE_SYSTEM_NAME Generic)
 SET(CMAKE_SYSTEM_VERSION 1)
 
 # specify the cross compiler
-find_program(ARM_CC arm-eabi-gcc
-        "C:/Program Files (x86)/GNU Tools ARM Embedded/5.4 2016q3/bin"
+find_program(ARM_CC arm-none-eabi-gcc-5.4.1
+        PATHS "C:/Program Files (x86)/GNU Tools ARM Embedded/5.4 2016q3/bin"
         )
-find_program(ARM_CXX arm-eabi-g++
-        "C:/Program Files (x86)/GNU Tools ARM Embedded/5.4 2016q3/bin"
+find_program(ARM_CXX arm-none-eabi-g++
+        PATHS "C:/Program Files (x86)/GNU Tools ARM Embedded/5.4 2016q3/bin"
         )
 CMAKE_FORCE_C_COMPILER(${ARM_CC} GNU)
 CMAKE_FORCE_CXX_COMPILER(${ARM_CXX} GNU)

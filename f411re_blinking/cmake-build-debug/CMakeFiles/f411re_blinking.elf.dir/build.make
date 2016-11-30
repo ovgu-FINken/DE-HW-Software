@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.3\bin\cmake\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Workspace\5 - Embedded programming\f411re_blinking"
+CMAKE_SOURCE_DIR = D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/f411re_blinking.elf.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/f411re_blinking.elf.dir/flags.make
 
 CMakeFiles/f411re_blinking.elf.dir/Src/main.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Src/main.c.obj: ../Src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/f411re_blinking.elf.dir/Src/main.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Src\main.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Src\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/f411re_blinking.elf.dir/Src/main.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Src\main.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Src\main.c
 
 CMakeFiles/f411re_blinking.elf.dir/Src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Src/main.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Src\main.c" > CMakeFiles\f411re_blinking.elf.dir\Src\main.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Src\main.c > CMakeFiles\f411re_blinking.elf.dir\Src\main.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Src/main.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Src\main.c" -o CMakeFiles\f411re_blinking.elf.dir\Src\main.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Src\main.c -o CMakeFiles\f411re_blinking.elf.dir\Src\main.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Src/main.c.obj.requires:
 
@@ -82,16 +82,16 @@ CMakeFiles/f411re_blinking.elf.dir/Src/main.c.obj.provides.build: CMakeFiles/f41
 
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.obj: ../Src/stm32f4xx_hal_msp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_hal_msp.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Src\stm32f4xx_hal_msp.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_hal_msp.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Src\stm32f4xx_hal_msp.c
 
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Src\stm32f4xx_hal_msp.c" > CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_hal_msp.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Src\stm32f4xx_hal_msp.c > CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_hal_msp.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Src\stm32f4xx_hal_msp.c" -o CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_hal_msp.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Src\stm32f4xx_hal_msp.c -o CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_hal_msp.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.obj.requires:
 
@@ -106,16 +106,16 @@ CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_hal_msp.c.obj.provides.build: C
 
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.obj: ../Src/stm32f4xx_it.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_it.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Src\stm32f4xx_it.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_it.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Src\stm32f4xx_it.c
 
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Src\stm32f4xx_it.c" > CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_it.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Src\stm32f4xx_it.c > CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_it.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Src\stm32f4xx_it.c" -o CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_it.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Src\stm32f4xx_it.c -o CMakeFiles\f411re_blinking.elf.dir\Src\stm32f4xx_it.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.obj.requires:
 
@@ -130,16 +130,16 @@ CMakeFiles/f411re_blinking.elf.dir/Src/stm32f4xx_it.c.obj.provides.build: CMakeF
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj.requires:
 
@@ -154,16 +154,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj.requires:
 
@@ -178,16 +178,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj.requires:
 
@@ -202,16 +202,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj.requires:
 
@@ -226,16 +226,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj.requires:
 
@@ -250,16 +250,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj.requires:
 
@@ -274,16 +274,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj.requires:
 
@@ -298,16 +298,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj.requires:
 
@@ -322,16 +322,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj.requires:
 
@@ -346,16 +346,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj.requires:
 
@@ -370,16 +370,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj.requires:
 
@@ -394,16 +394,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj.requires:
 
@@ -418,16 +418,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj.requires:
 
@@ -442,16 +442,16 @@ CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: CMakeFiles/f411re_blinking.elf.dir/flags.make
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c" > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c > CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.i
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c" -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c -o CMakeFiles\f411re_blinking.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.s
 
 CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj.requires:
 
@@ -507,12 +507,12 @@ f411re_blinking.elf: CMakeFiles/f411re_blinking.elf.dir/Drivers/STM32F4xx_HAL_Dr
 f411re_blinking.elf: CMakeFiles/f411re_blinking.elf.dir/build.make
 f411re_blinking.elf: libCMSIS.a
 f411re_blinking.elf: CMakeFiles/f411re_blinking.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Linking C executable f411re_blinking.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking C executable f411re_blinking.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\f411re_blinking.elf.dir\link.txt --verbose=$(VERBOSE)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/Workspace/5 - Embedded programming/f411re_blinking/build/f411re_blinking.hex "
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/Workspace/5 - Embedded programming/f411re_blinking/build/f411re_blinking.bin"
-	C:\MinGW\bin\objcopy.exe -Oihex "D:/Workspace/5 - Embedded programming/f411re_blinking/cmake-build-debug/f411re_blinking.elf" "D:/Workspace/5 - Embedded programming/f411re_blinking/build/f411re_blinking.hex"
-	C:\MinGW\bin\objcopy.exe -Obinary "D:/Workspace/5 - Embedded programming/f411re_blinking/cmake-build-debug/f411re_blinking.elf" "D:/Workspace/5 - Embedded programming/f411re_blinking/build/f411re_blinking.bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/build/f411re_blinking.hex "
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/build/f411re_blinking.bin"
+	"C:\Program Files (x86)\GNU Tools ARM Embedded\5.4 2016q3\bin\arm-none-eabi-objcopy.exe" -Oihex D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/cmake-build-debug/f411re_blinking.elf D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/build/f411re_blinking.hex
+	"C:\Program Files (x86)\GNU Tools ARM Embedded\5.4 2016q3\bin\arm-none-eabi-objcopy.exe" -Obinary D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/cmake-build-debug/f411re_blinking.elf D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/build/f411re_blinking.bin
 
 # Rule to build all files generated by this target.
 CMakeFiles/f411re_blinking.elf.dir/build: f411re_blinking.elf
@@ -544,6 +544,6 @@ CMakeFiles/f411re_blinking.elf.dir/clean:
 .PHONY : CMakeFiles/f411re_blinking.elf.dir/clean
 
 CMakeFiles/f411re_blinking.elf.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "D:\Workspace\5 - Embedded programming\f411re_blinking" "D:\Workspace\5 - Embedded programming\f411re_blinking" "D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug" "D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug" "D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles\f411re_blinking.elf.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles\f411re_blinking.elf.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/f411re_blinking.elf.dir/depend
 

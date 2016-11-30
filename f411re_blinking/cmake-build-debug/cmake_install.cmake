@@ -1,4 +1,4 @@
-# Install script for directory: D:/Workspace/5 - Embedded programming/f411re_blinking
+# Install script for directory: D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Workspace/5 - Embedded programming/f411re_blinking/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

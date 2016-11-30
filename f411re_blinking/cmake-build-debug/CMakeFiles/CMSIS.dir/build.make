@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.3\bin\cmake\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Workspace\5 - Embedded programming\f411re_blinking"
+CMAKE_SOURCE_DIR = D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CMSIS.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/CMSIS.dir/flags.make
 
 CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.obj: CMakeFiles/CMSIS.dir/flags.make
 CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.obj"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CMSIS.dir\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c.obj   -c "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.obj"
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CMSIS.dir\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c.obj   -c D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
 
 CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.i"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" > CMakeFiles\CMSIS.dir\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c.i
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c > CMakeFiles\CMSIS.dir\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c.i
 
 CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.s"
-	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\Workspace\5 - Embedded programming\f411re_blinking\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" -o CMakeFiles\CMSIS.dir\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c.s
+	C:\PROGRA~2\GNUTOO~1\50A5A~1.420\bin\AR4A58~1.EXE  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c -o CMakeFiles\CMSIS.dir\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c.s
 
 CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.obj.requires:
 
@@ -90,7 +90,7 @@ CMSIS_EXTERNAL_OBJECTS =
 libCMSIS.a: CMakeFiles/CMSIS.dir/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c.obj
 libCMSIS.a: CMakeFiles/CMSIS.dir/build.make
 libCMSIS.a: CMakeFiles/CMSIS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libCMSIS.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libCMSIS.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\CMSIS.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CMSIS.dir\link.txt --verbose=$(VERBOSE)
 
@@ -108,6 +108,6 @@ CMakeFiles/CMSIS.dir/clean:
 .PHONY : CMakeFiles/CMSIS.dir/clean
 
 CMakeFiles/CMSIS.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "D:\Workspace\5 - Embedded programming\f411re_blinking" "D:\Workspace\5 - Embedded programming\f411re_blinking" "D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug" "D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug" "D:\Workspace\5 - Embedded programming\f411re_blinking\cmake-build-debug\CMakeFiles\CMSIS.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking\cmake-build-debug\CMakeFiles\CMSIS.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CMSIS.dir/depend
 

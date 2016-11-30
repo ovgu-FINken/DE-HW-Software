@@ -1,5 +1,6 @@
 project(f411re_blinking)
 cmake_minimum_required(VERSION 3.6)
+include(STM32F411xE.cmake)
 
 set(CMAKE_CXX_STANDARD 11)
 

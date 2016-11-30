@@ -1,0 +1,4 @@
+D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/build/CMakeFiles/CMSIS.dir
+D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/build/CMakeFiles/edit_cache.dir
+D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/build/CMakeFiles/f411re_blinking.elf.dir
+D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/build/CMakeFiles/rebuild_cache.dir

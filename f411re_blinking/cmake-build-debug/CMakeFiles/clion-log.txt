@@ -1,4 +1,4 @@
-"C:\Program Files (x86)\JetBrains\CLion 2016.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=STM32F411xE.cmake -G "CodeBlocks - MinGW Makefiles" "D:\Workspace\5 - Embedded programming\f411re_blinking"
+"C:\Program Files (x86)\JetBrains\CLion 2016.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=STM32F411xE.cmake -G "CodeBlocks - MinGW Makefiles" D:\Workspace\5-Embedded_programming\DE-HW-Software\f411re_blinking
 CMake Deprecation Warning at C:/Program Files (x86)/JetBrains/CLion 2016.3/bin/cmake/share/cmake-3.6/Modules/CMakeForceCompiler.cmake:79 (message):
   The CMAKE_FORCE_C_COMPILER macro is deprecated.  Instead just set
   CMAKE_C_COMPILER and allow CMake to identify the compiler.
@@ -33,8 +33,24 @@ Call Stack (most recent call first):
   STM32F411xE.cmake:14 (CMAKE_FORCE_CXX_COMPILER)
   cmake-build-debug/CMakeFiles/3.6.2/CMakeSystem.cmake:6 (include)
   CMakeLists.txt:1 (project)
+
+
+CMake Deprecation Warning at C:/Program Files (x86)/JetBrains/CLion 2016.3/bin/cmake/share/cmake-3.6/Modules/CMakeForceCompiler.cmake:79 (message):
+  The CMAKE_FORCE_C_COMPILER macro is deprecated.  Instead just set
+  CMAKE_C_COMPILER and allow CMake to identify the compiler.
+Call Stack (most recent call first):
+  STM32F411xE.cmake:13 (CMAKE_FORCE_C_COMPILER)
+  CMakeLists.txt:3 (include)
+
+
+CMake Deprecation Warning at C:/Program Files (x86)/JetBrains/CLion 2016.3/bin/cmake/share/cmake-3.6/Modules/CMakeForceCompiler.cmake:93 (message):
+  The CMAKE_FORCE_CXX_COMPILER macro is deprecated.  Instead just set
+  CMAKE_CXX_COMPILER and allow CMake to identify the compiler.
+Call Stack (most recent call first):
+  STM32F411xE.cmake:14 (CMAKE_FORCE_CXX_COMPILER)
+  CMakeLists.txt:3 (include)
 
 
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/Workspace/5 - Embedded programming/f411re_blinking/cmake-build-debug
+-- Build files have been written to: D:/Workspace/5-Embedded_programming/DE-HW-Software/f411re_blinking/cmake-build-debug
