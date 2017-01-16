@@ -1,0 +1,29 @@
+https://github.com/ARMmbed/mbed-cli#exporting-to-desktop-ides
+Installing mbed-cli
+
+1. Install Python v2.7
+2. Install Git and Mercurial
+3. Install GNU ARM Embedded Toolchain
+Step0: Remove previous version of toolchains, if needed
+		"sudo apt-get remove gcc-arm-none-eabi"
+		"sudo apt-get remove g++-arm-linux-gnueabi"
+		"sudo apt-get remove binutils-arm-none-eabi"
+Step1: Inside Ubuntu, open a terminal and input
+       "sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa"
+
+Step2: Continue to input
+       "sudo apt-get update"
+
+Step3: Continue to input to install toolchain
+       "sudo apt-get install gcc-arm-embedded"
+4. Install mbed-cli
+		"sudo pip install mbed-cli"
+5. Get the program
+5. Select tollchain in mbed-cli. Run in folder my_program/mbed_os
+		"mbed config --global GCC_ARM_PATH /usr/bin/"
+6. Compile the programm. Run in my_program folder
+		"mbed compile -t GCC_ARM -m NUCLEO_F411RE"
+7. Flash the microcontroller
+
+
+
