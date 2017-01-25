@@ -1,3 +1,3 @@
-.idea/*
-cmake-build-debug/*
-BUILD/*
+*/.idea/*
+*/cmake-build-debug/*
+*/BUILD/*
