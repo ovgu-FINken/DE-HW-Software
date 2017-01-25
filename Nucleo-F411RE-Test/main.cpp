@@ -8,7 +8,9 @@ void irSensorDigitalTest();
 void irSensorAnalogTest();
 void sonarI2CTest();
 
-
+/*
+ * Main function, put here the things to test
+ */
 int main() {
     irSensorAnalogTest();
 }
@@ -20,6 +22,17 @@ void ledTest() {
     }
 }
 
+/*
+ * Sharp GP2Y0D805Z0F Digital Distance Sensor 5cm
+ * This small digital distance sensor detects objects between 0.5 cm and 5 cm (0.2″ and 2″) away.
+ * Documentation: https://www.pololu.com/file/0J284/GP2Y0D805Z0F.pdf
+ *
+ * Feature summary:
+ * Operating voltage: 2.7 V to 6.2 V
+ * Average current consumption: 5 mA (typical)
+ * Output type: digital signal (low when detecting an object, high otherwise)
+ * Steady state update period: 2.56 ms typical (3.77 ms max)
+ */
 void irSensorDigitalTest() {
     AnalogIn sensor(A0);   //0.2-5cm
 
@@ -33,6 +46,15 @@ void irSensorDigitalTest() {
     }
 }
 
+/*
+ * Pololu Carrier with Sharp GP2Y0A60SZLF Analog Distance Sensor 10-150cm, 5V
+ * The GP2Y0A60SZ distance sensor from Sharp offers a wide detection range of 4″ to 60″ (10 cm to 150 cm)
+ * and a high update rate of 60 Hz. The distance is indicated by an analog voltage,
+ * so only a single analog input is required to interface with the module.
+ * The sensor ships installed on our compact carrier board, which makes it easy to integrate this great sensor
+ * into your project, and is configured for 5V mode.
+ * Documentation: https://www.pololu.com/file/0J812/gp2y0a60szxf_e.pdf
+ */
 void irSensorAnalogTest() {
     AnalogIn sensor(A1);
 
@@ -46,6 +68,10 @@ void irSensorAnalogTest() {
     }
 }
 
+/*
+ * I2CXL-MaxSonar - EZ Series
+ * Documentation: http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf
+ */
 void sonarI2CTest() {
     I2C i2c(I2C_SDA, I2C_SCL);
     //I2C rangefinder(pb7, pb8); //sda, sc1
