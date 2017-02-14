@@ -1,16 +1,15 @@
-#ifndef NUCLEO_F411RE_TEST_LEDS_H
-#define NUCLEO_F411RE_TEST_LEDS_H
+#pragma once
 
 #include "mbed.h"
+#include "PinNames.h"
 
 class SimpleLED {
 public:
+    SimpleLED();
     void blink();
     void blink(int interval);
     void init();
 
 private:
-    DigitalOut led(LED1);
+    DigitalOut led;
 };
-
-#endif

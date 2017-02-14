@@ -1,6 +1,8 @@
 #include "SimpleLED.h"
 #include "mbed.h"
 
+SimpleLED::SimpleLED():led(LED1) {}
+
 void SimpleLED::init() {
     //this->led(LED1);
 }

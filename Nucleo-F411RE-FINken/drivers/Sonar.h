@@ -11,12 +11,14 @@ public:
     uint16_t getRange();
 
 private:
-    I2C i2c(I2C_SDA, I2C_SCL);
-    uint8_t address = 0;
+    I2C i2c;
+    uint8_t address;
     char config_r[2];
     char range_read[2];
     uint16_t range;
     Timeout timeout;
     bool waiting = false;
+
+    void read();
 };
 

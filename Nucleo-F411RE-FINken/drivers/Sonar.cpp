@@ -2,27 +2,27 @@
 #include <stdint.h>
 #include "mbed.h"
 
-Sonar::Sonar(uint8_t addr) {
+Sonar::Sonar(uint8_t addr):i2c(I2C_SDA, I2C_SCL) {
     address = addr;
 }
 
 void Sonar::update() {
     config_r[0] = 0x51;
     config_r[1] = 0x00;
-    int a = i2c.write(addr, config_r, 1);
+    i2c.write(address, config_r, 1);
     waiting = true;
-    timeout.attach(&read, );
+    timeout.attach(callback(this,&Sonar::read), 0.07);
 }
 
-void read() {
+void Sonar::read() {
     config_r[0] = 0x02;
-    if (i2c.read(addr | 1, range_read, 2) != 0) //read the two-byte range data
+    if (i2c.read(address | 1, range_read, 2) != 0) //read the two-byte range data
         return; // Reading failed
     else {
         range = ((range_read[0] << 8) + range_read[1]);
     }
 }
 
-uint8_t Sonar::getRange() {
+uint16_t Sonar::getRange() {
     return range;
 }
