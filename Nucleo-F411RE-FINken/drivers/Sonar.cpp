@@ -1,13 +1,14 @@
 #include "Sonar.h"
 #include <stdint.h>
 #include "mbed.h"
+#include "IRQLock.h"
 
 Sonar::Sonar(uint8_t addr):i2c(I2C_SDA, I2C_SCL) {
     address = addr;
 }
 
 void Sonar::update() {
-    IRQLock lock = new IRQ;
+    IRQLock lock;
     config_r[0] = 0x51;
     config_r[1] = 0x00;
     i2c.write(address, config_r, 1);

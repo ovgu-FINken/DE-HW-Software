@@ -17,7 +17,6 @@ private:
     char range_read[2];
     uint16_t range;
     Timeout timeout;
-    bool waiting = false;
 
     void read();
 };

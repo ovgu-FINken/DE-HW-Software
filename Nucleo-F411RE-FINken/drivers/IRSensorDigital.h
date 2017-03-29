@@ -7,7 +7,6 @@
 class IRSensorDigital: public AbstractComponent {
 public:
     /**
-     *
      * @param dataPin
      * @param detectionRange
      */
