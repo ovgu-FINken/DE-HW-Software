@@ -1,4 +1,4 @@
-#include "mbed.h"
+﻿#include "mbed.h"
 #include "tests.h"
 
 DigitalOut led(LED1);
@@ -13,7 +13,7 @@ void ledTest() {
 
 /*
  * Sharp GP2Y0D805Z0F Digital Distance Sensor 5cm
- * This small digital distance sensor detects objects between 0.5 cm and 5 cm (0.2″ and 2″) away.
+ * This small digital distance sensor detects objects between 0.5 cm and 5 cm (0.2? and 2?) away.
  * Documentation: https://www.pololu.com/file/0J284/GP2Y0D805Z0F.pdf
  *
  * Feature summary:
@@ -37,7 +37,7 @@ void irSensorDigitalTest() {
 
 /*
  * Pololu Carrier with Sharp GP2Y0A60SZLF Analog Distance Sensor 10-150cm, 5V
- * The GP2Y0A60SZ distance sensor from Sharp offers a wide detection range of 4″ to 60″ (10 cm to 150 cm)
+ * The GP2Y0A60SZ distance sensor from Sharp offers a wide detection range of 4? to 60? (10 cm to 150 cm)
  * and a high update rate of 60 Hz. The distance is indicated by an analog voltage,
  * so only a single analog input is required to interface with the module.
  * The sensor ships installed on our compact carrier board, which makes it easy to integrate this great sensor
@@ -85,4 +85,33 @@ void sonarI2CTest() {
         Thread::wait(50);
 
     }
+}
+/*
+ * WS2812 LED
+ * Documentation: https://cdn-shop.adafruit.com/datasheets/WS2812.pdf
+ */
+void LEDStripTest()
+{
+int unsigned CPU_Frequency 16000000
+PixelArray px(WS2812_BUF);
+WS2812 ws(PC5, WS2812_BUF,0.35*CPU_Frequency,0.8*CPU_Frequency,0.7*CPU_Frequency,0.6*CPU_Frequency);
+
+ws.useII(WS2812::PER_PIXEL); // use per-pixel intensity scaling
+int colorbuf[NUM_COLORS] = {0x2f0000,0x2f2f00,0x002f00,0x002f2f,0x00002f,0x2f002f}
+for (int i = 0; i < WS2812_BUF; i++) 
+{
+   px.Set(i, colorbuf[(i / NUM_LEDS_PER_COLOR) % NUM_COLORS]);
+}
+for (int j=0; j<WS2812_BUF; j++) 
+{
+        // px.SetI(pixel position, II value)
+px.SetI(j%WS2812_BUF, 0xf+(0xf*(j%NUM_LEDS_PER_COLOR)));
+}
+while (1) {
+        for (int z=WS2812_BUF; z >= 0 ; z--) {
+            ws.write_offsets(px.getBuf(),z,z,z);
+            wait(0.075);
+        }
+    }
+
 }
