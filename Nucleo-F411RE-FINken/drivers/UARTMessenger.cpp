@@ -2,6 +2,7 @@
 #include "mbed.h"
 #include "IRQLock.h"
 #include <string>
+#include <vector>
 
 UARTMessenger::UARTMessenger(PinName tx, PinName rx): uart(tx, rx) {
     count = 0;
@@ -23,18 +24,20 @@ void UARTMessenger::update() {
 
     // add current submessages
     for (int i = 0; i < count; i++) {
-       message.push_back();
+       //
     }
 
+    count = 0;
+    // empty the subMessages array
 }
 
-void UARTMessenger::appendMessage(const SubMessage &subMessage) {
+void UARTMessenger::appendMessage(const SubMessage& subMessage) {
     IRQLock lock;
-    subMessages[count] = subMessage;
-    messageLength += subMessages[i]->length + 3;
+    subMessages[count] = &subMessage;
+    messageLength += subMessages[count]->length + 3;
     count++;
 }
 
 uint8_t UARTMessenger::calculateChecksum() {
-
+    return 0;
 }

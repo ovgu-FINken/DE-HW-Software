@@ -1,5 +1,7 @@
 ﻿#include "mbed.h"
 #include "tests.h"
+#include "../drivers/LEDStrip/WS2812.h"
+#include "../drivers/LEDStrip/PixelArray.h"
 
 DigitalOut led(LED1);
 Serial pc(USBTX, USBRX); //Debug Info
@@ -86,32 +88,50 @@ void sonarI2CTest() {
 
     }
 }
+
+#define WS2812_BUF 24
+#define NUM_COLORS 6
+#define NUM_LEDS_PER_COLOR 3
+
 /*
  * WS2812 LED
  * Documentation: https://cdn-shop.adafruit.com/datasheets/WS2812.pdf
  */
 void LEDStripTest()
 {
-int unsigned CPU_Frequency 16000000
+int unsigned CPU_Frequency = 16; // for microseconds
 PixelArray px(WS2812_BUF);
-WS2812 ws(PC5, WS2812_BUF,0.35*CPU_Frequency,0.8*CPU_Frequency,0.7*CPU_Frequency,0.6*CPU_Frequency);
+WS2812 ws(PC_5, WS2812_BUF, 0, 5, 4, 3);
 
-ws.useII(WS2812::PER_PIXEL); // use per-pixel intensity scaling
-int colorbuf[NUM_COLORS] = {0x2f0000,0x2f2f00,0x002f00,0x002f2f,0x00002f,0x2f002f}
-for (int i = 0; i < WS2812_BUF; i++) 
-{
-   px.Set(i, colorbuf[(i / NUM_LEDS_PER_COLOR) % NUM_COLORS]);
-}
-for (int j=0; j<WS2812_BUF; j++) 
-{
-        // px.SetI(pixel position, II value)
-px.SetI(j%WS2812_BUF, 0xf+(0xf*(j%NUM_LEDS_PER_COLOR)));
-}
+ws.useII(WS2812::OFF); // use per-pixel intensity scaling
+int colorbuf[NUM_COLORS] = {0x00FF00, 0x2f2f00, 0x002f00, 0x002f2f, 0x00002f, 0x2f002f};
+
+px.SetAll(0x0000FF);
+    //px.SetAllI(50);
+
+//for (int i = 0; i < WS2812_BUF; i++)
+//{
+//   px.Set(i, colorbuf[(i / NUM_LEDS_PER_COLOR) % NUM_COLORS]);
+//}
+//
+//for (int j=0; j<WS2812_BUF; j++)
+//{
+//    // px.SetI(pixel position, II value)
+//    px.SetI(j, 0xf+(0xf*(j%NUM_LEDS_PER_COLOR)));
+//}
+
 while (1) {
-        for (int z=WS2812_BUF; z >= 0 ; z--) {
-            ws.write_offsets(px.getBuf(),z,z,z);
-            wait(0.075);
-        }
+    for (int i=0; i<WS2812_BUF; i++)
+    {
+        // px.SetI(pixel position, II value)
+        //px.SetI(j, 0xf+(0xf*(j%NUM_LEDS_PER_COLOR)));
+        px.Set(i, colorbuf[(i / 3) % 6]);
+    }
+    ws.write(px.getBuf());
+
+    led = !led;
+    wait(0.5);
+
     }
 
 }

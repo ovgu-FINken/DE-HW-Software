@@ -3,9 +3,10 @@
 #include "AbstractComponent.h"
 #include "mbed.h"
 #include "PinNames.h"
+//#include "UARTMessenger.h"
 #include <vector>
 
-class UARTMessenger;
+//class UARTMessenger;
 /**
  *
  */
@@ -17,7 +18,7 @@ public:
      * @param dataPin - pin on board, where data pin of IR sensor is connected
      * @param lookupTable - two-dimensional array, describing relation between sensor output and distance, set in millimeters
      */
-    IRSensorAnalog(UARTMessenger* uartMessenger, PinName dataPin, std::vector<std::vector<int> > lookupTable);
+    IRSensorAnalog(PinName dataPin, std::vector<std::vector<int> > lookupTable);
 
     /**
      *
@@ -30,7 +31,7 @@ public:
 private:
     float toRange(float sensorOutput);
 
-    UARTMessenger *const uartMessenger;
+    //UARTMessenger uartMessenger; //UARTMessenger *const uartMessenger;
     PinName dataPin;
     AnalogIn sensor;
     std::vector<std::vector<int> > lookupTable;

@@ -24,7 +24,7 @@ public:
 
 private:
     Serial uart;
-    SubMessage* subMessages[16];
+    const SubMessage* subMessages[16];
     int count;
     uint8_t startByte;
     uint8_t stopByte;

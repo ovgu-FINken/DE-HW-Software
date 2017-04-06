@@ -5,6 +5,7 @@
 
 IRSensorAnalog::IRSensorAnalog(PinName pin, std::vector<std::vector<int> > lookupTable):dataPin(pin),sensor(dataPin) {
     this->lookupTable = lookupTable;
+    //this->uartMessenger = uart;
     range = 0;
 }
 
