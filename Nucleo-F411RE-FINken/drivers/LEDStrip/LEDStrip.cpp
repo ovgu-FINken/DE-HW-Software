@@ -19,7 +19,7 @@ void LEDStrip::update() {
             // Control from Paparazzi
             break;
         case 1:
-            // Running red
+            // Running red LED
             px.Set(0, 0xFF0000);
             ws.write_offsets(px.getBuf(), r_offset, g_offset, b_offset);
             r_offset += 1 % stripSize;

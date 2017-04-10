@@ -2,6 +2,7 @@
 
 #include "AbstractComponent.h"
 #include "mbed.h"
+#include "vector"
 
 class UARTMessenger: public AbstractComponent {
 public:
@@ -19,8 +20,9 @@ public:
     };
     UARTMessenger(PinName tx, PinName rx);
     virtual void update();
+    //virtual void onPaparazziMsg(uint8_t msg);
     void appendMessage(const SubMessage& subMessage);
-    uint8_t calculateChecksum();
+    uint16_t calculateChecksum(std::vector<uint8_t> message);
 
 private:
     Serial uart;

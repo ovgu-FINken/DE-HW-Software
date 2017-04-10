@@ -18,17 +18,32 @@ void UARTMessenger::update() {
 
     message[0] = messageLength & 0xFF;
     message[1] = messageLength >> 8;
-    uint16_t checksum;
-    message[3] = checksum & 0xFF;
-    message[4] = checksum >> 8;
+
+    // reserve place for checksum
+    message[3] = 0;
+    message[4] = 0;
 
     // add current submessages
     for (int i = 0; i < count; i++) {
-       //
+        message.push_back(subMessages[i]->id);
+        message.push_back(subMessages[i]->type);
+        message.push_back(subMessages[i]->length);
+        for (int j = 0; j < subMessages[i]->length; j++) {
+            message.push_back(subMessages[i]->data[j]);
+        }
     }
 
+    uint16_t checksum = calculateChecksum(message);
+    message[3] = checksum & 0xFF;
+    message[4] = checksum >> 8;
+
+    // send the message
+    for (int i = 0; i < message.size(); i++) {
+        uart.putc(message[i]);
+    }
+
+    // empty the subMessages array?
     count = 0;
-    // empty the subMessages array
 }
 
 void UARTMessenger::appendMessage(const SubMessage& subMessage) {
@@ -38,6 +53,6 @@ void UARTMessenger::appendMessage(const SubMessage& subMessage) {
     count++;
 }
 
-uint8_t UARTMessenger::calculateChecksum() {
+uint16_t UARTMessenger::calculateChecksum(std::vector<uint8_t> message) {
     return 0;
 }

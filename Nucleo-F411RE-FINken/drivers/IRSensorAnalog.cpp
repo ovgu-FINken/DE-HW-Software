@@ -3,9 +3,9 @@
 #include "PinNames.h"
 #include <vector>
 
-IRSensorAnalog::IRSensorAnalog(PinName pin, std::vector<std::vector<int> > lookupTable):dataPin(pin),sensor(dataPin) {
+IRSensorAnalog::IRSensorAnalog(UARTMessenger *uartMsngr, PinName pin, std::vector<std::vector<int> > lookupTable):dataPin(pin),sensor(dataPin) {
     this->lookupTable = lookupTable;
-    //this->uartMessenger = uart;
+    this->uartMessenger = uartMsngr;
     range = 0;
 }
 

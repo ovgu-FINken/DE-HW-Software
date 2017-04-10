@@ -29,6 +29,8 @@ public:
 
     virtual void update();
 
+    virtual void onPaparazziMsg();
+
 private:
     WS2812 ws;
     PixelArray px;
