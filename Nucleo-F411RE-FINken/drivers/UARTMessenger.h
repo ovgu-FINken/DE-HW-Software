@@ -5,9 +5,20 @@
 
 class UARTMessenger: public AbstractComponent {
 public:
+    /**
+     * Constructor for UARTMessenger
+     *
+     * @param tx transmit pin
+     * @param rx receive pin
+     */
     UARTMessenger(PinName tx, PinName rx);
     virtual void update();
-    //virtual void onPaparazziMsg(uint8_t msg);
+
+    /**
+     * Append new message for sending to Paparazzi
+     *
+     * @param subMessage message to be added
+     */
     void appendMessage(const SubMessage& subMessage);
     uint16_t calculateChecksum(std::vector<uint8_t> message);
 
