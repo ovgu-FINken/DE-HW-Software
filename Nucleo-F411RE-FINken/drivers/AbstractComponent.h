@@ -1,6 +1,7 @@
 #pragma once
 
 #include "mbed.h"
+#include "PinNames.h"
 
 class AbstractComponent {
 public:

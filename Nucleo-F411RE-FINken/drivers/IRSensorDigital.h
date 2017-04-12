@@ -1,8 +1,7 @@
 #pragma once
 
 #include "AbstractComponent.h"
-#include "mbed.h"
-#include "PinNames.h"
+#include "UARTMessenger.h"
 
 class IRSensorDigital: public AbstractComponent {
 public:
@@ -10,11 +9,12 @@ public:
      * @param dataPin
      * @param detectionRange
      */
-    IRSensorDigital(PinName dataPin, float detectionRange);
+    IRSensorDigital(UARTMessenger *const uartMsngr, PinName dataPin, float detectionRange);
     bool isInRange();
     virtual void update();
 
 private:
+    UARTMessenger *const uartMessenger;
     PinName dataPin;
     AnalogIn sensor;
     float detectionRange;

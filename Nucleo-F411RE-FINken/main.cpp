@@ -31,6 +31,7 @@ int main() {
     //components[1] = new LEDStrip(PC5, 150, 10, 15, 20, 25); // calculate values
 
     // sort all components according to their priority
+    // TODO: sort components
 
     while (true) {
         for (int i = 0; i < COMP_NUMBER; i++) {

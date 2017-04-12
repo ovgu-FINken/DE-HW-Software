@@ -1,5 +1,4 @@
 #include "UARTMessenger.h"
-#include "mbed.h"
 #include "IRQLock.h"
 #include <string>
 #include <vector>
@@ -54,5 +53,6 @@ void UARTMessenger::appendMessage(const SubMessage& subMessage) {
 }
 
 uint16_t UARTMessenger::calculateChecksum(std::vector<uint8_t> message) {
+    // TODO: calculate checksum
     return 0;
 }

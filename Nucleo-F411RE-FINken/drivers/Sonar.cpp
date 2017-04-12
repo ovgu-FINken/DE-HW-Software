@@ -1,9 +1,8 @@
 #include "Sonar.h"
 #include <stdint.h>
-#include "mbed.h"
 #include "IRQLock.h"
 
-Sonar::Sonar(uint8_t addr):i2c(I2C_SDA, I2C_SCL) {
+Sonar::Sonar(UARTMessenger *const uartMsngr, uint8_t addr): uartMessenger(uartMsngr), i2c(I2C_SDA, I2C_SCL) {
     address = addr;
 }
 
@@ -16,6 +15,7 @@ void Sonar::update() {
 }
 
 void Sonar::read() {
+    IRQLock lock;
     config_r[0] = 0x02;
     if (i2c.read(address | 1, range_read, 2) != 0) //read the two-byte range data
         return; // Reading failed

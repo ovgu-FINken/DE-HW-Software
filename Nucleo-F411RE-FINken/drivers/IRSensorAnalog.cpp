@@ -1,11 +1,8 @@
 #include "IRSensorAnalog.h"
-#include "mbed.h"
-#include "PinNames.h"
 #include <vector>
 
-IRSensorAnalog::IRSensorAnalog(UARTMessenger *uartMsngr, PinName pin, std::vector<std::vector<int> > lookupTable):dataPin(pin),sensor(dataPin) {
+IRSensorAnalog::IRSensorAnalog(UARTMessenger *const uartMsngr, PinName pin, std::vector<std::vector<int> > lookupTable): uartMessenger(uartMsngr), dataPin(pin), sensor(dataPin) {
     this->lookupTable = lookupTable;
-    this->uartMessenger = uartMsngr;
     range = 0;
 }
 

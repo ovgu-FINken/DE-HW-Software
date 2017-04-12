@@ -1,7 +1,6 @@
 #pragma once
 
 #include "AbstractComponent.h"
-#include "mbed.h"
 #include "vector"
 
 class UARTMessenger: public AbstractComponent {
