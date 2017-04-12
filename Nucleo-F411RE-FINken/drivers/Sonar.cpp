@@ -12,6 +12,14 @@ void Sonar::update() {
     config_r[1] = 0x00;
     i2c.write(address, config_r, 1);
     timeout.attach(callback(this,&Sonar::read), 0.07);
+
+    SubMessage subMessage;
+    subMessage.type = SONAR;
+    subMessage.id = id;
+    subMessage.data = reinterpret_cast<uint8_t*>(&range);
+    subMessage.length = sizeof(subMessage.data);
+
+    uartMessenger->appendMessage(subMessage);
 }
 
 void Sonar::read() {

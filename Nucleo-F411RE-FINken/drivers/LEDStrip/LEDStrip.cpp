@@ -28,3 +28,8 @@ void LEDStrip::update() {
             break;
     }
 }
+
+void LEDStrip::onPaparazziMsg(uint8_t *msg) {
+    // TODO: implement reaction on message from paparazzi
+    return;
+}

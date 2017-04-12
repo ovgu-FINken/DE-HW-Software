@@ -1,8 +1,6 @@
 #pragma once
 
 #include "../AbstractComponent.h"
-#include "mbed.h"
-#include "PinNames.h"
 #include "WS2812.h"
 #include "PixelArray.h"
 
@@ -29,7 +27,7 @@ public:
 
     virtual void update();
 
-    virtual void onPaparazziMsg();
+    void onPaparazziMsg(uint8_t* msg);
 
 private:
     WS2812 ws;

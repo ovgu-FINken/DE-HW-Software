@@ -12,6 +12,14 @@ void IRSensorDigital::update() {
     } else {
         inRange = true;
     }
+
+    SubMessage subMessage;
+    subMessage.type = IRDIGITAL;
+    subMessage.id = id;
+    subMessage.data = reinterpret_cast<uint8_t*>(&inRange);
+    subMessage.length = sizeof(subMessage.data);
+
+    uartMessenger->appendMessage(subMessage);
 }
 
 bool IRSensorDigital::isInRange() {

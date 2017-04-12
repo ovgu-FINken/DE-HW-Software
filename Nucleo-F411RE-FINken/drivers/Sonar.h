@@ -6,6 +6,12 @@
 
 class Sonar: public AbstractComponent {
 public:
+    /**
+     * Constructor for Sonar
+     *
+     * @param uartMsngr Pointer to UARTMessanger object, that should be used for sending data to Paparazzi
+     * @param addr Address of the Sonar
+     */
     Sonar(UARTMessenger *const uartMsngr, uint8_t addr);
     virtual void update();
     uint16_t getRange();

@@ -9,6 +9,15 @@ IRSensorAnalog::IRSensorAnalog(UARTMessenger *const uartMsngr, PinName pin, std:
 void IRSensorAnalog::update() {
     float value = sensor.read() * 3300; //multiply by current in the system, mV
     range = toRange(value);
+
+    // TODO ask for review
+    SubMessage subMessage;
+    subMessage.type = IRANALOG;
+    subMessage.id = id;
+    subMessage.data = reinterpret_cast<uint8_t*>(&value);
+    subMessage.length = sizeof(subMessage.data);
+
+    uartMessenger->appendMessage(subMessage);
 }
 
 float IRSensorAnalog::toRange(float sensorOutput) {

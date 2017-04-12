@@ -41,7 +41,7 @@ void UARTMessenger::update() {
         uart.putc(message[i]);
     }
 
-    // empty the subMessages array?
+    // TODO ask how to empty the subMessages array
     count = 0;
 }
 
