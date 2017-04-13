@@ -16,8 +16,8 @@ void IRSensorDigital::update() {
     SubMessage subMessage;
     subMessage.type = IRDIGITAL;
     subMessage.id = id;
-    subMessage.data = reinterpret_cast<uint8_t*>(&inRange);
-    subMessage.length = sizeof(subMessage.data);
+    reinterpret_cast<bool*>(subMessage.data)[0] = inRange;
+    subMessage.length = sizeof(inRange);
 
     uartMessenger->appendMessage(subMessage);
 }

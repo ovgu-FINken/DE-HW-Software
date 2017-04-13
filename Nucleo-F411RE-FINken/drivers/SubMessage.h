@@ -16,5 +16,5 @@ struct SubMessage {
     uint8_t type;
     uint8_t id;
     uint8_t length;
-    uint8_t* data;
+    uint8_t data[16];
 };

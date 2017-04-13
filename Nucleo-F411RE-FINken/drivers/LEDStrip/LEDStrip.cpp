@@ -13,6 +13,10 @@ LEDStrip::LEDStrip(PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh
 
 }
 
+void LEDStrip::setMode(uint8_t mode) {
+    this->mode = mode;
+}
+
 void LEDStrip::update() {
     switch (mode) {
         case 0:
@@ -22,9 +26,9 @@ void LEDStrip::update() {
             // Running red LED
             px.Set(0, 0xFF0000);
             ws.write_offsets(px.getBuf(), r_offset, g_offset, b_offset);
-            r_offset += 1 % stripSize;
-            g_offset += 1 % stripSize;
-            b_offset += 1 % stripSize;
+            r_offset = (r_offset + 1) % stripSize;
+            g_offset = (g_offset + 1) % stripSize;
+            b_offset = (b_offset + 1) % stripSize;
             break;
     }
 }

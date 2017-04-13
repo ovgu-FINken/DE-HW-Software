@@ -1,6 +1,5 @@
 #include "UARTMessenger.h"
 #include "IRQLock.h"
-#include <string>
 #include <vector>
 
 UARTMessenger::UARTMessenger(PinName tx, PinName rx): uart(tx, rx) {

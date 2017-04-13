@@ -16,8 +16,8 @@ void Sonar::update() {
     SubMessage subMessage;
     subMessage.type = SONAR;
     subMessage.id = id;
-    subMessage.data = reinterpret_cast<uint8_t*>(&range);
-    subMessage.length = sizeof(subMessage.data);
+    reinterpret_cast<uint16_t*>(subMessage.data)[0] = range;
+    subMessage.length = sizeof(range);
 
     uartMessenger->appendMessage(subMessage);
 }

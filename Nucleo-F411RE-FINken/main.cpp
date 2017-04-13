@@ -12,7 +12,9 @@
 // Lookup tables for sensors, pairs {sensorOutput, distance} in acceding order of sensorOutput, distance in millimeters
 std::vector<std::vector<int> > pololu10_150 = {{800, 1300},{830, 1000},{900, 800},{1150, 600},{1650, 400},{2700, 200}};
 
-#define COMP_NUMBER 20
+#define COMP_NUMBER 2
+
+DigitalOut led1(LED1);
 
 /*
  * Main function
@@ -28,11 +30,12 @@ int main() {
     UARTMessenger *uartMessenger = new UARTMessenger(USBTX, USBRX); // set pins
     uartMessenger->setPriority(5);
 
-    components[0] = uartMessenger;
-    components[1] = new IRSensorAnalog(uartMessenger, A0, pololu10_150);
-    components[2] = new Sonar(uartMessenger, 0x70 << 1);
-    components[3] = new LEDStrip(PC_5, 24, 0, 5, 4, 3); // experimental values
-    //dynamic_cast<LEDStrip*>(components[3])->setMode(1); // TODO ask if there is better way
+    //components[0] = uartMessenger;
+    components[0] = new IRSensorAnalog(uartMessenger, A0, pololu10_150);
+    components[1] = new Sonar(uartMessenger, 0x70 << 1);
+//    LEDStrip *ledStrip = new LEDStrip(PC_5, 24, 0, 5, 4, 3);
+//    components[1] = ledStrip; // experimentally defined values
+//    ledStrip->setMode(0);
 
     // sort all components according to their priority
     int size = sizeof(components);
@@ -49,9 +52,12 @@ int main() {
     }
 
     while (true) {
+        // Update all components on the board
         for (int i = 0; i < COMP_NUMBER; i++) {
-            components[i]->update();
+            //components[i]->update();
         }
 
+        led1 = !led1;
+        Thread::wait(500);
     }
 }

@@ -14,8 +14,8 @@ void IRSensorAnalog::update() {
     SubMessage subMessage;
     subMessage.type = IRANALOG;
     subMessage.id = id;
-    subMessage.data = reinterpret_cast<uint8_t*>(&value);
-    subMessage.length = sizeof(subMessage.data);
+    reinterpret_cast<float*>(subMessage.data)[0] = range;
+    subMessage.length = sizeof(range);
 
     uartMessenger->appendMessage(subMessage);
 }
