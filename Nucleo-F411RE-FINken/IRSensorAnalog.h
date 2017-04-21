@@ -1,7 +1,7 @@
 #pragma once
 
-#include "AbstractComponent.h"
-#include "UARTMessenger.h"
+#include "drivers/AbstractComponent.h"
+#include "drivers/UARTMessenger.h"
 #include <vector>
 
 class UARTMessenger;
@@ -30,6 +30,7 @@ private:
     float toRange(float sensorOutput);
 
     UARTMessenger *const uartMessenger;
+    SubMessage subMessage;
     PinName dataPin;
     AnalogIn sensor;
     std::vector<std::vector<int> > lookupTable;

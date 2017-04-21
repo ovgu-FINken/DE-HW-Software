@@ -10,8 +10,6 @@ void IRSensorAnalog::update() {
     float value = sensor.read() * 3300; //multiply by current in the system, mV
     range = toRange(value);
 
-    // TODO ask for review
-    SubMessage subMessage;
     subMessage.type = IRANALOG;
     subMessage.id = id;
     reinterpret_cast<float*>(subMessage.data)[0] = range;

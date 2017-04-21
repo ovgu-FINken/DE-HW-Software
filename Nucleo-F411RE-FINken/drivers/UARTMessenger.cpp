@@ -40,12 +40,14 @@ void UARTMessenger::update() {
         uart.putc(message[i]);
     }
 
-    // TODO ask how to empty the subMessages array
     count = 0;
 }
 
 void UARTMessenger::appendMessage(const SubMessage& subMessage) {
     IRQLock lock;
+    if (count >= MSG_NUMBER) {
+        return;
+    }
     subMessages[count] = &subMessage;
     messageLength += subMessages[count]->length + 3;
     count++;

@@ -13,7 +13,6 @@ void Sonar::update() {
     i2c.write(address, config_r, 1);
     timeout.attach(callback(this,&Sonar::read), 0.07);
 
-    SubMessage subMessage;
     subMessage.type = SONAR;
     subMessage.id = id;
     reinterpret_cast<uint16_t*>(subMessage.data)[0] = range;

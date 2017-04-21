@@ -15,6 +15,7 @@ public:
 
 private:
     UARTMessenger *const uartMessenger;
+    SubMessage subMessage;
     PinName dataPin;
     AnalogIn sensor;
     float detectionRange;

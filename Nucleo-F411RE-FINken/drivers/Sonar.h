@@ -18,6 +18,7 @@ public:
 
 private:
     UARTMessenger *const uartMessenger;
+    SubMessage subMessage;
     I2C i2c;
     uint8_t address;
     char config_r[2];

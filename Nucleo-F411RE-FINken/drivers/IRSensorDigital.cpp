@@ -13,7 +13,6 @@ void IRSensorDigital::update() {
         inRange = true;
     }
 
-    SubMessage subMessage;
     subMessage.type = IRDIGITAL;
     subMessage.id = id;
     reinterpret_cast<bool*>(subMessage.data)[0] = inRange;

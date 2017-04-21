@@ -3,6 +3,8 @@
 #include "AbstractComponent.h"
 #include "vector"
 
+#define MSG_NUMBER 16
+
 class UARTMessenger: public AbstractComponent {
 public:
     /**
@@ -24,7 +26,7 @@ public:
 
 private:
     Serial uart;
-    const SubMessage* subMessages[16];
+    const SubMessage* subMessages[MSG_NUMBER];
     int count;
     uint8_t startByte;
     uint8_t stopByte;
