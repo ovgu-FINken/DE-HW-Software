@@ -33,8 +33,6 @@ private:
     WS2812 ws;
     PixelArray px;
     int stripSize;
-    int r_offset;
-    int g_offset;
-    int b_offset;
+    int offset;
     uint8_t mode;
 };
