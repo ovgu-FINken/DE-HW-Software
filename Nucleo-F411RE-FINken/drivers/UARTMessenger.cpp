@@ -2,50 +2,56 @@
 #include "IRQLock.h"
 #include <vector>
 
-UARTMessenger::UARTMessenger(PinName tx, PinName rx): uart(tx, rx) {
+UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx) {
+    id = ++s_id;
     count = 0;
     startByte = 254;
     stopByte = 255;
-    messageLength = 4; // Length itself (two bytes) and checksum (two bytes) - minimal possible message
+    messageLength = 2; // Length itself (one byte) and checksum (one byte) - minimal possible message
 }
 
 void UARTMessenger::update() {
     IRQLock lock;
 
-    std::vector<uint8_t> message;
+    uint8_t* message;
 
-    message[0] = messageLength & 0xFF;
-    message[1] = messageLength >> 8;
-
-    // reserve place for checksum
-    message[3] = 0;
-    message[4] = 0;
+    message[0] = messageLength;
 
     // add current submessages
+    int pos = 1;
     for (int i = 0; i < count; i++) {
-        message.push_back(subMessages[i]->id);
-        message.push_back(subMessages[i]->type);
-        message.push_back(subMessages[i]->length);
+        message[pos] = subMessages[i]->id;
+        message[pos++] = subMessages[i]->id;
+        message[pos++] = subMessages[i]->id;
         for (int j = 0; j < subMessages[i]->length; j++) {
-            message.push_back(subMessages[i]->data[j]);
+            message[pos++] = subMessages[i]->data[j];
         }
     }
+//    for (int i = 0; i < count; i++) {
+//        message.push_back(subMessages[i]->id);
+//        message.push_back(subMessages[i]->type);
+//        message.push_back(subMessages[i]->length);
+//        for (int j = 0; j < subMessages[i]->length; j++) {
+//            message.push_back(subMessages[i]->data[j]);
+//        }
+//    }
 
-    uint16_t checksum = calculateChecksum(message);
-    message[3] = checksum & 0xFF;
-    message[4] = checksum >> 8;
+    calculateChecksum(message, messageLength);
 
-    // send the message
-    for (int i = 0; i < message.size(); i++) {
+    // send the message, one additional byte for checksum
+    for (int i = 0; i < messageLength + 1; i++) {
         uart.putc(message[i]);
     }
 
+    uart.getc();
+
     count = 0;
+    messageLength = 2;
 }
 
-void UARTMessenger::appendMessage(const SubMessage& subMessage) {
+void UARTMessenger::appendMessage(const SubMessage &subMessage) {
     IRQLock lock;
-    if (count >= MSG_NUMBER) {
+    if (count >= MAX_MSG_NUMBER) {
         return;
     }
     subMessages[count] = &subMessage;
@@ -53,7 +59,23 @@ void UARTMessenger::appendMessage(const SubMessage& subMessage) {
     count++;
 }
 
-uint16_t UARTMessenger::calculateChecksum(std::vector<uint8_t> message) {
-    // TODO: calculate checksum
-    return 0;
+bool UARTMessenger::validateChecksum(uint8_t const *pkt, uint8_t const length) {
+    uint8_t pos = 0;
+    uint8_t sum = 0;
+    while (pos < (length - 1)) {
+        sum += *(pkt + pos++);
+    }
+    sum = 0x0 - sum;
+
+    return (sum == *(pkt + pos));
+}
+
+void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
+    uint8_t pos = 0;
+    uint8_t sum = 0;
+    while (pos < (length - 1)) {
+        sum += *(pkt + pos++);
+    }
+    // put the checksum into the data stream
+    *(pkt + pos) = 0x0 - sum;
 }

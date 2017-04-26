@@ -3,7 +3,7 @@
 #include "PixelArray.h"
 
 LEDStrip::LEDStrip(PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh, int oneLow): ws(pin, size, zeroHigh, zeroLow, oneHigh, oneLow), px(size) {
-
+    id = ++s_id;
     ws.useII(WS2812::GLOBAL); // use per-pixel intensity scaling
     stripSize = size;
     r_offset = 0;

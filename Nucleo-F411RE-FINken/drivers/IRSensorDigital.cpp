@@ -1,6 +1,7 @@
 #include "IRSensorDigital.h"
 
 IRSensorDigital::IRSensorDigital(UARTMessenger *const uartMsngr, PinName pin, float detectionRange):uartMessenger(uartMsngr),dataPin(pin),sensor(dataPin) {
+    id = ++s_id;
     this->detectionRange = detectionRange;
     inRange = false;
 };

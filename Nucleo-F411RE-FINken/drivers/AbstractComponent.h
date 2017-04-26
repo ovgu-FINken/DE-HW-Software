@@ -3,6 +3,7 @@
 #include "mbed.h"
 #include "PinNames.h"
 #include "SubMessage.h"
+#include "atomic"
 
 class AbstractComponent {
 public:
@@ -38,7 +39,9 @@ public:
         return priority;
     }
 
+    int id;
+
 protected:
     int priority = 0;
-    int id = 0;
+    static int s_id;
 };

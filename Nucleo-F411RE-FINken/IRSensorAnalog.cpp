@@ -2,12 +2,13 @@
 #include <vector>
 
 IRSensorAnalog::IRSensorAnalog(UARTMessenger *const uartMsngr, PinName pin, std::vector<std::vector<int> > lookupTable): uartMessenger(uartMsngr), dataPin(pin), sensor(dataPin) {
+    id = ++s_id;
     this->lookupTable = lookupTable;
     range = 0;
 }
 
 void IRSensorAnalog::update() {
-    float value = sensor.read() * 3300; //multiply by current in the system, mV
+    float value = sensor.read() * 3300; // TODO: ask about this - multiply by current in the system, mV
     range = toRange(value);
 
     subMessage.type = IRANALOG;

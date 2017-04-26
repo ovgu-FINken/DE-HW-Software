@@ -75,9 +75,7 @@ void sonarI2CTest() {
         config_r[1] = 0x00; // config data byte1
         int a = i2c.write(addr, config_r, 1);
         //pc.printf("Write returned %i\n\r", a);
-        wait(0.07);
-        config_r[0] = 0x02; //set pointer reg to 'data register'
-        //i2c.write(addr, config_r, 1); //send to pointer 'read range'
+        wait(0.08);
         if (i2c.read(addr | 1, range_read, 2) != 0) //read the two-byte range data
             pc.printf("Reading failed");
         else {

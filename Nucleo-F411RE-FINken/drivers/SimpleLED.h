@@ -1,14 +1,11 @@
 #pragma once
 
-#include "mbed.h"
-#include "PinNames.h"
+#include "AbstractComponent.h"
 
-class SimpleLED {
+class SimpleLED: public AbstractComponent {
 public:
     SimpleLED();
-    void blink();
-    void blink(int interval);
-    void init();
+    virtual void update();
 
 private:
     DigitalOut led;
