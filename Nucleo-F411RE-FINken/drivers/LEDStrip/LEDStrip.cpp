@@ -4,13 +4,12 @@
 
 LEDStrip::LEDStrip(PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh, int oneLow): ws(pin, size, zeroHigh, zeroLow, oneHigh, oneLow), px(size) {
     id = ++s_id;
-    ws.useII(WS2812::GLOBAL); // use per-pixel intensity scaling
-    stripSize = size;
-    r_offset = 0;
-    g_offset = 0;
-    b_offset = 0;
-    mode = 0;
 
+    ws.useII(WS2812::OFF); // use per-pixel intensity scaling
+    stripSize = size;
+    offset = 0;
+    mode = 0;
+    px.Set(0, 0xFF0000);
 }
 
 void LEDStrip::setMode(uint8_t mode) {
@@ -24,11 +23,8 @@ void LEDStrip::update() {
             break;
         case 1:
             // Running red LED
-            px.Set(0, 0xFF0000);
-            ws.write_offsets(px.getBuf(), r_offset, g_offset, b_offset);
-            r_offset = (r_offset + 1) % stripSize;
-            g_offset = (g_offset + 1) % stripSize;
-            b_offset = (b_offset + 1) % stripSize;
+            ws.write_offsets(px.getBuf(), offset, offset, offset);
+            offset = (offset + 1) % stripSize;
             break;
     }
 }
