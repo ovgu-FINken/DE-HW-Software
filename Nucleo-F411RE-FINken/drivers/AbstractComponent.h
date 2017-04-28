@@ -41,6 +41,8 @@ public:
 
     int id;
 
+    bool operator<(const AbstractComponent& another) const;
+
 protected:
     int priority = 0;
     static int s_id;

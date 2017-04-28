@@ -3,7 +3,7 @@
 #include "tests/tests.h"
 #include "drivers/AbstractComponent.h"
 #include "drivers/Sonar.h"
-#include "IRSensorAnalog.h"
+#include "drivers/IRSensorAnalog.h"
 #include "drivers/IRSensorDigital.h"
 #include "drivers/UARTMessenger.h"
 #include "drivers/LEDStrip/LEDStrip.h"
@@ -12,19 +12,14 @@
 #include <memory>
 #include <vector>
 
-
 // Lookup tables for sensors, pairs {sensorOutput, distance} in acceding order of sensorOutput, distance in millimeters
 uint16_t pololu10_150[][2] = {{800, 1300},{830, 1000},{900, 800},{1150, 600},{1650, 400},{2700, 200}};
-
-DigitalOut led0(PC_0);
-DigitalOut led1(PC_1, 1);
 
 /*
  * Main function
  */
 int main() {
     // If you want to rum one of the tests from tests.cpp, just call it here
-    sonarI2CTest();
 
     // Initialization of components, connected to the board
     // First two parameters for all driver's constructors: uartMessenger
@@ -33,15 +28,19 @@ int main() {
     using Storage = vector<AbstractComponentPtr>;
     Storage components;
 
-    //UARTMessenger *uartMessenger = new UARTMessenger(USBTX, USBRX); // set pins
-    //uartMessenger->setPriority(5);
+    UARTMessenger *uartMessenger = new UARTMessenger(USBTX, USBRX);
+    uartMessenger->setPriority(5);
+
 
     //components[0] = uartMessenger;
     //components[0] = new IRSensorAnalog(uartMessenger, A0, pololu10_150);
     //components[1] = new Sonar(uartMessenger, 0x70 << 1);
-    LEDStrip *ledStrip = new LEDStrip(PC_5, 28, 0, 5, 4, 3);
-    components.emplace_back(ledStrip); // experimentally defined values
+    LEDStrip *ledStrip = new LEDStrip(PC_5, 24, 0, 5, 4, 3); // experimentally defined values
+    components.emplace_back(ledStrip);
     ledStrip->setMode(1);
+    components.emplace_back(new SimpleLED(LED1));
+
+    components.emplace_back(uartMessenger);
 
     // sort all components according to their priority
 /*    int size = sizeof(components);
@@ -61,9 +60,7 @@ int main() {
         // Update all components on the board
         for (AbstractComponentPtr& comp : components)
             comp->update();
-        
-        led0 = !led0;
-        led1 = !led1;
-        Thread::wait(100);
+
+        Thread::wait(300);
     }
 }

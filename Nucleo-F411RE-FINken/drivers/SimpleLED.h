@@ -4,7 +4,8 @@
 
 class SimpleLED: public AbstractComponent {
 public:
-    SimpleLED();
+    SimpleLED(PinName outPin);
+    SimpleLED(PinName outPin, int initValue);
     virtual void update();
 
 private:

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "drivers/AbstractComponent.h"
-#include "drivers/UARTMessenger.h"
+#include "AbstractComponent.h"
+#include "UARTMessenger.h"
 #include <vector>
 
 class UARTMessenger;

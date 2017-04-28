@@ -1,6 +1,8 @@
 #include "IRSensorAnalog.h"
 #include <vector>
 
+#define REFERENCE_VOLTAGE 3300 // in mV
+
 IRSensorAnalog::IRSensorAnalog(UARTMessenger *const uartMsngr, PinName pin, std::vector<std::vector<int> > lookupTable): uartMessenger(uartMsngr), dataPin(pin), sensor(dataPin) {
     id = ++s_id;
     this->lookupTable = lookupTable;
@@ -8,7 +10,7 @@ IRSensorAnalog::IRSensorAnalog(UARTMessenger *const uartMsngr, PinName pin, std:
 }
 
 void IRSensorAnalog::update() {
-    float value = sensor.read() * 3300; // TODO: ask about this - multiply by current in the system, mV
+    float value = sensor.read() * REFERENCE_VOLTAGE;
     range = toRange(value);
 
     subMessage.type = IRANALOG;
