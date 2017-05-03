@@ -13,7 +13,7 @@
 #include <vector>
 
 // Lookup tables for sensors, pairs {sensorOutput, distance} in acceding order of sensorOutput, distance in millimeters
-uint16_t pololu10_150[][2] = {{800, 1300},{830, 1000},{900, 800},{1150, 600},{1650, 400},{2700, 200}};
+std::vector<std::vector<int> > pololu10_150 = {{800, 1300},{830, 1000},{900, 800},{1150, 600},{1650, 400},{2700, 200}};
 
 /*
  * Main function
@@ -22,7 +22,7 @@ int main() {
     // If you want to rum one of the tests from tests.cpp, just call it here
 
     // Initialization of components, connected to the board
-    // First two parameters for all driver's constructors: uartMessenger
+    // First parameter for all driver's constructors: uartMessenger
     // Priority of all components by default - 0, can be changed manually. Priority = order of update, lower first
     using AbstractComponentPtr = unique_ptr<AbstractComponent>;
     using Storage = vector<AbstractComponentPtr>;
@@ -34,13 +34,17 @@ int main() {
 
     //components[0] = uartMessenger;
     //components[0] = new IRSensorAnalog(uartMessenger, A0, pololu10_150);
-    //components[1] = new Sonar(uartMessenger, 0x70 << 1);
-    LEDStrip *ledStrip = new LEDStrip(PC_5, 24, 0, 5, 4, 3); // experimentally defined values
+    components.emplace_back(new Sonar(uartMessenger, 112)); // 112 = 0x70
+    components.emplace_back(new IRSensorAnalog(uartMessenger, A0, pololu10_150));
+
+    LEDStrip *ledStrip = new LEDStrip(uartMessenger, PC_5, 24, 0, 5, 4, 3); // experimentally defined values
     components.emplace_back(ledStrip);
     ledStrip->setMode(1);
     components.emplace_back(new SimpleLED(LED1));
 
     components.emplace_back(uartMessenger);
+
+    // TODO: ask how to sort this storage
 
     // sort all components according to their priority
 /*    int size = sizeof(components);

@@ -3,7 +3,8 @@
 enum ComponentType {
     SONAR,
     IRANALOG,
-    IRDIGITAL
+    IRDIGITAL,
+    LEDSTRIP
 };
 
 struct SubMessage {

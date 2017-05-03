@@ -1,6 +1,5 @@
 #include "UARTMessenger.h"
 #include "IRQLock.h"
-#include <vector>
 
 UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx) {
     id = ++s_id;
@@ -13,7 +12,8 @@ UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx) {
 void UARTMessenger::update() {
     IRQLock lock;
 
-    uint8_t* message;
+    uint8_t message[BUF_SIZE];
+    memset(message, 0, BUF_SIZE);
 
     message[0] = messageLength;
 
@@ -21,10 +21,10 @@ void UARTMessenger::update() {
     int pos = 1;
     for (int i = 0; i < count; i++) {
         message[pos] = subMessages[i]->id;
-        message[pos++] = subMessages[i]->id;
-        message[pos++] = subMessages[i]->id;
+        message[++pos] = subMessages[i]->type;
+        message[++pos] = subMessages[i]->length;
         for (int j = 0; j < subMessages[i]->length; j++) {
-            message[pos++] = subMessages[i]->data[j];
+            message[++pos] = subMessages[i]->data[j];
         }
     }
 //    for (int i = 0; i < count; i++) {
@@ -38,12 +38,11 @@ void UARTMessenger::update() {
 
     calculateChecksum(message, messageLength);
 
-    // send the message, one additional byte for checksum
-    for (int i = 0; i < messageLength + 1; i++) {
-        uart.putc(message[i]);
-    }
+    // send the message via UART
+    //uart.write(message, messageLength, nullptr);
 
-    uart.getc();
+    // check if we have
+    //uart.read(papparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPapparazziMsg));
 
     count = 0;
     messageLength = 2;
@@ -78,4 +77,8 @@ void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
     }
     // put the checksum into the data stream
     *(pkt + pos) = 0x0 - sum;
+}
+
+void UARTMessenger::processPaparazziMsg() {
+    //TODO: good way to get all components?
 }

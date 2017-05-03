@@ -4,6 +4,7 @@
 #include "vector"
 
 #define MAX_MSG_NUMBER 16
+#define BUF_SIZE 256
 
 class UARTMessenger: public AbstractComponent {
 public:
@@ -23,6 +24,7 @@ public:
      */
     void appendMessage(const SubMessage& subMessage);
 
+private:
     /**
      * Validate the checksum of the byte array
      *
@@ -41,11 +43,16 @@ public:
      */
     void calculateChecksum(uint8_t *pkt, uint8_t const length);
 
-private:
+    /**
+     * Process message from Paparazzi, if there is one
+     */
+    void processPaparazziMsg();
+
     Serial uart;
     const SubMessage* subMessages[MAX_MSG_NUMBER];
     int count;
     uint8_t startByte;
     uint8_t stopByte;
     uint8_t messageLength;
+    uint8_t papparazziMsg[BUF_SIZE];
 };

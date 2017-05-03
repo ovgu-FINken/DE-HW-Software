@@ -3,6 +3,7 @@
 #include "../AbstractComponent.h"
 #include "WS2812.h"
 #include "PixelArray.h"
+#include "UARTMessenger.h"
 
 class LEDStrip : public AbstractComponent {
 public:
@@ -16,7 +17,7 @@ public:
       * @param oneHigh How many NOPs to insert to ensure T1H is properly generated. See library description for more information.
       * @param oneLow How many NOPs to insert to ensure T1L is properly generated. See library description for more information.
       */
-    LEDStrip(PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh, int oneLow);
+    LEDStrip(UARTMessenger *const uartMsngr, PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh, int oneLow);
 
     /**
      * Set LED Strip to manual control instead of getting control action from paparazzi, which is set by default
@@ -30,6 +31,8 @@ public:
     void onPaparazziMsg(uint8_t* msg);
 
 private:
+    UARTMessenger *const uartMessenger;
+    SubMessage subMessage;
     WS2812 ws;
     PixelArray px;
     int stripSize;

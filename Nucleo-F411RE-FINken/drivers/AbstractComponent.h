@@ -17,7 +17,7 @@ public:
      * React to the message from Paparazzi.
      * At the moment only relevant for LED strip
      *
-     * @param msg Message from Paprazzi
+     * @param msg Message from Paparazzi
      */
     void onPaparazziMsg(uint8_t* msg) {
         return;
