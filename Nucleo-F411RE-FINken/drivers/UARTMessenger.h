@@ -51,8 +51,7 @@ private:
     Serial uart;
     const SubMessage* subMessages[MAX_MSG_NUMBER];
     int count;
-    uint8_t startByte;
-    uint8_t stopByte;
     uint8_t messageLength;
+    uint8_t message[BUF_SIZE];
     uint8_t papparazziMsg[BUF_SIZE];
 };

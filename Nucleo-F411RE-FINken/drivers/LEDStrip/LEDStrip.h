@@ -26,6 +26,8 @@ public:
      */
     void setMode(uint8_t mode);
 
+    void setColor(int color);
+
     virtual void update();
 
     void onPaparazziMsg(uint8_t* msg);

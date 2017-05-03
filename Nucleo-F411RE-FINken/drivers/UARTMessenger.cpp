@@ -4,15 +4,12 @@
 UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx) {
     id = ++s_id;
     count = 0;
-    startByte = 254;
-    stopByte = 255;
     messageLength = 2; // Length itself (one byte) and checksum (one byte) - minimal possible message
 }
 
 void UARTMessenger::update() {
     IRQLock lock;
 
-    uint8_t message[BUF_SIZE];
     memset(message, 0, BUF_SIZE);
 
     message[0] = messageLength;

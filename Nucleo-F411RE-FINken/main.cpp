@@ -33,13 +33,13 @@ int main() {
 
 
     //components[0] = uartMessenger;
-    //components[0] = new IRSensorAnalog(uartMessenger, A0, pololu10_150);
     components.emplace_back(new Sonar(uartMessenger, 112)); // 112 = 0x70
     components.emplace_back(new IRSensorAnalog(uartMessenger, A0, pololu10_150));
 
     LEDStrip *ledStrip = new LEDStrip(uartMessenger, PC_5, 24, 0, 5, 4, 3); // experimentally defined values
     components.emplace_back(ledStrip);
     ledStrip->setMode(1);
+    ledStrip->setColor(0x110011);
     components.emplace_back(new SimpleLED(LED1));
 
     components.emplace_back(uartMessenger);

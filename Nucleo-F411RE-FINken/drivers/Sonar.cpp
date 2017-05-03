@@ -7,13 +7,13 @@ Sonar::Sonar(UARTMessenger *const uartMsngr, uint8_t addr): uartMessenger(uartMs
     address = addr << 1;
     range = 0;
 
-    config_r[0] = 81; // Take a range reading, 81 = 0x51
-    config_r[1] = 0;
+    config[0] = 81; // Take a range reading, 81 = 0x51
+//    config_r[1] = 0;
 }
 
 void Sonar::update() {
     i2c.lock();
-    int a = i2c.write(address, config_r, 1);
+    int a = i2c.write(address, config, 1);
     if (a != 0)
         return; //Writing failed
     timeout.attach(callback(this, &Sonar::read), 0.08); // 80 ms is suggested in documentation

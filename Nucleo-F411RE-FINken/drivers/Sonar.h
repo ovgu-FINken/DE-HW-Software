@@ -9,7 +9,7 @@ public:
     /**
      * Constructor for Sonar
      *
-     * @param uartMsngr Pointer to UARTMessanger object, that should be used for sending data to Paparazzi
+     * @param uartMsngr Pointer to UARTMessenger object, that should be used for sending data to Paparazzi
      * @param addr Address of the Sonar
      */
     Sonar(UARTMessenger *const uartMsngr, uint8_t addr);
@@ -17,14 +17,14 @@ public:
     uint16_t getRange();
 
 private:
+    void read();
+
     UARTMessenger *const uartMessenger;
     SubMessage subMessage;
     I2C i2c;
     uint8_t address;
-    char config_r[2];
+    char config[2];
     uint16_t range;
     Timeout timeout;
-
-    void read();
 };
 

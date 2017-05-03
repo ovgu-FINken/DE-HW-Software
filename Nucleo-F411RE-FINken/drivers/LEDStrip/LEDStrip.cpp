@@ -15,6 +15,10 @@ void LEDStrip::setMode(uint8_t mode) {
     this->mode = mode;
 }
 
+void LEDStrip::setColor(int color) {
+    px.Set(0, color);
+}
+
 void LEDStrip::update() {
     switch (mode) {
         case 0:
