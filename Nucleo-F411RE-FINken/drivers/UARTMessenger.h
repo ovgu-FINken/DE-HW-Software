@@ -24,6 +24,8 @@ public:
      */
     void appendMessage(const SubMessage& subMessage);
 
+    uint8_t* checkForMsgFromPaparazzi(int id);
+
 private:
     /**
      * Validate the checksum of the byte array
@@ -48,10 +50,12 @@ private:
      */
     void processPaparazziMsg();
 
+    void nullFunc();
+
     Serial uart;
     const SubMessage* subMessages[MAX_MSG_NUMBER];
     int count;
     uint8_t messageLength;
     uint8_t message[BUF_SIZE];
-    uint8_t papparazziMsg[BUF_SIZE];
+    uint8_t paparazziMsg[BUF_SIZE];
 };

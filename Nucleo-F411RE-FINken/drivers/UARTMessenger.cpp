@@ -1,7 +1,7 @@
 #include "UARTMessenger.h"
 #include "IRQLock.h"
 
-UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx) {
+UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx, 9600) {
     id = ++s_id;
     count = 0;
     messageLength = 2; // Length itself (one byte) and checksum (one byte) - minimal possible message
@@ -36,10 +36,13 @@ void UARTMessenger::update() {
     calculateChecksum(message, messageLength);
 
     // send the message via UART
-    //uart.write(message, messageLength, nullptr);
+    //uart.write(message, messageLength, &UARTMessenger::nullFunc);
+    for (int i = 0; i < messageLength; i++) {
+        uart.putc(message[i]);
+    }
 
-    // check if we have
-    //uart.read(papparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPapparazziMsg));
+    // check if we have message from paparazzi
+    //uart.read(paparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPaparazziMsg));
 
     count = 0;
     messageLength = 2;
@@ -78,4 +81,15 @@ void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
 
 void UARTMessenger::processPaparazziMsg() {
     //TODO: good way to get all components?
+}
+
+void UARTMessenger::nullFunc() {}
+
+uint8_t* UARTMessenger::checkForMsgFromPaparazzi(int id) {
+    // check if message from paparazzi has something for component with this id
+    if (false) {
+        return paparazziMsg;
+    } else {
+        return nullptr;
+    }
 }

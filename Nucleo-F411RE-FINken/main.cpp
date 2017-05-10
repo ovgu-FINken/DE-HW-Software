@@ -65,6 +65,6 @@ int main() {
         for (AbstractComponentPtr& comp : components)
             comp->update();
 
-        Thread::wait(300);
+        Thread::wait(500);
     }
 }

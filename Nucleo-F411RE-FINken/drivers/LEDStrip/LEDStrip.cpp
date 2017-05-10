@@ -22,8 +22,15 @@ void LEDStrip::setColor(int color) {
 void LEDStrip::update() {
     switch (mode) {
         case 0:
-            // Control from Paparazzi. Need to send the id of the LEDStrip first to be able to communicate
-            subMessage.type = IRANALOG;
+            // Control from Paparazzi
+
+            uint8_t* paparazziMsg = uartMessenger->checkForMsgFromPaparazzi(id);
+            if (paparazziMsg != nullptr) {
+                // react on the message
+            }
+
+            //  Need to send the id of the LEDStrip first to be able to communicate. Do this every time?
+            subMessage.type = LEDSTRIP;
             subMessage.id = id;
             subMessage.length = 0;
 
