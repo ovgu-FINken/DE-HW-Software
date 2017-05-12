@@ -25,20 +25,12 @@ void UARTMessenger::update() {
             message[++pos] = subMessages[i]->data[j];
         }
     }
-//    for (int i = 0; i < count; i++) {
-//        message.push_back(subMessages[i]->id);
-//        message.push_back(subMessages[i]->type);
-//        message.push_back(subMessages[i]->length);
-//        for (int j = 0; j < subMessages[i]->length; j++) {
-//            message.push_back(subMessages[i]->data[j]);
-//        }
-//    }
 
     calculateChecksum(message, messageLength);
 
     // send the message via UART
-    //uart.write(message, messageLength, &UARTMessenger::nullFunc);
-    for (int i = 0; i < messageLength + 1; i++) {
+    //uart.write(message, messageLength + 2, &UARTMessenger::nullFunc);
+    for (int i = 0; i < messageLength + 2; i++) {
         uart.putc(message[i]);
     }
 
@@ -84,7 +76,7 @@ void UARTMessenger::processPaparazziMsg(int size) {
     //TODO: good way to get all components?
 }
 
-void UARTMessenger::nullFunc() {}
+void UARTMessenger::nullFunc(int size) {}
 
 SubMessage* UARTMessenger::checkForMsgFromPaparazzi(int id) {
     // check if message from paparazzi has something for component with this id

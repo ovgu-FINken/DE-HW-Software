@@ -1,4 +1,5 @@
 #include "mbed.h"
+#include "mbed_events.h"
 #include "PinNames.h"
 #include "tests/tests.h"
 #include "drivers/AbstractComponent.h"
@@ -16,11 +17,17 @@
 // Lookup tables for sensors, pairs {sensorOutput, distance} in acceding order of sensorOutput, distance in millimeters
 std::vector<std::vector<int> > pololu10_150 = {{800, 1300},{830, 1000},{900, 800},{1150, 600},{1650, 400},{2700, 200}};
 
+EventQueue queue(32 * EVENTS_EVENT_SIZE); // default value: 32 * EVENTS_EVENT_SIZE
+Thread t;
+
 /*
  * Main function
  */
 int main() {
     // If you want to rum one of the tests from tests.cpp, just call it here
+
+    // Start the event queue
+    t.start(callback(&queue, &EventQueue::dispatch_forever));
 
     // Initialization of components, connected to the board
     // First parameter for all driver's constructors: uartMessenger
@@ -34,7 +41,7 @@ int main() {
 
 
     //components[0] = uartMessenger;
-    components.emplace_back(new Sonar(uartMessenger, 112)); // 112 = 0x70
+    components.emplace_back(new Sonar(uartMessenger, 112, &queue)); // 112 = 0x70
     components.emplace_back(new IRSensorAnalog(uartMessenger, A0, pololu10_150));
 
     LEDStrip *ledStrip = new LEDStrip(uartMessenger, PC_5, 24, 0, 5, 4, 3); // experimentally defined values
@@ -46,7 +53,7 @@ int main() {
     components.emplace_back(uartMessenger);
 
     // sort all components according to their priority
-    sort(components.begin(), components.end(), [](const AbstractComponentPtr& a, const AbstractComponentPtr& b){return *a < *b;});
+    //sort(components.begin(), components.end(), [](const AbstractComponentPtr& a, const AbstractComponentPtr& b){return *a < *b;});
 
     while (true) {
         // Update all components on the board

@@ -50,7 +50,7 @@ private:
      */
     void processPaparazziMsg(int size);
 
-    void nullFunc();
+    void nullFunc(int size);
 
     Serial uart;
     const SubMessage* subMessages[MAX_MSG_NUMBER];
