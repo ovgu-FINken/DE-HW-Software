@@ -19,7 +19,7 @@ public:
      *
      * @param msg Message from Paparazzi
      */
-    void onPaparazziMsg(uint8_t* msg) {
+    virtual void onPaparazziMsg(uint8_t* msg) {
         return;
     };
 

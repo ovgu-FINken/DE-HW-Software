@@ -15,19 +15,21 @@ void LEDStrip::setMode(uint8_t mode) {
     this->mode = mode;
 }
 
-void LEDStrip::setColor(int color) {
+void LEDStrip::setColor(unsigned int color) {
     px.Set(0, color);
 }
 
 void LEDStrip::update() {
     switch (mode) {
-        case 0:
+        case 0: {
             // Control from Paparazzi
 
-            uint8_t* paparazziMsg = uartMessenger->checkForMsgFromPaparazzi(id);
+
+            SubMessage *paparazziMsg = uartMessenger->checkForMsgFromPaparazzi(id);
             if (paparazziMsg != nullptr) {
-                // react on the message
+                onPaparazziMsg(paparazziMsg);
             }
+
 
             //  Need to send the id of the LEDStrip first to be able to communicate. Do this every time?
             subMessage.type = LEDSTRIP;
@@ -35,16 +37,19 @@ void LEDStrip::update() {
             subMessage.length = 0;
 
             uartMessenger->appendMessage(subMessage);
+        }
             break;
         case 1:
             // Running red LED
             ws.write_offsets(px.getBuf(), offset, offset, offset);
             offset = (offset + 1) % stripSize;
             break;
+        default:
+            break;
     }
 }
 
-void LEDStrip::onPaparazziMsg(uint8_t *msg) {
+void LEDStrip::onPaparazziMsg(SubMessage* msg) {
     // TODO: implement reaction on message from paparazzi
     return;
 }

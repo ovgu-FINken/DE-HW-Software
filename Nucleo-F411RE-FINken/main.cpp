@@ -11,6 +11,7 @@
 
 #include <memory>
 #include <vector>
+#include "algorithm"
 
 // Lookup tables for sensors, pairs {sensorOutput, distance} in acceding order of sensorOutput, distance in millimeters
 std::vector<std::vector<int> > pololu10_150 = {{800, 1300},{830, 1000},{900, 800},{1150, 600},{1650, 400},{2700, 200}};
@@ -44,21 +45,8 @@ int main() {
 
     components.emplace_back(uartMessenger);
 
-    // TODO: ask how to sort this storage
-
     // sort all components according to their priority
-/*    int size = sizeof(components);
-    for (int sorted = 0, maxIndex = 0; sorted < size; sorted++) {
-        for (int i = 0, max = 0; i < size - sorted; i++) {
-            if (components[i]->getPriority() > max) {
-                max = components[i]->getPriority();
-                maxIndex = i;
-            }
-        }
-        AbstractComponent *buf = components[COMP_NUMBER - sorted];
-        components[COMP_NUMBER - sorted] = components[maxIndex];
-        components[maxIndex] = buf;
-    }*/
+    sort(components.begin(), components.end(), [](const AbstractComponentPtr& a, const AbstractComponentPtr& b){return *a < *b;});
 
     while (true) {
         // Update all components on the board

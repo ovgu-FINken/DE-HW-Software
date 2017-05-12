@@ -24,7 +24,7 @@ public:
      */
     void appendMessage(const SubMessage& subMessage);
 
-    uint8_t* checkForMsgFromPaparazzi(int id);
+    SubMessage* checkForMsgFromPaparazzi(int id);
 
 private:
     /**
@@ -48,7 +48,7 @@ private:
     /**
      * Process message from Paparazzi, if there is one
      */
-    void processPaparazziMsg();
+    void processPaparazziMsg(int size);
 
     void nullFunc();
 

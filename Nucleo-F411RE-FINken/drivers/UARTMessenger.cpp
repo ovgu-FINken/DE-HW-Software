@@ -1,3 +1,4 @@
+#include <cstring>
 #include "UARTMessenger.h"
 #include "IRQLock.h"
 
@@ -37,12 +38,12 @@ void UARTMessenger::update() {
 
     // send the message via UART
     //uart.write(message, messageLength, &UARTMessenger::nullFunc);
-    for (int i = 0; i < messageLength; i++) {
+    for (int i = 0; i < messageLength + 1; i++) {
         uart.putc(message[i]);
     }
 
     // check if we have message from paparazzi
-    //uart.read(paparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPaparazziMsg));
+    uart.read(paparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPaparazziMsg));
 
     count = 0;
     messageLength = 2;
@@ -79,16 +80,16 @@ void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
     *(pkt + pos) = 0x0 - sum;
 }
 
-void UARTMessenger::processPaparazziMsg() {
+void UARTMessenger::processPaparazziMsg(int size) {
     //TODO: good way to get all components?
 }
 
 void UARTMessenger::nullFunc() {}
 
-uint8_t* UARTMessenger::checkForMsgFromPaparazzi(int id) {
+SubMessage* UARTMessenger::checkForMsgFromPaparazzi(int id) {
     // check if message from paparazzi has something for component with this id
     if (false) {
-        return paparazziMsg;
+        return reinterpret_cast<SubMessage*>(paparazziMsg);
     } else {
         return nullptr;
     }

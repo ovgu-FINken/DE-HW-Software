@@ -4,6 +4,7 @@
 #include "WS2812.h"
 #include "PixelArray.h"
 #include "UARTMessenger.h"
+#include "../UARTMessenger.h"
 
 class LEDStrip : public AbstractComponent {
 public:
@@ -26,11 +27,11 @@ public:
      */
     void setMode(uint8_t mode);
 
-    void setColor(int color);
+    void setColor(unsigned int color);
 
     virtual void update();
 
-    void onPaparazziMsg(uint8_t* msg);
+    virtual void onPaparazziMsg(SubMessage* msg);
 
 private:
     UARTMessenger *const uartMessenger;
