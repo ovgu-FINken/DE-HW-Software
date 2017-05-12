@@ -8,7 +8,7 @@ LEDStrip::LEDStrip(UARTMessenger *const uartMsngr, PinName pin, int size, int ze
     stripSize = size;
     offset = 0;
     mode = 0;
-    px.Set(0, 0xFF0000);
+    px.Set(0, 0xFF0000); // default color - red
 }
 
 void LEDStrip::setMode(uint8_t mode) {

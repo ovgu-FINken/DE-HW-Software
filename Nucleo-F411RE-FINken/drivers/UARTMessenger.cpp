@@ -29,10 +29,7 @@ void UARTMessenger::update() {
     calculateChecksum(message, messageLength);
 
     // send the message via UART
-    //uart.write(message, messageLength + 2, &UARTMessenger::nullFunc);
-    for (int i = 0; i < messageLength + 2; i++) {
-        uart.putc(message[i]);
-    }
+    uart.write(message, messageLength + 2, callback(this, &UARTMessenger::nullFunc));
 
     // check if we have message from paparazzi
     uart.read(paparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPaparazziMsg));
@@ -73,16 +70,17 @@ void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
 }
 
 void UARTMessenger::processPaparazziMsg(int size) {
-    //TODO: good way to get all components?
+    //TODO: convert message from Paparazzi to an array of submessages
+    paparazziCount = 0;
 }
 
 void UARTMessenger::nullFunc(int size) {}
 
 SubMessage* UARTMessenger::checkForMsgFromPaparazzi(int id) {
     // check if message from paparazzi has something for component with this id
-    if (false) {
-        return reinterpret_cast<SubMessage*>(paparazziMsg);
-    } else {
-        return nullptr;
+    for (int i = 0; i < paparazziCount; i++) {
+        if (messagesFromPaparazzi[i]->id == id)
+            return messagesFromPaparazzi[i];
     }
+    return nullptr;
 }

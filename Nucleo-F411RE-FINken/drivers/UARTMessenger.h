@@ -54,7 +54,9 @@ private:
 
     Serial uart;
     const SubMessage* subMessages[MAX_MSG_NUMBER];
+    SubMessage* messagesFromPaparazzi[MAX_MSG_NUMBER];
     int count;
+    int paparazziCount;
     uint8_t messageLength;
     uint8_t message[BUF_SIZE];
     uint8_t paparazziMsg[BUF_SIZE];

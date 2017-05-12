@@ -17,7 +17,7 @@
 // Lookup tables for sensors, pairs {sensorOutput, distance} in acceding order of sensorOutput, distance in millimeters
 std::vector<std::vector<int> > pololu10_150 = {{800, 1300},{830, 1000},{900, 800},{1150, 600},{1650, 400},{2700, 200}};
 
-EventQueue queue(32 * EVENTS_EVENT_SIZE); // default value: 32 * EVENTS_EVENT_SIZE
+EventQueue queue(16 * EVENTS_EVENT_SIZE); // default value: 32 * EVENTS_EVENT_SIZE
 Thread t;
 
 /*
@@ -39,8 +39,6 @@ int main() {
     UARTMessenger *uartMessenger = new UARTMessenger(USBTX, USBRX);
     uartMessenger->setPriority(5);
 
-
-    //components[0] = uartMessenger;
     components.emplace_back(new Sonar(uartMessenger, 112, &queue)); // 112 = 0x70
     components.emplace_back(new IRSensorAnalog(uartMessenger, A0, pololu10_150));
 
@@ -53,13 +51,13 @@ int main() {
     components.emplace_back(uartMessenger);
 
     // sort all components according to their priority
-    //sort(components.begin(), components.end(), [](const AbstractComponentPtr& a, const AbstractComponentPtr& b){return *a < *b;});
+    sort(components.begin(), components.end(), [](const AbstractComponentPtr& a, const AbstractComponentPtr& b){return *a < *b;});
 
     while (true) {
         // Update all components on the board
         for (AbstractComponentPtr& comp : components)
             comp->update();
 
-        Thread::wait(500);
+        Thread::wait(1000);
     }
 }

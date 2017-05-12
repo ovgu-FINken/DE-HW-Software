@@ -16,7 +16,6 @@ void Sonar::update() {
     int a = i2c.write(address & ~1, config, 1);
     if (a != 0)
         return; // Writing failed
-
     i2c.unlock();
 
     queue->call_in(80, callback(this, &Sonar::read));
