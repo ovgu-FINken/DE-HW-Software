@@ -27,7 +27,7 @@ public:
      */
     void setMode(uint8_t mode);
 
-    void setColor(unsigned int color);
+    void setColor(unsigned int color, uint8_t led=0);
 
     virtual void update();
 

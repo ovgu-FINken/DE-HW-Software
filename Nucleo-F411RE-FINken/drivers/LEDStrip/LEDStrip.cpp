@@ -15,8 +15,8 @@ void LEDStrip::setMode(uint8_t mode) {
     this->mode = mode;
 }
 
-void LEDStrip::setColor(unsigned int color) {
-    px.Set(0, color);
+void LEDStrip::setColor(unsigned int color, uint8_t led) {
+    px.Set(led, color);
 }
 
 void LEDStrip::update() {
@@ -45,6 +45,7 @@ void LEDStrip::update() {
             offset = (offset + 1) % stripSize;
             break;
         default:
+            ws.write_offsets(px.getBuf(), 0, 0, 0);
             break;
     }
 }
