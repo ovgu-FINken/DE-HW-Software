@@ -8,7 +8,6 @@ LEDStrip::LEDStrip(UARTMessenger *const uartMsngr, PinName pin, int size, int ze
     stripSize = size;
     offset = 0;
     mode = 0;
-    px.Set(0, 0xFF0000); // default color - red
 }
 
 void LEDStrip::setMode(uint8_t mode) {
@@ -27,6 +26,7 @@ void LEDStrip::update() {
             SubMessage *paparazziMsg = uartMessenger->checkForMsgFromPaparazzi(id);
             if (paparazziMsg != nullptr) {
                 onPaparazziMsg(paparazziMsg);
+                ws.write_offsets(px.getBuf(), 0, 0, 0);
             }
 
             //  Need to send the id of the LEDStrip first to be able to communicate. Do this every time?
@@ -48,6 +48,12 @@ void LEDStrip::update() {
 }
 
 void LEDStrip::onPaparazziMsg(SubMessage* msg) {
-    // TODO: implement reaction on message from paparazzi
+    int pos = 0;
+    for (int i = 0; i < msg->length / 4; i++) {
+        uint8_t led = msg->data[pos];
+        px.SetR(led, msg->data[++pos]);
+        px.SetG(led, msg->data[++pos]);
+        px.SetB(led, msg->data[++pos]);
+    }
     return;
 }

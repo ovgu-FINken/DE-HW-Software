@@ -44,8 +44,8 @@ int main() {
 
     LEDStrip *ledStrip = new LEDStrip(uartMessenger, PC_5, 24, 0, 5, 4, 3); // experimentally defined values
     components.emplace_back(ledStrip);
-    ledStrip->setMode(1);
-    ledStrip->setColor(0x110011);
+    ledStrip->setMode(0);
+//    ledStrip->setColor(0x110011);
     components.emplace_back(new SimpleLED(LED1));
 
     components.emplace_back(uartMessenger);

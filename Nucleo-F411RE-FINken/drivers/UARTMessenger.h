@@ -46,6 +46,8 @@ private:
      */
     void calculateChecksum(uint8_t *pkt, uint8_t const length);
 
+    void readByte();
+
     /**
      * Process message from Paparazzi, if there is one
      */
@@ -61,4 +63,6 @@ private:
     uint8_t toPaparazziMsgLength;
     uint8_t toPaparazziMsg[BUF_SIZE];
     uint8_t fromPaparazziMsg[BUF_SIZE];
+
+    uint8_t position;
 };
