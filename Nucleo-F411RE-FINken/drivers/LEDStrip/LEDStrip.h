@@ -27,10 +27,22 @@ public:
      */
     void setMode(uint8_t mode);
 
+    /**
+     * Set color to LED Strip
+     *
+     * @param color color in RGB format, e.g. 0x00FF00
+     */
     void setColor(unsigned int color);
 
     virtual void update();
 
+    /**
+     * Reaction on the message from Paparazzi.
+     * Expected message structure: type (1 byte), id (1 byte), length (1 byte), data (length byte)
+     * Data structure: led id (1 byte), red channel (1 byte), green channel (1 byte), blue channel (1 byte)
+     *
+     * @param msg SubMessage came from Paparazzi
+     */
     virtual void onPaparazziMsg(SubMessage* msg);
 
 private:

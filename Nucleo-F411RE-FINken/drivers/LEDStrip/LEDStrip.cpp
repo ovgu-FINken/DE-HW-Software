@@ -24,12 +24,10 @@ void LEDStrip::update() {
         case 0: {
             // Control from Paparazzi
 
-
             SubMessage *paparazziMsg = uartMessenger->checkForMsgFromPaparazzi(id);
             if (paparazziMsg != nullptr) {
                 onPaparazziMsg(paparazziMsg);
             }
-
 
             //  Need to send the id of the LEDStrip first to be able to communicate. Do this every time?
             subMessage.type = LEDSTRIP;

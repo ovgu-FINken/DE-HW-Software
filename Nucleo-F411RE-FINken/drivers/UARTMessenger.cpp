@@ -4,48 +4,53 @@
 
 UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx, 9600) {
     id = ++s_id;
-    count = 0;
-    messageLength = 2; // Length itself (one byte) and checksum (one byte) - minimal possible message
+    toPaparazziCount = 0;
+    fromPaparazziCount = 0;
+    toPaparazziMsgLength = MIN_MSG_SIZE;
 }
 
 void UARTMessenger::update() {
     IRQLock lock;
 
-    memset(message, 0, BUF_SIZE);
+    memset(toPaparazziMsg, 0, BUF_SIZE);
 
-    message[0] = messageLength;
+    toPaparazziMsg[0] = toPaparazziCount;
 
     // add current submessages
     int pos = 1;
-    for (int i = 0; i < count; i++) {
-        message[pos] = subMessages[i]->id;
-        message[++pos] = subMessages[i]->type;
-        message[++pos] = subMessages[i]->length;
-        for (int j = 0; j < subMessages[i]->length; j++) {
-            message[++pos] = subMessages[i]->data[j];
+    for (int i = 0; i < toPaparazziCount; i++) {
+        toPaparazziMsg[pos] = subMessagesToPaparazzi[i]->id;
+        toPaparazziMsg[++pos] = subMessagesToPaparazzi[i]->type;
+        toPaparazziMsg[++pos] = subMessagesToPaparazzi[i]->length;
+        for (int j = 0; j < subMessagesToPaparazzi[i]->length; j++) {
+            toPaparazziMsg[++pos] = subMessagesToPaparazzi[i]->data[j];
         }
     }
 
-    calculateChecksum(message, messageLength);
+    calculateChecksum(toPaparazziMsg, toPaparazziMsgLength);
 
     // send the message via UART
-    uart.write(message, messageLength + 2, callback(this, &UARTMessenger::nullFunc));
+    uart.write(toPaparazziMsg, toPaparazziMsgLength, callback(this, &UARTMessenger::nullFunc));
 
-    // check if we have message from paparazzi
-    uart.read(paparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPaparazziMsg));
+    // forget old messages from Paparazzi
+    fromPaparazziCount = 0;
 
-    count = 0;
-    messageLength = 2;
+    // check if we have message from Paparazzi
+    uart.read(fromPaparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPaparazziMsg));
+
+    // forget about old messages to Paparazzi
+    toPaparazziCount = 0;
+    toPaparazziMsgLength = MIN_MSG_SIZE;
 }
 
 void UARTMessenger::appendMessage(const SubMessage &subMessage) {
     IRQLock lock;
-    if (count >= MAX_MSG_NUMBER) {
+    if (toPaparazziCount >= MAX_MSG_NUMBER) {
         return;
     }
-    subMessages[count] = &subMessage;
-    messageLength += subMessages[count]->length + 3;
-    count++;
+    subMessagesToPaparazzi[toPaparazziCount] = &subMessage;
+    toPaparazziMsgLength += subMessagesToPaparazzi[toPaparazziCount]->length + 3;
+    toPaparazziCount++;
 }
 
 bool UARTMessenger::validateChecksum(uint8_t const *pkt, uint8_t const length) {
@@ -70,17 +75,35 @@ void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
 }
 
 void UARTMessenger::processPaparazziMsg(int size) {
-    //TODO: convert message from Paparazzi to an array of submessages
-    paparazziCount = 0;
+    bool validation = validateChecksum(fromPaparazziMsg, size);
+
+    if (validation) {
+        fromPaparazziCount = fromPaparazziMsg[0];
+
+        int pos = 1;
+        for(int i = 0; i < fromPaparazziCount; i++) {
+            SubMessage paparazziSubMessage;
+
+            paparazziSubMessage.type = fromPaparazziMsg[pos];
+            paparazziSubMessage.id = fromPaparazziMsg[++pos];
+            paparazziSubMessage.length = fromPaparazziMsg[++pos];
+
+            for (int j = 0; j < paparazziSubMessage.length; j++) {
+                paparazziSubMessage.data[j] = fromPaparazziMsg[++pos];
+            }
+
+            subMessagesFromPaparazzi[i] = paparazziSubMessage;
+        }
+    }
 }
 
 void UARTMessenger::nullFunc(int size) {}
 
 SubMessage* UARTMessenger::checkForMsgFromPaparazzi(int id) {
     // check if message from paparazzi has something for component with this id
-    for (int i = 0; i < paparazziCount; i++) {
-        if (messagesFromPaparazzi[i]->id == id)
-            return messagesFromPaparazzi[i];
+    for (int i = 0; i < fromPaparazziCount; i++) {
+        if (subMessagesFromPaparazzi[i].id == id)
+            return &subMessagesFromPaparazzi[i];
     }
     return nullptr;
 }

@@ -18,13 +18,13 @@
 std::vector<std::vector<int> > pololu10_150 = {{800, 1300},{830, 1000},{900, 800},{1150, 600},{1650, 400},{2700, 200}};
 
 EventQueue queue(16 * EVENTS_EVENT_SIZE); // default value: 32 * EVENTS_EVENT_SIZE
-Thread t;
+Thread t; // thread for event queue - at the moment is used only by sonars
 
 /*
  * Main function
  */
 int main() {
-    // If you want to rum one of the tests from tests.cpp, just call it here
+    // If you want to run one of the tests from tests.cpp, just call it here
 
     // Start the event queue
     t.start(callback(&queue, &EventQueue::dispatch_forever));

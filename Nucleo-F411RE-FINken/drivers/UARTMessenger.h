@@ -3,6 +3,7 @@
 #include "AbstractComponent.h"
 #include "vector"
 
+#define MIN_MSG_SIZE 2 // Length itself (one byte) and checksum (one byte) - minimal possible message
 #define MAX_MSG_NUMBER 16
 #define BUF_SIZE 256
 
@@ -53,11 +54,11 @@ private:
     void nullFunc(int size);
 
     Serial uart;
-    const SubMessage* subMessages[MAX_MSG_NUMBER];
-    SubMessage* messagesFromPaparazzi[MAX_MSG_NUMBER];
-    int count;
-    int paparazziCount;
-    uint8_t messageLength;
-    uint8_t message[BUF_SIZE];
-    uint8_t paparazziMsg[BUF_SIZE];
+    const SubMessage* subMessagesToPaparazzi[MAX_MSG_NUMBER];
+    SubMessage subMessagesFromPaparazzi[MAX_MSG_NUMBER];
+    uint8_t toPaparazziCount;
+    uint8_t fromPaparazziCount;
+    uint8_t toPaparazziMsgLength;
+    uint8_t toPaparazziMsg[BUF_SIZE];
+    uint8_t fromPaparazziMsg[BUF_SIZE];
 };
