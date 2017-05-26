@@ -92,10 +92,9 @@ void UARTMessenger::processPaparazziMsg(int size) {
     bool validation = validateChecksum(fromPaparazziMsg, size);
 
     if (true) {
-        // Start from second byte because of gtkterm
-        fromPaparazziCount = fromPaparazziMsg[1];
+        fromPaparazziCount = fromPaparazziMsg[0];
 
-        int pos = 2;
+        int pos = 1;
         for(int i = 0; i < fromPaparazziCount; i++) {
             SubMessage paparazziSubMessage;
 

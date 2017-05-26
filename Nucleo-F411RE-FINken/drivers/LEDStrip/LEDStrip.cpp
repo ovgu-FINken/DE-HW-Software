@@ -48,12 +48,18 @@ void LEDStrip::update() {
 }
 
 void LEDStrip::onPaparazziMsg(SubMessage* msg) {
-    int pos = 0;
+    int pos = -1;
     for (int i = 0; i < msg->length / 4; i++) {
-        uint8_t led = msg->data[pos];
-        px.SetR(led, msg->data[++pos]);
-        px.SetG(led, msg->data[++pos]);
-        px.SetB(led, msg->data[++pos]);
+        uint8_t led = msg->data[++pos];
+        if (msg->length == 4 && led > stripSize) {
+            px.SetAllR(msg->data[++pos]);
+            px.SetAllG(msg->data[++pos]);
+            px.SetAllB(msg->data[++pos]);
+        } else {
+            px.SetR(led, msg->data[++pos]);
+            px.SetG(led, msg->data[++pos]);
+            px.SetB(led, msg->data[++pos]);
+        }
     }
     return;
 }
