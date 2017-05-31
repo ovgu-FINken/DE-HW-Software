@@ -65,24 +65,28 @@ void irSensorAnalogTest() {
  */
 void sonarI2CTest() {
     I2C i2c(I2C_SDA, I2C_SCL);
-    const int addr = (0x70 << 1);
-    char config_r[2];
+    const int address = (0x70 << 1);
+    char config[2];
     char range_read[2];
     int range;
     while (true)
     {
-        config_r[0] = 0x51; //set pointer reg to ‘cmd register'
-        config_r[1] = 0x00; // config data byte1
-        int a = i2c.write(addr, config_r, 1);
-        //pc.printf("Write returned %i\n\r", a);
-        wait(0.08);
-        if (i2c.read(addr | 1, range_read, 2) != 0) //read the two-byte range data
+        config[0] = 0x51; //initializing the address as 81
+        int a = i2c.write(address & ~1, config, 1);
+        if (a != 0)
+            pc.printf("Writing failed");
+
+        Thread::wait(80);;
+
+        a = i2c.read(address | 0x01, range_read, 2); //read the two-byte range data
+        if (a != 0)
             pc.printf("Reading failed");
         else {
             range = ((range_read[0] << 8) + range_read[1]);
             pc.printf("Range = %i cm\n\r", range); //print range on screen
         }
-        Thread::wait(50);
+
+        Thread::wait(500);
 
     }
 }

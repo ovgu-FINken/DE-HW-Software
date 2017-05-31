@@ -11,9 +11,16 @@ public:
      *
      * @param uartMsngr Pointer to UARTMessenger object, that should be used for sending data to Paparazzi
      * @param addr Address of the Sonar
+     * @param queue mbed EventQueue
      */
     Sonar(UARTMessenger *const uartMsngr, uint8_t addr, EventQueue *const queue);
+
     virtual void update();
+
+    /**
+     *
+     * @return current range of this sensor
+     */
     uint16_t getRange();
 
 private:

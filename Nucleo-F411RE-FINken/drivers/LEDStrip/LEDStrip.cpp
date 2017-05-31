@@ -2,9 +2,10 @@
 #include "WS2812.h"
 #include "PixelArray.h"
 
-LEDStrip::LEDStrip(UARTMessenger *const uartMsngr, PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh, int oneLow): uartMessenger(uartMsngr), ws(pin, size, zeroHigh, zeroLow, oneHigh, oneLow), px(size) {
+LEDStrip::LEDStrip(UARTMessenger *const uartMsngr, PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh,
+                   int oneLow) : uartMessenger(uartMsngr), ws(pin, size, zeroHigh, zeroLow, oneHigh, oneLow), px(size) {
     id = ++s_id;
-    ws.useII(WS2812::OFF); // use per-pixel intensity scaling
+    ws.useII(WS2812::OFF); // off intensity scaling
     stripSize = size;
     offset = 0;
     mode = 0;
@@ -47,7 +48,7 @@ void LEDStrip::update() {
     }
 }
 
-void LEDStrip::onPaparazziMsg(SubMessage* msg) {
+void LEDStrip::onPaparazziMsg(SubMessage *msg) {
     int pos = -1;
     for (int i = 0; i < msg->length / 4; i++) {
         uint8_t led = msg->data[++pos];

@@ -16,6 +16,7 @@ public:
      * @param rx receive pin
      */
     UARTMessenger(PinName tx, PinName rx);
+
     virtual void update();
 
     /**
@@ -25,6 +26,12 @@ public:
      */
     void appendMessage(const SubMessage& subMessage);
 
+    /**
+     * Check if there is currently a message from Paparazzi with this id
+     *
+     * @param id - id of the component
+     * @return SubMessage* if found, nullptr otherwise
+     */
     SubMessage* checkForMsgFromPaparazzi(int id);
 
 private:
@@ -46,23 +53,31 @@ private:
      */
     void calculateChecksum(uint8_t *pkt, uint8_t const length);
 
-    void readByte();
-
     /**
-     * Process message from Paparazzi, if there is one
+     * Process message from Paparazzi, if there is one.
+     * Used as callback for mbed read() function.
+     *
+     * @param size - size of the message
      */
     void processPaparazziMsg(int size);
 
+    /**
+     * Used as null callback for mbed write() function
+     *
+     * @param size - size of the message
+     */
     void nullFunc(int size);
 
     Serial uart;
     const SubMessage* subMessagesToPaparazzi[MAX_MSG_NUMBER];
     SubMessage subMessagesFromPaparazzi[MAX_MSG_NUMBER];
+
     uint8_t toPaparazziCount;
     uint8_t fromPaparazziCount;
     uint8_t toPaparazziMsgLength;
     uint8_t toPaparazziMsg[BUF_SIZE];
     uint8_t fromPaparazziMsg[BUF_SIZE];
 
-    uint8_t position;
+    uint8_t startByte;
+    uint8_t stopByte;
 };

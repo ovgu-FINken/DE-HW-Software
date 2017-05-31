@@ -8,8 +8,8 @@ UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx, 9600) {
     fromPaparazziCount = 0;
     toPaparazziMsgLength = MIN_MSG_SIZE;
 
-//    uart.attach(&UARTMessenger::readByte);
-    position = 0;
+    startByte = 0xFE;
+    stopByte = 0xFF;
 }
 
 void UARTMessenger::update() {
@@ -36,11 +36,10 @@ void UARTMessenger::update() {
     uart.write(toPaparazziMsg, toPaparazziMsgLength, callback(this, &UARTMessenger::nullFunc));
 
     // forget old messages from Paparazzi
-//    fromPaparazziCount = 0;
     memset(fromPaparazziMsg, 0, BUF_SIZE);
 
     // check if we have message from Paparazzi
-    uart.read(fromPaparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPaparazziMsg), SERIAL_EVENT_RX_COMPLETE | SERIAL_EVENT_RX_CHARACTER_MATCH, 255);
+    uart.read(fromPaparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPaparazziMsg), SERIAL_EVENT_RX_COMPLETE | SERIAL_EVENT_RX_CHARACTER_MATCH, stopByte);
 
     // forget about old messages to Paparazzi
     toPaparazziCount = 0;
@@ -78,19 +77,10 @@ void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
     *(pkt + pos) = 0x0 - sum;
 }
 
-void UARTMessenger::readByte() {
-    while (uart.readable()) {
-        fromPaparazziMsg[position++] = uart.getc();
-    }
-    if (position == 2) {
-        processPaparazziMsg(position);
-        position = 0;
-    }
-}
-
 void UARTMessenger::processPaparazziMsg(int size) {
     bool validation = validateChecksum(fromPaparazziMsg, size);
 
+    // ATTENTION: change to 'if (validation)' in real application
     if (true) {
         fromPaparazziCount = fromPaparazziMsg[0];
 
