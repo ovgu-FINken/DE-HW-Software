@@ -7,7 +7,6 @@ Sonar::Sonar(UARTMessenger *const uartMsngr, uint8_t addr, EventQueue *const que
     id = ++s_id;
     i2c.frequency(50000);
     address = addr << 1;
-
 }
 
 void Sonar::update() {

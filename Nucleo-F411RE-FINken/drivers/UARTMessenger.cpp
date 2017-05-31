@@ -4,6 +4,7 @@
 
 UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx, 9600) {
     id = ++s_id;
+
     toPaparazziCount = 0;
     fromPaparazziCount = 0;
     toPaparazziMsgLength = MIN_MSG_SIZE;
@@ -82,10 +83,11 @@ void UARTMessenger::processPaparazziMsg(int size) {
 
     // ATTENTION: change to 'if (validation)' in real application
     if (true) {
+        // Currently it's just overwriting the old messages
         fromPaparazziCount = fromPaparazziMsg[0];
 
         int pos = 1;
-        for(int i = 0; i < fromPaparazziCount; i++) {
+        for(int i = 0; i < fromPaparazziCount && i < MAX_MSG_NUMBER; i++) {
             SubMessage paparazziSubMessage;
 
             paparazziSubMessage.type = fromPaparazziMsg[pos++];
@@ -107,6 +109,7 @@ SubMessage* UARTMessenger::checkForMsgFromPaparazzi(int id) {
     // check if message from paparazzi has something for component with this id
     for (int i = 0; i < fromPaparazziCount; i++) {
         if (subMessagesFromPaparazzi[i].id == id) {
+            subMessagesFromPaparazzi[i].id = 0; // invalidate this submessage
             return &subMessagesFromPaparazzi[i];
         }
     }
