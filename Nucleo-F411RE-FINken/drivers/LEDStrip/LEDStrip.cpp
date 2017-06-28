@@ -1,6 +1,17 @@
 #include "LEDStrip.h"
 #include "WS2812.h"
 #include "PixelArray.h"
+/**
+      
+      * Constructor for creating a new LED Strip
+      *
+      * @param pin Output pin. Connect to "Din" on the first WS2812 in the strip
+      * @param size Number of LEDs in your strip
+      * @param zeroHigh How many NOPs to insert to ensure TOH is properly generated. See library description for more information.
+      * @param zeroLow How many NOPs to insert to ensure TOL is properly generated. See library description for more information.
+      * @param oneHigh How many NOPs to insert to ensure T1H is properly generated. See library description for more information.
+      * @param oneLow How many NOPs to insert to ensure T1L is properly generated. See library description for more information.
+*/
 
 LEDStrip::LEDStrip(UARTMessenger *const uartMsngr, PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh,
                    int oneLow) : uartMessenger(uartMsngr), ws(pin, size, zeroHigh, zeroLow, oneHigh, oneLow), px(size) {
@@ -10,14 +21,37 @@ LEDStrip::LEDStrip(UARTMessenger *const uartMsngr, PinName pin, int size, int ze
     offset = 0;
     mode = 0;
 }
-
+/**
+     * Set LED Strip to manual control instead of getting control action from paparazzi, which is set by default
+     *
+     * @param mode one of predifined modes
+*/
 void LEDStrip::setMode(uint8_t mode) {
     this->mode = mode;
 }
 
+/**
+     * Set color to LED Strip
+     *
+     * @param color color in RGB format, e.g. 0x00FF00
+*/
+
 void LEDStrip::setColor(unsigned int color) {
     px.Set(0, color);
 }
+
+/**
+
+      *The update fucntion will be to the LEDstrip when the control from paparazzi is received and check the message from paparrazi
+       with respect to id 
+      *
+      *Then check if the paparazzi message received is not null then go to the method onPaparazziMsg to recieve paparazzi message
+      *
+      *set write offset passing parameters.
+      *
+      *while givng the the submesage provide the LED strio Id and append message to the uartmessenger
+
+*/
 
 void LEDStrip::update() {
     switch (mode) {
@@ -30,7 +64,7 @@ void LEDStrip::update() {
                 ws.write_offsets(px.getBuf(), 0, 0, 0);
             }
 
-            //  Need to send the id of the LEDStrip first to be able to communicate. Do this every time?
+            //  Need to send the id of the LEDStrip first to be able to communicate.
             subMessage.type = LEDSTRIP;
             subMessage.id = id;
             subMessage.length = 0;
@@ -47,6 +81,13 @@ void LEDStrip::update() {
             break;
     }
 }
+
+/**
+     * Reaction on the message from Paparazzi.
+     * @param Expected message structure: type (1 byte), id (1 byte), length (1 byte), data (length byte)
+     * @param Datastructure: led id (1 byte), red channel (1 byte), green channel (1 byte), blue channel (1 byte)
+     * @param SubMessage came from Paparazzi
+*/
 
 void LEDStrip::onPaparazziMsg(SubMessage *msg) {
     int pos = -1;

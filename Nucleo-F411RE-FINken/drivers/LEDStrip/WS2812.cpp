@@ -1,5 +1,17 @@
 #include "WS2812.h"
 
+/**
+    *   Constructor
+    *
+    * @param pin Output pin. Connect to "Din" on the first WS2812 in the strip
+    * @param size Number of LEDs in your strip
+    * @param zeroHigh How many NOPs to insert to ensure TOH is properly generated. See library description for more information.
+    * @param zeroLow How many NOPs to insert to ensure TOL is properly generated. See library description for more information.
+    * @param oneHigh How many NOPs to insert to ensure T1H is properly generated. See library description for more information.
+    * @param oneLow How many NOPs to insert to ensure T1L is properly generated. See library description for more information.
+    *
+*/
+
 WS2812::WS2812(PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh, int oneLow) : __gpo(pin)
 {
     __size = size;
@@ -17,6 +29,17 @@ WS2812::~WS2812()
 {
     delete[] __transmitBuf;
 }
+
+/**
+    *   Writes the given buffer to the LED strip with the given offsets.
+    *   NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section.
+    *
+    * @param buf Pointer to the PixelArray buffer
+    * @param r_offset The offset where each each pixel pulls its red component. Wraps to beginning if end is reached.
+    * @param g_offset The offset where each each pixel pulls its green component. Wraps to beginning if end is reached.
+    * @param b_offset The offset where each each pixel pulls its blue component. Wraps to beginning if end is reached.
+    *
+*/
 
 void WS2812::setDelays(int zeroHigh, int zeroLow, int oneHigh, int oneLow) {
     __zeroHigh = zeroHigh;
@@ -73,6 +96,14 @@ void WS2812::__loadBuf(int buf[],int r_offset, int g_offset, int b_offset) {
     }
 }
 
+/**
+    *   Writes the given buffer to the LED strip
+    *   NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section.
+    *
+    * @param buf Pointer to the PixelArray buffer
+    *
+*/
+
 void WS2812::write(int buf[]) {
     write_offsets(buf, 0, 0, 0);
 }
@@ -111,6 +142,12 @@ void WS2812::write_offsets (int buf[],int r_offset, int g_offset, int b_offset) 
     __enable_irq();
 }
 
+/**
+    *   Sets the brightness mode
+    *
+    * @param bc The brightness control. Defaults to OFF. Possible values include OFF, GLOBAL, and PER_PIXEL
+    *
+*/
 
 void WS2812::useII(BrightnessControl bc)
 {
@@ -120,6 +157,13 @@ void WS2812::useII(BrightnessControl bc)
         __use_II = OFF;
     }
 }
+
+/**
+    *   Sets the global brightness level.
+    *
+    * @param II The brightness level. Possible values include 0 - 255 (0x00 - 0xFF).
+    *
+*/
 
 void WS2812::setII(unsigned char II)
 {

@@ -1,5 +1,10 @@
 #include "PixelArray.h"
 
+//!Library for the WS2812 RGB LED with integrated controller
+
+/*
+	PixelArray with the size
+*/
 PixelArray::PixelArray(int size)
 {
     pbufsize = size;
@@ -7,6 +12,10 @@ PixelArray::PixelArray(int size)
     SetAll(0x0); // initialise memory to zeros
 
 }
+
+/*
+    Destroys instance.
+*/
 
 PixelArray::~PixelArray()
 {
@@ -30,7 +39,9 @@ void PixelArray::SetAllI(unsigned char value)
     }
 }
 
-
+/*
+	Set pixel for R
+*/
 
 void PixelArray::SetAllR(unsigned char value)
 {
@@ -39,6 +50,9 @@ void PixelArray::SetAllR(unsigned char value)
         __set_pixel_component(i,2,value);
     }
 }
+/*
+	Set pixel for G
+*/
 
 void PixelArray::SetAllG(unsigned char value)
 {
@@ -48,6 +62,10 @@ void PixelArray::SetAllG(unsigned char value)
     }
 }
 
+/*
+	Set pixel for B
+*/
+
 void PixelArray::SetAllB(unsigned char value)
 {
     // for each pixel
@@ -55,9 +73,6 @@ void PixelArray::SetAllB(unsigned char value)
         __set_pixel_component(i,0,value);
     }
 }
-
-
-
 
 
 void PixelArray::Set(int i, unsigned int value)
