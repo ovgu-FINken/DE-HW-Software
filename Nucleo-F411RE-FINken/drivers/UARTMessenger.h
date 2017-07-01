@@ -20,15 +20,13 @@ public:
     virtual void update();
 
     /**
-     * Append new message for sending to Paparazzi
      *
      * @param subMessage message to be added
      */
     void appendMessage(const SubMessage& subMessage);
 
     /**
-     * Check if there is currently a message from Paparazzi with this id
-     *
+     
      * @param id - id of the component
      * @return SubMessage* if found, nullptr otherwise
      */

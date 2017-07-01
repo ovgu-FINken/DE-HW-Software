@@ -7,11 +7,7 @@
 
 class AbstractComponent {
 public:
-    /**
-     * Main function for using all the components.
-     * Update component data and add this information to UARTMessenger.
-     * In case of UARTMessenger itself sends the message to Paparazzi
-     */
+  
     virtual void update() = 0;
 
     /**

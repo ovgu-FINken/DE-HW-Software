@@ -4,9 +4,7 @@
 
 /**
      * Constructor for UARTMessenger
-     *
-     * @param tx transmit pin
-     * @param rx receive pin
+     
 */
 
 UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx, 9600) {
@@ -57,8 +55,7 @@ void UARTMessenger::update() {
 
 /**
      * Append new message for sending to Paparazzi
-     *
-     * @param subMessage message to be added
+     
 */
 
 void UARTMessenger::appendMessage(const SubMessage &subMessage) {
@@ -72,9 +69,6 @@ void UARTMessenger::appendMessage(const SubMessage &subMessage) {
 }
 /**
      * Validate the checksum of the byte array
-     *
-     * @param pkt pointer to the byte array
-     * @param length number of bytes in the array
      *
      * @return true if validation was successful
 */
@@ -90,9 +84,6 @@ bool UARTMessenger::validateChecksum(uint8_t const *pkt, uint8_t const length) {
 }
 /**
      * Add checksum to the end of the byte array
-     *
-     * @param pkt pointer to the byte array
-     * @param length number of bytes in the array
 */
 
 void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
@@ -107,8 +98,7 @@ void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
 /**
      * Process message from Paparazzi, if there is one.
      * Used as callback for mbed read() function.
-     *
-     * @param size - size of the message
+    
 */
 
 void UARTMessenger::processPaparazziMsg(int size) {
@@ -138,8 +128,7 @@ void UARTMessenger::processPaparazziMsg(int size) {
 
 /**
      * Used as null callback for mbed write() function
-     *
-     * @param size - size of the message
+    
 */
 void UARTMessenger::nullFunc(int size) {}
 

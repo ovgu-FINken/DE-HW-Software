@@ -4,13 +4,7 @@
 /**
       
       * Constructor for creating a new LED Strip
-      *
-      * @param pin Output pin. Connect to "Din" on the first WS2812 in the strip
-      * @param size Number of LEDs in your strip
-      * @param zeroHigh How many NOPs to insert to ensure TOH is properly generated. See library description for more information.
-      * @param zeroLow How many NOPs to insert to ensure TOL is properly generated. See library description for more information.
-      * @param oneHigh How many NOPs to insert to ensure T1H is properly generated. See library description for more information.
-      * @param oneLow How many NOPs to insert to ensure T1L is properly generated. See library description for more information.
+      
 */
 
 LEDStrip::LEDStrip(UARTMessenger *const uartMsngr, PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh,
@@ -23,17 +17,15 @@ LEDStrip::LEDStrip(UARTMessenger *const uartMsngr, PinName pin, int size, int ze
 }
 /**
      * Set LED Strip to manual control instead of getting control action from paparazzi, which is set by default
-     *
-     * @param mode one of predifined modes
-*/
+
+ */
 void LEDStrip::setMode(uint8_t mode) {
     this->mode = mode;
 }
 
 /**
      * Set color to LED Strip
-     *
-     * @param color color in RGB format, e.g. 0x00FF00
+    
 */
 
 void LEDStrip::setColor(unsigned int color) {
@@ -84,9 +76,9 @@ void LEDStrip::update() {
 
 /**
      * Reaction on the message from Paparazzi.
-     * @param Expected message structure: type (1 byte), id (1 byte), length (1 byte), data (length byte)
-     * @param Datastructure: led id (1 byte), red channel (1 byte), green channel (1 byte), blue channel (1 byte)
-     * @param SubMessage came from Paparazzi
+     * Expected message structure: type (1 byte), id (1 byte), length (1 byte), data (length byte)
+     * Datastructure: led id (1 byte), red channel (1 byte), green channel (1 byte), blue channel (1 byte)
+     * SubMessage came from Paparazzi
 */
 
 void LEDStrip::onPaparazziMsg(SubMessage *msg) {

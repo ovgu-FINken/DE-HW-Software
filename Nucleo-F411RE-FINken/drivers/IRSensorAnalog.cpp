@@ -3,15 +3,7 @@
 
 #define REFERENCE_VOLTAGE 3300 // in mV
 
-/**
 
-	*@param IR Sensor Analog has the constructor is the pointer of uartMsngr got from UARTMessenger
-
-	*@param dataPin - pin on board, where data pin of IR sensor is connected
-
-	*@param lookupTable - two-dimensional array, describing relation between sensor output and distance,set in millimeters
-
-*/ 
 
 IRSensorAnalog::IRSensorAnalog(UARTMessenger *const uartMsngr, PinName pin, std::vector<std::vector<int> > lookupTable): uartMessenger(uartMsngr), dataPin(pin), sensor(dataPin) {
     id = ++s_id;

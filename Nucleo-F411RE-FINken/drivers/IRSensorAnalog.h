@@ -5,9 +5,7 @@
 #include <vector>
 
 class UARTMessenger;
-/**
- *
- */
+
 class IRSensorAnalog: public AbstractComponent {
 public:
     /**

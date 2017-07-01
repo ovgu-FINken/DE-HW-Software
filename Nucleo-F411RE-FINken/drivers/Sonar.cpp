@@ -4,10 +4,7 @@
 #include "mbed_events.h"
 /**
      * Constructor for Sonar
-     *
-     * @param uartMsngr Pointer to UARTMessenger object, using for sending data to Paparazzi
-     * @param addr Address of the Sonar
-     * @param queue mbed EventQueue
+    
 */
 Sonar::Sonar(UARTMessenger *const uartMsngr, uint8_t addr, EventQueue *const queue) : uartMessenger(uartMsngr), queue(queue), i2c(I2C_SDA, I2C_SCL) {
     id = ++s_id;

@@ -1,10 +1,5 @@
 #include "IRSensorDigital.h"
 
-/**
-	* @param dataPin - pin on board, where data pin of IR sensor is connected
-	* @param detectionRange - distance of detection for this sensor
-*/
-
 IRSensorDigital::IRSensorDigital(UARTMessenger *const uartMsngr, PinName pin, float detectionRange):uartMessenger(uartMsngr),dataPin(pin),sensor(dataPin) {
     id = ++s_id;
     this->detectionRange = detectionRange;
