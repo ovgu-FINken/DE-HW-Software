@@ -40,12 +40,21 @@ int main() {
     uartMessenger->setPriority(5);
 
     components.emplace_back(new Sonar(uartMessenger, 112, &queue)); // 112 = 0x70
+
     components.emplace_back(new IRSensorAnalog(uartMessenger, A0, pololu10_150));
 
-    LEDStrip *ledStrip = new LEDStrip(uartMessenger, PC_5, 24, 0, 5, 4, 3); // experimentally defined values
-    components.emplace_back(ledStrip);
-    ledStrip->setMode(0);
-//    ledStrip->setColor(0x110011);
+    LEDStrip& ledStrip = *new LEDStrip(uartMessenger, PC_5, 8, 0, 8, 8, 0); // experimentally defined values
+    components.emplace_back(&ledStrip);
+    ledStrip.setMode(1);
+    ledStrip.setColor(0x0000FF, 0);
+    ledStrip.setColor(0x0000FF, 1);
+    ledStrip.setColor(0x0000FF, 2);
+    ledStrip.setColor(0x0000FF, 3);
+    ledStrip.setColor(0x00FF00, 4);
+    ledStrip.setColor(0xFF0000, 5);
+    ledStrip.setColor(0xFF0000, 6);
+    ledStrip.setColor(0x00FF00, 7);
+
     components.emplace_back(new SimpleLED(LED1));
 
     components.emplace_back(uartMessenger);

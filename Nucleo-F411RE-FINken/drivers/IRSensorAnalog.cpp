@@ -3,6 +3,9 @@
 
 #define REFERENCE_VOLTAGE 3300 // in mV
 
+/**
+ * Constructor for analog IRSensor
+ */
 IRSensorAnalog::IRSensorAnalog(UARTMessenger *const uartMsngr, PinName pin, std::vector<std::vector<int> > lookupTable): uartMessenger(uartMsngr), dataPin(pin), sensor(dataPin) {
     id = ++s_id;
     this->lookupTable = lookupTable;

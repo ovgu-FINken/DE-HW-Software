@@ -9,15 +9,13 @@ class UARTMessenger;
 class IRSensorAnalog: public AbstractComponent {
 public:
     /**
-     * Constructor for analog IRSensor
-     *
+     * @param uartMsngr UARTMessenger object for communicating with Paparazzi
      * @param dataPin - pin on board, where data pin of IR sensor is connected
      * @param lookupTable - two-dimensional array, describing relation between sensor output and distance, set in millimeters
      */
     IRSensorAnalog(UARTMessenger *const uartMsngr, PinName dataPin, std::vector<std::vector<int> > lookupTable);
 
     /**
-     *
      * @return - range of sensor in meters
      */
     float getRange();
