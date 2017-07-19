@@ -2,23 +2,19 @@
 #include <stdint.h>
 #include "IRQLock.h"
 #include "mbed_events.h"
+
 /**
-     * Constructor for Sonar
-    
-*/
+ * Constructor for Sonar
+ */
 Sonar::Sonar(UARTMessenger *const uartMsngr, uint8_t addr, EventQueue *const queue) : uartMessenger(uartMsngr), queue(queue), i2c(I2C_SDA, I2C_SCL) {
     id = ++s_id;
     i2c.frequency(50000);
     address = addr << 1;
 }
 
-
 /**
-     *
-     * @return current range of this sensor
-     * It will call the function everytime after 80ms
-*/
-
+ * Write value to i2c for the sonar.
+ */
 void Sonar::update() {
     i2c.lock();
     config[0] = 0x51; //initializing the address as 81
@@ -27,18 +23,15 @@ void Sonar::update() {
         return; // Writing failed
     i2c.unlock();
 
+    // move read function to the queue to be called after 80 ms
     queue->call_in(80, callback(this, &Sonar::read));
 }
+
 /**
-
-	*Read the range and then bit will be shifted towards left 8 bytes
-
-	*Type of the sensor is SONAR,id of the sensor,converting to data range to uint16_t,length of the range
-
-	*Append the message
-
-*/
-
+ * Read the range and then bit will be shifted towards left 8 bytes.
+ * Type of the sensor is SONAR, id of the sensor, converting to data range to uint16_t, length of the range.
+ * Appends the message to uart list.
+ */
 void Sonar::read() {
     i2c.lock();
     char range_read[2];

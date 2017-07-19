@@ -3,8 +3,6 @@
 
 #define REFERENCE_VOLTAGE 3300 // in mV
 
-
-
 IRSensorAnalog::IRSensorAnalog(UARTMessenger *const uartMsngr, PinName pin, std::vector<std::vector<int> > lookupTable): uartMessenger(uartMsngr), dataPin(pin), sensor(dataPin) {
     id = ++s_id;
     this->lookupTable = lookupTable;
@@ -12,18 +10,11 @@ IRSensorAnalog::IRSensorAnalog(UARTMessenger *const uartMsngr, PinName pin, std:
 }
 
 /**
-
-	*Read the sensor value and product with the Refernece voltage
-
-	*We can get range from torange function
-
-	*Submessage is struct where we get type of the sensor =IRANALOG,id of the sensor,data,length of the range size
-
-	*UartMessenger appends submessage which is in UARTMessenger
-
-
-*/
-
+ * Read the sensor value and product with the reference voltage.
+ * We can get range from toRange() function.
+ * Submessage is struct where we get type of the sensor = IRANALOG, id of the sensor, data, length of the range size.
+ * UartMessenger appends submessage which is in UARTMessenger.
+ */
 void IRSensorAnalog::update() {
     float value = sensor.read() * REFERENCE_VOLTAGE;
     range = toRange(value);
@@ -37,11 +28,11 @@ void IRSensorAnalog::update() {
 }
 
 /**
-
-	*@param We will get sensor output two-dimensional array,describing relation between sensor output and distance,
-         set in millimeters
-
-*/
+ * Calculates distance from voltage output and lookup table.
+ *
+ * @param sensorOutput output of the sensor - voltage
+ * @return float value of a range between min and max values from lookup table
+ */
 float IRSensorAnalog::toRange(float sensorOutput) {
     float distance = 0;
 

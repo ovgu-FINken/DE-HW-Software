@@ -10,8 +10,6 @@
 class UARTMessenger: public AbstractComponent {
 public:
     /**
-     * Constructor for UARTMessenger
-     *
      * @param tx transmit pin
      * @param rx receive pin
      */
@@ -20,13 +18,11 @@ public:
     virtual void update();
 
     /**
-     *
      * @param subMessage message to be added
      */
     void appendMessage(const SubMessage& subMessage);
 
     /**
-     
      * @param id - id of the component
      * @return SubMessage* if found, nullptr otherwise
      */
@@ -34,8 +30,6 @@ public:
 
 private:
     /**
-     * Validate the checksum of the byte array
-     *
      * @param pkt pointer to the byte array
      * @param length number of bytes in the array
      *
@@ -44,24 +38,17 @@ private:
     bool validateChecksum(uint8_t const *pkt, uint8_t const length);
 
     /**
-     * Add checksum to the end of the byte array
-     *
      * @param pkt pointer to the byte array
      * @param length number of bytes in the array
      */
     void calculateChecksum(uint8_t *pkt, uint8_t const length);
 
     /**
-     * Process message from Paparazzi, if there is one.
-     * Used as callback for mbed read() function.
-     *
      * @param size - size of the message
      */
     void processPaparazziMsg(int size);
 
     /**
-     * Used as null callback for mbed write() function
-     *
      * @param size - size of the message
      */
     void nullFunc(int size);
