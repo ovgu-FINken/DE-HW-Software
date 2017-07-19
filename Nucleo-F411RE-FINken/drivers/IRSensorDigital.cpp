@@ -1,10 +1,5 @@
 #include "IRSensorDigital.h"
 
-/**
-	* @param dataPin - pin on board, where data pin of IR sensor is connected
-	* @param detectionRange - distance of detection for this sensor
-*/
-
 IRSensorDigital::IRSensorDigital(UARTMessenger *const uartMsngr, PinName pin, float detectionRange):uartMessenger(uartMsngr),dataPin(pin),sensor(dataPin) {
     id = ++s_id;
     this->detectionRange = detectionRange;
@@ -12,21 +7,12 @@ IRSensorDigital::IRSensorDigital(UARTMessenger *const uartMsngr, PinName pin, fl
 };
 
 /**
-
-	*if the value is less than the detectionRange then it will return the true value
-
-	* SubMessage type is IRDIGITAL,Id of the sensor
-
-	*reinterpret_cast is that  submessgae.data will be converting into boolean 
-         Returns a value of type boolean
-
-	*Length is size inRange
-
-  	*Append the message
-
-*/
-
-
+ * If the value is less than the detectionRange then it will return the true value.
+ * SubMessage type is IRDIGITAL, Id of the sensor.
+ * reinterpret_cast is that  submessage.data will be converted into boolean.
+ * Length is size of inRange.
+ * Appends the message to uart list.
+ */
 void IRSensorDigital::update() {
     float value = sensor.read();
     if (value > detectionRange) {

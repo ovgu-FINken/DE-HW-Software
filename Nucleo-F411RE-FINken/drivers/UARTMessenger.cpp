@@ -3,12 +3,8 @@
 #include "IRQLock.h"
 
 /**
-     * Constructor for UARTMessenger
-     *
-     * @param tx transmit pin
-     * @param rx receive pin
-*/
-
+ * Constructor for UARTMessenger
+ */
 UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx, 9600) {
     id = ++s_id;
 
@@ -19,7 +15,6 @@ UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx, 9600) {
     startByte = 0xFE;
     stopByte = 0xFF;
 }
-
 
 void UARTMessenger::update() {
     IRQLock lock;
@@ -56,11 +51,8 @@ void UARTMessenger::update() {
 }
 
 /**
-     * Append new message for sending to Paparazzi
-     *
-     * @param subMessage message to be added
-*/
-
+ * Append new message for sending to Paparazzi.
+ */
 void UARTMessenger::appendMessage(const SubMessage &subMessage) {
     IRQLock lock;
     if (toPaparazziCount >= MAX_MSG_NUMBER) {
@@ -70,14 +62,10 @@ void UARTMessenger::appendMessage(const SubMessage &subMessage) {
     toPaparazziMsgLength += subMessagesToPaparazzi[toPaparazziCount]->length + 3;
     toPaparazziCount++;
 }
+
 /**
-     * Validate the checksum of the byte array
-     *
-     * @param pkt pointer to the byte array
-     * @param length number of bytes in the array
-     *
-     * @return true if validation was successful
-*/
+ * Validate the checksum of the byte array
+ */
 bool UARTMessenger::validateChecksum(uint8_t const *pkt, uint8_t const length) {
     uint8_t pos = 0;
     uint8_t sum = 0;
@@ -88,13 +76,10 @@ bool UARTMessenger::validateChecksum(uint8_t const *pkt, uint8_t const length) {
 
     return (sum == *(pkt + pos));
 }
-/**
-     * Add checksum to the end of the byte array
-     *
-     * @param pkt pointer to the byte array
-     * @param length number of bytes in the array
-*/
 
+/**
+ * Add checksum to the end of the byte array
+ */
 void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
     uint8_t pos = 0;
     uint8_t sum = 0;
@@ -104,13 +89,11 @@ void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
     // put the checksum into the data stream
     *(pkt + pos) = 0x0 - sum;
 }
-/**
-     * Process message from Paparazzi, if there is one.
-     * Used as callback for mbed read() function.
-     *
-     * @param size - size of the message
-*/
 
+/**
+ * Process message from Paparazzi, if there is one.
+ * Used as callback for mbed read() function.
+ */
 void UARTMessenger::processPaparazziMsg(int size) {
     bool validation = validateChecksum(fromPaparazziMsg, size);
 
@@ -137,17 +120,13 @@ void UARTMessenger::processPaparazziMsg(int size) {
 }
 
 /**
-     * Used as null callback for mbed write() function
-     *
-     * @param size - size of the message
-*/
+ * Used as null callback for mbed write() function
+ */
 void UARTMessenger::nullFunc(int size) {}
 
 /**
-
-     *check if message from paparazzi has something for component with this id
-
-*/
+ * check if message from paparazzi has something for component with this id
+ */
 SubMessage* UARTMessenger::checkForMsgFromPaparazzi(int id) {
     // check if message from paparazzi has something for component with this id
     for (int i = 0; i < fromPaparazziCount; i++) {

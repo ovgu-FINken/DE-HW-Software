@@ -7,8 +7,6 @@
 class Sonar: public AbstractComponent {
 public:
     /**
-     * Constructor for Sonar
-     *
      * @param uartMsngr Pointer to UARTMessenger object, that should be used for sending data to Paparazzi
      * @param addr Address of the Sonar
      * @param queue mbed EventQueue
