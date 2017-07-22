@@ -1,0 +1,8 @@
+<map id="AbstractComponent" name="AbstractComponent">
+<area shape="rect" id="node2" href="$class_i_r_sensor_analog.html" title="IRSensorAnalog" alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node3" href="$class_i_r_sensor_digital.html" title="IRSensorDigital" alt="" coords="145,80,255,107"/>
+<area shape="rect" id="node4" href="$class_l_e_d_strip.html" title="LEDStrip" alt="" coords="280,80,355,107"/>
+<area shape="rect" id="node5" href="$class_simple_l_e_d.html" title="SimpleLED" alt="" coords="379,80,466,107"/>
+<area shape="rect" id="node6" href="$class_sonar.html" title="Sonar" alt="" coords="491,80,547,107"/>
+<area shape="rect" id="node7" href="$class_u_a_r_t_messenger.html" title="UARTMessenger" alt="" coords="571,80,691,107"/>
+</map>

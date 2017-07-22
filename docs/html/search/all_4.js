@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['id',['id',['../struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d',1,'SubMessage']]],
-  ['irqlock',['IRQLock',['../class_i_r_q_lock.html',1,'']]],
-  ['irsensoranalog',['IRSensorAnalog',['../class_i_r_sensor_analog.html',1,'IRSensorAnalog'],['../class_i_r_sensor_analog.html#af27166832035783b3df081014c4dfb9d',1,'IRSensorAnalog::IRSensorAnalog()']]],
-  ['irsensordigital',['IRSensorDigital',['../class_i_r_sensor_digital.html',1,'IRSensorDigital'],['../class_i_r_sensor_digital.html#a43d7d836d07616260611d3cef709dff1',1,'IRSensorDigital::IRSensorDigital()']]],
-  ['isinrange',['isInRange',['../class_i_r_sensor_digital.html#a749b91dae3e83900f6de49fcc908470d',1,'IRSensorDigital']]],
-  ['i2cxl_2dmax_20sonar_20detailed_20description',['I2CXL-MAX SONAR Detailed description',['../page_name1.html',1,'']]]
+  ['data',['data',['../struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be',1,'SubMessage']]],
+  ['datapin',['dataPin',['../class_i_r_sensor_analog.html#a248c6a3f0a6a4e4867fd70c0ac0b3d76',1,'IRSensorAnalog::dataPin()'],['../class_i_r_sensor_digital.html#a4dcc356ed96053c03b4fd247b9ffc928',1,'IRSensorDigital::dataPin()']]],
+  ['detectionrange',['detectionRange',['../class_i_r_sensor_digital.html#abb7c9c63c4aa193dd828d0ee56850478',1,'IRSensorDigital']]],
+  ['distance_20sensor',['DISTANCE SENSOR',['../_i_r.html',1,'']]]
 ];

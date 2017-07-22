@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['irsensoranalog',['IRSensorAnalog',['../class_i_r_sensor_analog.html#af27166832035783b3df081014c4dfb9d',1,'IRSensorAnalog']]],
-  ['irsensordigital',['IRSensorDigital',['../class_i_r_sensor_digital.html#a43d7d836d07616260611d3cef709dff1',1,'IRSensorDigital']]],
-  ['isinrange',['isInRange',['../class_i_r_sensor_digital.html#a749b91dae3e83900f6de49fcc908470d',1,'IRSensorDigital']]]
+  ['getbuf',['getBuf',['../class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3',1,'PixelArray']]],
+  ['getpriority',['getPriority',['../class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1',1,'AbstractComponent']]],
+  ['getrange',['getRange',['../class_i_r_sensor_analog.html#aa6642b85ec1018980e216eab0dfd27f2',1,'IRSensorAnalog::getRange()'],['../class_sonar.html#a7a641bcfac1967fbc42eea2ab70886dc',1,'Sonar::getRange()']]]
 ];

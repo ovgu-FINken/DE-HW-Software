@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: PixelArray Class Reference</title>
+<title>Hardware Development of FINken III quadcopter: PixelArray Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -42,6 +51,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_pixel_array.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,10 +80,11 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_pixel_array-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PixelArray Class Reference</div>  </div>
@@ -78,43 +103,48 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a86359f5eda90e0d12e3aa2c102ade21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f4d10fcbd08290dfdecafb2ed4ad687"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a9f4d10fcbd08290dfdecafb2ed4ad687">~PixelArray</a> ()</td></tr>
 <tr class="separator:a9f4d10fcbd08290dfdecafb2ed4ad687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a987f1dc053a5cf25d78d5cfe037088d3"><td class="memItemLeft" align="right" valign="top"><a id="a987f1dc053a5cf25d78d5cfe037088d3"></a>
-int *&#160;</td><td class="memItemRight" valign="bottom"><b>getBuf</b> ()</td></tr>
+<tr class="memitem:a987f1dc053a5cf25d78d5cfe037088d3"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3">getBuf</a> ()</td></tr>
 <tr class="separator:a987f1dc053a5cf25d78d5cfe037088d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f560dcef3d1582614858969b20da89d"><td class="memItemLeft" align="right" valign="top"><a id="a5f560dcef3d1582614858969b20da89d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAll</b> (unsigned int)</td></tr>
+<tr class="memitem:a5f560dcef3d1582614858969b20da89d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a5f560dcef3d1582614858969b20da89d">SetAll</a> (unsigned int)</td></tr>
 <tr class="separator:a5f560dcef3d1582614858969b20da89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9433e281c3cc0e4f8bbf23e127d8ad2c"><td class="memItemLeft" align="right" valign="top"><a id="a9433e281c3cc0e4f8bbf23e127d8ad2c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAllI</b> (unsigned char)</td></tr>
+<tr class="memitem:a9433e281c3cc0e4f8bbf23e127d8ad2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a9433e281c3cc0e4f8bbf23e127d8ad2c">SetAllI</a> (unsigned char)</td></tr>
 <tr class="separator:a9433e281c3cc0e4f8bbf23e127d8ad2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ddfdd1a01a9877e4bfcf5a462412fd2"><td class="memItemLeft" align="right" valign="top"><a id="a9ddfdd1a01a9877e4bfcf5a462412fd2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAllR</b> (unsigned char)</td></tr>
+<tr class="memitem:a9ddfdd1a01a9877e4bfcf5a462412fd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2">SetAllR</a> (unsigned char)</td></tr>
 <tr class="separator:a9ddfdd1a01a9877e4bfcf5a462412fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88f25ee1b266e2dc0ef7ae90ff4bd12d"><td class="memItemLeft" align="right" valign="top"><a id="a88f25ee1b266e2dc0ef7ae90ff4bd12d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAllG</b> (unsigned char)</td></tr>
+<tr class="memitem:a88f25ee1b266e2dc0ef7ae90ff4bd12d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d">SetAllG</a> (unsigned char)</td></tr>
 <tr class="separator:a88f25ee1b266e2dc0ef7ae90ff4bd12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b17271fdc21503236ca6ca8e37d501b"><td class="memItemLeft" align="right" valign="top"><a id="a3b17271fdc21503236ca6ca8e37d501b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAllB</b> (unsigned char)</td></tr>
+<tr class="memitem:a3b17271fdc21503236ca6ca8e37d501b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b">SetAllB</a> (unsigned char)</td></tr>
 <tr class="separator:a3b17271fdc21503236ca6ca8e37d501b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcfe32b74beeced27f928f42131d77c1"><td class="memItemLeft" align="right" valign="top"><a id="afcfe32b74beeced27f928f42131d77c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> (int, unsigned int)</td></tr>
+<tr class="memitem:afcfe32b74beeced27f928f42131d77c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1">Set</a> (int, unsigned int)</td></tr>
 <tr class="separator:afcfe32b74beeced27f928f42131d77c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbfac74c674f63d793d85141d3a3b046"><td class="memItemLeft" align="right" valign="top"><a id="afbfac74c674f63d793d85141d3a3b046"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetI</b> (int, unsigned char)</td></tr>
+<tr class="memitem:afbfac74c674f63d793d85141d3a3b046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#afbfac74c674f63d793d85141d3a3b046">SetI</a> (int, unsigned char)</td></tr>
 <tr class="separator:afbfac74c674f63d793d85141d3a3b046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd4253e7c76f3775f31e09dfe318e3a5"><td class="memItemLeft" align="right" valign="top"><a id="abd4253e7c76f3775f31e09dfe318e3a5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetR</b> (int, unsigned char)</td></tr>
+<tr class="memitem:abd4253e7c76f3775f31e09dfe318e3a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5">SetR</a> (int, unsigned char)</td></tr>
 <tr class="separator:abd4253e7c76f3775f31e09dfe318e3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60ea8084ec95df0d51f46c9b0ff308d5"><td class="memItemLeft" align="right" valign="top"><a id="a60ea8084ec95df0d51f46c9b0ff308d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetG</b> (int, unsigned char)</td></tr>
+<tr class="memitem:a60ea8084ec95df0d51f46c9b0ff308d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5">SetG</a> (int, unsigned char)</td></tr>
 <tr class="separator:a60ea8084ec95df0d51f46c9b0ff308d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a560a654c59614fd5a6c17adb10083a78"><td class="memItemLeft" align="right" valign="top"><a id="a560a654c59614fd5a6c17adb10083a78"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetB</b> (int, unsigned char)</td></tr>
+<tr class="memitem:a560a654c59614fd5a6c17adb10083a78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78">SetB</a> (int, unsigned char)</td></tr>
 <tr class="separator:a560a654c59614fd5a6c17adb10083a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a42c6681bf771332826ecc9ad2a8cea02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">__set_pixel_component</a> (int index, int channel, int value)</td></tr>
+<tr class="separator:a42c6681bf771332826ecc9ad2a8cea02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b1a6582bc3bab1f67aebd1f97a5595d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d">__set_pixel</a> (int index, int value)</td></tr>
+<tr class="separator:a4b1a6582bc3bab1f67aebd1f97a5595d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab0109a336e69a9942b2723e43ee715d7"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">pbuf</a></td></tr>
+<tr class="separator:ab0109a336e69a9942b2723e43ee715d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca29e70f9b643bff3733ab2e694439a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a></td></tr>
+<tr class="separator:aca29e70f9b643bff3733ab2e694439a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Library for the <a class="el" href="class_w_s2812.html" title="Library for the WS2812 RGB LED with integrated controller. ">WS2812</a> RGB LED with integrated controller. </p>
 <p><a class="el" href="class_pixel_array.html" title="Library for the WS2812 RGB LED with integrated controller. ">PixelArray</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8h_source.html#l00010">10</a> of file <a class="el" href="_pixel_array_8h_source.html">PixelArray.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a86359f5eda90e0d12e3aa2c102ade21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86359f5eda90e0d12e3aa2c102ade21d">&#9670;&nbsp;</a></span>PixelArray()</h2>
@@ -136,6 +166,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetB</b> (int, unsign
 <p>Library for the <a class="el" href="class_w_s2812.html" title="Library for the WS2812 RGB LED with integrated controller. ">WS2812</a> RGB LED with integrated controller.</p>
 <p>Pixel Array </p>
 
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00008">8</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a> = size;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">pbuf</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[<a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>];</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_pixel_array.html#a5f560dcef3d1582614858969b20da89d">SetAll</a>(0x0); <span class="comment">// initialise memory to zeros</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a5f560dcef3d1582614858969b20da89d"><div class="ttname"><a href="class_pixel_array.html#a5f560dcef3d1582614858969b20da89d">PixelArray::SetAll</a></div><div class="ttdeci">void SetAll(unsigned int)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00025">PixelArray.cpp:25</a></div></div>
+<div class="ttc" id="class_pixel_array_html_ab0109a336e69a9942b2723e43ee715d7"><div class="ttname"><a href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">PixelArray::pbuf</a></div><div class="ttdeci">int * pbuf</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00041">PixelArray.h:41</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a86359f5eda90e0d12e3aa2c102ade21d_cgraph.png" border="0" usemap="#class_pixel_array_a86359f5eda90e0d12e3aa2c102ade21d_cgraph" alt=""/></div>
+<map name="class_pixel_array_a86359f5eda90e0d12e3aa2c102ade21d_cgraph" id="class_pixel_array_a86359f5eda90e0d12e3aa2c102ade21d_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a5f560dcef3d1582614858969b20da89d" title="PixelArray::SetAll" alt="" coords="204,5,329,32"/>
+<area shape="rect" id="node3" href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d" title="PixelArray::__set_pixel" alt="" coords="377,5,533,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a9f4d10fcbd08290dfdecafb2ed4ad687"></a>
@@ -154,18 +198,635 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetB</b> (int, unsign
 </div><div class="memdoc">
 <p>Destroys instance. </p>
 
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00020">20</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">delete</span>[] <a class="code" href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">pbuf</a>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_ab0109a336e69a9942b2723e43ee715d7"><div class="ttname"><a href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">PixelArray::pbuf</a></div><div class="ttdeci">int * pbuf</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00041">PixelArray.h:41</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4b1a6582bc3bab1f67aebd1f97a5595d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b1a6582bc3bab1f67aebd1f97a5595d">&#9670;&nbsp;</a></span>__set_pixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::__set_pixel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00136">136</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">// AND with 0x00 shifted to the right location to clear the bits</span></div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">pbuf</a>[index] = value;</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_ab0109a336e69a9942b2723e43ee715d7"><div class="ttname"><a href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">PixelArray::pbuf</a></div><div class="ttdeci">int * pbuf</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00041">PixelArray.h:41</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a4b1a6582bc3bab1f67aebd1f97a5595d_icgraph.png" border="0" usemap="#class_pixel_array_a4b1a6582bc3bab1f67aebd1f97a5595d_icgraph" alt=""/></div>
+<map name="class_pixel_array_a4b1a6582bc3bab1f67aebd1f97a5595d_icgraph" id="class_pixel_array_a4b1a6582bc3bab1f67aebd1f97a5595d_icgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a5f560dcef3d1582614858969b20da89d" title="PixelArray::SetAll" alt="" coords="209,5,335,32"/>
+<area shape="rect" id="node4" href="class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1" title="PixelArray::Set" alt="" coords="217,56,327,83"/>
+<area shape="rect" id="node3" href="class_pixel_array.html#a86359f5eda90e0d12e3aa2c102ade21d" title="Creates an instance of the class. " alt="" coords="383,5,533,32"/>
+<area shape="rect" id="node5" href="class_l_e_d_strip.html#a310b381acdd83a01ddb6e2debebbbc7c" title="Set color to LED Strip. " alt="" coords="393,56,523,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a42c6681bf771332826ecc9ad2a8cea02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c6681bf771332826ecc9ad2a8cea02">&#9670;&nbsp;</a></span>__set_pixel_component()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::__set_pixel_component </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00124">124</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">// AND with 0x00 shifted to the right location to clear the bits</span></div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">pbuf</a>[index] &amp;= ~(0xFF &lt;&lt; (8 * channel));</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">// Set the bits with an OR</span></div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">pbuf</a>[index] |= (value &lt;&lt; (8 * channel));</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_ab0109a336e69a9942b2723e43ee715d7"><div class="ttname"><a href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">PixelArray::pbuf</a></div><div class="ttdeci">int * pbuf</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00041">PixelArray.h:41</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a42c6681bf771332826ecc9ad2a8cea02_icgraph.png" border="0" usemap="#class_pixel_array_a42c6681bf771332826ecc9ad2a8cea02_icgraph" alt=""/></div>
+<map name="class_pixel_array_a42c6681bf771332826ecc9ad2a8cea02_icgraph" id="class_pixel_array_a42c6681bf771332826ecc9ad2a8cea02_icgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a9433e281c3cc0e4f8bbf23e127d8ad2c" title="PixelArray::SetAllI" alt="" coords="213,5,341,32"/>
+<area shape="rect" id="node3" href="class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2" title="PixelArray::SetAllR" alt="" coords="209,56,344,83"/>
+<area shape="rect" id="node6" href="class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d" title="PixelArray::SetAllG" alt="" coords="209,107,344,133"/>
+<area shape="rect" id="node7" href="class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b" title="PixelArray::SetAllB" alt="" coords="209,157,344,184"/>
+<area shape="rect" id="node8" href="class_pixel_array.html#afbfac74c674f63d793d85141d3a3b046" title="PixelArray::SetI" alt="" coords="220,208,333,235"/>
+<area shape="rect" id="node9" href="class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5" title="PixelArray::SetR" alt="" coords="217,259,336,285"/>
+<area shape="rect" id="node10" href="class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5" title="PixelArray::SetG" alt="" coords="217,309,337,336"/>
+<area shape="rect" id="node11" href="class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78" title="PixelArray::SetB" alt="" coords="217,360,336,387"/>
+<area shape="rect" id="node4" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436" title="Reaction on the message from Paparazzi. " alt="" coords="392,208,571,235"/>
+<area shape="rect" id="node5" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="619,208,740,235"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a987f1dc053a5cf25d78d5cfe037088d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a987f1dc053a5cf25d78d5cfe037088d3">&#9670;&nbsp;</a></span>getBuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * PixelArray::getBuf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00117">117</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">pbuf</a>);</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_ab0109a336e69a9942b2723e43ee715d7"><div class="ttname"><a href="class_pixel_array.html#ab0109a336e69a9942b2723e43ee715d7">PixelArray::pbuf</a></div><div class="ttdeci">int * pbuf</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00041">PixelArray.h:41</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a987f1dc053a5cf25d78d5cfe037088d3_icgraph.png" border="0" usemap="#class_pixel_array_a987f1dc053a5cf25d78d5cfe037088d3_icgraph" alt=""/></div>
+<map name="class_pixel_array_a987f1dc053a5cf25d78d5cfe037088d3_icgraph" id="class_pixel_array_a987f1dc053a5cf25d78d5cfe037088d3_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="180,5,301,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afcfe32b74beeced27f928f42131d77c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcfe32b74beeced27f928f42131d77c1">&#9670;&nbsp;</a></span>Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::Set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00078">78</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> ((i &gt;= 0) &amp;&amp; (i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>)) {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d">__set_pixel</a>(i,value);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a4b1a6582bc3bab1f67aebd1f97a5595d"><div class="ttname"><a href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d">PixelArray::__set_pixel</a></div><div class="ttdeci">void __set_pixel(int index, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00136">PixelArray.cpp:136</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_afcfe32b74beeced27f928f42131d77c1_cgraph.png" border="0" usemap="#class_pixel_array_afcfe32b74beeced27f928f42131d77c1_cgraph" alt=""/></div>
+<map name="class_pixel_array_afcfe32b74beeced27f928f42131d77c1_cgraph" id="class_pixel_array_afcfe32b74beeced27f928f42131d77c1_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d" title="PixelArray::__set_pixel" alt="" coords="164,5,320,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_afcfe32b74beeced27f928f42131d77c1_icgraph.png" border="0" usemap="#class_pixel_array_afcfe32b74beeced27f928f42131d77c1_icgraph" alt=""/></div>
+<map name="class_pixel_array_afcfe32b74beeced27f928f42131d77c1_icgraph" id="class_pixel_array_afcfe32b74beeced27f928f42131d77c1_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#a310b381acdd83a01ddb6e2debebbbc7c" title="Set color to LED Strip. " alt="" coords="164,5,295,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f560dcef3d1582614858969b20da89d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f560dcef3d1582614858969b20da89d">&#9670;&nbsp;</a></span>SetAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::SetAll </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00025">25</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// for each pixel</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0 ; i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>; i++) {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d">__set_pixel</a>(i,value);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a4b1a6582bc3bab1f67aebd1f97a5595d"><div class="ttname"><a href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d">PixelArray::__set_pixel</a></div><div class="ttdeci">void __set_pixel(int index, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00136">PixelArray.cpp:136</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a5f560dcef3d1582614858969b20da89d_cgraph.png" border="0" usemap="#class_pixel_array_a5f560dcef3d1582614858969b20da89d_cgraph" alt=""/></div>
+<map name="class_pixel_array_a5f560dcef3d1582614858969b20da89d_cgraph" id="class_pixel_array_a5f560dcef3d1582614858969b20da89d_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d" title="PixelArray::__set_pixel" alt="" coords="179,5,335,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a5f560dcef3d1582614858969b20da89d_icgraph.png" border="0" usemap="#class_pixel_array_a5f560dcef3d1582614858969b20da89d_icgraph" alt=""/></div>
+<map name="class_pixel_array_a5f560dcef3d1582614858969b20da89d_icgraph" id="class_pixel_array_a5f560dcef3d1582614858969b20da89d_icgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a86359f5eda90e0d12e3aa2c102ade21d" title="Creates an instance of the class. " alt="" coords="179,5,329,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3b17271fdc21503236ca6ca8e37d501b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b17271fdc21503236ca6ca8e37d501b">&#9670;&nbsp;</a></span>SetAllB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::SetAllB </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00069">69</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// for each pixel</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0 ; i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>; i++) {</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">__set_pixel_component</a>(i,0,value);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a42c6681bf771332826ecc9ad2a8cea02"><div class="ttname"><a href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">PixelArray::__set_pixel_component</a></div><div class="ttdeci">void __set_pixel_component(int index, int channel, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00124">PixelArray.cpp:124</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a3b17271fdc21503236ca6ca8e37d501b_cgraph.png" border="0" usemap="#class_pixel_array_a3b17271fdc21503236ca6ca8e37d501b_cgraph" alt=""/></div>
+<map name="class_pixel_array_a3b17271fdc21503236ca6ca8e37d501b_cgraph" id="class_pixel_array_a3b17271fdc21503236ca6ca8e37d501b_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="188,5,344,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a3b17271fdc21503236ca6ca8e37d501b_icgraph.png" border="0" usemap="#class_pixel_array_a3b17271fdc21503236ca6ca8e37d501b_icgraph" alt=""/></div>
+<map name="class_pixel_array_a3b17271fdc21503236ca6ca8e37d501b_icgraph" id="class_pixel_array_a3b17271fdc21503236ca6ca8e37d501b_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436" title="Reaction on the message from Paparazzi. " alt="" coords="188,5,367,32"/>
+<area shape="rect" id="node3" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="415,5,536,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a88f25ee1b266e2dc0ef7ae90ff4bd12d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88f25ee1b266e2dc0ef7ae90ff4bd12d">&#9670;&nbsp;</a></span>SetAllG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::SetAllG </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00057">57</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// for each pixel</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0 ; i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>; i++) {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">__set_pixel_component</a>(i,1,value);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a42c6681bf771332826ecc9ad2a8cea02"><div class="ttname"><a href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">PixelArray::__set_pixel_component</a></div><div class="ttdeci">void __set_pixel_component(int index, int channel, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00124">PixelArray.cpp:124</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a88f25ee1b266e2dc0ef7ae90ff4bd12d_cgraph.png" border="0" usemap="#class_pixel_array_a88f25ee1b266e2dc0ef7ae90ff4bd12d_cgraph" alt=""/></div>
+<map name="class_pixel_array_a88f25ee1b266e2dc0ef7ae90ff4bd12d_cgraph" id="class_pixel_array_a88f25ee1b266e2dc0ef7ae90ff4bd12d_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="188,5,344,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a88f25ee1b266e2dc0ef7ae90ff4bd12d_icgraph.png" border="0" usemap="#class_pixel_array_a88f25ee1b266e2dc0ef7ae90ff4bd12d_icgraph" alt=""/></div>
+<map name="class_pixel_array_a88f25ee1b266e2dc0ef7ae90ff4bd12d_icgraph" id="class_pixel_array_a88f25ee1b266e2dc0ef7ae90ff4bd12d_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436" title="Reaction on the message from Paparazzi. " alt="" coords="188,5,367,32"/>
+<area shape="rect" id="node3" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="415,5,536,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9433e281c3cc0e4f8bbf23e127d8ad2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9433e281c3cc0e4f8bbf23e127d8ad2c">&#9670;&nbsp;</a></span>SetAllI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::SetAllI </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00034">34</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// for each pixel</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0 ; i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>; i++) {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">__set_pixel_component</a>(i,3,value);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a42c6681bf771332826ecc9ad2a8cea02"><div class="ttname"><a href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">PixelArray::__set_pixel_component</a></div><div class="ttdeci">void __set_pixel_component(int index, int channel, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00124">PixelArray.cpp:124</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a9433e281c3cc0e4f8bbf23e127d8ad2c_cgraph.png" border="0" usemap="#class_pixel_array_a9433e281c3cc0e4f8bbf23e127d8ad2c_cgraph" alt=""/></div>
+<map name="class_pixel_array_a9433e281c3cc0e4f8bbf23e127d8ad2c_cgraph" id="class_pixel_array_a9433e281c3cc0e4f8bbf23e127d8ad2c_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="181,5,337,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ddfdd1a01a9877e4bfcf5a462412fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ddfdd1a01a9877e4bfcf5a462412fd2">&#9670;&nbsp;</a></span>SetAllR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::SetAllR </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00046">46</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// for each pixel</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0 ; i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>; i++) {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">__set_pixel_component</a>(i,2,value);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a42c6681bf771332826ecc9ad2a8cea02"><div class="ttname"><a href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">PixelArray::__set_pixel_component</a></div><div class="ttdeci">void __set_pixel_component(int index, int channel, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00124">PixelArray.cpp:124</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a9ddfdd1a01a9877e4bfcf5a462412fd2_cgraph.png" border="0" usemap="#class_pixel_array_a9ddfdd1a01a9877e4bfcf5a462412fd2_cgraph" alt=""/></div>
+<map name="class_pixel_array_a9ddfdd1a01a9877e4bfcf5a462412fd2_cgraph" id="class_pixel_array_a9ddfdd1a01a9877e4bfcf5a462412fd2_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="188,5,344,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a9ddfdd1a01a9877e4bfcf5a462412fd2_icgraph.png" border="0" usemap="#class_pixel_array_a9ddfdd1a01a9877e4bfcf5a462412fd2_icgraph" alt=""/></div>
+<map name="class_pixel_array_a9ddfdd1a01a9877e4bfcf5a462412fd2_icgraph" id="class_pixel_array_a9ddfdd1a01a9877e4bfcf5a462412fd2_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436" title="Reaction on the message from Paparazzi. " alt="" coords="188,5,367,32"/>
+<area shape="rect" id="node3" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="415,5,536,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a560a654c59614fd5a6c17adb10083a78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a560a654c59614fd5a6c17adb10083a78">&#9670;&nbsp;</a></span>SetB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::SetB </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00109">109</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> ((i &gt;= 0) &amp;&amp; (i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>)) {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">__set_pixel_component</a>(i,0,value);</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a42c6681bf771332826ecc9ad2a8cea02"><div class="ttname"><a href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">PixelArray::__set_pixel_component</a></div><div class="ttdeci">void __set_pixel_component(int index, int channel, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00124">PixelArray.cpp:124</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a560a654c59614fd5a6c17adb10083a78_cgraph.png" border="0" usemap="#class_pixel_array_a560a654c59614fd5a6c17adb10083a78_cgraph" alt=""/></div>
+<map name="class_pixel_array_a560a654c59614fd5a6c17adb10083a78_cgraph" id="class_pixel_array_a560a654c59614fd5a6c17adb10083a78_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="172,5,328,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a560a654c59614fd5a6c17adb10083a78_icgraph.png" border="0" usemap="#class_pixel_array_a560a654c59614fd5a6c17adb10083a78_icgraph" alt=""/></div>
+<map name="class_pixel_array_a560a654c59614fd5a6c17adb10083a78_icgraph" id="class_pixel_array_a560a654c59614fd5a6c17adb10083a78_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436" title="Reaction on the message from Paparazzi. " alt="" coords="172,5,351,32"/>
+<area shape="rect" id="node3" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="399,5,520,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a60ea8084ec95df0d51f46c9b0ff308d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ea8084ec95df0d51f46c9b0ff308d5">&#9670;&nbsp;</a></span>SetG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::SetG </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00102">102</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> ((i &gt;= 0) &amp;&amp; (i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>)) {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">__set_pixel_component</a>(i,1,value);</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a42c6681bf771332826ecc9ad2a8cea02"><div class="ttname"><a href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">PixelArray::__set_pixel_component</a></div><div class="ttdeci">void __set_pixel_component(int index, int channel, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00124">PixelArray.cpp:124</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a60ea8084ec95df0d51f46c9b0ff308d5_cgraph.png" border="0" usemap="#class_pixel_array_a60ea8084ec95df0d51f46c9b0ff308d5_cgraph" alt=""/></div>
+<map name="class_pixel_array_a60ea8084ec95df0d51f46c9b0ff308d5_cgraph" id="class_pixel_array_a60ea8084ec95df0d51f46c9b0ff308d5_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="173,5,329,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_a60ea8084ec95df0d51f46c9b0ff308d5_icgraph.png" border="0" usemap="#class_pixel_array_a60ea8084ec95df0d51f46c9b0ff308d5_icgraph" alt=""/></div>
+<map name="class_pixel_array_a60ea8084ec95df0d51f46c9b0ff308d5_icgraph" id="class_pixel_array_a60ea8084ec95df0d51f46c9b0ff308d5_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436" title="Reaction on the message from Paparazzi. " alt="" coords="173,5,352,32"/>
+<area shape="rect" id="node3" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="400,5,521,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afbfac74c674f63d793d85141d3a3b046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbfac74c674f63d793d85141d3a3b046">&#9670;&nbsp;</a></span>SetI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::SetI </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00087">87</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> ((i &gt;= 0) &amp;&amp; (i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>)) {</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">__set_pixel_component</a>(i,3,value);</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a42c6681bf771332826ecc9ad2a8cea02"><div class="ttname"><a href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">PixelArray::__set_pixel_component</a></div><div class="ttdeci">void __set_pixel_component(int index, int channel, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00124">PixelArray.cpp:124</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_afbfac74c674f63d793d85141d3a3b046_cgraph.png" border="0" usemap="#class_pixel_array_afbfac74c674f63d793d85141d3a3b046_cgraph" alt=""/></div>
+<map name="class_pixel_array_afbfac74c674f63d793d85141d3a3b046_cgraph" id="class_pixel_array_afbfac74c674f63d793d85141d3a3b046_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="167,5,323,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abd4253e7c76f3775f31e09dfe318e3a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4253e7c76f3775f31e09dfe318e3a5">&#9670;&nbsp;</a></span>SetR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PixelArray::SetR </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8cpp_source.html#l00095">95</a> of file <a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> ((i &gt;= 0) &amp;&amp; (i &lt; <a class="code" href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">pbufsize</a>)) {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">__set_pixel_component</a>(i,2,value);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_aca29e70f9b643bff3733ab2e694439a1"><div class="ttname"><a href="class_pixel_array.html#aca29e70f9b643bff3733ab2e694439a1">PixelArray::pbufsize</a></div><div class="ttdeci">int pbufsize</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8h_source.html#l00042">PixelArray.h:42</a></div></div>
+<div class="ttc" id="class_pixel_array_html_a42c6681bf771332826ecc9ad2a8cea02"><div class="ttname"><a href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">PixelArray::__set_pixel_component</a></div><div class="ttdeci">void __set_pixel_component(int index, int channel, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00124">PixelArray.cpp:124</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_abd4253e7c76f3775f31e09dfe318e3a5_cgraph.png" border="0" usemap="#class_pixel_array_abd4253e7c76f3775f31e09dfe318e3a5_cgraph" alt=""/></div>
+<map name="class_pixel_array_abd4253e7c76f3775f31e09dfe318e3a5_cgraph" id="class_pixel_array_abd4253e7c76f3775f31e09dfe318e3a5_cgraph">
+<area shape="rect" id="node2" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="172,5,328,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_pixel_array_abd4253e7c76f3775f31e09dfe318e3a5_icgraph.png" border="0" usemap="#class_pixel_array_abd4253e7c76f3775f31e09dfe318e3a5_icgraph" alt=""/></div>
+<map name="class_pixel_array_abd4253e7c76f3775f31e09dfe318e3a5_icgraph" id="class_pixel_array_abd4253e7c76f3775f31e09dfe318e3a5_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436" title="Reaction on the message from Paparazzi. " alt="" coords="172,5,351,32"/>
+<area shape="rect" id="node3" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="399,5,520,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab0109a336e69a9942b2723e43ee715d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0109a336e69a9942b2723e43ee715d7">&#9670;&nbsp;</a></span>pbuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* PixelArray::pbuf</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8h_source.html#l00041">41</a> of file <a class="el" href="_pixel_array_8h_source.html">PixelArray.h</a>.</p>
+
+</div>
+</div>
+<a id="aca29e70f9b643bff3733ab2e694439a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca29e70f9b643bff3733ab2e694439a1">&#9670;&nbsp;</a></span>pbufsize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PixelArray::pbufsize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_pixel_array_8h_source.html#l00042">42</a> of file <a class="el" href="_pixel_array_8h_source.html">PixelArray.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_pixel_array_8h_source.html">PixelArray.h</a></li>
-<li>PixelArray.cpp</li>
+<li><a class="el" href="_pixel_array_8cpp_source.html">PixelArray.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_pixel_array.html">PixelArray</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

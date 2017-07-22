@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['data',['data',['../struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be',1,'SubMessage']]],
-  ['distance_20gp2y0a605_3a_20detailed_20description',['DISTANCE GP2Y0A605: Detailed description',['../_i_r.html',1,'']]]
+  ['brightnesscontrol',['BrightnessControl',['../class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642d',1,'WS2812']]],
+  ['buf_5fsize',['BUF_SIZE',['../_u_a_r_t_messenger_8h.html#a6821bafc3c88dfb2e433a095df9940c6',1,'UARTMessenger.h']]]
 ];

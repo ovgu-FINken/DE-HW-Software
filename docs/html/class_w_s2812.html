@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: WS2812 Class Reference</title>
+<title>Hardware Development of FINken III quadcopter: WS2812 Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -42,6 +51,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_w_s2812.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,11 +80,12 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_w_s2812-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">WS2812 Class Reference</div>  </div>
@@ -74,33 +99,94 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a14186f70863bf4f3a35b2cc21b15642d"><td class="memItemLeft" align="right" valign="top"><a id="a14186f70863bf4f3a35b2cc21b15642d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>BrightnessControl</b> { <b>OFF</b>, 
-<b>GLOBAL</b>, 
-<b>PER_PIXEL</b>
+<tr class="memitem:a14186f70863bf4f3a35b2cc21b15642d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642d">BrightnessControl</a> { <a class="el" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">OFF</a>, 
+<a class="el" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45">GLOBAL</a>, 
+<a class="el" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863">PER_PIXEL</a>
  }</td></tr>
 <tr class="separator:a14186f70863bf4f3a35b2cc21b15642d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a397fb1e75594024884cb4365d3c725cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a397fb1e75594024884cb4365d3c725cd">WS2812</a> (PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh, int oneLow)</td></tr>
+<tr class="memdesc:a397fb1e75594024884cb4365d3c725cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a397fb1e75594024884cb4365d3c725cd">More...</a><br /></td></tr>
 <tr class="separator:a397fb1e75594024884cb4365d3c725cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58973dedd9cbc5c3fd3397f07f9a720f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a58973dedd9cbc5c3fd3397f07f9a720f">~WS2812</a> ()</td></tr>
 <tr class="separator:a58973dedd9cbc5c3fd3397f07f9a720f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e1370e6fbb56daa68f1146e7b58d9ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a7e1370e6fbb56daa68f1146e7b58d9ec">setDelays</a> (int zeroHigh, int zeroLow, int oneHigh, int oneLow)</td></tr>
+<tr class="memdesc:a7e1370e6fbb56daa68f1146e7b58d9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the timing parameters for the bit-banged signal.  <a href="#a7e1370e6fbb56daa68f1146e7b58d9ec">More...</a><br /></td></tr>
 <tr class="separator:a7e1370e6fbb56daa68f1146e7b58d9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a578fd0b278445bd6f84e260a69b18a68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68">write_offsets</a> (int buf[], int r_offset=0, int g_offset=0, int b_offset=0)</td></tr>
+<tr class="memdesc:a578fd0b278445bd6f84e260a69b18a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given buffer to the LED strip with the given offsets.  <a href="#a578fd0b278445bd6f84e260a69b18a68">More...</a><br /></td></tr>
 <tr class="separator:a578fd0b278445bd6f84e260a69b18a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab85d6a78bc51929dac48db05f6bc68d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#ab85d6a78bc51929dac48db05f6bc68d4">write</a> (int buf[])</td></tr>
+<tr class="memdesc:ab85d6a78bc51929dac48db05f6bc68d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given buffer to the LED strip NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section.  <a href="#ab85d6a78bc51929dac48db05f6bc68d4">More...</a><br /></td></tr>
 <tr class="separator:ab85d6a78bc51929dac48db05f6bc68d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb221ea7ba9cfb40a43b7778f0dffa5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#acb221ea7ba9cfb40a43b7778f0dffa5d">useII</a> (BrightnessControl bc)</td></tr>
+<tr class="memitem:acb221ea7ba9cfb40a43b7778f0dffa5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#acb221ea7ba9cfb40a43b7778f0dffa5d">useII</a> (<a class="el" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642d">BrightnessControl</a> bc)</td></tr>
+<tr class="memdesc:acb221ea7ba9cfb40a43b7778f0dffa5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the brightness mode.  <a href="#acb221ea7ba9cfb40a43b7778f0dffa5d">More...</a><br /></td></tr>
 <tr class="separator:acb221ea7ba9cfb40a43b7778f0dffa5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b6491617f9beb271d6d5c56ba384fb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a8b6491617f9beb271d6d5c56ba384fb6">setII</a> (unsigned char II)</td></tr>
+<tr class="memdesc:a8b6491617f9beb271d6d5c56ba384fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the global brightness level.  <a href="#a8b6491617f9beb271d6d5c56ba384fb6">More...</a><br /></td></tr>
 <tr class="separator:a8b6491617f9beb271d6d5c56ba384fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:adfe7d119deac16639f987130f5db724e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#adfe7d119deac16639f987130f5db724e">__loadBuf</a> (int buf[], int r_offset=0, int g_offset=0, int b_offset=0)</td></tr>
+<tr class="separator:adfe7d119deac16639f987130f5db724e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5623ee0fd628d54483c0427f30f4d568"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a5623ee0fd628d54483c0427f30f4d568">__size</a></td></tr>
+<tr class="separator:a5623ee0fd628d54483c0427f30f4d568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44dea9eca691fddccd0637af24c028d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a44dea9eca691fddccd0637af24c028d8">__zeroHigh</a></td></tr>
+<tr class="separator:a44dea9eca691fddccd0637af24c028d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addde539bd94ea4a670420c22cace2216"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#addde539bd94ea4a670420c22cace2216">__zeroLow</a></td></tr>
+<tr class="separator:addde539bd94ea4a670420c22cace2216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef8597fa4d4a31916a1460de124026e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#acef8597fa4d4a31916a1460de124026e">__oneHigh</a></td></tr>
+<tr class="separator:acef8597fa4d4a31916a1460de124026e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d118fa4ae51618675d284fc7130fdd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#ab6d118fa4ae51618675d284fc7130fdd">__oneLow</a></td></tr>
+<tr class="separator:ab6d118fa4ae51618675d284fc7130fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90cb6ef1c50bfa6b2d1a7e6100adead7"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a90cb6ef1c50bfa6b2d1a7e6100adead7">__II</a></td></tr>
+<tr class="separator:a90cb6ef1c50bfa6b2d1a7e6100adead7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249d1039add9ef099574fc4a52aa1235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642d">BrightnessControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a249d1039add9ef099574fc4a52aa1235">__use_II</a></td></tr>
+<tr class="separator:a249d1039add9ef099574fc4a52aa1235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345b0895fb037ed603a79806bb7e510c"><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">__transmitBuf</a></td></tr>
+<tr class="separator:a345b0895fb037ed603a79806bb7e510c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e08f8b78b58930cef508a4a66a27916"><td class="memItemLeft" align="right" valign="top">PinName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a8e08f8b78b58930cef508a4a66a27916">__outPin</a></td></tr>
+<tr class="separator:a8e08f8b78b58930cef508a4a66a27916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c5f3871012186c92a1bf856ca888ee"><td class="memItemLeft" align="right" valign="top">DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_s2812.html#a37c5f3871012186c92a1bf856ca888ee">__gpo</a></td></tr>
+<tr class="separator:a37c5f3871012186c92a1bf856ca888ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Library for the <a class="el" href="class_w_s2812.html" title="Library for the WS2812 RGB LED with integrated controller. ">WS2812</a> RGB LED with integrated controller. </p>
 <p>The <a class="el" href="class_w_s2812.html" title="Library for the WS2812 RGB LED with integrated controller. ">WS2812</a> is controller that is built into a range of LEDs </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00013">13</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a14186f70863bf4f3a35b2cc21b15642d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14186f70863bf4f3a35b2cc21b15642d">&#9670;&nbsp;</a></span>BrightnessControl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642d">WS2812::BrightnessControl</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55"></a>OFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45"></a>GLOBAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863"></a>PER_PIXEL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00016">16</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{ <a class="code" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">OFF</a>, <a class="code" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45">GLOBAL</a>, <a class="code" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863">PER_PIXEL</a> };</div><div class="ttc" id="class_w_s2812_html_a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863"><div class="ttname"><a href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863">WS2812::PER_PIXEL</a></div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00016">WS2812.h:16</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55"><div class="ttname"><a href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">WS2812::OFF</a></div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00016">WS2812.h:16</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45"><div class="ttname"><a href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45">WS2812::GLOBAL</a></div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00016">WS2812.h:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a397fb1e75594024884cb4365d3c725cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a397fb1e75594024884cb4365d3c725cd">&#9670;&nbsp;</a></span>WS2812()</h2>
 
@@ -150,7 +236,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructor</p>
+
+<p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pin</td><td>Output pin. Connect to "Din" on the first <a class="el" href="class_w_s2812.html" title="Library for the WS2812 RGB LED with integrated controller. ">WS2812</a> in the strip </td></tr>
@@ -162,7 +249,25 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Constructor </p>
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8cpp_source.html#l00008">8</a> of file <a class="el" href="_w_s2812_8cpp_source.html">WS2812.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                                                                        : <a class="code" href="class_w_s2812.html#a37c5f3871012186c92a1bf856ca888ee">__gpo</a>(pin)</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_w_s2812.html#a5623ee0fd628d54483c0427f30f4d568">__size</a> = size;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">__transmitBuf</a> = <span class="keyword">new</span> <span class="keywordtype">bool</span>[size * <a class="code" href="_w_s2812_8h.html#af9b1b2ba12857a4bf11289dac8c5462d">FRAME_SIZE</a>];</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_w_s2812.html#a249d1039add9ef099574fc4a52aa1235">__use_II</a> = <a class="code" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">OFF</a>;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_w_s2812.html#a90cb6ef1c50bfa6b2d1a7e6100adead7">__II</a> = 0xFF; <span class="comment">// set global intensity to full</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_w_s2812.html#a8e08f8b78b58930cef508a4a66a27916">__outPin</a> = pin;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// Default values designed for K64f. Assumes GPIO toggle takes ~0.4us</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_w_s2812.html#a7e1370e6fbb56daa68f1146e7b58d9ec">setDelays</a>(zeroHigh, zeroLow, oneHigh, oneLow);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div><div class="ttc" id="class_w_s2812_html_a249d1039add9ef099574fc4a52aa1235"><div class="ttname"><a href="class_w_s2812.html#a249d1039add9ef099574fc4a52aa1235">WS2812::__use_II</a></div><div class="ttdeci">BrightnessControl __use_II</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00092">WS2812.h:92</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a5623ee0fd628d54483c0427f30f4d568"><div class="ttname"><a href="class_w_s2812.html#a5623ee0fd628d54483c0427f30f4d568">WS2812::__size</a></div><div class="ttdeci">int __size</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00089">WS2812.h:89</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a7e1370e6fbb56daa68f1146e7b58d9ec"><div class="ttname"><a href="class_w_s2812.html#a7e1370e6fbb56daa68f1146e7b58d9ec">WS2812::setDelays</a></div><div class="ttdeci">void setDelays(int zeroHigh, int zeroLow, int oneHigh, int oneLow)</div><div class="ttdoc">Sets the timing parameters for the bit-banged signal. </div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8cpp_source.html#l00031">WS2812.cpp:31</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55"><div class="ttname"><a href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">WS2812::OFF</a></div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00016">WS2812.h:16</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a90cb6ef1c50bfa6b2d1a7e6100adead7"><div class="ttname"><a href="class_w_s2812.html#a90cb6ef1c50bfa6b2d1a7e6100adead7">WS2812::__II</a></div><div class="ttdeci">unsigned char __II</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00091">WS2812.h:91</a></div></div>
+<div class="ttc" id="_w_s2812_8h_html_af9b1b2ba12857a4bf11289dac8c5462d"><div class="ttname"><a href="_w_s2812_8h.html#af9b1b2ba12857a4bf11289dac8c5462d">FRAME_SIZE</a></div><div class="ttdeci">#define FRAME_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00007">WS2812.h:7</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a345b0895fb037ed603a79806bb7e510c"><div class="ttname"><a href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">WS2812::__transmitBuf</a></div><div class="ttdeci">bool * __transmitBuf</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00093">WS2812.h:93</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a37c5f3871012186c92a1bf856ca888ee"><div class="ttname"><a href="class_w_s2812.html#a37c5f3871012186c92a1bf856ca888ee">WS2812::__gpo</a></div><div class="ttdeci">DigitalOut __gpo</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00096">WS2812.h:96</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a8e08f8b78b58930cef508a4a66a27916"><div class="ttname"><a href="class_w_s2812.html#a8e08f8b78b58930cef508a4a66a27916">WS2812::__outPin</a></div><div class="ttdeci">PinName __outPin</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00095">WS2812.h:95</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_w_s2812_a397fb1e75594024884cb4365d3c725cd_cgraph.png" border="0" usemap="#class_w_s2812_a397fb1e75594024884cb4365d3c725cd_cgraph" alt=""/></div>
+<map name="class_w_s2812_a397fb1e75594024884cb4365d3c725cd_cgraph" id="class_w_s2812_a397fb1e75594024884cb4365d3c725cd_cgraph">
+<area shape="rect" id="node2" href="class_w_s2812.html#a7e1370e6fbb56daa68f1146e7b58d9ec" title="Sets the timing parameters for the bit&#45;banged signal. " alt="" coords="184,5,323,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -182,9 +287,79 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Destroys instance. </p>
 
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8cpp_source.html#l00021">21</a> of file <a class="el" href="_w_s2812_8cpp_source.html">WS2812.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">delete</span>[] <a class="code" href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">__transmitBuf</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div><div class="ttc" id="class_w_s2812_html_a345b0895fb037ed603a79806bb7e510c"><div class="ttname"><a href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">WS2812::__transmitBuf</a></div><div class="ttdeci">bool * __transmitBuf</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00093">WS2812.h:93</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="adfe7d119deac16639f987130f5db724e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe7d119deac16639f987130f5db724e">&#9670;&nbsp;</a></span>__loadBuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WS2812::__loadBuf </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buf</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r_offset</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>g_offset</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b_offset</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8cpp_source.html#l00038">38</a> of file <a class="el" href="_w_s2812_8cpp_source.html">WS2812.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                                                         {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_w_s2812.html#a5623ee0fd628d54483c0427f30f4d568">__size</a>; i++) {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">int</span> color = 0;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        color |= ((buf[(i+g_offset)%__size] &amp; 0x0000FF00));</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        color |= ((buf[(i+r_offset)%__size] &amp; 0x00FF0000));</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        color |=  (buf[(i+b_offset)%__size] &amp; 0x000000FF);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        color |= (buf[i] &amp; 0xFF000000);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// Outut format : GGRRBB</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// Inout format : IIRRGGBB</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> agrb[4] = {0x0, 0x0, 0x0, 0x0};</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> sf; <span class="comment">// scaling factor for  II</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// extract colour fields from incoming</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// 0 = green, 1 = red, 2 = blue, 3 = brightness</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        agrb[0] = (color &amp; 0x0000FF00) &gt;&gt; 8;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        agrb[1] = (color &amp; 0x00FF0000) &gt;&gt; 16;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        agrb[2] = color  &amp; 0x000000FF;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        agrb[3] = (color &amp; 0xFF000000) &gt;&gt; 24;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// set the intensity scaling factor (global, per pixel, none)</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_w_s2812.html#a249d1039add9ef099574fc4a52aa1235">__use_II</a> == <a class="code" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45">GLOBAL</a>) {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            sf = <a class="code" href="class_w_s2812.html#a90cb6ef1c50bfa6b2d1a7e6100adead7">__II</a>;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_w_s2812.html#a249d1039add9ef099574fc4a52aa1235">__use_II</a> == <a class="code" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863">PER_PIXEL</a>) {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            sf = agrb[3];</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            sf = 0xFF;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// Apply the scaling factor to each othe colour components</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> clr = 0; clr &lt; 3; clr++) {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            agrb[clr] = ((agrb[clr] * sf) &gt;&gt; 8);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 8; j++) {</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">if</span> (((agrb[clr] &lt;&lt; j) &amp; 0x80) == 0x80) {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    <span class="comment">// Bit is set (checks MSB fist)</span></div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    <a class="code" href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">__transmitBuf</a>[(i * <a class="code" href="_w_s2812_8h.html#af9b1b2ba12857a4bf11289dac8c5462d">FRAME_SIZE</a>) + (clr * 8) + j] = 1;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <span class="comment">// Bit is clear</span></div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <a class="code" href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">__transmitBuf</a>[(i * <a class="code" href="_w_s2812_8h.html#af9b1b2ba12857a4bf11289dac8c5462d">FRAME_SIZE</a>) + (clr * 8) + j] = 0;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                }</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div><div class="ttc" id="class_w_s2812_html_a249d1039add9ef099574fc4a52aa1235"><div class="ttname"><a href="class_w_s2812.html#a249d1039add9ef099574fc4a52aa1235">WS2812::__use_II</a></div><div class="ttdeci">BrightnessControl __use_II</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00092">WS2812.h:92</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a5623ee0fd628d54483c0427f30f4d568"><div class="ttname"><a href="class_w_s2812.html#a5623ee0fd628d54483c0427f30f4d568">WS2812::__size</a></div><div class="ttdeci">int __size</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00089">WS2812.h:89</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863"><div class="ttname"><a href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863">WS2812::PER_PIXEL</a></div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00016">WS2812.h:16</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a90cb6ef1c50bfa6b2d1a7e6100adead7"><div class="ttname"><a href="class_w_s2812.html#a90cb6ef1c50bfa6b2d1a7e6100adead7">WS2812::__II</a></div><div class="ttdeci">unsigned char __II</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00091">WS2812.h:91</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45"><div class="ttname"><a href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45">WS2812::GLOBAL</a></div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00016">WS2812.h:16</a></div></div>
+<div class="ttc" id="_w_s2812_8h_html_af9b1b2ba12857a4bf11289dac8c5462d"><div class="ttname"><a href="_w_s2812_8h.html#af9b1b2ba12857a4bf11289dac8c5462d">FRAME_SIZE</a></div><div class="ttdeci">#define FRAME_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00007">WS2812.h:7</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a345b0895fb037ed603a79806bb7e510c"><div class="ttname"><a href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">WS2812::__transmitBuf</a></div><div class="ttdeci">bool * __transmitBuf</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00093">WS2812.h:93</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_w_s2812_adfe7d119deac16639f987130f5db724e_icgraph.png" border="0" usemap="#class_w_s2812_adfe7d119deac16639f987130f5db724e_icgraph" alt=""/></div>
+<map name="class_w_s2812_adfe7d119deac16639f987130f5db724e_icgraph" id="class_w_s2812_adfe7d119deac16639f987130f5db724e_icgraph">
+<area shape="rect" id="node2" href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68" title="Writes the given buffer to the LED strip with the given offsets. " alt="" coords="191,31,343,57"/>
+<area shape="rect" id="node3" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="391,5,512,32"/>
+<area shape="rect" id="node4" href="class_w_s2812.html#ab85d6a78bc51929dac48db05f6bc68d4" title="Writes the given buffer to the LED strip NOTE: This function is timing critical, therefore interrupts..." alt="" coords="398,56,505,83"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a7e1370e6fbb56daa68f1146e7b58d9ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e1370e6fbb56daa68f1146e7b58d9ec">&#9670;&nbsp;</a></span>setDelays()</h2>
 
@@ -222,7 +397,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the timing parameters for the bit-banged signal</p>
+
+<p>Sets the timing parameters for the bit-banged signal. </p>
+<p>Writes the given buffer to the LED strip with the given offsets.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">zeroHigh</td><td>How many NOPs to insert to ensure TOH is properly generated. See library description for more information. </td></tr>
@@ -232,7 +409,21 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Writes the given buffer to the LED strip with the given offsets. NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section. </p>
+<p>NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section. </p>
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8cpp_source.html#l00031">31</a> of file <a class="el" href="_w_s2812_8cpp_source.html">WS2812.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                                         {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_w_s2812.html#a44dea9eca691fddccd0637af24c028d8">__zeroHigh</a> = zeroHigh;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_w_s2812.html#addde539bd94ea4a670420c22cace2216">__zeroLow</a> = zeroLow;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_w_s2812.html#acef8597fa4d4a31916a1460de124026e">__oneHigh</a> = oneHigh;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_w_s2812.html#ab6d118fa4ae51618675d284fc7130fdd">__oneLow</a> = oneLow;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="ttc" id="class_w_s2812_html_a44dea9eca691fddccd0637af24c028d8"><div class="ttname"><a href="class_w_s2812.html#a44dea9eca691fddccd0637af24c028d8">WS2812::__zeroHigh</a></div><div class="ttdeci">int __zeroHigh</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00090">WS2812.h:90</a></div></div>
+<div class="ttc" id="class_w_s2812_html_addde539bd94ea4a670420c22cace2216"><div class="ttname"><a href="class_w_s2812.html#addde539bd94ea4a670420c22cace2216">WS2812::__zeroLow</a></div><div class="ttdeci">int __zeroLow</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00090">WS2812.h:90</a></div></div>
+<div class="ttc" id="class_w_s2812_html_ab6d118fa4ae51618675d284fc7130fdd"><div class="ttname"><a href="class_w_s2812.html#ab6d118fa4ae51618675d284fc7130fdd">WS2812::__oneLow</a></div><div class="ttdeci">int __oneLow</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00090">WS2812.h:90</a></div></div>
+<div class="ttc" id="class_w_s2812_html_acef8597fa4d4a31916a1460de124026e"><div class="ttname"><a href="class_w_s2812.html#acef8597fa4d4a31916a1460de124026e">WS2812::__oneHigh</a></div><div class="ttdeci">int __oneHigh</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00090">WS2812.h:90</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec_icgraph.png" border="0" usemap="#class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec_icgraph" alt=""/></div>
+<map name="class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec_icgraph" id="class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec_icgraph">
+<area shape="rect" id="node2" href="class_w_s2812.html#a397fb1e75594024884cb4365d3c725cd" title="Constructor. " alt="" coords="192,5,323,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -251,15 +442,18 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the global brightness level.</p>
+
+<p>Sets the global brightness level. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">II</td><td>The brightness level. Possible values include 0 - 255 (0x00 - 0xFF).</td></tr>
+    <tr><td class="paramname">II</td><td>The brightness level. Possible values include 0 - 255 (0x00 - 0xFF). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Sets the global brightness level. </p>
 
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8cpp_source.html#l00148">148</a> of file <a class="el" href="_w_s2812_8cpp_source.html">WS2812.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="class_w_s2812.html#a90cb6ef1c50bfa6b2d1a7e6100adead7">__II</a> = II;</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div><div class="ttc" id="class_w_s2812_html_a90cb6ef1c50bfa6b2d1a7e6100adead7"><div class="ttname"><a href="class_w_s2812.html#a90cb6ef1c50bfa6b2d1a7e6100adead7">WS2812::__II</a></div><div class="ttdeci">unsigned char __II</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00091">WS2812.h:91</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acb221ea7ba9cfb40a43b7778f0dffa5d"></a>
@@ -271,20 +465,32 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void WS2812::useII </td>
           <td>(</td>
-          <td class="paramtype">BrightnessControl&#160;</td>
+          <td class="paramtype"><a class="el" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642d">BrightnessControl</a>&#160;</td>
           <td class="paramname"><em>bc</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the brightness mode</p>
+
+<p>Sets the brightness mode. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bc</td><td>The brightness control. Defaults to OFF. Possible values include OFF, GLOBAL, and PER_PIXEL</td></tr>
   </table>
   </dd>
 </dl>
-<p>Sets the brightness mode </p>
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8cpp_source.html#l00135">135</a> of file <a class="el" href="_w_s2812_8cpp_source.html">WS2812.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">if</span> (bc &gt; <a class="code" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">OFF</a>) {</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <a class="code" href="class_w_s2812.html#a249d1039add9ef099574fc4a52aa1235">__use_II</a> = bc;</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="class_w_s2812.html#a249d1039add9ef099574fc4a52aa1235">__use_II</a> = <a class="code" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">OFF</a>;</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div><div class="ttc" id="class_w_s2812_html_a249d1039add9ef099574fc4a52aa1235"><div class="ttname"><a href="class_w_s2812.html#a249d1039add9ef099574fc4a52aa1235">WS2812::__use_II</a></div><div class="ttdeci">BrightnessControl __use_II</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00092">WS2812.h:92</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55"><div class="ttname"><a href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">WS2812::OFF</a></div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00016">WS2812.h:16</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d_icgraph.png" border="0" usemap="#class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d_icgraph" alt=""/></div>
+<map name="class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d_icgraph" id="class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#a746e420e05c5d6c45eb2f74eaf5928fc" title="Constructor for creating a new LED Strip. " alt="" coords="160,5,295,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -303,14 +509,26 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Writes the given buffer to the LED strip NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section.</p>
+
+<p>Writes the given buffer to the LED strip NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buf</td><td>Pointer to the <a class="el" href="class_pixel_array.html" title="Library for the WS2812 RGB LED with integrated controller. ">PixelArray</a> buffer</td></tr>
+    <tr><td class="paramname">buf</td><td>Pointer to the <a class="el" href="class_pixel_array.html" title="Library for the WS2812 RGB LED with integrated controller. ">PixelArray</a> buffer </td></tr>
   </table>
   </dd>
 </dl>
-<p>Writes the given buffer to the LED strip NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section. </p>
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8cpp_source.html#l00092">92</a> of file <a class="el" href="_w_s2812_8cpp_source.html">WS2812.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                            {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68">write_offsets</a>(buf, 0, 0, 0);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div><div class="ttc" id="class_w_s2812_html_a578fd0b278445bd6f84e260a69b18a68"><div class="ttname"><a href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68">WS2812::write_offsets</a></div><div class="ttdeci">void write_offsets(int buf[], int r_offset=0, int g_offset=0, int b_offset=0)</div><div class="ttdoc">Writes the given buffer to the LED strip with the given offsets. </div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8cpp_source.html#l00096">WS2812.cpp:96</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4_cgraph.png" border="0" usemap="#class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4_cgraph" alt=""/></div>
+<map name="class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4_cgraph" id="class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4_cgraph">
+<area shape="rect" id="node2" href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68" title="Writes the given buffer to the LED strip with the given offsets. " alt="" coords="160,5,312,32"/>
+<area shape="rect" id="node3" href="class_w_s2812.html#adfe7d119deac16639f987130f5db724e" title="WS2812::__loadBuf" alt="" coords="360,5,497,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -351,7 +569,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Writes the given buffer to the LED strip with the given offsets. NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section.</p>
+
+<p>Writes the given buffer to the LED strip with the given offsets. </p>
+<p>NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">buf</td><td>Pointer to the <a class="el" href="class_pixel_array.html" title="Library for the WS2812 RGB LED with integrated controller. ">PixelArray</a> buffer </td></tr>
@@ -362,18 +582,291 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8cpp_source.html#l00096">96</a> of file <a class="el" href="_w_s2812_8cpp_source.html">WS2812.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                                                              {</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// Load the transmit buffer</span></div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="class_w_s2812.html#adfe7d119deac16639f987130f5db724e">__loadBuf</a>(buf, r_offset, g_offset, b_offset);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// Entering timing critical section, so disabling interrupts</span></div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    __disable_irq();</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// Begin bit-banging</span></div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="_w_s2812_8h.html#af9b1b2ba12857a4bf11289dac8c5462d">FRAME_SIZE</a> * <a class="code" href="class_w_s2812.html#a5623ee0fd628d54483c0427f30f4d568">__size</a>; i++) {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">__transmitBuf</a>[i]){</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <a class="code" href="class_w_s2812.html#a37c5f3871012186c92a1bf856ca888ee">__gpo</a> = 1;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_w_s2812.html#acef8597fa4d4a31916a1460de124026e">__oneHigh</a>; j++) {</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                __NOP();</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <a class="code" href="class_w_s2812.html#a37c5f3871012186c92a1bf856ca888ee">__gpo</a> = 0;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_w_s2812.html#ab6d118fa4ae51618675d284fc7130fdd">__oneLow</a>; j++) {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                __NOP();</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="code" href="class_w_s2812.html#a37c5f3871012186c92a1bf856ca888ee">__gpo</a> = 1;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_w_s2812.html#a44dea9eca691fddccd0637af24c028d8">__zeroHigh</a>; j++) {</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                __NOP();</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <a class="code" href="class_w_s2812.html#a37c5f3871012186c92a1bf856ca888ee">__gpo</a> = 0;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_w_s2812.html#addde539bd94ea4a670420c22cace2216">__zeroLow</a>; j++) {</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                __NOP();</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            }</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// Exiting timing critical section, so enabling interrutps</span></div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    __enable_irq();</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div><div class="ttc" id="class_w_s2812_html_a44dea9eca691fddccd0637af24c028d8"><div class="ttname"><a href="class_w_s2812.html#a44dea9eca691fddccd0637af24c028d8">WS2812::__zeroHigh</a></div><div class="ttdeci">int __zeroHigh</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00090">WS2812.h:90</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a5623ee0fd628d54483c0427f30f4d568"><div class="ttname"><a href="class_w_s2812.html#a5623ee0fd628d54483c0427f30f4d568">WS2812::__size</a></div><div class="ttdeci">int __size</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00089">WS2812.h:89</a></div></div>
+<div class="ttc" id="class_w_s2812_html_addde539bd94ea4a670420c22cace2216"><div class="ttname"><a href="class_w_s2812.html#addde539bd94ea4a670420c22cace2216">WS2812::__zeroLow</a></div><div class="ttdeci">int __zeroLow</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00090">WS2812.h:90</a></div></div>
+<div class="ttc" id="class_w_s2812_html_ab6d118fa4ae51618675d284fc7130fdd"><div class="ttname"><a href="class_w_s2812.html#ab6d118fa4ae51618675d284fc7130fdd">WS2812::__oneLow</a></div><div class="ttdeci">int __oneLow</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00090">WS2812.h:90</a></div></div>
+<div class="ttc" id="class_w_s2812_html_adfe7d119deac16639f987130f5db724e"><div class="ttname"><a href="class_w_s2812.html#adfe7d119deac16639f987130f5db724e">WS2812::__loadBuf</a></div><div class="ttdeci">void __loadBuf(int buf[], int r_offset=0, int g_offset=0, int b_offset=0)</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8cpp_source.html#l00038">WS2812.cpp:38</a></div></div>
+<div class="ttc" id="_w_s2812_8h_html_af9b1b2ba12857a4bf11289dac8c5462d"><div class="ttname"><a href="_w_s2812_8h.html#af9b1b2ba12857a4bf11289dac8c5462d">FRAME_SIZE</a></div><div class="ttdeci">#define FRAME_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00007">WS2812.h:7</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a345b0895fb037ed603a79806bb7e510c"><div class="ttname"><a href="class_w_s2812.html#a345b0895fb037ed603a79806bb7e510c">WS2812::__transmitBuf</a></div><div class="ttdeci">bool * __transmitBuf</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00093">WS2812.h:93</a></div></div>
+<div class="ttc" id="class_w_s2812_html_acef8597fa4d4a31916a1460de124026e"><div class="ttname"><a href="class_w_s2812.html#acef8597fa4d4a31916a1460de124026e">WS2812::__oneHigh</a></div><div class="ttdeci">int __oneHigh</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00090">WS2812.h:90</a></div></div>
+<div class="ttc" id="class_w_s2812_html_a37c5f3871012186c92a1bf856ca888ee"><div class="ttname"><a href="class_w_s2812.html#a37c5f3871012186c92a1bf856ca888ee">WS2812::__gpo</a></div><div class="ttdeci">DigitalOut __gpo</div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00096">WS2812.h:96</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_cgraph.png" border="0" usemap="#class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_cgraph" alt=""/></div>
+<map name="class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_cgraph" id="class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_cgraph">
+<area shape="rect" id="node2" href="class_w_s2812.html#adfe7d119deac16639f987130f5db724e" title="WS2812::__loadBuf" alt="" coords="205,5,343,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_icgraph.png" border="0" usemap="#class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_icgraph" alt=""/></div>
+<map name="class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_icgraph" id="class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_icgraph">
+<area shape="rect" id="node2" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="205,5,327,32"/>
+<area shape="rect" id="node3" href="class_w_s2812.html#ab85d6a78bc51929dac48db05f6bc68d4" title="Writes the given buffer to the LED strip NOTE: This function is timing critical, therefore interrupts..." alt="" coords="213,56,319,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a37c5f3871012186c92a1bf856ca888ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c5f3871012186c92a1bf856ca888ee">&#9670;&nbsp;</a></span>__gpo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DigitalOut WS2812::__gpo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00096">96</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
+</div>
+</div>
+<a id="a90cb6ef1c50bfa6b2d1a7e6100adead7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90cb6ef1c50bfa6b2d1a7e6100adead7">&#9670;&nbsp;</a></span>__II</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char WS2812::__II</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00091">91</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
+</div>
+</div>
+<a id="acef8597fa4d4a31916a1460de124026e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef8597fa4d4a31916a1460de124026e">&#9670;&nbsp;</a></span>__oneHigh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WS2812::__oneHigh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00090">90</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
+</div>
+</div>
+<a id="ab6d118fa4ae51618675d284fc7130fdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d118fa4ae51618675d284fc7130fdd">&#9670;&nbsp;</a></span>__oneLow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WS2812::__oneLow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00090">90</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
+</div>
+</div>
+<a id="a8e08f8b78b58930cef508a4a66a27916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e08f8b78b58930cef508a4a66a27916">&#9670;&nbsp;</a></span>__outPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PinName WS2812::__outPin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00095">95</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
+</div>
+</div>
+<a id="a5623ee0fd628d54483c0427f30f4d568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5623ee0fd628d54483c0427f30f4d568">&#9670;&nbsp;</a></span>__size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WS2812::__size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00089">89</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
+</div>
+</div>
+<a id="a345b0895fb037ed603a79806bb7e510c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345b0895fb037ed603a79806bb7e510c">&#9670;&nbsp;</a></span>__transmitBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool* WS2812::__transmitBuf</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00093">93</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
+</div>
+</div>
+<a id="a249d1039add9ef099574fc4a52aa1235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249d1039add9ef099574fc4a52aa1235">&#9670;&nbsp;</a></span>__use_II</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642d">BrightnessControl</a> WS2812::__use_II</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00092">92</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
+</div>
+</div>
+<a id="a44dea9eca691fddccd0637af24c028d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44dea9eca691fddccd0637af24c028d8">&#9670;&nbsp;</a></span>__zeroHigh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WS2812::__zeroHigh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00090">90</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
+</div>
+</div>
+<a id="addde539bd94ea4a670420c22cace2216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addde539bd94ea4a670420c22cace2216">&#9670;&nbsp;</a></span>__zeroLow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WS2812::__zeroLow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_w_s2812_8h_source.html#l00090">90</a> of file <a class="el" href="_w_s2812_8h_source.html">WS2812.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_w_s2812_8h_source.html">WS2812.h</a></li>
-<li>WS2812.cpp</li>
+<li><a class="el" href="_w_s2812_8cpp_source.html">WS2812.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_w_s2812.html">WS2812</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

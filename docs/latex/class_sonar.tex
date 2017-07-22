@@ -1,21 +1,85 @@
 \hypertarget{class_sonar}{}\section{Sonar Class Reference}
 \label{class_sonar}\index{Sonar@{Sonar}}
-Inheritance diagram for Sonar\+:\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Sonar.\+h$>$}
+
+
+
+Inheritance diagram for Sonar\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_sonar}
+\includegraphics[width=183pt]{class_sonar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sonar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sonar__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_sonar_a8199e2b1d48626cc0404708063d7fe42}{Sonar} (\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const uart\+Msngr, uint8\+\_\+t addr, Event\+Queue $\ast$const queue)
-\item 
+\hyperlink{class_sonar_a8199e2b1d48626cc0404708063d7fe42}{Sonar} (\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const uart\+Msngr, uint8\+\_\+t addr, Event\+Queue $\ast$const \hyperlink{class_sonar_af0431d160853c8313eba0fd0e1ce8346}{queue})
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class_sonar}{Sonar}. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_sonar_aaf10dd734528b86b4dea3ab35c4ee4f4}{update} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Write value to i2c for the sonar. \end{DoxyCompactList}\item 
 uint16\+\_\+t \hyperlink{class_sonar_a7a641bcfac1967fbc42eea2ab70886dc}{get\+Range} ()
+\item 
+void \hyperlink{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}{set\+Priority} (int p)
+\begin{DoxyCompactList}\small\item\em Set priority to the component, used for updating order. \end{DoxyCompactList}\item 
+int \hyperlink{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}{get\+Priority} ()
+\item 
+bool \hyperlink{class_abstract_component_a0c2e458144111c5f599c66f168516abc}{operator$<$} (const \hyperlink{class_abstract_component}{Abstract\+Component} \&another) const
+\begin{DoxyCompactList}\small\item\em Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id}
+\item 
+int \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority} = 0
 \end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}{s\+\_\+id} = 0
+\begin{DoxyCompactList}\small\item\em The id for each component will be created in a sequence order staring with 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_sonar_af7a8bb36d925d164b31ff271f9006dc7}{read} ()
+\begin{DoxyCompactList}\small\item\em Read the range and then bit will be shifted towards left 8 bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const \hyperlink{class_sonar_a63b5d2455e9278c9d3c6dded215789f6}{uart\+Messenger}
+\item 
+Event\+Queue $\ast$const \hyperlink{class_sonar_af0431d160853c8313eba0fd0e1ce8346}{queue}
+\item 
+\hyperlink{struct_sub_message}{Sub\+Message} \hyperlink{class_sonar_a08f09f7abe342846e6e97b8dd76d623b}{sub\+Message}
+\item 
+I2C \hyperlink{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}{i2c}
+\item 
+uint8\+\_\+t \hyperlink{class_sonar_aa42fef5da4ff8d80353143a74eff2ae2}{address}
+\item 
+char \hyperlink{class_sonar_a6a5dc5e466fc0c7a8cb2fc50af10db45}{config} \mbox{[}2\mbox{]}
+\item 
+uint16\+\_\+t \hyperlink{class_sonar_a6b0f78a9151925ca61fe54c852c195bd}{range}
+\item 
+Timeout \hyperlink{class_sonar_a4b3cc5317263c63dd58195f3c2c94da6}{timeout}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file Sonar.\+h.
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -26,17 +90,61 @@ uint16\+\_\+t \hyperlink{class_sonar_a7a641bcfac1967fbc42eea2ab70886dc}{get\+Ran
 {\footnotesize\ttfamily Sonar\+::\+Sonar (\begin{DoxyParamCaption}\item[{\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const}]{uart\+Msngr,  }\item[{uint8\+\_\+t}]{addr,  }\item[{Event\+Queue $\ast$const}]{queue }\end{DoxyParamCaption})}
 
 
+
+Constructor for \hyperlink{class_sonar}{Sonar}. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em uart\+Msngr} & Pointer to \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} object, that should be used for sending data to Paparazzi \\
 \hline
 {\em addr} & Address of the \hyperlink{class_sonar}{Sonar} \\
 \hline
-{\em queue} & mbed Event\+Queue\\
+{\em queue} & mbed Event\+Queue \\
 \hline
 \end{DoxyParams}
-Constructor for \hyperlink{class_sonar}{Sonar} 
+
+
+Definition at line 9 of file Sonar.\+cpp.
+
+
+\begin{DoxyCode}
+9                                                                                   : 
+      \hyperlink{class_sonar_a63b5d2455e9278c9d3c6dded215789f6}{uartMessenger}(uartMsngr), \hyperlink{class_sonar_af0431d160853c8313eba0fd0e1ce8346}{queue}(\hyperlink{class_sonar_af0431d160853c8313eba0fd0e1ce8346}{queue}), \hyperlink{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}{i2c}(I2C\_SDA, I2C\_SCL) \{
+10     \textcolor{keywordtype}{id} = ++\hyperlink{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}{s\_id};
+11     \hyperlink{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}{i2c}.frequency(50000);
+12     \hyperlink{class_sonar_aa42fef5da4ff8d80353143a74eff2ae2}{address} = addr << 1;
+13 \}
+\end{DoxyCode}
+
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}\label{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}} 
+\index{Sonar@{Sonar}!get\+Priority@{get\+Priority}}
+\index{get\+Priority@{get\+Priority}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{get\+Priority()}{getPriority()}}
+{\footnotesize\ttfamily int Abstract\+Component\+::get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+\begin{DoxyReturn}{Returns}
+priority of the component 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Abstract\+Component.\+h.
+
+
+\begin{DoxyCode}
+25                       \{
+26         \textcolor{keywordflow}{return} \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority};
+27     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_sonar_a7a641bcfac1967fbc42eea2ab70886dc}\label{class_sonar_a7a641bcfac1967fbc42eea2ab70886dc}} 
 \index{Sonar@{Sonar}!get\+Range@{get\+Range}}
 \index{get\+Range@{get\+Range}!Sonar@{Sonar}}
@@ -46,19 +154,282 @@ Constructor for \hyperlink{class_sonar}{Sonar}
 \begin{DoxyReturn}{Returns}
 current range of this sensor 
 \end{DoxyReturn}
+
+
+Definition at line 52 of file Sonar.\+cpp.
+
+
+\begin{DoxyCode}
+52                          \{
+53     \textcolor{keywordflow}{return} \hyperlink{class_sonar_a6b0f78a9151925ca61fe54c852c195bd}{range};
+54 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_abstract_component_a0c2e458144111c5f599c66f168516abc}\label{class_abstract_component_a0c2e458144111c5f599c66f168516abc}} 
+\index{Sonar@{Sonar}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Abstract\+Component\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_abstract_component}{Abstract\+Component} \&}]{another }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em another} & component for comparison \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if id is smaller then the id of another component 
+\end{DoxyReturn}
+
+
+Definition at line 8 of file Abstract\+Component.\+cpp.
+
+
+\begin{DoxyCode}
+8                                                                         \{
+9     \textcolor{keywordflow}{return} \textcolor{keywordtype}{id} < another.\hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id};
+10 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sonar_af7a8bb36d925d164b31ff271f9006dc7}\label{class_sonar_af7a8bb36d925d164b31ff271f9006dc7}} 
+\index{Sonar@{Sonar}!read@{read}}
+\index{read@{read}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Sonar\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Read the range and then bit will be shifted towards left 8 bytes. 
+
+Type of the sensor is S\+O\+N\+AR, id of the sensor, converting to data range to uint16\+\_\+t, length of the range. Appends the message to uart list. 
+
+Definition at line 35 of file Sonar.\+cpp.
+
+
+\begin{DoxyCode}
+35                  \{
+36     \hyperlink{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}{i2c}.lock();
+37     \textcolor{keywordtype}{char} range\_read[2];
+38     \textcolor{keywordtype}{int} a = \hyperlink{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}{i2c}.read(\hyperlink{class_sonar_aa42fef5da4ff8d80353143a74eff2ae2}{address} | 0x01, range\_read, 2); \textcolor{comment}{//read the two-byte range data}
+39     \textcolor{keywordflow}{if} (a != 0)
+40         \textcolor{keywordflow}{return}; \textcolor{comment}{// Reading failed}
+41     \hyperlink{class_sonar_a6b0f78a9151925ca61fe54c852c195bd}{range} = ((range\_read[0] << 8) | range\_read[1]);
+42     \hyperlink{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}{i2c}.unlock();
+43 
+44     \hyperlink{class_sonar_a08f09f7abe342846e6e97b8dd76d623b}{subMessage}.\hyperlink{struct_sub_message_a064f1d26d553da776dc749d37a18a499}{type} = \hyperlink{_sub_message_8h_a81f78fc173dedefe5a049c0aa3eed2c0a4cc68226cf454df7dd46f74f2a18d240}{SONAR};
+45     \hyperlink{class_sonar_a08f09f7abe342846e6e97b8dd76d623b}{subMessage}.\hyperlink{struct_sub_message_af3acc450c0686d7a9d15ccd9d548cb6d}{id} = \hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id};
+46     \textcolor{keyword}{reinterpret\_cast<}uint16\_t *\textcolor{keyword}{>}(\hyperlink{class_sonar_a08f09f7abe342846e6e97b8dd76d623b}{subMessage}.\hyperlink{struct_sub_message_a7d923c5cdaa380c27d7c4cf60ea7c1be}{data})[0] = \hyperlink{class_sonar_a6b0f78a9151925ca61fe54c852c195bd}{range};
+47     \hyperlink{class_sonar_a08f09f7abe342846e6e97b8dd76d623b}{subMessage}.\hyperlink{struct_sub_message_a276e06f5335ca7857c21ac8c0e51bd6d}{length} = \textcolor{keyword}{sizeof}(\hyperlink{class_sonar_a6b0f78a9151925ca61fe54c852c195bd}{range});
+48 
+49     \hyperlink{class_sonar_a63b5d2455e9278c9d3c6dded215789f6}{uartMessenger}->\hyperlink{class_u_a_r_t_messenger_ada0967869e320c236a211b405abf128a}{appendMessage}(\hyperlink{class_sonar_a08f09f7abe342846e6e97b8dd76d623b}{subMessage});
+50 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sonar_af7a8bb36d925d164b31ff271f9006dc7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_sonar_af7a8bb36d925d164b31ff271f9006dc7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}\label{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}} 
+\index{Sonar@{Sonar}!set\+Priority@{set\+Priority}}
+\index{set\+Priority@{set\+Priority}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{set\+Priority()}{setPriority()}}
+{\footnotesize\ttfamily void Abstract\+Component\+::set\+Priority (\begin{DoxyParamCaption}\item[{int}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Set priority to the component, used for updating order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & priority \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Abstract\+Component.\+h.
+
+
+\begin{DoxyCode}
+18                             \{
+19         \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority} = p;
+20     \}
+\end{DoxyCode}
 \mbox{\Hypertarget{class_sonar_aaf10dd734528b86b4dea3ab35c4ee4f4}\label{class_sonar_aaf10dd734528b86b4dea3ab35c4ee4f4}} 
 \index{Sonar@{Sonar}!update@{update}}
 \index{update@{update}!Sonar@{Sonar}}
 \subsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void Sonar\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
 Write value to i2c for the sonar. 
 
-Implements \hyperlink{class_abstract_component}{Abstract\+Component}.
+
+
+Implements \hyperlink{class_abstract_component_af25a90b8ab213762221c3b358d9873f3}{Abstract\+Component}.
+
+
+
+Definition at line 18 of file Sonar.\+cpp.
+
+
+\begin{DoxyCode}
+18                    \{
+19     \hyperlink{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}{i2c}.lock();
+20     \hyperlink{class_sonar_a6a5dc5e466fc0c7a8cb2fc50af10db45}{config}[0] = 0x51; \textcolor{comment}{//initializing the address as 81}
+21     \textcolor{keywordtype}{int} a = \hyperlink{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}{i2c}.write(\hyperlink{class_sonar_aa42fef5da4ff8d80353143a74eff2ae2}{address} & ~1, \hyperlink{class_sonar_a6a5dc5e466fc0c7a8cb2fc50af10db45}{config}, 1);
+22     \textcolor{keywordflow}{if} (a != 0)
+23         \textcolor{keywordflow}{return}; \textcolor{comment}{// Writing failed}
+24     \hyperlink{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}{i2c}.unlock();
+25 
+26     \textcolor{comment}{// move read function to the queue to be called after 80 ms}
+27     \hyperlink{class_sonar_af0431d160853c8313eba0fd0e1ce8346}{queue}->call\_in(80, callback(\textcolor{keyword}{this}, &\hyperlink{class_sonar_af7a8bb36d925d164b31ff271f9006dc7}{Sonar::read}));
+28 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sonar_aaf10dd734528b86b4dea3ab35c4ee4f4_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sonar_aa42fef5da4ff8d80353143a74eff2ae2}\label{class_sonar_aa42fef5da4ff8d80353143a74eff2ae2}} 
+\index{Sonar@{Sonar}!address@{address}}
+\index{address@{address}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily uint8\+\_\+t Sonar\+::address\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 31 of file Sonar.\+h.
+
+\mbox{\Hypertarget{class_sonar_a6a5dc5e466fc0c7a8cb2fc50af10db45}\label{class_sonar_a6a5dc5e466fc0c7a8cb2fc50af10db45}} 
+\index{Sonar@{Sonar}!config@{config}}
+\index{config@{config}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily char Sonar\+::config\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 32 of file Sonar.\+h.
+
+\mbox{\Hypertarget{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}\label{class_sonar_ae6be174d7fc69e27ae5d932b26a5a003}} 
+\index{Sonar@{Sonar}!i2c@{i2c}}
+\index{i2c@{i2c}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{i2c}{i2c}}
+{\footnotesize\ttfamily I2C Sonar\+::i2c\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file Sonar.\+h.
+
+\mbox{\Hypertarget{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}\label{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}} 
+\index{Sonar@{Sonar}!id@{id}}
+\index{id@{id}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Abstract\+Component\+::id\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 39 of file Abstract\+Component.\+h.
+
+\mbox{\Hypertarget{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}\label{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}} 
+\index{Sonar@{Sonar}!priority@{priority}}
+\index{priority@{priority}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily int Abstract\+Component\+::priority = 0\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 40 of file Abstract\+Component.\+h.
+
+\mbox{\Hypertarget{class_sonar_af0431d160853c8313eba0fd0e1ce8346}\label{class_sonar_af0431d160853c8313eba0fd0e1ce8346}} 
+\index{Sonar@{Sonar}!queue@{queue}}
+\index{queue@{queue}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily Event\+Queue$\ast$ const Sonar\+::queue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file Sonar.\+h.
+
+\mbox{\Hypertarget{class_sonar_a6b0f78a9151925ca61fe54c852c195bd}\label{class_sonar_a6b0f78a9151925ca61fe54c852c195bd}} 
+\index{Sonar@{Sonar}!range@{range}}
+\index{range@{range}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{range}{range}}
+{\footnotesize\ttfamily uint16\+\_\+t Sonar\+::range\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 33 of file Sonar.\+h.
+
+\mbox{\Hypertarget{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}\label{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}} 
+\index{Sonar@{Sonar}!s\+\_\+id@{s\+\_\+id}}
+\index{s\+\_\+id@{s\+\_\+id}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{s\+\_\+id}{s\_id}}
+{\footnotesize\ttfamily int Abstract\+Component\+::s\+\_\+id = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+The id for each component will be created in a sequence order staring with 1. 
+
+
+
+Definition at line 38 of file Abstract\+Component.\+h.
+
+\mbox{\Hypertarget{class_sonar_a08f09f7abe342846e6e97b8dd76d623b}\label{class_sonar_a08f09f7abe342846e6e97b8dd76d623b}} 
+\index{Sonar@{Sonar}!sub\+Message@{sub\+Message}}
+\index{sub\+Message@{sub\+Message}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{sub\+Message}{subMessage}}
+{\footnotesize\ttfamily \hyperlink{struct_sub_message}{Sub\+Message} Sonar\+::sub\+Message\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 29 of file Sonar.\+h.
+
+\mbox{\Hypertarget{class_sonar_a4b3cc5317263c63dd58195f3c2c94da6}\label{class_sonar_a4b3cc5317263c63dd58195f3c2c94da6}} 
+\index{Sonar@{Sonar}!timeout@{timeout}}
+\index{timeout@{timeout}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{timeout}{timeout}}
+{\footnotesize\ttfamily Timeout Sonar\+::timeout\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file Sonar.\+h.
+
+\mbox{\Hypertarget{class_sonar_a63b5d2455e9278c9d3c6dded215789f6}\label{class_sonar_a63b5d2455e9278c9d3c6dded215789f6}} 
+\index{Sonar@{Sonar}!uart\+Messenger@{uart\+Messenger}}
+\index{uart\+Messenger@{uart\+Messenger}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{uart\+Messenger}{uartMessenger}}
+{\footnotesize\ttfamily \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger}$\ast$ const Sonar\+::uart\+Messenger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 27 of file Sonar.\+h.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Sonar.\+h\item 
-Sonar.\+cpp\end{DoxyCompactItemize}
+\hyperlink{_sonar_8h}{Sonar.\+h}\item 
+\hyperlink{_sonar_8cpp}{Sonar.\+cpp}\end{DoxyCompactItemize}

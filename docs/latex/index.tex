@@ -1,13 +1,13 @@
 \hypertarget{index_intro_sec}{}\section{Introduction}\label{index_intro_sec}
 Our project is to develop hardware for the F\+I\+Nken 3 robots.
 
-We have designed the P\+C\+Bs where the reference link is given below for the further details \href{https://github.com/ovgu-FINken/DE-HW-Hardware/wiki}{\tt Hardware link}
+We have designed the P\+C\+Bs where the reference link is given below for the further details \href{https://github.com/ovgu-FINken/DE-HW-Hardware/wiki}{\tt Hardware wiki link}
 
 This document mainly focused on the software part.
 
-Currently the F\+I\+Nken I\+II is the newest generation of our copters with more power,better communication and more sensors
+Currently the F\+I\+Nken I\+II is the newest generation of our copters with more power, better communication and more sensors 
 
-{\bfseries Specifications\+:}
+{\bfseries Specifications \+:}
 
 
 \begin{DoxyEnumerate}
@@ -33,11 +33,17 @@ List of components is provided below\+:
 \item Paparazzi\+U\+AV board
 \item R\+GB L\+E\+Ds
 \item Illuminating Sensor
-\item S\+T\+M32\+F44\+R\+E\+T6 Micro controller
-\end{DoxyEnumerate}\hypertarget{index_about}{}\section{Programming language and installation guide for using in Linux}\label{index_about}
-We programmed in Clion using mbed libraries in C++ language. For using mbed libraries, mbed cli needs to install for exporting into I\+DE.
+\item S\+T\+M32\+F44\+R\+E\+T6 Micro controller 
 
-Below are the procedure as follows\+:
+ 
+\end{DoxyEnumerate}\hypertarget{index_prog_sec}{}\subsection{Programming language and installation guide for using in Linux}\label{index_prog_sec}
+
+
+
+
+We programmed in C\+Lion using Mbed libraries in C++ language. For using mbed libraries, mbed cli needs to install for exporting into I\+DE.
+
+Below is the procedure as follows\+:
 
 
 \begin{DoxyEnumerate}
@@ -57,19 +63,22 @@ Step3\+: Continue to input to install toolchain \char`\"{}sudo apt-\/get install
 \item Flash the microcontroller
 \end{DoxyEnumerate}
 
-Use another terminal for running the code (for convinence) for gdb terminal
+Use another terminal for running the code (for convenience) for gdb terminal
 
 (gdb) target extended-\/remote /dev/tty\+A\+C\+M0 Remote debugging using /dev/tty\+A\+C\+M0 If A\+C\+M0 doesnt work need to try for A\+C\+M1 and A\+C\+M2 (gdb) monitor swdp\+\_\+scan....For supplying power Target voltage\+: 3.\+4V
 
-Available Targets\+: No. Att Driver 1 S\+T\+M32\+F4xx
+Available Targets\+: No. Attach Driver 1 S\+T\+M32\+F4xx
 
-(gdb) attach 1 load the .elf file run if you want to break the code and check we can do the particular check
+(gdb) attach 1 Load the .elf file Run If you want to break the code and check we can do the particular check
 
-Open gtk terminal where one can see the output, set the port (usually A\+C\+M0) and change from A\+S\+C\+II to hex to see the output in hex format (in bytes)
+Open gtk terminal where one can see the output set the port (usually A\+C\+M0) and change from A\+S\+C\+II to hex to see the output in hex format (In bytes)
 
-{\bfseries Communication with Paparazzi}
 
-The message structures is as follows for both receive and send for paparazzi\+:
+
+ \hypertarget{index_paparazzi_sec}{}\subsection{Communication with Paparazzi}\label{index_paparazzi_sec}
+
+
+ The message structures are as follows for both receive and send for paparazzi\+:
 
 
 \begin{DoxyEnumerate}

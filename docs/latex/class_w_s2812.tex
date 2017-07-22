@@ -12,28 +12,55 @@ Library for the \hyperlink{class_w_s2812}{W\+S2812} R\+GB L\+ED with integrated 
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}\label{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}} 
-enum {\bfseries Brightness\+Control} \{ {\bfseries O\+FF}, 
-{\bfseries G\+L\+O\+B\+AL}, 
-{\bfseries P\+E\+R\+\_\+\+P\+I\+X\+EL}
+enum \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}{Brightness\+Control} \{ \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55}{O\+FF}, 
+\hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45}{G\+L\+O\+B\+AL}, 
+\hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863}{P\+E\+R\+\_\+\+P\+I\+X\+EL}
  \}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_w_s2812_a397fb1e75594024884cb4365d3c725cd}{W\+S2812} (Pin\+Name pin, int size, int zero\+High, int zero\+Low, int one\+High, int one\+Low)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \hyperlink{class_w_s2812_a58973dedd9cbc5c3fd3397f07f9a720f}{$\sim$\+W\+S2812} ()
 \item 
 void \hyperlink{class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec}{set\+Delays} (int zero\+High, int zero\+Low, int one\+High, int one\+Low)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the timing parameters for the bit-\/banged signal. \end{DoxyCompactList}\item 
 void \hyperlink{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}{write\+\_\+offsets} (int buf\mbox{[}$\,$\mbox{]}, int r\+\_\+offset=0, int g\+\_\+offset=0, int b\+\_\+offset=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Writes the given buffer to the L\+ED strip with the given offsets. \end{DoxyCompactList}\item 
 void \hyperlink{class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4}{write} (int buf\mbox{[}$\,$\mbox{]})
-\item 
-void \hyperlink{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}{use\+II} (Brightness\+Control bc)
-\item 
+\begin{DoxyCompactList}\small\item\em Writes the given buffer to the L\+ED strip N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section. \end{DoxyCompactList}\item 
+void \hyperlink{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}{use\+II} (\hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}{Brightness\+Control} bc)
+\begin{DoxyCompactList}\small\item\em Sets the brightness mode. \end{DoxyCompactList}\item 
 void \hyperlink{class_w_s2812_a8b6491617f9beb271d6d5c56ba384fb6}{set\+II} (unsigned char II)
+\begin{DoxyCompactList}\small\item\em Sets the global brightness level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_w_s2812_adfe7d119deac16639f987130f5db724e}{\+\_\+\+\_\+load\+Buf} (int buf\mbox{[}$\,$\mbox{]}, int r\+\_\+offset=0, int g\+\_\+offset=0, int b\+\_\+offset=0)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_w_s2812_a5623ee0fd628d54483c0427f30f4d568}{\+\_\+\+\_\+size}
+\item 
+int \hyperlink{class_w_s2812_a44dea9eca691fddccd0637af24c028d8}{\+\_\+\+\_\+zero\+High}
+\item 
+int \hyperlink{class_w_s2812_addde539bd94ea4a670420c22cace2216}{\+\_\+\+\_\+zero\+Low}
+\item 
+int \hyperlink{class_w_s2812_acef8597fa4d4a31916a1460de124026e}{\+\_\+\+\_\+one\+High}
+\item 
+int \hyperlink{class_w_s2812_ab6d118fa4ae51618675d284fc7130fdd}{\+\_\+\+\_\+one\+Low}
+\item 
+unsigned char \hyperlink{class_w_s2812_a90cb6ef1c50bfa6b2d1a7e6100adead7}{\+\_\+\+\_\+\+II}
+\item 
+\hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}{Brightness\+Control} \hyperlink{class_w_s2812_a249d1039add9ef099574fc4a52aa1235}{\+\_\+\+\_\+use\+\_\+\+II}
+\item 
+bool $\ast$ \hyperlink{class_w_s2812_a345b0895fb037ed603a79806bb7e510c}{\+\_\+\+\_\+transmit\+Buf}
+\item 
+Pin\+Name \hyperlink{class_w_s2812_a8e08f8b78b58930cef508a4a66a27916}{\+\_\+\+\_\+out\+Pin}
+\item 
+Digital\+Out \hyperlink{class_w_s2812_a37c5f3871012186c92a1bf856ca888ee}{\+\_\+\+\_\+gpo}
 \end{DoxyCompactItemize}
 
 
@@ -42,6 +69,41 @@ Library for the \hyperlink{class_w_s2812}{W\+S2812} R\+GB L\+ED with integrated 
 
 The \hyperlink{class_w_s2812}{W\+S2812} is controller that is built into a range of L\+E\+Ds 
 
+Definition at line 13 of file W\+S2812.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}\label{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}} 
+\index{W\+S2812@{W\+S2812}!Brightness\+Control@{Brightness\+Control}}
+\index{Brightness\+Control@{Brightness\+Control}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{Brightness\+Control}{BrightnessControl}}
+{\footnotesize\ttfamily enum \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}{W\+S2812\+::\+Brightness\+Control}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+FF@{O\+FF}!W\+S2812@{W\+S2812}}\index{W\+S2812@{W\+S2812}!O\+FF@{O\+FF}}}\mbox{\Hypertarget{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55}\label{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55}} 
+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+L\+O\+B\+AL@{G\+L\+O\+B\+AL}!W\+S2812@{W\+S2812}}\index{W\+S2812@{W\+S2812}!G\+L\+O\+B\+AL@{G\+L\+O\+B\+AL}}}\mbox{\Hypertarget{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45}\label{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45}} 
+G\+L\+O\+B\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+E\+R\+\_\+\+P\+I\+X\+EL@{P\+E\+R\+\_\+\+P\+I\+X\+EL}!W\+S2812@{W\+S2812}}\index{W\+S2812@{W\+S2812}!P\+E\+R\+\_\+\+P\+I\+X\+EL@{P\+E\+R\+\_\+\+P\+I\+X\+EL}}}\mbox{\Hypertarget{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863}\label{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863}} 
+P\+E\+R\+\_\+\+P\+I\+X\+EL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 16 of file W\+S2812.\+h.
+
+
+\begin{DoxyCode}
+16 \{ \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55}{OFF}, \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45}{GLOBAL}, \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863}{PER\_PIXEL} \};
+\end{DoxyCode}
+
+
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_w_s2812_a397fb1e75594024884cb4365d3c725cd}\label{class_w_s2812_a397fb1e75594024884cb4365d3c725cd}} 
 \index{W\+S2812@{W\+S2812}!W\+S2812@{W\+S2812}}
@@ -49,7 +111,9 @@ The \hyperlink{class_w_s2812}{W\+S2812} is controller that is built into a range
 \subsubsection{\texorpdfstring{W\+S2812()}{WS2812()}}
 {\footnotesize\ttfamily W\+S2812\+::\+W\+S2812 (\begin{DoxyParamCaption}\item[{Pin\+Name}]{pin,  }\item[{int}]{size,  }\item[{int}]{zero\+High,  }\item[{int}]{zero\+Low,  }\item[{int}]{one\+High,  }\item[{int}]{one\+Low }\end{DoxyParamCaption})}
 
-Constructor
+
+
+Constructor. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -66,7 +130,33 @@ Constructor
 {\em one\+Low} & How many N\+O\+Ps to insert to ensure T1L is properly generated. See library description for more information.\\
 \hline
 \end{DoxyParams}
-Constructor \mbox{\Hypertarget{class_w_s2812_a58973dedd9cbc5c3fd3397f07f9a720f}\label{class_w_s2812_a58973dedd9cbc5c3fd3397f07f9a720f}} 
+
+
+Definition at line 8 of file W\+S2812.\+cpp.
+
+
+\begin{DoxyCode}
+8                                                                                         : 
+      \hyperlink{class_w_s2812_a37c5f3871012186c92a1bf856ca888ee}{\_\_gpo}(pin)
+9 \{
+10     \hyperlink{class_w_s2812_a5623ee0fd628d54483c0427f30f4d568}{\_\_size} = size;
+11     \hyperlink{class_w_s2812_a345b0895fb037ed603a79806bb7e510c}{\_\_transmitBuf} = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[size * \hyperlink{_w_s2812_8h_af9b1b2ba12857a4bf11289dac8c5462d}{FRAME\_SIZE}];
+12     \hyperlink{class_w_s2812_a249d1039add9ef099574fc4a52aa1235}{\_\_use\_II} = \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55}{OFF};
+13     \hyperlink{class_w_s2812_a90cb6ef1c50bfa6b2d1a7e6100adead7}{\_\_II} = 0xFF; \textcolor{comment}{// set global intensity to full}
+14     \hyperlink{class_w_s2812_a8e08f8b78b58930cef508a4a66a27916}{\_\_outPin} = pin;
+15 
+16     \textcolor{comment}{// Default values designed for K64f. Assumes GPIO toggle takes ~0.4us}
+17     \hyperlink{class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec}{setDelays}(zeroHigh, zeroLow, oneHigh, oneLow);
+18 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_w_s2812_a397fb1e75594024884cb4365d3c725cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_w_s2812_a58973dedd9cbc5c3fd3397f07f9a720f}\label{class_w_s2812_a58973dedd9cbc5c3fd3397f07f9a720f}} 
 \index{W\+S2812@{W\+S2812}!````~W\+S2812@{$\sim$\+W\+S2812}}
 \index{````~W\+S2812@{$\sim$\+W\+S2812}!W\+S2812@{W\+S2812}}
 \subsubsection{\texorpdfstring{$\sim$\+W\+S2812()}{~WS2812()}}
@@ -74,14 +164,95 @@ Constructor \mbox{\Hypertarget{class_w_s2812_a58973dedd9cbc5c3fd3397f07f9a720f}\
 
 Destroys instance. 
 
+Definition at line 21 of file W\+S2812.\+cpp.
+
+
+\begin{DoxyCode}
+22 \{
+23     \textcolor{keyword}{delete}[] \hyperlink{class_w_s2812_a345b0895fb037ed603a79806bb7e510c}{\_\_transmitBuf};
+24 \}
+\end{DoxyCode}
+
+
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_w_s2812_adfe7d119deac16639f987130f5db724e}\label{class_w_s2812_adfe7d119deac16639f987130f5db724e}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+load\+Buf@{\+\_\+\+\_\+load\+Buf}}
+\index{\+\_\+\+\_\+load\+Buf@{\+\_\+\+\_\+load\+Buf}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+load\+Buf()}{\_\_loadBuf()}}
+{\footnotesize\ttfamily void W\+S2812\+::\+\_\+\+\_\+load\+Buf (\begin{DoxyParamCaption}\item[{int}]{buf\mbox{[}$\,$\mbox{]},  }\item[{int}]{r\+\_\+offset = {\ttfamily 0},  }\item[{int}]{g\+\_\+offset = {\ttfamily 0},  }\item[{int}]{b\+\_\+offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 38 of file W\+S2812.\+cpp.
+
+
+\begin{DoxyCode}
+38                                                                          \{
+39     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{class_w_s2812_a5623ee0fd628d54483c0427f30f4d568}{\_\_size}; i++) \{
+40         \textcolor{keywordtype}{int} color = 0;
+41 
+42         color |= ((buf[(i+g\_offset)%\_\_size] & 0x0000FF00));
+43         color |= ((buf[(i+r\_offset)%\_\_size] & 0x00FF0000));
+44         color |=  (buf[(i+b\_offset)%\_\_size] & 0x000000FF);
+45         color |= (buf[i] & 0xFF000000);
+46 
+47         \textcolor{comment}{// Outut format : GGRRBB}
+48         \textcolor{comment}{// Inout format : IIRRGGBB}
+49         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} agrb[4] = \{0x0, 0x0, 0x0, 0x0\};
+50 
+51         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} sf; \textcolor{comment}{// scaling factor for  II}
+52 
+53         \textcolor{comment}{// extract colour fields from incoming}
+54         \textcolor{comment}{// 0 = green, 1 = red, 2 = blue, 3 = brightness}
+55         agrb[0] = (color & 0x0000FF00) >> 8;
+56         agrb[1] = (color & 0x00FF0000) >> 16;
+57         agrb[2] = color  & 0x000000FF;
+58         agrb[3] = (color & 0xFF000000) >> 24;
+59 
+60         \textcolor{comment}{// set the intensity scaling factor (global, per pixel, none)}
+61         \textcolor{keywordflow}{if} (\hyperlink{class_w_s2812_a249d1039add9ef099574fc4a52aa1235}{\_\_use\_II} == \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45}{GLOBAL}) \{
+62             sf = \hyperlink{class_w_s2812_a90cb6ef1c50bfa6b2d1a7e6100adead7}{\_\_II};
+63         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{class_w_s2812_a249d1039add9ef099574fc4a52aa1235}{\_\_use\_II} == \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642dad5ae572eb876f9e90650fd6817385863}{PER\_PIXEL}) \{
+64             sf = agrb[3];
+65         \} \textcolor{keywordflow}{else} \{
+66             sf = 0xFF;
+67         \}
+68 
+69         \textcolor{comment}{// Apply the scaling factor to each othe colour components}
+70         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} clr = 0; clr < 3; clr++) \{
+71             agrb[clr] = ((agrb[clr] * sf) >> 8);
+72 
+73             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 8; j++) \{
+74                 \textcolor{keywordflow}{if} (((agrb[clr] << j) & 0x80) == 0x80) \{
+75                     \textcolor{comment}{// Bit is set (checks MSB fist)}
+76                     \hyperlink{class_w_s2812_a345b0895fb037ed603a79806bb7e510c}{\_\_transmitBuf}[(i * \hyperlink{_w_s2812_8h_af9b1b2ba12857a4bf11289dac8c5462d}{FRAME\_SIZE}) + (clr * 8) + j] = 1;
+77                 \} \textcolor{keywordflow}{else} \{
+78                     \textcolor{comment}{// Bit is clear}
+79                     \hyperlink{class_w_s2812_a345b0895fb037ed603a79806bb7e510c}{\_\_transmitBuf}[(i * \hyperlink{_w_s2812_8h_af9b1b2ba12857a4bf11289dac8c5462d}{FRAME\_SIZE}) + (clr * 8) + j] = 0;
+80                 \}
+81             \}
+82         \}
+83     \}
+84 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_w_s2812_adfe7d119deac16639f987130f5db724e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec}\label{class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec}} 
 \index{W\+S2812@{W\+S2812}!set\+Delays@{set\+Delays}}
 \index{set\+Delays@{set\+Delays}!W\+S2812@{W\+S2812}}
 \subsubsection{\texorpdfstring{set\+Delays()}{setDelays()}}
 {\footnotesize\ttfamily void W\+S2812\+::set\+Delays (\begin{DoxyParamCaption}\item[{int}]{zero\+High,  }\item[{int}]{zero\+Low,  }\item[{int}]{one\+High,  }\item[{int}]{one\+Low }\end{DoxyParamCaption})}
 
-Sets the timing parameters for the bit-\/banged signal
+
+
+Sets the timing parameters for the bit-\/banged signal. 
+
+Writes the given buffer to the L\+ED strip with the given offsets.
 
 
 \begin{DoxyParams}{Parameters}
@@ -94,52 +265,130 @@ Sets the timing parameters for the bit-\/banged signal
 {\em one\+Low} & How many N\+O\+Ps to insert to ensure T1L is properly generated. See library description for more information.\\
 \hline
 \end{DoxyParams}
-Writes the given buffer to the L\+ED strip with the given offsets. N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section. \mbox{\Hypertarget{class_w_s2812_a8b6491617f9beb271d6d5c56ba384fb6}\label{class_w_s2812_a8b6491617f9beb271d6d5c56ba384fb6}} 
+N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section. 
+
+Definition at line 31 of file W\+S2812.\+cpp.
+
+
+\begin{DoxyCode}
+31                                                                          \{
+32     \hyperlink{class_w_s2812_a44dea9eca691fddccd0637af24c028d8}{\_\_zeroHigh} = zeroHigh;
+33     \hyperlink{class_w_s2812_addde539bd94ea4a670420c22cace2216}{\_\_zeroLow} = zeroLow;
+34     \hyperlink{class_w_s2812_acef8597fa4d4a31916a1460de124026e}{\_\_oneHigh} = oneHigh;
+35     \hyperlink{class_w_s2812_ab6d118fa4ae51618675d284fc7130fdd}{\_\_oneLow} = oneLow;
+36 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_w_s2812_a8b6491617f9beb271d6d5c56ba384fb6}\label{class_w_s2812_a8b6491617f9beb271d6d5c56ba384fb6}} 
 \index{W\+S2812@{W\+S2812}!set\+II@{set\+II}}
 \index{set\+II@{set\+II}!W\+S2812@{W\+S2812}}
 \subsubsection{\texorpdfstring{set\+I\+I()}{setII()}}
 {\footnotesize\ttfamily void W\+S2812\+::set\+II (\begin{DoxyParamCaption}\item[{unsigned char}]{II }\end{DoxyParamCaption})}
 
-Sets the global brightness level.
+
+
+Sets the global brightness level. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em II} & The brightness level. Possible values include 0 -\/ 255 (0x00 -\/ 0x\+FF).\\
+{\em II} & The brightness level. Possible values include 0 -\/ 255 (0x00 -\/ 0x\+FF). \\
 \hline
 \end{DoxyParams}
-Sets the global brightness level. \mbox{\Hypertarget{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}\label{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}} 
+
+
+Definition at line 148 of file W\+S2812.\+cpp.
+
+
+\begin{DoxyCode}
+149 \{
+150     \hyperlink{class_w_s2812_a90cb6ef1c50bfa6b2d1a7e6100adead7}{\_\_II} = II;
+151 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}\label{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}} 
 \index{W\+S2812@{W\+S2812}!use\+II@{use\+II}}
 \index{use\+II@{use\+II}!W\+S2812@{W\+S2812}}
 \subsubsection{\texorpdfstring{use\+I\+I()}{useII()}}
-{\footnotesize\ttfamily void W\+S2812\+::use\+II (\begin{DoxyParamCaption}\item[{Brightness\+Control}]{bc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void W\+S2812\+::use\+II (\begin{DoxyParamCaption}\item[{\hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}{Brightness\+Control}}]{bc }\end{DoxyParamCaption})}
 
-Sets the brightness mode
+
+
+Sets the brightness mode. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em bc} & The brightness control. Defaults to O\+FF. Possible values include O\+FF, G\+L\+O\+B\+AL, and P\+E\+R\+\_\+\+P\+I\+X\+EL\\
 \hline
 \end{DoxyParams}
-Sets the brightness mode \mbox{\Hypertarget{class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4}\label{class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4}} 
+
+
+Definition at line 135 of file W\+S2812.\+cpp.
+
+
+\begin{DoxyCode}
+136 \{
+137     \textcolor{keywordflow}{if} (bc > \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55}{OFF}) \{
+138         \hyperlink{class_w_s2812_a249d1039add9ef099574fc4a52aa1235}{\_\_use\_II} = bc;
+139     \} \textcolor{keywordflow}{else} \{
+140         \hyperlink{class_w_s2812_a249d1039add9ef099574fc4a52aa1235}{\_\_use\_II} = \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55}{OFF};
+141     \}
+142 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4}\label{class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4}} 
 \index{W\+S2812@{W\+S2812}!write@{write}}
 \index{write@{write}!W\+S2812@{W\+S2812}}
 \subsubsection{\texorpdfstring{write()}{write()}}
 {\footnotesize\ttfamily void W\+S2812\+::write (\begin{DoxyParamCaption}\item[{int}]{buf\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
-Writes the given buffer to the L\+ED strip N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section.
+
+
+Writes the given buffer to the L\+ED strip N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em buf} & Pointer to the \hyperlink{class_pixel_array}{Pixel\+Array} buffer\\
+{\em buf} & Pointer to the \hyperlink{class_pixel_array}{Pixel\+Array} buffer \\
 \hline
 \end{DoxyParams}
-Writes the given buffer to the L\+ED strip N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section. \mbox{\Hypertarget{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}\label{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}} 
+
+
+Definition at line 92 of file W\+S2812.\+cpp.
+
+
+\begin{DoxyCode}
+92                             \{
+93     \hyperlink{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}{write\_offsets}(buf, 0, 0, 0);
+94 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}\label{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}} 
 \index{W\+S2812@{W\+S2812}!write\+\_\+offsets@{write\+\_\+offsets}}
 \index{write\+\_\+offsets@{write\+\_\+offsets}!W\+S2812@{W\+S2812}}
 \subsubsection{\texorpdfstring{write\+\_\+offsets()}{write\_offsets()}}
 {\footnotesize\ttfamily void W\+S2812\+::write\+\_\+offsets (\begin{DoxyParamCaption}\item[{int}]{buf\mbox{[}$\,$\mbox{]},  }\item[{int}]{r\+\_\+offset = {\ttfamily 0},  }\item[{int}]{g\+\_\+offset = {\ttfamily 0},  }\item[{int}]{b\+\_\+offset = {\ttfamily 0} }\end{DoxyParamCaption})}
 
-Writes the given buffer to the L\+ED strip with the given offsets. N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section.
+
+
+Writes the given buffer to the L\+ED strip with the given offsets. 
+
+N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section.
 
 
 \begin{DoxyParams}{Parameters}
@@ -154,7 +403,164 @@ Writes the given buffer to the L\+ED strip with the given offsets. N\+O\+TE\+: T
 \end{DoxyParams}
 
 
+Definition at line 96 of file W\+S2812.\+cpp.
+
+
+\begin{DoxyCode}
+96                                                                               \{
+97     \textcolor{comment}{// Load the transmit buffer}
+98     \hyperlink{class_w_s2812_adfe7d119deac16639f987130f5db724e}{\_\_loadBuf}(buf, r\_offset, g\_offset, b\_offset);
+99 
+100     \textcolor{comment}{// Entering timing critical section, so disabling interrupts}
+101     \_\_disable\_irq();
+102 
+103     \textcolor{comment}{// Begin bit-banging}
+104     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{_w_s2812_8h_af9b1b2ba12857a4bf11289dac8c5462d}{FRAME\_SIZE} * \hyperlink{class_w_s2812_a5623ee0fd628d54483c0427f30f4d568}{\_\_size}; i++) \{
+105         \textcolor{keywordflow}{if} (\hyperlink{class_w_s2812_a345b0895fb037ed603a79806bb7e510c}{\_\_transmitBuf}[i])\{
+106             \hyperlink{class_w_s2812_a37c5f3871012186c92a1bf856ca888ee}{\_\_gpo} = 1;
+107             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{class_w_s2812_acef8597fa4d4a31916a1460de124026e}{\_\_oneHigh}; j++) \{
+108                 \_\_NOP();
+109             \}
+110             \hyperlink{class_w_s2812_a37c5f3871012186c92a1bf856ca888ee}{\_\_gpo} = 0;
+111             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{class_w_s2812_ab6d118fa4ae51618675d284fc7130fdd}{\_\_oneLow}; j++) \{
+112                 \_\_NOP();
+113             \}
+114         \} \textcolor{keywordflow}{else} \{
+115             \hyperlink{class_w_s2812_a37c5f3871012186c92a1bf856ca888ee}{\_\_gpo} = 1;
+116             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{class_w_s2812_a44dea9eca691fddccd0637af24c028d8}{\_\_zeroHigh}; j++) \{
+117                 \_\_NOP();
+118             \}
+119             \hyperlink{class_w_s2812_a37c5f3871012186c92a1bf856ca888ee}{\_\_gpo} = 0;
+120             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{class_w_s2812_addde539bd94ea4a670420c22cace2216}{\_\_zeroLow}; j++) \{
+121                 \_\_NOP();
+122             \}
+123         \}
+124     \}
+125 
+126     \textcolor{comment}{// Exiting timing critical section, so enabling interrutps}
+127     \_\_enable\_irq();
+128 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_w_s2812_a37c5f3871012186c92a1bf856ca888ee}\label{class_w_s2812_a37c5f3871012186c92a1bf856ca888ee}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+gpo@{\+\_\+\+\_\+gpo}}
+\index{\+\_\+\+\_\+gpo@{\+\_\+\+\_\+gpo}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+gpo}{\_\_gpo}}
+{\footnotesize\ttfamily Digital\+Out W\+S2812\+::\+\_\+\+\_\+gpo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 96 of file W\+S2812.\+h.
+
+\mbox{\Hypertarget{class_w_s2812_a90cb6ef1c50bfa6b2d1a7e6100adead7}\label{class_w_s2812_a90cb6ef1c50bfa6b2d1a7e6100adead7}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+\+II@{\+\_\+\+\_\+\+II}}
+\index{\+\_\+\+\_\+\+II@{\+\_\+\+\_\+\+II}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+II}{\_\_II}}
+{\footnotesize\ttfamily unsigned char W\+S2812\+::\+\_\+\+\_\+\+II\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 91 of file W\+S2812.\+h.
+
+\mbox{\Hypertarget{class_w_s2812_acef8597fa4d4a31916a1460de124026e}\label{class_w_s2812_acef8597fa4d4a31916a1460de124026e}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+one\+High@{\+\_\+\+\_\+one\+High}}
+\index{\+\_\+\+\_\+one\+High@{\+\_\+\+\_\+one\+High}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+one\+High}{\_\_oneHigh}}
+{\footnotesize\ttfamily int W\+S2812\+::\+\_\+\+\_\+one\+High\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 90 of file W\+S2812.\+h.
+
+\mbox{\Hypertarget{class_w_s2812_ab6d118fa4ae51618675d284fc7130fdd}\label{class_w_s2812_ab6d118fa4ae51618675d284fc7130fdd}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+one\+Low@{\+\_\+\+\_\+one\+Low}}
+\index{\+\_\+\+\_\+one\+Low@{\+\_\+\+\_\+one\+Low}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+one\+Low}{\_\_oneLow}}
+{\footnotesize\ttfamily int W\+S2812\+::\+\_\+\+\_\+one\+Low\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 90 of file W\+S2812.\+h.
+
+\mbox{\Hypertarget{class_w_s2812_a8e08f8b78b58930cef508a4a66a27916}\label{class_w_s2812_a8e08f8b78b58930cef508a4a66a27916}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+out\+Pin@{\+\_\+\+\_\+out\+Pin}}
+\index{\+\_\+\+\_\+out\+Pin@{\+\_\+\+\_\+out\+Pin}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+out\+Pin}{\_\_outPin}}
+{\footnotesize\ttfamily Pin\+Name W\+S2812\+::\+\_\+\+\_\+out\+Pin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 95 of file W\+S2812.\+h.
+
+\mbox{\Hypertarget{class_w_s2812_a5623ee0fd628d54483c0427f30f4d568}\label{class_w_s2812_a5623ee0fd628d54483c0427f30f4d568}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+size@{\+\_\+\+\_\+size}}
+\index{\+\_\+\+\_\+size@{\+\_\+\+\_\+size}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+size}{\_\_size}}
+{\footnotesize\ttfamily int W\+S2812\+::\+\_\+\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 89 of file W\+S2812.\+h.
+
+\mbox{\Hypertarget{class_w_s2812_a345b0895fb037ed603a79806bb7e510c}\label{class_w_s2812_a345b0895fb037ed603a79806bb7e510c}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+transmit\+Buf@{\+\_\+\+\_\+transmit\+Buf}}
+\index{\+\_\+\+\_\+transmit\+Buf@{\+\_\+\+\_\+transmit\+Buf}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+transmit\+Buf}{\_\_transmitBuf}}
+{\footnotesize\ttfamily bool$\ast$ W\+S2812\+::\+\_\+\+\_\+transmit\+Buf\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 93 of file W\+S2812.\+h.
+
+\mbox{\Hypertarget{class_w_s2812_a249d1039add9ef099574fc4a52aa1235}\label{class_w_s2812_a249d1039add9ef099574fc4a52aa1235}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+use\+\_\+\+II@{\+\_\+\+\_\+use\+\_\+\+II}}
+\index{\+\_\+\+\_\+use\+\_\+\+II@{\+\_\+\+\_\+use\+\_\+\+II}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+use\+\_\+\+II}{\_\_use\_II}}
+{\footnotesize\ttfamily \hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}{Brightness\+Control} W\+S2812\+::\+\_\+\+\_\+use\+\_\+\+II\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 92 of file W\+S2812.\+h.
+
+\mbox{\Hypertarget{class_w_s2812_a44dea9eca691fddccd0637af24c028d8}\label{class_w_s2812_a44dea9eca691fddccd0637af24c028d8}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+zero\+High@{\+\_\+\+\_\+zero\+High}}
+\index{\+\_\+\+\_\+zero\+High@{\+\_\+\+\_\+zero\+High}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+zero\+High}{\_\_zeroHigh}}
+{\footnotesize\ttfamily int W\+S2812\+::\+\_\+\+\_\+zero\+High\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 90 of file W\+S2812.\+h.
+
+\mbox{\Hypertarget{class_w_s2812_addde539bd94ea4a670420c22cace2216}\label{class_w_s2812_addde539bd94ea4a670420c22cace2216}} 
+\index{W\+S2812@{W\+S2812}!\+\_\+\+\_\+zero\+Low@{\+\_\+\+\_\+zero\+Low}}
+\index{\+\_\+\+\_\+zero\+Low@{\+\_\+\+\_\+zero\+Low}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+zero\+Low}{\_\_zeroLow}}
+{\footnotesize\ttfamily int W\+S2812\+::\+\_\+\+\_\+zero\+Low\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 90 of file W\+S2812.\+h.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-W\+S2812.\+h\item 
-W\+S2812.\+cpp\end{DoxyCompactItemize}
+\hyperlink{_w_s2812_8h}{W\+S2812.\+h}\item 
+\hyperlink{_w_s2812_8cpp}{W\+S2812.\+cpp}\end{DoxyCompactItemize}

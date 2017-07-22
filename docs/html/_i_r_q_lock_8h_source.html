@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: IRQLock.h Source File</title>
+<title>Hardware Development of FINken III quadcopter: IRQLock.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +52,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_i_r_q_lock_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,13 +85,19 @@ $(function() {
 <div class="title">IRQLock.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;mbed.h&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_i_r_q_lock.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_r_q_lock.html">IRQLock</a> {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_i_r_q_lock.html">IRQLock</a>() {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        __disable_irq(); <span class="comment">//Disable Interrupts</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    ~<a class="code" href="class_i_r_q_lock.html">IRQLock</a>() {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        __enable_irq(); <span class="comment">//Enable Interrupts</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div><div class="ttc" id="class_i_r_q_lock_html"><div class="ttname"><a href="class_i_r_q_lock.html">IRQLock</a></div><div class="ttdef"><b>Definition:</b> IRQLock.h:11</div></div>
+<a href="_i_r_q_lock_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;mbed.h&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_i_r_q_lock.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_r_q_lock.html">IRQLock</a> {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_i_r_q_lock.html#aa9ab20f118027e26c7748d0333a9581e">   14</a></span>&#160;    <a class="code" href="class_i_r_q_lock.html#aa9ab20f118027e26c7748d0333a9581e">IRQLock</a>() {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        __disable_irq(); <span class="comment">//Disable Interrupts</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_i_r_q_lock.html#a77ab3c6555d123ef45e2e50e4eab81fb">   18</a></span>&#160;    <a class="code" href="class_i_r_q_lock.html#a77ab3c6555d123ef45e2e50e4eab81fb">~IRQLock</a>() {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        __enable_irq(); <span class="comment">//Enable Interrupts</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div><div class="ttc" id="class_i_r_q_lock_html"><div class="ttname"><a href="class_i_r_q_lock.html">IRQLock</a></div><div class="ttdoc">In some cases, we want to ensure a section of code is not interrupted. </div><div class="ttdef"><b>Definition:</b> <a href="_i_r_q_lock_8h_source.html#l00011">IRQLock.h:11</a></div></div>
+<div class="ttc" id="class_i_r_q_lock_html_aa9ab20f118027e26c7748d0333a9581e"><div class="ttname"><a href="class_i_r_q_lock.html#aa9ab20f118027e26c7748d0333a9581e">IRQLock::IRQLock</a></div><div class="ttdeci">IRQLock()</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_q_lock_8h_source.html#l00014">IRQLock.h:14</a></div></div>
+<div class="ttc" id="class_i_r_q_lock_html_a77ab3c6555d123ef45e2e50e4eab81fb"><div class="ttname"><a href="class_i_r_q_lock.html#a77ab3c6555d123ef45e2e50e4eab81fb">IRQLock::~IRQLock</a></div><div class="ttdeci">~IRQLock()</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_q_lock_8h_source.html#l00018">IRQLock.h:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="_i_r_q_lock_8h.html">IRQLock.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

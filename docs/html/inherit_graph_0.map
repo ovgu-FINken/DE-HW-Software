@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_abstract_component.html" title="AbstractComponent" alt="" coords="5,132,143,159"/>
+<area shape="rect" id="node2" href="$class_i_r_sensor_analog.html" title="IRSensorAnalog" alt="" coords="193,5,308,32"/>
+<area shape="rect" id="node3" href="$class_i_r_sensor_digital.html" title="IRSensorDigital" alt="" coords="195,56,306,83"/>
+<area shape="rect" id="node4" href="$class_l_e_d_strip.html" title="LEDStrip" alt="" coords="213,107,288,133"/>
+<area shape="rect" id="node5" href="$class_simple_l_e_d.html" title="SimpleLED" alt="" coords="207,157,294,184"/>
+<area shape="rect" id="node6" href="$class_sonar.html" title="Sonar" alt="" coords="223,208,279,235"/>
+<area shape="rect" id="node7" href="$class_u_a_r_t_messenger.html" title="UARTMessenger" alt="" coords="191,259,311,285"/>
+</map>

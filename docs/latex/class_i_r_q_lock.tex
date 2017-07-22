@@ -2,13 +2,66 @@
 \label{class_i_r_q_lock}\index{I\+R\+Q\+Lock@{I\+R\+Q\+Lock}}
 
 
+In some cases, we want to ensure a section of code is not interrupted.  
+
+
+
+
 {\ttfamily \#include $<$I\+R\+Q\+Lock.\+h$>$}
 
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_i_r_q_lock_aa9ab20f118027e26c7748d0333a9581e}{I\+R\+Q\+Lock} ()
+\item 
+\hyperlink{class_i_r_q_lock_a77ab3c6555d123ef45e2e50e4eab81fb}{$\sim$\+I\+R\+Q\+Lock} ()
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-In some cases, we want to ensure a section of code is not interrupted. For example, you might be talking to a peripheral where the whole transaction must happen in one go, and an interrupt could cause the operation to fail. So we use the constructor and deconstructor of I\+RQ Lock. 
+In some cases, we want to ensure a section of code is not interrupted. 
+
+For example, you might be talking to a peripheral where the whole transaction must happen in one go, and an interrupt could cause the operation to fail. So we use the constructor and deconstructor of I\+RQ Lock. 
+
+Definition at line 11 of file I\+R\+Q\+Lock.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_r_q_lock_aa9ab20f118027e26c7748d0333a9581e}\label{class_i_r_q_lock_aa9ab20f118027e26c7748d0333a9581e}} 
+\index{I\+R\+Q\+Lock@{I\+R\+Q\+Lock}!I\+R\+Q\+Lock@{I\+R\+Q\+Lock}}
+\index{I\+R\+Q\+Lock@{I\+R\+Q\+Lock}!I\+R\+Q\+Lock@{I\+R\+Q\+Lock}}
+\subsubsection{\texorpdfstring{I\+R\+Q\+Lock()}{IRQLock()}}
+{\footnotesize\ttfamily I\+R\+Q\+Lock\+::\+I\+R\+Q\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 14 of file I\+R\+Q\+Lock.\+h.
+
+
+\begin{DoxyCode}
+14               \{
+15         \_\_disable\_irq(); \textcolor{comment}{//Disable Interrupts}
+16         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_i_r_q_lock_a77ab3c6555d123ef45e2e50e4eab81fb}\label{class_i_r_q_lock_a77ab3c6555d123ef45e2e50e4eab81fb}} 
+\index{I\+R\+Q\+Lock@{I\+R\+Q\+Lock}!````~I\+R\+Q\+Lock@{$\sim$\+I\+R\+Q\+Lock}}
+\index{````~I\+R\+Q\+Lock@{$\sim$\+I\+R\+Q\+Lock}!I\+R\+Q\+Lock@{I\+R\+Q\+Lock}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+R\+Q\+Lock()}{~IRQLock()}}
+{\footnotesize\ttfamily I\+R\+Q\+Lock\+::$\sim$\+I\+R\+Q\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 18 of file I\+R\+Q\+Lock.\+h.
+
+
+\begin{DoxyCode}
+18                \{
+19         \_\_enable\_irq(); \textcolor{comment}{//Enable Interrupts}
+20         \}
+\end{DoxyCode}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-I\+R\+Q\+Lock.\+h\end{DoxyCompactItemize}
+\hyperlink{_i_r_q_lock_8h}{I\+R\+Q\+Lock.\+h}\end{DoxyCompactItemize}

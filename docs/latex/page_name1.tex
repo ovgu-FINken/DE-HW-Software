@@ -1,4 +1,4 @@
-subpage\+\_\+name1 M\+B1232
+I2\+C-\/\+S\+O\+N\+AR details\+:
 
 Max\+Sonar sensors are accepted and successfully used in various multi-\/copters (U\+A\+Vs, rotorcraft, or quad copters). As a user the sensor was comparatively reliable to work on even though errors where there. Sensor operation during flight on a quad-\/copter is a challenging environment for an ultrasonic sensor to operate reliably. The most obvious issue is the
 \begin{DoxyEnumerate}
@@ -8,21 +8,23 @@ Max\+Sonar sensors are accepted and successfully used in various multi-\/copters
 
 I2C bus communication allows rapid control of multiple sensors with only two wires. We use 8 sonar sensors where these sonars will maintain the copter in the air without any obstruction and will sense the ranging distance in the arena. Sensors are placed in such a way that it will detect the distance from all possible sides. Power-\/up address reset pin available
 
-Here is image of the sonar we used  {\bfseries Measurements} The below is the graph for the ranges and the number of trials we have taken where we observed that as the range increases accuracy is less
+Here is image of the sonar we used 
+
+{\bfseries Measurements\+:} The below graph depicts the distance ranges and the number of trials we have taken,where we observed that as the range increases accuracy is less
 
 Here is a graph for the calculate distance and real distances vs No. of trials  Here is the graph for the error calculation for each distance 
 
-{\bfseries Table \+: for distance and error value}
+{\bfseries Table\+: for distance and error value}
 
 \tabulinesep=1mm
 \begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
 \hline
-\rowcolor{\tableheadbgcolor}\textbf{ Distances(in cm) }&\textbf{ Error value(in \%)  }\\\cline{1-2}
+\rowcolor{\tableheadbgcolor}\textbf{ Distances (in cm) }&\textbf{ Error value (in \%)  }\\\cline{1-2}
 \endfirsthead
 \hline
 \endfoot
 \hline
-\rowcolor{\tableheadbgcolor}\textbf{ Distances(in cm) }&\textbf{ Error value(in \%)  }\\\cline{1-2}
+\rowcolor{\tableheadbgcolor}\textbf{ Distances (in cm) }&\textbf{ Error value (in \%)  }\\\cline{1-2}
 \endhead
 20 &0.\+17 \\\cline{1-2}
 40 &10 \\\cline{1-2}
@@ -30,6 +32,6 @@ Here is a graph for the calculate distance and real distances vs No. of trials  
 80 &7.\+79 \\\cline{1-2}
 100 &3.\+57 \\\cline{1-2}
 \end{longtabu}
-We could see the average error of 5.\+88 percent.\+As sonar is susceptible to noise from a variety of sources so here is link where it can be used to reduce the error \href{http://www.maxbotix.com/articles/067.htm}{\tt referance link}
+We could see the average error of 5.\+88\%.As sonar is susceptible to noise from a variety of sources so here is link where it can be used to reduce the error \href{http://www.maxbotix.com/articles/067.htm}{\tt referance link}
 
 The reference link of the datasheet for the further details \href{http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf}{\tt Sonar datasheet} 

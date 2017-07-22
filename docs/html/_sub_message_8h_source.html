@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: SubMessage.h Source File</title>
+<title>Hardware Development of FINken III quadcopter: SubMessage.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +52,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_sub_message_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,17 +85,26 @@ $(function() {
 <div class="title">SubMessage.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">enum</span> ComponentType {</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    SONAR,</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    IRANALOG,</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    IRDIGITAL,</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    LEDSTRIP</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;};</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_sub_message.html">   10</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_sub_message.html">SubMessage</a> {</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">   18</a></span>&#160;    uint8_t <a class="code" href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">type</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">   23</a></span>&#160;    uint8_t <a class="code" href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">id</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">   28</a></span>&#160;    uint8_t <a class="code" href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">length</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">   33</a></span>&#160;    uint8_t <a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>[16];</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div><div class="ttc" id="struct_sub_message_html"><div class="ttname"><a href="struct_sub_message.html">SubMessage</a></div><div class="ttdef"><b>Definition:</b> SubMessage.h:10</div></div>
-<div class="ttc" id="struct_sub_message_html_af3acc450c0686d7a9d15ccd9d548cb6d"><div class="ttname"><a href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">SubMessage::id</a></div><div class="ttdeci">uint8_t id</div><div class="ttdef"><b>Definition:</b> SubMessage.h:23</div></div>
-<div class="ttc" id="struct_sub_message_html_a276e06f5335ca7857c21ac8c0e51bd6d"><div class="ttname"><a href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">SubMessage::length</a></div><div class="ttdeci">uint8_t length</div><div class="ttdef"><b>Definition:</b> SubMessage.h:28</div></div>
-<div class="ttc" id="struct_sub_message_html_a064f1d26d553da776dc749d37a18a499"><div class="ttname"><a href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">SubMessage::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdef"><b>Definition:</b> SubMessage.h:18</div></div>
-<div class="ttc" id="struct_sub_message_html_a7d923c5cdaa380c27d7c4cf60ea7c1be"><div class="ttname"><a href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">SubMessage::data</a></div><div class="ttdeci">uint8_t data[16]</div><div class="ttdef"><b>Definition:</b> SubMessage.h:33</div></div>
+<a href="_sub_message_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0">    3</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0">ComponentType</a> {</div><div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0a4cc68226cf454df7dd46f74f2a18d240">    4</a></span>&#160;    <a class="code" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0a4cc68226cf454df7dd46f74f2a18d240">SONAR</a>,</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0af743186003faa7fbcb5ba26dfce5c1f4">    5</a></span>&#160;    <a class="code" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0af743186003faa7fbcb5ba26dfce5c1f4">IRANALOG</a>,</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0aaee95c16a1b18903d850fbab47d73b9d">    6</a></span>&#160;    <a class="code" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0aaee95c16a1b18903d850fbab47d73b9d">IRDIGITAL</a>,</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0affd2d0d3f226452ef4313ef1080ea581">    7</a></span>&#160;    <a class="code" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0affd2d0d3f226452ef4313ef1080ea581">LEDSTRIP</a></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;};</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_sub_message.html">   10</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_sub_message.html">SubMessage</a> {</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">   18</a></span>&#160;    uint8_t <a class="code" href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">type</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">   23</a></span>&#160;    uint8_t <a class="code" href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">id</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">   28</a></span>&#160;    uint8_t <a class="code" href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">length</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">   33</a></span>&#160;    uint8_t <a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>[16];</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div><div class="ttc" id="struct_sub_message_html"><div class="ttname"><a href="struct_sub_message.html">SubMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00010">SubMessage.h:10</a></div></div>
+<div class="ttc" id="_sub_message_8h_html_a81f78fc173dedefe5a049c0aa3eed2c0af743186003faa7fbcb5ba26dfce5c1f4"><div class="ttname"><a href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0af743186003faa7fbcb5ba26dfce5c1f4">IRANALOG</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00005">SubMessage.h:5</a></div></div>
+<div class="ttc" id="_sub_message_8h_html_a81f78fc173dedefe5a049c0aa3eed2c0"><div class="ttname"><a href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0">ComponentType</a></div><div class="ttdeci">ComponentType</div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00003">SubMessage.h:3</a></div></div>
+<div class="ttc" id="struct_sub_message_html_af3acc450c0686d7a9d15ccd9d548cb6d"><div class="ttname"><a href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">SubMessage::id</a></div><div class="ttdeci">uint8_t id</div><div class="ttdoc">Unique id of the component. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00023">SubMessage.h:23</a></div></div>
+<div class="ttc" id="_sub_message_8h_html_a81f78fc173dedefe5a049c0aa3eed2c0a4cc68226cf454df7dd46f74f2a18d240"><div class="ttname"><a href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0a4cc68226cf454df7dd46f74f2a18d240">SONAR</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00004">SubMessage.h:4</a></div></div>
+<div class="ttc" id="_sub_message_8h_html_a81f78fc173dedefe5a049c0aa3eed2c0aaee95c16a1b18903d850fbab47d73b9d"><div class="ttname"><a href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0aaee95c16a1b18903d850fbab47d73b9d">IRDIGITAL</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00006">SubMessage.h:6</a></div></div>
+<div class="ttc" id="struct_sub_message_html_a276e06f5335ca7857c21ac8c0e51bd6d"><div class="ttname"><a href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">SubMessage::length</a></div><div class="ttdeci">uint8_t length</div><div class="ttdoc">Length of the data in this submessage in bytes. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00028">SubMessage.h:28</a></div></div>
+<div class="ttc" id="_sub_message_8h_html_a81f78fc173dedefe5a049c0aa3eed2c0affd2d0d3f226452ef4313ef1080ea581"><div class="ttname"><a href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0affd2d0d3f226452ef4313ef1080ea581">LEDSTRIP</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00007">SubMessage.h:7</a></div></div>
+<div class="ttc" id="struct_sub_message_html_a064f1d26d553da776dc749d37a18a499"><div class="ttname"><a href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">SubMessage::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdoc">type of the message: 0 - Sonar 1 - IR Sensor analog 2 - IR Sensor digital 3 - LED Strip ...</div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00018">SubMessage.h:18</a></div></div>
+<div class="ttc" id="struct_sub_message_html_a7d923c5cdaa380c27d7c4cf60ea7c1be"><div class="ttname"><a href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">SubMessage::data</a></div><div class="ttdeci">uint8_t data[16]</div><div class="ttdoc">Byte array with data. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00033">SubMessage.h:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="_sub_message_8h.html">SubMessage.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

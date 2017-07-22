@@ -1,0 +1,5 @@
+<map id="WS2812::__loadBuf" name="WS2812::__loadBuf">
+<area shape="rect" id="node2" href="$class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68" title="Writes the given buffer to the LED strip with the given offsets. " alt="" coords="191,31,343,57"/>
+<area shape="rect" id="node3" href="$class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="391,5,512,32"/>
+<area shape="rect" id="node4" href="$class_w_s2812.html#ab85d6a78bc51929dac48db05f6bc68d4" title="Writes the given buffer to the LED strip NOTE: This function is timing critical, therefore interrupts..." alt="" coords="398,56,505,83"/>
+</map>

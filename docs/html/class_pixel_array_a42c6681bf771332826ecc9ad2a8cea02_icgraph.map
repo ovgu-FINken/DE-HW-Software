@@ -1,0 +1,12 @@
+<map id="PixelArray::__set_pixel_component" name="PixelArray::__set_pixel_component">
+<area shape="rect" id="node2" href="$class_pixel_array.html#a9433e281c3cc0e4f8bbf23e127d8ad2c" title="PixelArray::SetAllI" alt="" coords="213,5,341,32"/>
+<area shape="rect" id="node3" href="$class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2" title="PixelArray::SetAllR" alt="" coords="209,56,344,83"/>
+<area shape="rect" id="node6" href="$class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d" title="PixelArray::SetAllG" alt="" coords="209,107,344,133"/>
+<area shape="rect" id="node7" href="$class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b" title="PixelArray::SetAllB" alt="" coords="209,157,344,184"/>
+<area shape="rect" id="node8" href="$class_pixel_array.html#afbfac74c674f63d793d85141d3a3b046" title="PixelArray::SetI" alt="" coords="220,208,333,235"/>
+<area shape="rect" id="node9" href="$class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5" title="PixelArray::SetR" alt="" coords="217,259,336,285"/>
+<area shape="rect" id="node10" href="$class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5" title="PixelArray::SetG" alt="" coords="217,309,337,336"/>
+<area shape="rect" id="node11" href="$class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78" title="PixelArray::SetB" alt="" coords="217,360,336,387"/>
+<area shape="rect" id="node4" href="$class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436" title="Reaction on the message from Paparazzi. " alt="" coords="392,208,571,235"/>
+<area shape="rect" id="node5" href="$class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="619,208,740,235"/>
+</map>

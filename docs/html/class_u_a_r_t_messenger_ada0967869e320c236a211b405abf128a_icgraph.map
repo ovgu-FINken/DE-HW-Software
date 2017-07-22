@@ -1,0 +1,7 @@
+<map id="UARTMessenger::appendMessage" name="UARTMessenger::appendMessage">
+<area shape="rect" id="node2" href="$class_i_r_sensor_analog.html#a919942de7c5fc3af5da9a2b32e31d328" title="Read the sensor value and product with the reference voltage. " alt="" coords="276,5,439,32"/>
+<area shape="rect" id="node3" href="$class_i_r_sensor_digital.html#a8d09a546a1f4b4c6533c324d98a146a9" title="If the value is less than the detectionRange then it will return the true value. " alt="" coords="278,56,437,83"/>
+<area shape="rect" id="node4" href="$class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="297,107,418,133"/>
+<area shape="rect" id="node5" href="$class_sonar.html#af7a8bb36d925d164b31ff271f9006dc7" title="Read the range and then bit will be shifted towards left 8 bytes. " alt="" coords="313,157,402,184"/>
+<area shape="rect" id="node6" href="$class_sonar.html#aaf10dd734528b86b4dea3ab35c4ee4f4" title="Write value to i2c for the sonar. " alt="" coords="487,157,589,184"/>
+</map>

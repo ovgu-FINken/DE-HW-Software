@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Class Members - Functions</title>
+<title>Hardware Development of FINken III quadcopter: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +52,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,6 +83,19 @@ $(function() {
 <div class="contents">
 &#160;
 
+<h3><a id="index__"></a>- _ -</h3><ul>
+<li>__loadBuf()
+: <a class="el" href="class_w_s2812.html#adfe7d119deac16639f987130f5db724e">WS2812</a>
+</li>
+<li>__set_pixel()
+: <a class="el" href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d">PixelArray</a>
+</li>
+<li>__set_pixel_component()
+: <a class="el" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02">PixelArray</a>
+</li>
+</ul>
+
+
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>appendMessage()
 : <a class="el" href="class_u_a_r_t_messenger.html#ada0967869e320c236a211b405abf128a">UARTMessenger</a>
@@ -68,6 +104,9 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>calculateChecksum()
+: <a class="el" href="class_u_a_r_t_messenger.html#a21e6194acf3039eafdbb4e4c3b7876a3">UARTMessenger</a>
+</li>
 <li>checkForMsgFromPaparazzi()
 : <a class="el" href="class_u_a_r_t_messenger.html#affb33ad31e70001505e14d02e1f8a018">UARTMessenger</a>
 </li>
@@ -75,6 +114,9 @@ $(function() {
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>getBuf()
+: <a class="el" href="class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3">PixelArray</a>
+</li>
 <li>getPriority()
 : <a class="el" href="class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1">AbstractComponent</a>
 </li>
@@ -86,6 +128,9 @@ $(function() {
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
+<li>IRQLock()
+: <a class="el" href="class_i_r_q_lock.html#aa9ab20f118027e26c7748d0333a9581e">IRQLock</a>
+</li>
 <li>IRSensorAnalog()
 : <a class="el" href="class_i_r_sensor_analog.html#af27166832035783b3df081014c4dfb9d">IRSensorAnalog</a>
 </li>
@@ -105,6 +150,13 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_n"></a>- n -</h3><ul>
+<li>nullFunc()
+: <a class="el" href="class_u_a_r_t_messenger.html#a91aa0a571db31d7a0a7f2535a97c30c3">UARTMessenger</a>
+</li>
+</ul>
+
+
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>onPaparazziMsg()
 : <a class="el" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436">LEDStrip</a>
@@ -119,15 +171,52 @@ $(function() {
 <li>PixelArray()
 : <a class="el" href="class_pixel_array.html#a86359f5eda90e0d12e3aa2c102ade21d">PixelArray</a>
 </li>
+<li>processPaparazziMsg()
+: <a class="el" href="class_u_a_r_t_messenger.html#a3ae1cd91810b34f89244cd157c436c3c">UARTMessenger</a>
+</li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
+<li>read()
+: <a class="el" href="class_sonar.html#af7a8bb36d925d164b31ff271f9006dc7">Sonar</a>
+</li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>Set()
+: <a class="el" href="class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1">PixelArray</a>
+</li>
+<li>SetAll()
+: <a class="el" href="class_pixel_array.html#a5f560dcef3d1582614858969b20da89d">PixelArray</a>
+</li>
+<li>SetAllB()
+: <a class="el" href="class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b">PixelArray</a>
+</li>
+<li>SetAllG()
+: <a class="el" href="class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d">PixelArray</a>
+</li>
+<li>SetAllI()
+: <a class="el" href="class_pixel_array.html#a9433e281c3cc0e4f8bbf23e127d8ad2c">PixelArray</a>
+</li>
+<li>SetAllR()
+: <a class="el" href="class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2">PixelArray</a>
+</li>
+<li>SetB()
+: <a class="el" href="class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78">PixelArray</a>
+</li>
 <li>setColor()
 : <a class="el" href="class_l_e_d_strip.html#a310b381acdd83a01ddb6e2debebbbc7c">LEDStrip</a>
 </li>
 <li>setDelays()
 : <a class="el" href="class_w_s2812.html#a7e1370e6fbb56daa68f1146e7b58d9ec">WS2812</a>
+</li>
+<li>SetG()
+: <a class="el" href="class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5">PixelArray</a>
+</li>
+<li>SetI()
+: <a class="el" href="class_pixel_array.html#afbfac74c674f63d793d85141d3a3b046">PixelArray</a>
 </li>
 <li>setII()
 : <a class="el" href="class_w_s2812.html#a8b6491617f9beb271d6d5c56ba384fb6">WS2812</a>
@@ -138,11 +227,21 @@ $(function() {
 <li>setPriority()
 : <a class="el" href="class_abstract_component.html#a58a59a9ea6c3b4c86fb3bf98ff1eaaef">AbstractComponent</a>
 </li>
+<li>SetR()
+: <a class="el" href="class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5">PixelArray</a>
+</li>
 <li>SimpleLED()
-: <a class="el" href="class_simple_l_e_d.html#a035610e281499c6a1160b2ae6b2797f0">SimpleLED</a>
+: <a class="el" href="class_simple_l_e_d.html#afec6f532dbc735f2fd95a2d080e7398d">SimpleLED</a>
 </li>
 <li>Sonar()
 : <a class="el" href="class_sonar.html#a8199e2b1d48626cc0404708063d7fe42">Sonar</a>
+</li>
+</ul>
+
+
+<h3><a id="index_t"></a>- t -</h3><ul>
+<li>toRange()
+: <a class="el" href="class_i_r_sensor_analog.html#a33ed6c82b3cb6720bfdd6f7598c54699">IRSensorAnalog</a>
 </li>
 </ul>
 
@@ -152,13 +251,23 @@ $(function() {
 : <a class="el" href="class_u_a_r_t_messenger.html#a2fcc2d4308e961996cf3dd120f297112">UARTMessenger</a>
 </li>
 <li>update()
-: <a class="el" href="class_i_r_sensor_analog.html#a919942de7c5fc3af5da9a2b32e31d328">IRSensorAnalog</a>
+: <a class="el" href="class_abstract_component.html#af25a90b8ab213762221c3b358d9873f3">AbstractComponent</a>
+, <a class="el" href="class_i_r_sensor_analog.html#a919942de7c5fc3af5da9a2b32e31d328">IRSensorAnalog</a>
 , <a class="el" href="class_i_r_sensor_digital.html#a8d09a546a1f4b4c6533c324d98a146a9">IRSensorDigital</a>
 , <a class="el" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95">LEDStrip</a>
+, <a class="el" href="class_simple_l_e_d.html#a1642dc4aca42ad46e5663a39cdda005f">SimpleLED</a>
 , <a class="el" href="class_sonar.html#aaf10dd734528b86b4dea3ab35c4ee4f4">Sonar</a>
+, <a class="el" href="class_u_a_r_t_messenger.html#a7f2c3bdcf3a2b082e52815b97be37281">UARTMessenger</a>
 </li>
 <li>useII()
 : <a class="el" href="class_w_s2812.html#acb221ea7ba9cfb40a43b7778f0dffa5d">WS2812</a>
+</li>
+</ul>
+
+
+<h3><a id="index_v"></a>- v -</h3><ul>
+<li>validateChecksum()
+: <a class="el" href="class_u_a_r_t_messenger.html#a8e90d75bc44daee10b5d6cf70e1c1fb4">UARTMessenger</a>
 </li>
 </ul>
 
@@ -177,6 +286,9 @@ $(function() {
 
 
 <h3><a id="index_0x7e"></a>- ~ -</h3><ul>
+<li>~IRQLock()
+: <a class="el" href="class_i_r_q_lock.html#a77ab3c6555d123ef45e2e50e4eab81fb">IRQLock</a>
+</li>
 <li>~PixelArray()
 : <a class="el" href="class_pixel_array.html#a9f4d10fcbd08290dfdecafb2ed4ad687">PixelArray</a>
 </li>
@@ -185,11 +297,14 @@ $(function() {
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

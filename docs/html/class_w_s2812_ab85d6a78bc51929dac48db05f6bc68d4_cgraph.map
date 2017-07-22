@@ -1,0 +1,4 @@
+<map id="WS2812::write" name="WS2812::write">
+<area shape="rect" id="node2" href="$class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68" title="Writes the given buffer to the LED strip with the given offsets. " alt="" coords="160,5,312,32"/>
+<area shape="rect" id="node3" href="$class_w_s2812.html#adfe7d119deac16639f987130f5db724e" title="WS2812::__loadBuf" alt="" coords="360,5,497,32"/>
+</map>

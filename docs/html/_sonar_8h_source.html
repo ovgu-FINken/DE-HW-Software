@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Sonar.h Source File</title>
+<title>Hardware Development of FINken III quadcopter: Sonar.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +52,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_sonar_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,19 +85,34 @@ $(function() {
 <div class="title">Sonar.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;AbstractComponent.h&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;UARTMessenger.h&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_sonar.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sonar.html">Sonar</a>: <span class="keyword">public</span> <a class="code" href="class_abstract_component.html">AbstractComponent</a> {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_sonar.html#a8199e2b1d48626cc0404708063d7fe42">Sonar</a>(<a class="code" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *<span class="keyword">const</span> uartMsngr, uint8_t addr, EventQueue *<span class="keyword">const</span> queue);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_sonar.html#aaf10dd734528b86b4dea3ab35c4ee4f4">update</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    uint16_t <a class="code" href="class_sonar.html#a7a641bcfac1967fbc42eea2ab70886dc">getRange</a>();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> read();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *<span class="keyword">const</span> uartMessenger;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    EventQueue *<span class="keyword">const</span> queue;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="struct_sub_message.html">SubMessage</a> subMessage;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    I2C i2c;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    uint8_t address;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">char</span> config[2];</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    uint16_t range;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Timeout timeout;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="ttc" id="struct_sub_message_html"><div class="ttname"><a href="struct_sub_message.html">SubMessage</a></div><div class="ttdef"><b>Definition:</b> SubMessage.h:10</div></div>
-<div class="ttc" id="class_sonar_html_a7a641bcfac1967fbc42eea2ab70886dc"><div class="ttname"><a href="class_sonar.html#a7a641bcfac1967fbc42eea2ab70886dc">Sonar::getRange</a></div><div class="ttdeci">uint16_t getRange()</div><div class="ttdef"><b>Definition:</b> Sonar.cpp:52</div></div>
-<div class="ttc" id="class_sonar_html"><div class="ttname"><a href="class_sonar.html">Sonar</a></div><div class="ttdef"><b>Definition:</b> Sonar.h:7</div></div>
-<div class="ttc" id="class_abstract_component_html"><div class="ttname"><a href="class_abstract_component.html">AbstractComponent</a></div><div class="ttdef"><b>Definition:</b> AbstractComponent.h:8</div></div>
-<div class="ttc" id="class_sonar_html_aaf10dd734528b86b4dea3ab35c4ee4f4"><div class="ttname"><a href="class_sonar.html#aaf10dd734528b86b4dea3ab35c4ee4f4">Sonar::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdef"><b>Definition:</b> Sonar.cpp:18</div></div>
-<div class="ttc" id="class_sonar_html_a8199e2b1d48626cc0404708063d7fe42"><div class="ttname"><a href="class_sonar.html#a8199e2b1d48626cc0404708063d7fe42">Sonar::Sonar</a></div><div class="ttdeci">Sonar(UARTMessenger *const uartMsngr, uint8_t addr, EventQueue *const queue)</div><div class="ttdef"><b>Definition:</b> Sonar.cpp:9</div></div>
-<div class="ttc" id="class_u_a_r_t_messenger_html"><div class="ttname"><a href="class_u_a_r_t_messenger.html">UARTMessenger</a></div><div class="ttdef"><b>Definition:</b> UARTMessenger.h:10</div></div>
+<a href="_sonar_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_abstract_component_8h.html">AbstractComponent.h</a>&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_a_r_t_messenger_8h.html">UARTMessenger.h</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_sonar.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sonar.html">Sonar</a>: <span class="keyword">public</span> <a class="code" href="class_abstract_component.html">AbstractComponent</a> {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_sonar.html#a8199e2b1d48626cc0404708063d7fe42">Sonar</a>(<a class="code" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *<span class="keyword">const</span> uartMsngr, uint8_t addr, EventQueue *<span class="keyword">const</span> <a class="code" href="class_sonar.html#af0431d160853c8313eba0fd0e1ce8346">queue</a>);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_sonar.html#aaf10dd734528b86b4dea3ab35c4ee4f4">update</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    uint16_t <a class="code" href="class_sonar.html#a7a641bcfac1967fbc42eea2ab70886dc">getRange</a>();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sonar.html#af7a8bb36d925d164b31ff271f9006dc7">read</a>();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_sonar.html#a63b5d2455e9278c9d3c6dded215789f6">   27</a></span>&#160;    <a class="code" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *<span class="keyword">const</span> <a class="code" href="class_sonar.html#a63b5d2455e9278c9d3c6dded215789f6">uartMessenger</a>;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_sonar.html#af0431d160853c8313eba0fd0e1ce8346">   28</a></span>&#160;    EventQueue *<span class="keyword">const</span> <a class="code" href="class_sonar.html#af0431d160853c8313eba0fd0e1ce8346">queue</a>;</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_sonar.html#a08f09f7abe342846e6e97b8dd76d623b">   29</a></span>&#160;    <a class="code" href="struct_sub_message.html">SubMessage</a> <a class="code" href="class_sonar.html#a08f09f7abe342846e6e97b8dd76d623b">subMessage</a>;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_sonar.html#ae6be174d7fc69e27ae5d932b26a5a003">   30</a></span>&#160;    I2C <a class="code" href="class_sonar.html#ae6be174d7fc69e27ae5d932b26a5a003">i2c</a>;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_sonar.html#aa42fef5da4ff8d80353143a74eff2ae2">   31</a></span>&#160;    uint8_t <a class="code" href="class_sonar.html#aa42fef5da4ff8d80353143a74eff2ae2">address</a>;</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_sonar.html#a6a5dc5e466fc0c7a8cb2fc50af10db45">   32</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_sonar.html#a6a5dc5e466fc0c7a8cb2fc50af10db45">config</a>[2];</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_sonar.html#a6b0f78a9151925ca61fe54c852c195bd">   33</a></span>&#160;    uint16_t <a class="code" href="class_sonar.html#a6b0f78a9151925ca61fe54c852c195bd">range</a>;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_sonar.html#a4b3cc5317263c63dd58195f3c2c94da6">   34</a></span>&#160;    Timeout <a class="code" href="class_sonar.html#a4b3cc5317263c63dd58195f3c2c94da6">timeout</a>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="ttc" id="_u_a_r_t_messenger_8h_html"><div class="ttname"><a href="_u_a_r_t_messenger_8h.html">UARTMessenger.h</a></div></div>
+<div class="ttc" id="struct_sub_message_html"><div class="ttname"><a href="struct_sub_message.html">SubMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00010">SubMessage.h:10</a></div></div>
+<div class="ttc" id="class_sonar_html_a7a641bcfac1967fbc42eea2ab70886dc"><div class="ttname"><a href="class_sonar.html#a7a641bcfac1967fbc42eea2ab70886dc">Sonar::getRange</a></div><div class="ttdeci">uint16_t getRange()</div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8cpp_source.html#l00052">Sonar.cpp:52</a></div></div>
+<div class="ttc" id="class_sonar_html"><div class="ttname"><a href="class_sonar.html">Sonar</a></div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8h_source.html#l00007">Sonar.h:7</a></div></div>
+<div class="ttc" id="class_abstract_component_html"><div class="ttname"><a href="class_abstract_component.html">AbstractComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00008">AbstractComponent.h:8</a></div></div>
+<div class="ttc" id="class_sonar_html_a08f09f7abe342846e6e97b8dd76d623b"><div class="ttname"><a href="class_sonar.html#a08f09f7abe342846e6e97b8dd76d623b">Sonar::subMessage</a></div><div class="ttdeci">SubMessage subMessage</div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8h_source.html#l00029">Sonar.h:29</a></div></div>
+<div class="ttc" id="class_sonar_html_aaf10dd734528b86b4dea3ab35c4ee4f4"><div class="ttname"><a href="class_sonar.html#aaf10dd734528b86b4dea3ab35c4ee4f4">Sonar::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdoc">Write value to i2c for the sonar. </div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8cpp_source.html#l00018">Sonar.cpp:18</a></div></div>
+<div class="ttc" id="class_sonar_html_a63b5d2455e9278c9d3c6dded215789f6"><div class="ttname"><a href="class_sonar.html#a63b5d2455e9278c9d3c6dded215789f6">Sonar::uartMessenger</a></div><div class="ttdeci">UARTMessenger *const uartMessenger</div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8h_source.html#l00027">Sonar.h:27</a></div></div>
+<div class="ttc" id="class_sonar_html_a8199e2b1d48626cc0404708063d7fe42"><div class="ttname"><a href="class_sonar.html#a8199e2b1d48626cc0404708063d7fe42">Sonar::Sonar</a></div><div class="ttdeci">Sonar(UARTMessenger *const uartMsngr, uint8_t addr, EventQueue *const queue)</div><div class="ttdoc">Constructor for Sonar. </div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8cpp_source.html#l00009">Sonar.cpp:9</a></div></div>
+<div class="ttc" id="class_sonar_html_a6b0f78a9151925ca61fe54c852c195bd"><div class="ttname"><a href="class_sonar.html#a6b0f78a9151925ca61fe54c852c195bd">Sonar::range</a></div><div class="ttdeci">uint16_t range</div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8h_source.html#l00033">Sonar.h:33</a></div></div>
+<div class="ttc" id="class_sonar_html_a4b3cc5317263c63dd58195f3c2c94da6"><div class="ttname"><a href="class_sonar.html#a4b3cc5317263c63dd58195f3c2c94da6">Sonar::timeout</a></div><div class="ttdeci">Timeout timeout</div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8h_source.html#l00034">Sonar.h:34</a></div></div>
+<div class="ttc" id="_abstract_component_8h_html"><div class="ttname"><a href="_abstract_component_8h.html">AbstractComponent.h</a></div></div>
+<div class="ttc" id="class_sonar_html_ae6be174d7fc69e27ae5d932b26a5a003"><div class="ttname"><a href="class_sonar.html#ae6be174d7fc69e27ae5d932b26a5a003">Sonar::i2c</a></div><div class="ttdeci">I2C i2c</div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8h_source.html#l00030">Sonar.h:30</a></div></div>
+<div class="ttc" id="class_sonar_html_aa42fef5da4ff8d80353143a74eff2ae2"><div class="ttname"><a href="class_sonar.html#aa42fef5da4ff8d80353143a74eff2ae2">Sonar::address</a></div><div class="ttdeci">uint8_t address</div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8h_source.html#l00031">Sonar.h:31</a></div></div>
+<div class="ttc" id="class_sonar_html_af0431d160853c8313eba0fd0e1ce8346"><div class="ttname"><a href="class_sonar.html#af0431d160853c8313eba0fd0e1ce8346">Sonar::queue</a></div><div class="ttdeci">EventQueue *const queue</div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8h_source.html#l00028">Sonar.h:28</a></div></div>
+<div class="ttc" id="class_u_a_r_t_messenger_html"><div class="ttname"><a href="class_u_a_r_t_messenger.html">UARTMessenger</a></div><div class="ttdef"><b>Definition:</b> <a href="_u_a_r_t_messenger_8h_source.html#l00010">UARTMessenger.h:10</a></div></div>
+<div class="ttc" id="class_sonar_html_a6a5dc5e466fc0c7a8cb2fc50af10db45"><div class="ttname"><a href="class_sonar.html#a6a5dc5e466fc0c7a8cb2fc50af10db45">Sonar::config</a></div><div class="ttdeci">char config[2]</div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8h_source.html#l00032">Sonar.h:32</a></div></div>
+<div class="ttc" id="class_sonar_html_af7a8bb36d925d164b31ff271f9006dc7"><div class="ttname"><a href="class_sonar.html#af7a8bb36d925d164b31ff271f9006dc7">Sonar::read</a></div><div class="ttdeci">void read()</div><div class="ttdoc">Read the range and then bit will be shifted towards left 8 bytes. </div><div class="ttdef"><b>Definition:</b> <a href="_sonar_8cpp_source.html#l00035">Sonar.cpp:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="_sonar_8h.html">Sonar.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

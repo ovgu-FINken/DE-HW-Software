@@ -1,37 +1,48 @@
 \hypertarget{class_abstract_component}{}\section{Abstract\+Component Class Reference}
 \label{class_abstract_component}\index{Abstract\+Component@{Abstract\+Component}}
-Inheritance diagram for Abstract\+Component\+:\begin{figure}[H]
+
+
+{\ttfamily \#include $<$Abstract\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Component\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=1.435897cm]{class_abstract_component}
+\includegraphics[width=350pt]{class_abstract_component__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_abstract_component_af25a90b8ab213762221c3b358d9873f3}\label{class_abstract_component_af25a90b8ab213762221c3b358d9873f3}} 
-virtual void {\bfseries update} ()=0
+virtual void \hyperlink{class_abstract_component_af25a90b8ab213762221c3b358d9873f3}{update} ()=0
 \item 
 void \hyperlink{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}{set\+Priority} (int p)
-\item 
+\begin{DoxyCompactList}\small\item\em Set priority to the component, used for updating order. \end{DoxyCompactList}\item 
 int \hyperlink{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}{get\+Priority} ()
 \item 
 bool \hyperlink{class_abstract_component_a0c2e458144111c5f599c66f168516abc}{operator$<$} (const \hyperlink{class_abstract_component}{Abstract\+Component} \&another) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}\label{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}} 
-int {\bfseries id}
+int \hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id}
 \item 
-\mbox{\Hypertarget{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}\label{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}} 
-int {\bfseries priority} = 0
+int \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority} = 0
 \end{DoxyCompactItemize}
 \subsection*{Static Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static int \hyperlink{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}{s\+\_\+id} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The id for each component will be created in a sequence order staring with 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file Abstract\+Component.\+h.
+
 
 
 \subsection{Member Function Documentation}
@@ -44,13 +55,33 @@ static int \hyperlink{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d
 \begin{DoxyReturn}{Returns}
 priority of the component 
 \end{DoxyReturn}
+
+
+Definition at line 25 of file Abstract\+Component.\+h.
+
+
+\begin{DoxyCode}
+25                       \{
+26         \textcolor{keywordflow}{return} \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority};
+27     \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_abstract_component_a0c2e458144111c5f599c66f168516abc}\label{class_abstract_component_a0c2e458144111c5f599c66f168516abc}} 
 \index{Abstract\+Component@{Abstract\+Component}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!Abstract\+Component@{Abstract\+Component}}
 \subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
 {\footnotesize\ttfamily bool Abstract\+Component\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_abstract_component}{Abstract\+Component} \&}]{another }\end{DoxyParamCaption}) const}
 
-Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}
+
+
+Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -60,13 +91,33 @@ Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}
 \begin{DoxyReturn}{Returns}
 true if id is smaller then the id of another component 
 \end{DoxyReturn}
+
+
+Definition at line 8 of file Abstract\+Component.\+cpp.
+
+
+\begin{DoxyCode}
+8                                                                         \{
+9     \textcolor{keywordflow}{return} \textcolor{keywordtype}{id} < another.\hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id};
+10 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}\label{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}} 
 \index{Abstract\+Component@{Abstract\+Component}!set\+Priority@{set\+Priority}}
 \index{set\+Priority@{set\+Priority}!Abstract\+Component@{Abstract\+Component}}
 \subsubsection{\texorpdfstring{set\+Priority()}{setPriority()}}
 {\footnotesize\ttfamily void Abstract\+Component\+::set\+Priority (\begin{DoxyParamCaption}\item[{int}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Set priority to the component, used for updating order
+
+
+Set priority to the component, used for updating order. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -75,16 +126,64 @@ Set priority to the component, used for updating order
 \end{DoxyParams}
 
 
+Definition at line 18 of file Abstract\+Component.\+h.
+
+
+\begin{DoxyCode}
+18                             \{
+19         \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority} = p;
+20     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_abstract_component_af25a90b8ab213762221c3b358d9873f3}\label{class_abstract_component_af25a90b8ab213762221c3b358d9873f3}} 
+\index{Abstract\+Component@{Abstract\+Component}!update@{update}}
+\index{update@{update}!Abstract\+Component@{Abstract\+Component}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Abstract\+Component\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95}{L\+E\+D\+Strip}, \hyperlink{class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328}{I\+R\+Sensor\+Analog}, \hyperlink{class_simple_l_e_d_a1642dc4aca42ad46e5663a39cdda005f}{Simple\+L\+ED}, \hyperlink{class_i_r_sensor_digital_a8d09a546a1f4b4c6533c324d98a146a9}{I\+R\+Sensor\+Digital}, \hyperlink{class_u_a_r_t_messenger_a7f2c3bdcf3a2b082e52815b97be37281}{U\+A\+R\+T\+Messenger}, and \hyperlink{class_sonar_aaf10dd734528b86b4dea3ab35c4ee4f4}{Sonar}.
+
+
+
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}\label{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}} 
+\index{Abstract\+Component@{Abstract\+Component}!id@{id}}
+\index{id@{id}!Abstract\+Component@{Abstract\+Component}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Abstract\+Component\+::id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file Abstract\+Component.\+h.
+
+\mbox{\Hypertarget{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}\label{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}} 
+\index{Abstract\+Component@{Abstract\+Component}!priority@{priority}}
+\index{priority@{priority}!Abstract\+Component@{Abstract\+Component}}
+\subsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily int Abstract\+Component\+::priority = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file Abstract\+Component.\+h.
+
 \mbox{\Hypertarget{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}\label{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}} 
 \index{Abstract\+Component@{Abstract\+Component}!s\+\_\+id@{s\+\_\+id}}
 \index{s\+\_\+id@{s\+\_\+id}!Abstract\+Component@{Abstract\+Component}}
 \subsubsection{\texorpdfstring{s\+\_\+id}{s\_id}}
 {\footnotesize\ttfamily int Abstract\+Component\+::s\+\_\+id = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
-The id for each component will be created in a sequence order staring with 1 
+
+
+The id for each component will be created in a sequence order staring with 1. 
+
+
+
+Definition at line 38 of file Abstract\+Component.\+h.
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Abstract\+Component.\+h\item 
-Abstract\+Component.\+cpp\end{DoxyCompactItemize}
+\hyperlink{_abstract_component_8h}{Abstract\+Component.\+h}\item 
+\hyperlink{_abstract_component_8cpp}{Abstract\+Component.\+cpp}\end{DoxyCompactItemize}

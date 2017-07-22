@@ -1,0 +1,4 @@
+<map id="LEDStrip::setColor" name="LEDStrip::setColor">
+<area shape="rect" id="node2" href="$class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1" title="PixelArray::Set" alt="" coords="184,5,295,32"/>
+<area shape="rect" id="node3" href="$class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d" title="PixelArray::__set_pixel" alt="" coords="343,5,499,32"/>
+</map>

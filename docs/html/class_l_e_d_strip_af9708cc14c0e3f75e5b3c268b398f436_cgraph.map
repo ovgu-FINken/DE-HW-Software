@@ -1,0 +1,9 @@
+<map id="LEDStrip::onPaparazziMsg" name="LEDStrip::onPaparazziMsg">
+<area shape="rect" id="node2" href="$class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2" title="PixelArray::SetAllR" alt="" coords="232,5,367,32"/>
+<area shape="rect" id="node4" href="$class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d" title="PixelArray::SetAllG" alt="" coords="232,56,367,83"/>
+<area shape="rect" id="node5" href="$class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b" title="PixelArray::SetAllB" alt="" coords="232,107,367,133"/>
+<area shape="rect" id="node6" href="$class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5" title="PixelArray::SetR" alt="" coords="240,157,359,184"/>
+<area shape="rect" id="node7" href="$class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5" title="PixelArray::SetG" alt="" coords="239,208,359,235"/>
+<area shape="rect" id="node8" href="$class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78" title="PixelArray::SetB" alt="" coords="240,259,359,285"/>
+<area shape="rect" id="node3" href="$class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="415,125,571,166"/>
+</map>

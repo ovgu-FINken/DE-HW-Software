@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: IRQLock Class Reference</title>
+<title>Hardware Development of FINken III quadcopter: IRQLock Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -42,6 +51,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_i_r_q_lock.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,27 +80,100 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_i_r_q_lock-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">IRQLock Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>In some cases, we want to ensure a section of code is not interrupted.  
+ <a href="class_i_r_q_lock.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_i_r_q_lock_8h_source.html">IRQLock.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa9ab20f118027e26c7748d0333a9581e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_q_lock.html#aa9ab20f118027e26c7748d0333a9581e">IRQLock</a> ()</td></tr>
+<tr class="separator:aa9ab20f118027e26c7748d0333a9581e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ab3c6555d123ef45e2e50e4eab81fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_q_lock.html#a77ab3c6555d123ef45e2e50e4eab81fb">~IRQLock</a> ()</td></tr>
+<tr class="separator:a77ab3c6555d123ef45e2e50e4eab81fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>In some cases, we want to ensure a section of code is not interrupted. For example, you might be talking to a peripheral where the whole transaction must happen in one go, and an interrupt could cause the operation to fail. So we use the constructor and deconstructor of IRQ Lock. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>In some cases, we want to ensure a section of code is not interrupted. </p>
+<p>For example, you might be talking to a peripheral where the whole transaction must happen in one go, and an interrupt could cause the operation to fail. So we use the constructor and deconstructor of IRQ Lock. </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_r_q_lock_8h_source.html#l00011">11</a> of file <a class="el" href="_i_r_q_lock_8h_source.html">IRQLock.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa9ab20f118027e26c7748d0333a9581e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ab20f118027e26c7748d0333a9581e">&#9670;&nbsp;</a></span>IRQLock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IRQLock::IRQLock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_r_q_lock_8h_source.html#l00014">14</a> of file <a class="el" href="_i_r_q_lock_8h_source.html">IRQLock.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;              {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        __disable_irq(); <span class="comment">//Disable Interrupts</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a77ab3c6555d123ef45e2e50e4eab81fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77ab3c6555d123ef45e2e50e4eab81fb">&#9670;&nbsp;</a></span>~IRQLock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IRQLock::~IRQLock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_r_q_lock_8h_source.html#l00018">18</a> of file <a class="el" href="_i_r_q_lock_8h_source.html">IRQLock.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;               {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        __enable_irq(); <span class="comment">//Enable Interrupts</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div></div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_i_r_q_lock_8h_source.html">IRQLock.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_r_q_lock.html">IRQLock</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

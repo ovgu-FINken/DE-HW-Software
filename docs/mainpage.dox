@@ -5,13 +5,14 @@
  * Our project is to develop hardware for the FINken 3 robots.
 
  * We have designed the PCBs where the reference link is given below for the further details  
- <a href="https://github.com/ovgu-FINken/DE-HW-Hardware/wiki">Hardware link</a> 
+ <a href="https://github.com/ovgu-FINken/DE-HW-Hardware/wiki">Hardware wiki link</a> 
 
  *This document mainly focused on the software part.
 
- *Currently the FINken III is the newest generation of our copters with more power,better communication and more sensors
+Currently the FINken III is the newest generation of our copters with more power, better communication and more sensors
+	*  \image html Finken.jpg "FINKen III quadcopter" width=800px
 
-*<b>Specifications:</b>
+*<b>Specifications :</b>
 
 1. Optical flow sensor with sonar ranging towards ground
    (Optional: Infrared distance sensor towards ground)
@@ -35,12 +36,13 @@
 4. RGB LEDs
 5. Illuminating Sensor
 6. STM32F44RET6 Micro controller
+__________________________________________________
+ * \subsection prog_sec Programming language and installation guide for using in Linux
+__________________________________________________ 
 
- * \section about Programming language and installation guide for using in Linux
+*We programmed in CLion using Mbed libraries in C++ language. For using mbed libraries, mbed cli needs to install for exporting into IDE.
 
-*We programmed in Clion using mbed libraries in C++ language. For using mbed libraries, mbed cli needs to install for exporting into IDE.
-
-Below are the procedure as follows:
+Below is the procedure as follows:
 
 1. Install Python v2.7
 2. Install Git and Mercurial
@@ -67,7 +69,7 @@ Step3: Continue to input to install toolchain
 8. Flash the microcontroller
 
 
-Use another terminal for running the code (for convinence) for gdb terminal
+Use another terminal for running the code (for convenience) for gdb terminal
 
 (gdb) target extended-remote /dev/ttyACM0
 Remote debugging using /dev/ttyACM0
@@ -76,20 +78,21 @@ If ACM0 doesnt work need to try for ACM1 and ACM2
 Target voltage: 3.4V 
 
 Available Targets:
-No. Att Driver
+No. Attach Driver
  1      STM32F4xx
 
 (gdb) attach 1
-load the .elf file
-run
-if you want to break the code and check we can do the particular check
+Load the .elf file
+Run
+If you want to break the code and check we can do the particular check
 
-Open gtk terminal where one can see the output, set the port (usually ACM0) and change from ASCII to hex to see the output in hex format
-(in bytes)
+Open gtk terminal where one can see the output set the port (usually ACM0) and change from ASCII to hex to see the output in hex format
+(In bytes)
 
-<b>Communication with Paparazzi</b> 
-
-The message structures is as follows for both receive and send for paparazzi:
+ __________________________________________________ 
+ * \subsection paparazzi_sec Communication with Paparazzi
+ __________________________________________________ 
+The message structures are as follows for both receive and send for paparazzi:
 
 1. Number of submessages - 1 byte
 2. Submessages (details below) - N * (1 + 1 + 1 + X) bytes
@@ -125,8 +128,8 @@ Currently only LEDStrip listen to messages from Paparazzi (by default).
 
 /**
 
-* \page page_name WS2812 Detailed Description
-* \subpage WS2812 LED
+* \page page_name WS2812-LED
+* \subpage WS2812B-LED details:
 
 WS2812B is an intelligent control LED light source which has RGB control chip integrated. The brightness can be adjusted by using the pixel of each color RGB
 Component LED is used for positioning the copter. LED is ON where we can set number of LEDs to glow. Each led can also be set with particular color and brightness too.
@@ -135,7 +138,8 @@ LED with low driving voltage, environmental protection and energy saving, high b
 Order of the led is fixed and the figure is attached down and if anyone wants to add led will be in continuation of the series provided
 
 Here is image of the LED we used
-   *  \image html ws2812.jpg "WS2812 LED"
+   *  \image html ws2812.jpg "WS2812 LED" width=400px
+  
 
 Here is image of the LED working on copter
    *  \image html led.jpg "WS2812 LED" width=800px
@@ -151,14 +155,14 @@ Here is image of the LED working on copter
 |RES| low voltage time 	       |Above 50&mu;s|               |
 
 
-The refernce link of the datasheet for the further details  
- <a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf">link text</a> 
+The reference link of the datasheet for the further details  
+ <a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf">WS2812-LED Datasheet</a> 
 
 
-* \page page_name1 I2CXL-MAX SONAR Detailed description
-* \subpage subpage_name1 MB1232
+* \page page_name1 I2CXL-MAX SONAR
+* \subpage I2C-SONAR details:
 
-	MaxSonar sensors are accepted and successfully used in various multi-copters (UAVs, rotorcraft, or quad copters).
+MaxSonar sensors are accepted and successfully used in various multi-copters (UAVs, rotorcraft, or quad copters).
 As a user the sensor was comparatively reliable to work on even though errors where there.
 Sensor operation during flight on a quad-copter is a challenging environment for an ultrasonic sensor to operate reliably.
 The most obvious issue is the 
@@ -172,36 +176,36 @@ I2C bus communication allows rapid control of multiple sensors with only two wir
 Sensors are placed in such a way that it will detect the distance from all possible sides. Power-up address reset pin available
 
 Here is image of the sonar we used
-   *  \image html sonar.jpg "Sonar"
+   *  \image html sonar.jpg "Sonar" width=400px
 
-<b>Measurements</b>
-The below is the graph for the ranges and the number of trials we have taken where we observed that as the range increases accuracy is less
+<b>Measurements:</b>
+The below graph depicts the distance ranges and the number of trials we have taken,where we observed that as the range increases accuracy is less
 
 Here is a graph for the calculate distance and real distances vs No. of trials
    *  \image html sonar_distance.png "Graph for distance accuracy"
 
 Here is the graph for the error calculation for each distance
-   *  \image html errorcalculation-sonar.png "Graph for error calculation for distances measured"
+   *  \image html errorcalculation-sonar.png "Graph for error calculation for distances measured" width=650px 
 
 
-<b>Table : for distance and error value</b>
+<b>Table: for distance and error value</b>
 
-|Distances(in cm) | Error value(in %) |
-|:----------------|:------------------|
-|20               |   0.17            |
-|40	          |   10              |
-|60               |   7.89            |
-|80	          |   7.79            |
-|100              |   3.57            |
+|Distances (in cm) | Error value (in %) |
+|:----------------|:------------------- |
+|20               |   0.17              |
+|40	          |   10                |
+|60               |   7.89              |
+|80	          |   7.79              |
+|100              |   3.57              |
 
-We could see the average error of 5.88 percent.As sonar is susceptible to noise from a variety of sources so here is link where it can be used to reduce the error
+We could see the average error of 5.88%.As sonar is susceptible to noise from a variety of sources so here is link where it can be used to reduce the error
  <a href="http://www.maxbotix.com/articles/067.htm">referance link</a>	
 
 The reference link of the datasheet for the further details  
  <a href="http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf">Sonar datasheet</a>
 
-* \page IR DISTANCE GP2Y0A605: Detailed description
-* \subpage <h><b>Distance sensor</h></b>
+* \page IR DISTANCE SENSOR
+* \subpage PROXIMIY SENSOR details:
 
 IR sensor is a distance measuring sensor unit, composed of an integrated combination of PSD (position sensitive detector). The variety of the reflectivity of the object, the environmental temperature and the operating duration are not influenced easily to the distance detection because of adopting the triangulation method. This device outputs the voltage corresponding to the detection distance. So this sensor can also be used as a proximity sensor.
 The IR sensor is placed on bottom part of the copter which will be used to detect the height of the copter when it flies and it has a lookup table to which has voltage values in mV.
@@ -209,32 +213,31 @@ As voltage is more the distance will be less. Distance measuring range is 10cm t
 The output is Analog type.
 
 Here is the image of IR sensor we used
-   *  \image html IR_sensor.jpg "IR sensor"
+   *  \image html IR_sensor.jpg "IR sensor" width=400px
 
-<b>Measurements</b>
+<b>Measurements:</b>
+The below graph depicts the distance ranges and the number of trials we have taken where we observed that as the range increases accuracy is less.
+As the voltage increases the distance will be decreases and vice versa.
 
-The below is the graph for the ranges and the number of trials we have taken where we observed that as the range increases accuracy is less.
-
-Here is a graph for calculate distance and real distances vs No. of trials
+Here is a graph for calculate distance and real distances vs. No. of trials and the voltage vs. number of trials
    *  \image html ir_distance.png "Graph for distances(calculated and real)"
 
-Here is the graph for the error calculation for each distance.We could see that as the distance
-increases error is increasing
+Here is the graph for the error calculation for each distance. We could see that as the distance increases error is increasing
    *  \image html errorcalculation-ir_sensor.png  "Graph for error calculation" 
 
-<b> Table : for distance and error value </b>
+<b> Table: for distance and error value </b>
 
-|Distances(in cm)| Error value (in %)  |
-|---------------:|:--------------------|
-|20              |   0                 |
-|40	         |  8.90               |	
-|60              |  9.88               | 
-|80	         | 18.66               |
-|100             | 32.45               |
+|Distances (in cm)| Error value (in %)  |
+|---------------: |:--------------------|
+|20               |   0                 |
+|40	          |  8.90               |	
+|60               |  9.88               | 
+|80	          | 18.66               |
+|100              | 32.45               |
 
-We could see that average of 14% error is present in the IR sensor we used.The error can be reduced by low pass filter.
+We could see that average of 14% error is present in the IR sensor we used. The error can be reduced by low pass filter.
 
-<b> Table :for measurment </b>
+<b> Table: for measurement </b>
 
 |Parameter                |Symbol   | Conditions              | MIN.| MAX.|Unit   |
 |------------------------:|:-------:|:-----------------------:|:---:|:---:|:-----:|

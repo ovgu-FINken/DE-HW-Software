@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: IRSensorAnalog Class Reference</title>
+<title>Hardware Development of FINken III quadcopter: IRSensorAnalog Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -42,6 +51,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_i_r_sensor_analog.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,55 +80,96 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_i_r_sensor_analog-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">IRSensorAnalog Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_i_r_sensor_analog_8h_source.html">IRSensorAnalog.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for IRSensorAnalog:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_i_r_sensor_analog.png" usemap="#IRSensorAnalog_map" alt=""/>
-  <map id="IRSensorAnalog_map" name="IRSensorAnalog_map">
-<area href="class_abstract_component.html" alt="AbstractComponent" shape="rect" coords="0,0,122,24"/>
+<div class="center"><img src="class_i_r_sensor_analog__inherit__graph.png" border="0" usemap="#_i_r_sensor_analog_inherit__map" alt="Inheritance graph"/></div>
+<map name="_i_r_sensor_analog_inherit__map" id="_i_r_sensor_analog_inherit__map">
+<area shape="rect" id="node2" href="class_abstract_component.html" title="AbstractComponent" alt="" coords="5,5,143,32"/>
 </map>
- </div></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for IRSensorAnalog:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_r_sensor_analog__coll__graph.png" border="0" usemap="#_i_r_sensor_analog_coll__map" alt="Collaboration graph"/></div>
+<map name="_i_r_sensor_analog_coll__map" id="_i_r_sensor_analog_coll__map">
+<area shape="rect" id="node2" href="class_abstract_component.html" title="AbstractComponent" alt="" coords="5,5,143,32"/>
+<area shape="rect" id="node4" href="class_u_a_r_t_messenger.html" title="UARTMessenger" alt="" coords="90,109,210,136"/>
+<area shape="rect" id="node3" href="struct_sub_message.html" title="SubMessage" alt="" coords="226,5,325,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af27166832035783b3df081014c4dfb9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#af27166832035783b3df081014c4dfb9d">IRSensorAnalog</a> (<a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *const uartMsngr, PinName dataPin, std::vector&lt; std::vector&lt; int &gt; &gt; lookupTable)</td></tr>
+<tr class="memitem:af27166832035783b3df081014c4dfb9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#af27166832035783b3df081014c4dfb9d">IRSensorAnalog</a> (<a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *const uartMsngr, PinName <a class="el" href="class_i_r_sensor_analog.html#a248c6a3f0a6a4e4867fd70c0ac0b3d76">dataPin</a>, std::vector&lt; std::vector&lt; int &gt; &gt; <a class="el" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>)</td></tr>
+<tr class="memdesc:af27166832035783b3df081014c4dfb9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for analog IRSensor.  <a href="#af27166832035783b3df081014c4dfb9d">More...</a><br /></td></tr>
 <tr class="separator:af27166832035783b3df081014c4dfb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6642b85ec1018980e216eab0dfd27f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#aa6642b85ec1018980e216eab0dfd27f2">getRange</a> ()</td></tr>
 <tr class="separator:aa6642b85ec1018980e216eab0dfd27f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a919942de7c5fc3af5da9a2b32e31d328"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#a919942de7c5fc3af5da9a2b32e31d328">update</a> ()</td></tr>
+<tr class="memdesc:a919942de7c5fc3af5da9a2b32e31d328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the sensor value and product with the reference voltage.  <a href="#a919942de7c5fc3af5da9a2b32e31d328">More...</a><br /></td></tr>
 <tr class="separator:a919942de7c5fc3af5da9a2b32e31d328"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_abstract_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_abstract_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_abstract_component.html">AbstractComponent</a></td></tr>
-<tr class="memitem:a58a59a9ea6c3b4c86fb3bf98ff1eaaef inherit pub_methods_class_abstract_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a58a59a9ea6c3b4c86fb3bf98ff1eaaef">setPriority</a> (int p)</td></tr>
-<tr class="separator:a58a59a9ea6c3b4c86fb3bf98ff1eaaef inherit pub_methods_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0b440d1d642ff1292ec3c544d75a8f1 inherit pub_methods_class_abstract_component"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1">getPriority</a> ()</td></tr>
-<tr class="separator:ac0b440d1d642ff1292ec3c544d75a8f1 inherit pub_methods_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c2e458144111c5f599c66f168516abc inherit pub_methods_class_abstract_component"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a0c2e458144111c5f599c66f168516abc">operator&lt;</a> (const <a class="el" href="class_abstract_component.html">AbstractComponent</a> &amp;another) const</td></tr>
-<tr class="separator:a0c2e458144111c5f599c66f168516abc inherit pub_methods_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a59a9ea6c3b4c86fb3bf98ff1eaaef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a58a59a9ea6c3b4c86fb3bf98ff1eaaef">setPriority</a> (int p)</td></tr>
+<tr class="memdesc:a58a59a9ea6c3b4c86fb3bf98ff1eaaef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set priority to the component, used for updating order.  <a href="#a58a59a9ea6c3b4c86fb3bf98ff1eaaef">More...</a><br /></td></tr>
+<tr class="separator:a58a59a9ea6c3b4c86fb3bf98ff1eaaef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b440d1d642ff1292ec3c544d75a8f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1">getPriority</a> ()</td></tr>
+<tr class="separator:ac0b440d1d642ff1292ec3c544d75a8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2e458144111c5f599c66f168516abc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a0c2e458144111c5f599c66f168516abc">operator&lt;</a> (const <a class="el" href="class_abstract_component.html">AbstractComponent</a> &amp;another) const</td></tr>
+<tr class="memdesc:a0c2e458144111c5f599c66f168516abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded comparison operator '&lt;'.  <a href="#a0c2e458144111c5f599c66f168516abc">More...</a><br /></td></tr>
+<tr class="separator:a0c2e458144111c5f599c66f168516abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_class_abstract_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_abstract_component')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_abstract_component.html">AbstractComponent</a></td></tr>
-<tr class="memitem:a9c9c548149681b1a1dd935e66ed5dd11 inherit pro_attribs_class_abstract_component"><td class="memItemLeft" align="right" valign="top"><a id="a9c9c548149681b1a1dd935e66ed5dd11"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
-<tr class="separator:a9c9c548149681b1a1dd935e66ed5dd11 inherit pro_attribs_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff57dfa5f31be093a06b55560e33fb95 inherit pro_attribs_class_abstract_component"><td class="memItemLeft" align="right" valign="top"><a id="aff57dfa5f31be093a06b55560e33fb95"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>priority</b> = 0</td></tr>
-<tr class="separator:aff57dfa5f31be093a06b55560e33fb95 inherit pro_attribs_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_attribs_class_abstract_component"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_abstract_component')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_abstract_component.html">AbstractComponent</a></td></tr>
-<tr class="memitem:a99ce3e5fe7d73dac569b874c15fcaf0d inherit pro_static_attribs_class_abstract_component"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a99ce3e5fe7d73dac569b874c15fcaf0d">s_id</a> = 0</td></tr>
-<tr class="separator:a99ce3e5fe7d73dac569b874c15fcaf0d inherit pro_static_attribs_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a9c9c548149681b1a1dd935e66ed5dd11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">id</a></td></tr>
+<tr class="separator:a9c9c548149681b1a1dd935e66ed5dd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff57dfa5f31be093a06b55560e33fb95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">priority</a> = 0</td></tr>
+<tr class="separator:aff57dfa5f31be093a06b55560e33fb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a99ce3e5fe7d73dac569b874c15fcaf0d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a99ce3e5fe7d73dac569b874c15fcaf0d">s_id</a> = 0</td></tr>
+<tr class="memdesc:a99ce3e5fe7d73dac569b874c15fcaf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id for each component will be created in a sequence order staring with 1.  <a href="#a99ce3e5fe7d73dac569b874c15fcaf0d">More...</a><br /></td></tr>
+<tr class="separator:a99ce3e5fe7d73dac569b874c15fcaf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a33ed6c82b3cb6720bfdd6f7598c54699"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#a33ed6c82b3cb6720bfdd6f7598c54699">toRange</a> (float sensorOutput)</td></tr>
+<tr class="memdesc:a33ed6c82b3cb6720bfdd6f7598c54699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates distance from voltage output and lookup table.  <a href="#a33ed6c82b3cb6720bfdd6f7598c54699">More...</a><br /></td></tr>
+<tr class="separator:a33ed6c82b3cb6720bfdd6f7598c54699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:abdd70ea1abffd1323989af062dab0aeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#abdd70ea1abffd1323989af062dab0aeb">uartMessenger</a></td></tr>
+<tr class="separator:abdd70ea1abffd1323989af062dab0aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3d8032be77b223aa78381c713197c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_sub_message.html">SubMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#a6f3d8032be77b223aa78381c713197c3">subMessage</a></td></tr>
+<tr class="separator:a6f3d8032be77b223aa78381c713197c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248c6a3f0a6a4e4867fd70c0ac0b3d76"><td class="memItemLeft" align="right" valign="top">PinName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#a248c6a3f0a6a4e4867fd70c0ac0b3d76">dataPin</a></td></tr>
+<tr class="separator:a248c6a3f0a6a4e4867fd70c0ac0b3d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90a5052f0d0f71bf2518fac4b5dd9dc0"><td class="memItemLeft" align="right" valign="top">AnalogIn&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#a90a5052f0d0f71bf2518fac4b5dd9dc0">sensor</a></td></tr>
+<tr class="separator:a90a5052f0d0f71bf2518fac4b5dd9dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981d91e0de8f658d5c15ac5bfbe8ed6c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a></td></tr>
+<tr class="separator:a981d91e0de8f658d5c15ac5bfbe8ed6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7463c4bbf714764667ac9d7527ced012"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_r_sensor_analog.html#a7463c4bbf714764667ac9d7527ced012">range</a></td></tr>
+<tr class="separator:a7463c4bbf714764667ac9d7527ced012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8h_source.html#l00009">9</a> of file <a class="el" href="_i_r_sensor_analog_8h_source.html">IRSensorAnalog.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af27166832035783b3df081014c4dfb9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af27166832035783b3df081014c4dfb9d">&#9670;&nbsp;</a></span>IRSensorAnalog()</h2>
 
@@ -121,7 +186,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>priority</b> = 0</td><
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">PinName&#160;</td>
-          <td class="paramname"><em>pin</em>, </td>
+          <td class="paramname"><em>dataPin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -136,19 +201,65 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>priority</b> = 0</td><
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor for analog IRSensor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uartMsngr</td><td><a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a> object for communicating with Paparazzi </td></tr>
     <tr><td class="paramname">dataPin</td><td>- pin on board, where data pin of IR sensor is connected </td></tr>
-    <tr><td class="paramname">lookupTable</td><td>- two-dimensional array, describing relation between sensor output and distance, set in millimeters</td></tr>
+    <tr><td class="paramname">lookupTable</td><td>- two-dimensional array, describing relation between sensor output and distance, set in millimeters </td></tr>
   </table>
   </dd>
 </dl>
-<p>Constructor for analog IRSensor </p>
 
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8cpp_source.html#l00009">9</a> of file <a class="el" href="_i_r_sensor_analog_8cpp_source.html">IRSensorAnalog.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                                                                                                 : <a class="code" href="class_i_r_sensor_analog.html#abdd70ea1abffd1323989af062dab0aeb">uartMessenger</a>(uartMsngr), <a class="code" href="class_i_r_sensor_analog.html#a248c6a3f0a6a4e4867fd70c0ac0b3d76">dataPin</a>(pin), <a class="code" href="class_i_r_sensor_analog.html#a90a5052f0d0f71bf2518fac4b5dd9dc0">sensor</a>(<a class="code" href="class_i_r_sensor_analog.html#a248c6a3f0a6a4e4867fd70c0ac0b3d76">dataPin</a>) {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">id</span> = ++<a class="code" href="class_abstract_component.html#a99ce3e5fe7d73dac569b874c15fcaf0d">s_id</a>;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    this-&gt;<a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a> = <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_i_r_sensor_analog.html#a7463c4bbf714764667ac9d7527ced012">range</a> = 0;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div><div class="ttc" id="class_abstract_component_html_a99ce3e5fe7d73dac569b874c15fcaf0d"><div class="ttname"><a href="class_abstract_component.html#a99ce3e5fe7d73dac569b874c15fcaf0d">AbstractComponent::s_id</a></div><div class="ttdeci">static int s_id</div><div class="ttdoc">The id for each component will be created in a sequence order staring with 1. </div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00038">AbstractComponent.h:38</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_abdd70ea1abffd1323989af062dab0aeb"><div class="ttname"><a href="class_i_r_sensor_analog.html#abdd70ea1abffd1323989af062dab0aeb">IRSensorAnalog::uartMessenger</a></div><div class="ttdeci">UARTMessenger *const uartMessenger</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00028">IRSensorAnalog.h:28</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_a248c6a3f0a6a4e4867fd70c0ac0b3d76"><div class="ttname"><a href="class_i_r_sensor_analog.html#a248c6a3f0a6a4e4867fd70c0ac0b3d76">IRSensorAnalog::dataPin</a></div><div class="ttdeci">PinName dataPin</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00030">IRSensorAnalog.h:30</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_a981d91e0de8f658d5c15ac5bfbe8ed6c"><div class="ttname"><a href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">IRSensorAnalog::lookupTable</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; lookupTable</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00032">IRSensorAnalog.h:32</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_a90a5052f0d0f71bf2518fac4b5dd9dc0"><div class="ttname"><a href="class_i_r_sensor_analog.html#a90a5052f0d0f71bf2518fac4b5dd9dc0">IRSensorAnalog::sensor</a></div><div class="ttdeci">AnalogIn sensor</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00031">IRSensorAnalog.h:31</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_a7463c4bbf714764667ac9d7527ced012"><div class="ttname"><a href="class_i_r_sensor_analog.html#a7463c4bbf714764667ac9d7527ced012">IRSensorAnalog::range</a></div><div class="ttdeci">float range</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00033">IRSensorAnalog.h:33</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac0b440d1d642ff1292ec3c544d75a8f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b440d1d642ff1292ec3c544d75a8f1">&#9670;&nbsp;</a></span>getPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AbstractComponent::getPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>priority of the component </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00025">25</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                      {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">priority</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div><div class="ttc" id="class_abstract_component_html_aff57dfa5f31be093a06b55560e33fb95"><div class="ttname"><a href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">AbstractComponent::priority</a></div><div class="ttdeci">int priority</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00040">AbstractComponent.h:40</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph.png" border="0" usemap="#class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph" alt=""/></div>
+<map name="class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph" id="class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph">
+<area shape="rect" id="node2" href="class_abstract_component.html#a0c2e458144111c5f599c66f168516abc" title="Overloaded comparison operator &#39;&lt;&#39;. " alt="" coords="199,5,344,47"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aa6642b85ec1018980e216eab0dfd27f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6642b85ec1018980e216eab0dfd27f2">&#9670;&nbsp;</a></span>getRange()</h2>
 
@@ -164,6 +275,138 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>priority</b> = 0</td><
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>- range of sensor in meters </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8cpp_source.html#l00066">66</a> of file <a class="el" href="_i_r_sensor_analog_8cpp_source.html">IRSensorAnalog.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                               {</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_i_r_sensor_analog.html#a7463c4bbf714764667ac9d7527ced012">range</a>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div><div class="ttc" id="class_i_r_sensor_analog_html_a7463c4bbf714764667ac9d7527ced012"><div class="ttname"><a href="class_i_r_sensor_analog.html#a7463c4bbf714764667ac9d7527ced012">IRSensorAnalog::range</a></div><div class="ttdeci">float range</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00033">IRSensorAnalog.h:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0c2e458144111c5f599c66f168516abc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2e458144111c5f599c66f168516abc">&#9670;&nbsp;</a></span>operator<()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AbstractComponent::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_abstract_component.html">AbstractComponent</a> &amp;&#160;</td>
+          <td class="paramname"><em>another</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overloaded comparison operator '&lt;'. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">another</td><td>component for comparison </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if id is smaller then the id of another component </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_abstract_component_8cpp_source.html#l00008">8</a> of file <a class="el" href="_abstract_component_8cpp_source.html">AbstractComponent.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                                                        {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> <span class="keywordtype">id</span> &lt; another.<a class="code" href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">id</a>;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div><div class="ttc" id="class_abstract_component_html_a9c9c548149681b1a1dd935e66ed5dd11"><div class="ttname"><a href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">AbstractComponent::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00039">AbstractComponent.h:39</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph.png" border="0" usemap="#class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph" alt=""/></div>
+<map name="class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph" id="class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph">
+<area shape="rect" id="node2" href="class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1" title="AbstractComponent::\lgetPriority" alt="" coords="199,5,344,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a58a59a9ea6c3b4c86fb3bf98ff1eaaef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58a59a9ea6c3b4c86fb3bf98ff1eaaef">&#9670;&nbsp;</a></span>setPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AbstractComponent::setPriority </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set priority to the component, used for updating order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>priority </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00018">18</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                            {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">priority</a> = p;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div><div class="ttc" id="class_abstract_component_html_aff57dfa5f31be093a06b55560e33fb95"><div class="ttname"><a href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">AbstractComponent::priority</a></div><div class="ttdeci">int priority</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00040">AbstractComponent.h:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a33ed6c82b3cb6720bfdd6f7598c54699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ed6c82b3cb6720bfdd6f7598c54699">&#9670;&nbsp;</a></span>toRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float IRSensorAnalog::toRange </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sensorOutput</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates distance from voltage output and lookup table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sensorOutput</td><td>output of the sensor - voltage </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float value of a range between min and max values from lookup table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8cpp_source.html#l00039">39</a> of file <a class="el" href="_i_r_sensor_analog_8cpp_source.html">IRSensorAnalog.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                                {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">float</span> distance = 0;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// left border of lookup table</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (sensorOutput &lt;= <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[0][0]) {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        distance = <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[0][1];</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> distance;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// right border of lookup table</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (sensorOutput &gt;= <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[<a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>.size()-1][0]) {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        distance = <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[<a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>.size()-1][1];</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> distance;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// inside the table</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> i=0;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">while</span> (sensorOutput &gt; <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[++i][0]) {</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">//iterate until we get to the first value in lookup table, that is bigger then our sensor output</span></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// w: something in range [0;1], for position in interval between i - 1 and i</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">float</span> w = (float) (sensorOutput - <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[i-1][0]) / (<a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[i][0] - <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[i-1][0]);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    distance = (1 - w) * <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[i-1][1] + w * <a class="code" href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">lookupTable</a>[i][1];</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> distance;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div><div class="ttc" id="class_i_r_sensor_analog_html_a981d91e0de8f658d5c15ac5bfbe8ed6c"><div class="ttname"><a href="class_i_r_sensor_analog.html#a981d91e0de8f658d5c15ac5bfbe8ed6c">IRSensorAnalog::lookupTable</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; lookupTable</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00032">IRSensorAnalog.h:32</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699_icgraph.png" border="0" usemap="#class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699_icgraph" alt=""/></div>
+<map name="class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699_icgraph" id="class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699_icgraph">
+<area shape="rect" id="node2" href="class_i_r_sensor_analog.html#a919942de7c5fc3af5da9a2b32e31d328" title="Read the sensor value and product with the reference voltage. " alt="" coords="224,5,387,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -189,22 +432,271 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>priority</b> = 0</td><
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Read the sensor value and product with the reference voltage. We can get range from toRange() function. Submessage is struct where we get type of the sensor = IRANALOG, id of the sensor, data, length of the range size. UartMessenger appends submessage which is in <a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a>. </p>
 
-<p>Implements <a class="el" href="class_abstract_component.html">AbstractComponent</a>.</p>
+<p>Read the sensor value and product with the reference voltage. </p>
+<p>We can get range from <a class="el" href="class_i_r_sensor_analog.html#a33ed6c82b3cb6720bfdd6f7598c54699" title="Calculates distance from voltage output and lookup table. ">toRange()</a> function. Submessage is struct where we get type of the sensor = IRANALOG, id of the sensor, data, length of the range size. UartMessenger appends submessage which is in <a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a>. </p>
+
+<p>Implements <a class="el" href="class_abstract_component.html#af25a90b8ab213762221c3b358d9873f3">AbstractComponent</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8cpp_source.html#l00021">21</a> of file <a class="el" href="_i_r_sensor_analog_8cpp_source.html">IRSensorAnalog.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                            {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">float</span> value = <a class="code" href="class_i_r_sensor_analog.html#a90a5052f0d0f71bf2518fac4b5dd9dc0">sensor</a>.read() * <a class="code" href="_i_r_sensor_analog_8cpp.html#a93b7d2c4ba7f352176468cb2b3a26ebd">REFERENCE_VOLTAGE</a>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_i_r_sensor_analog.html#a7463c4bbf714764667ac9d7527ced012">range</a> = <a class="code" href="class_i_r_sensor_analog.html#a33ed6c82b3cb6720bfdd6f7598c54699">toRange</a>(value);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_i_r_sensor_analog.html#a6f3d8032be77b223aa78381c713197c3">subMessage</a>.<a class="code" href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">type</a> = <a class="code" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0af743186003faa7fbcb5ba26dfce5c1f4">IRANALOG</a>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_i_r_sensor_analog.html#a6f3d8032be77b223aa78381c713197c3">subMessage</a>.<a class="code" href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">id</a> = <a class="code" href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">id</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">float</span>*<span class="keyword">&gt;</span>(<a class="code" href="class_i_r_sensor_analog.html#a6f3d8032be77b223aa78381c713197c3">subMessage</a>.<a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>)[0] = <a class="code" href="class_i_r_sensor_analog.html#a7463c4bbf714764667ac9d7527ced012">range</a>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_i_r_sensor_analog.html#a6f3d8032be77b223aa78381c713197c3">subMessage</a>.<a class="code" href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">length</a> = <span class="keyword">sizeof</span>(<a class="code" href="class_i_r_sensor_analog.html#a7463c4bbf714764667ac9d7527ced012">range</a>);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_i_r_sensor_analog.html#abdd70ea1abffd1323989af062dab0aeb">uartMessenger</a>-&gt;<a class="code" href="class_u_a_r_t_messenger.html#ada0967869e320c236a211b405abf128a">appendMessage</a>(<a class="code" href="class_i_r_sensor_analog.html#a6f3d8032be77b223aa78381c713197c3">subMessage</a>);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div><div class="ttc" id="_sub_message_8h_html_a81f78fc173dedefe5a049c0aa3eed2c0af743186003faa7fbcb5ba26dfce5c1f4"><div class="ttname"><a href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0af743186003faa7fbcb5ba26dfce5c1f4">IRANALOG</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00005">SubMessage.h:5</a></div></div>
+<div class="ttc" id="struct_sub_message_html_af3acc450c0686d7a9d15ccd9d548cb6d"><div class="ttname"><a href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">SubMessage::id</a></div><div class="ttdeci">uint8_t id</div><div class="ttdoc">Unique id of the component. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00023">SubMessage.h:23</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_abdd70ea1abffd1323989af062dab0aeb"><div class="ttname"><a href="class_i_r_sensor_analog.html#abdd70ea1abffd1323989af062dab0aeb">IRSensorAnalog::uartMessenger</a></div><div class="ttdeci">UARTMessenger *const uartMessenger</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00028">IRSensorAnalog.h:28</a></div></div>
+<div class="ttc" id="_i_r_sensor_analog_8cpp_html_a93b7d2c4ba7f352176468cb2b3a26ebd"><div class="ttname"><a href="_i_r_sensor_analog_8cpp.html#a93b7d2c4ba7f352176468cb2b3a26ebd">REFERENCE_VOLTAGE</a></div><div class="ttdeci">#define REFERENCE_VOLTAGE</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8cpp_source.html#l00004">IRSensorAnalog.cpp:4</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_a6f3d8032be77b223aa78381c713197c3"><div class="ttname"><a href="class_i_r_sensor_analog.html#a6f3d8032be77b223aa78381c713197c3">IRSensorAnalog::subMessage</a></div><div class="ttdeci">SubMessage subMessage</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00029">IRSensorAnalog.h:29</a></div></div>
+<div class="ttc" id="class_abstract_component_html_a9c9c548149681b1a1dd935e66ed5dd11"><div class="ttname"><a href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">AbstractComponent::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00039">AbstractComponent.h:39</a></div></div>
+<div class="ttc" id="struct_sub_message_html_a276e06f5335ca7857c21ac8c0e51bd6d"><div class="ttname"><a href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">SubMessage::length</a></div><div class="ttdeci">uint8_t length</div><div class="ttdoc">Length of the data in this submessage in bytes. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00028">SubMessage.h:28</a></div></div>
+<div class="ttc" id="struct_sub_message_html_a064f1d26d553da776dc749d37a18a499"><div class="ttname"><a href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">SubMessage::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdoc">type of the message: 0 - Sonar 1 - IR Sensor analog 2 - IR Sensor digital 3 - LED Strip ...</div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00018">SubMessage.h:18</a></div></div>
+<div class="ttc" id="class_u_a_r_t_messenger_html_ada0967869e320c236a211b405abf128a"><div class="ttname"><a href="class_u_a_r_t_messenger.html#ada0967869e320c236a211b405abf128a">UARTMessenger::appendMessage</a></div><div class="ttdeci">void appendMessage(const SubMessage &amp;subMessage)</div><div class="ttdoc">Append new message for sending to Paparazzi. </div><div class="ttdef"><b>Definition:</b> <a href="_u_a_r_t_messenger_8cpp_source.html#l00056">UARTMessenger.cpp:56</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_a90a5052f0d0f71bf2518fac4b5dd9dc0"><div class="ttname"><a href="class_i_r_sensor_analog.html#a90a5052f0d0f71bf2518fac4b5dd9dc0">IRSensorAnalog::sensor</a></div><div class="ttdeci">AnalogIn sensor</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00031">IRSensorAnalog.h:31</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_a33ed6c82b3cb6720bfdd6f7598c54699"><div class="ttname"><a href="class_i_r_sensor_analog.html#a33ed6c82b3cb6720bfdd6f7598c54699">IRSensorAnalog::toRange</a></div><div class="ttdeci">float toRange(float sensorOutput)</div><div class="ttdoc">Calculates distance from voltage output and lookup table. </div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8cpp_source.html#l00039">IRSensorAnalog.cpp:39</a></div></div>
+<div class="ttc" id="class_i_r_sensor_analog_html_a7463c4bbf714764667ac9d7527ced012"><div class="ttname"><a href="class_i_r_sensor_analog.html#a7463c4bbf714764667ac9d7527ced012">IRSensorAnalog::range</a></div><div class="ttdeci">float range</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_analog_8h_source.html#l00033">IRSensorAnalog.h:33</a></div></div>
+<div class="ttc" id="struct_sub_message_html_a7d923c5cdaa380c27d7c4cf60ea7c1be"><div class="ttname"><a href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">SubMessage::data</a></div><div class="ttdeci">uint8_t data[16]</div><div class="ttdoc">Byte array with data. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00033">SubMessage.h:33</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328_cgraph.png" border="0" usemap="#class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328_cgraph" alt=""/></div>
+<map name="class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328_cgraph" id="class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328_cgraph">
+<area shape="rect" id="node2" href="class_i_r_sensor_analog.html#a33ed6c82b3cb6720bfdd6f7598c54699" title="Calculates distance from voltage output and lookup table. " alt="" coords="242,5,413,32"/>
+<area shape="rect" id="node3" href="class_u_a_r_t_messenger.html#ada0967869e320c236a211b405abf128a" title="Append new message for sending to Paparazzi. " alt="" coords="216,56,439,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a248c6a3f0a6a4e4867fd70c0ac0b3d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a248c6a3f0a6a4e4867fd70c0ac0b3d76">&#9670;&nbsp;</a></span>dataPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PinName IRSensorAnalog::dataPin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8h_source.html#l00030">30</a> of file <a class="el" href="_i_r_sensor_analog_8h_source.html">IRSensorAnalog.h</a>.</p>
+
+</div>
+</div>
+<a id="a9c9c548149681b1a1dd935e66ed5dd11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c9c548149681b1a1dd935e66ed5dd11">&#9670;&nbsp;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AbstractComponent::id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00039">39</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
+
+</div>
+</div>
+<a id="a981d91e0de8f658d5c15ac5bfbe8ed6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a981d91e0de8f658d5c15ac5bfbe8ed6c">&#9670;&nbsp;</a></span>lookupTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;int&gt; &gt; IRSensorAnalog::lookupTable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8h_source.html#l00032">32</a> of file <a class="el" href="_i_r_sensor_analog_8h_source.html">IRSensorAnalog.h</a>.</p>
+
+</div>
+</div>
+<a id="aff57dfa5f31be093a06b55560e33fb95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff57dfa5f31be093a06b55560e33fb95">&#9670;&nbsp;</a></span>priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AbstractComponent::priority = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00040">40</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
+
+</div>
+</div>
+<a id="a7463c4bbf714764667ac9d7527ced012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7463c4bbf714764667ac9d7527ced012">&#9670;&nbsp;</a></span>range</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float IRSensorAnalog::range</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8h_source.html#l00033">33</a> of file <a class="el" href="_i_r_sensor_analog_8h_source.html">IRSensorAnalog.h</a>.</p>
+
+</div>
+</div>
+<a id="a99ce3e5fe7d73dac569b874c15fcaf0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ce3e5fe7d73dac569b874c15fcaf0d">&#9670;&nbsp;</a></span>s_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AbstractComponent::s_id = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The id for each component will be created in a sequence order staring with 1. </p>
+
+<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00038">38</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
+
+</div>
+</div>
+<a id="a90a5052f0d0f71bf2518fac4b5dd9dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a5052f0d0f71bf2518fac4b5dd9dc0">&#9670;&nbsp;</a></span>sensor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnalogIn IRSensorAnalog::sensor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8h_source.html#l00031">31</a> of file <a class="el" href="_i_r_sensor_analog_8h_source.html">IRSensorAnalog.h</a>.</p>
+
+</div>
+</div>
+<a id="a6f3d8032be77b223aa78381c713197c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f3d8032be77b223aa78381c713197c3">&#9670;&nbsp;</a></span>subMessage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_sub_message.html">SubMessage</a> IRSensorAnalog::subMessage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8h_source.html#l00029">29</a> of file <a class="el" href="_i_r_sensor_analog_8h_source.html">IRSensorAnalog.h</a>.</p>
+
+</div>
+</div>
+<a id="abdd70ea1abffd1323989af062dab0aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd70ea1abffd1323989af062dab0aeb">&#9670;&nbsp;</a></span>uartMessenger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a>* const IRSensorAnalog::uartMessenger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_r_sensor_analog_8h_source.html#l00028">28</a> of file <a class="el" href="_i_r_sensor_analog_8h_source.html">IRSensorAnalog.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_i_r_sensor_analog_8h_source.html">IRSensorAnalog.h</a></li>
-<li>IRSensorAnalog.cpp</li>
+<li><a class="el" href="_i_r_sensor_analog_8cpp_source.html">IRSensorAnalog.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_r_sensor_analog.html">IRSensorAnalog</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

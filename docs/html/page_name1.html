@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: I2CXL-MAX SONAR Detailed description</title>
+<title>Hardware Development of FINken III quadcopter: I2CXL-MAX SONAR</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -42,6 +51,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('page_name1.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,35 +80,34 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">I2CXL-MAX SONAR Detailed description </div>  </div>
+<div class="title">I2CXL-MAX SONAR </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>subpage_name1 MB1232</p>
+<div class="textblock"><p>I2C-SONAR details:</p>
 <p>MaxSonar sensors are accepted and successfully used in various multi-copters (UAVs, rotorcraft, or quad copters). As a user the sensor was comparatively reliable to work on even though errors where there. Sensor operation during flight on a quad-copter is a challenging environment for an ultrasonic sensor to operate reliably. The most obvious issue is the</p><ol type="1">
 <li>Amount of wind turbulence the ultrasonic wave must travel</li>
 <li>Acoustic noise is the noise the propellers generate These sensors have a high acoustic power output along with real-time auto calibration for changing conditions (voltage and acoustic or electric noise) that ensure users receive the most reliable (in air) ranging data for every reading taken. It operates on power 3V to 5.5V which provides very short to long-range detection and ranging We have considered the default starting range as 20cm but it can vary till 765cm. So we have provided the statistical data in the section Measurements.</li>
 </ol>
 <p>I2C bus communication allows rapid control of multiple sensors with only two wires. We use 8 sonar sensors where these sonars will maintain the copter in the air without any obstruction and will sense the ranging distance in the arena. Sensors are placed in such a way that it will detect the distance from all possible sides. Power-up address reset pin available</p>
 <p>Here is image of the sonar we used </p><div class="image">
-<img src="sonar.jpg" alt="sonar.jpg"/>
+<img src="sonar.jpg" alt="sonar.jpg" width="400px"/>
 <div class="caption">
 Sonar</div></div>
-<p> <b>Measurements</b> The below is the graph for the ranges and the number of trials we have taken where we observed that as the range increases accuracy is less</p>
+<p><b>Measurements:</b> The below graph depicts the distance ranges and the number of trials we have taken,where we observed that as the range increases accuracy is less</p>
 <p>Here is a graph for the calculate distance and real distances vs No. of trials </p><div class="image">
 <img src="sonar_distance.png" alt="sonar_distance.png"/>
 <div class="caption">
 Graph for distance accuracy</div></div>
 <p> Here is the graph for the error calculation for each distance </p><div class="image">
-<img src="errorcalculation-sonar.png" alt="errorcalculation-sonar.png"/>
+<img src="errorcalculation-sonar.png" alt="errorcalculation-sonar.png" width="650px"/>
 <div class="caption">
 Graph for error calculation for distances measured</div></div>
-<p><b>Table : for distance and error value</b></p>
+<p><b>Table: for distance and error value</b></p>
 <table class="doxtable">
 <tr>
-<th align="left">Distances(in cm) </th><th align="left">Error value(in %)  </th></tr>
+<th align="left">Distances (in cm) </th><th align="left">Error value (in %)  </th></tr>
 <tr>
 <td align="left">20 </td><td align="left">0.17 </td></tr>
 <tr>
@@ -96,14 +119,17 @@ Graph for error calculation for distances measured</div></div>
 <tr>
 <td align="left">100 </td><td align="left">3.57 </td></tr>
 </table>
-<p>We could see the average error of 5.88 percent.As sonar is susceptible to noise from a variety of sources so here is link where it can be used to reduce the error <a href="http://www.maxbotix.com/articles/067.htm">referance link</a></p>
+<p>We could see the average error of 5.88%.As sonar is susceptible to noise from a variety of sources so here is link where it can be used to reduce the error <a href="http://www.maxbotix.com/articles/067.htm">referance link</a></p>
 <p>The reference link of the datasheet for the further details <a href="http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf">Sonar datasheet</a> </p>
 </div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Software Development for FINken</title>
+<title>Hardware Development of FINken III quadcopter: Software Development for FINken</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Hardware Development of FINken III quadcopter
+   &#160;<span id="projectnumber">V1.0</span>
    </div>
+   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +52,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('index.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -65,10 +88,13 @@ $(function() {
 <div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
 Introduction</h1>
 <p>Our project is to develop hardware for the FINken 3 robots.</p>
-<p>We have designed the PCBs where the reference link is given below for the further details <a href="https://github.com/ovgu-FINken/DE-HW-Hardware/wiki">Hardware link</a></p>
+<p>We have designed the PCBs where the reference link is given below for the further details <a href="https://github.com/ovgu-FINken/DE-HW-Hardware/wiki">Hardware wiki link</a></p>
 <p>This document mainly focused on the software part.</p>
-<p>Currently the FINken III is the newest generation of our copters with more power,better communication and more sensors</p>
-<p><b>Specifications:</b></p>
+<p>Currently the FINken III is the newest generation of our copters with more power, better communication and more sensors </p><div class="image">
+<img src="Finken.jpg" alt="Finken.jpg" width="800px"/>
+<div class="caption">
+FINKen III quadcopter</div></div>
+<p><b>Specifications :</b></p>
 <ol type="1">
 <li>Optical flow sensor with sonar ranging towards ground (Optional: Infrared distance sensor towards ground)</li>
 <li>Tower of 4 sonar ranging sensor</li>
@@ -89,12 +115,14 @@ Components used in our project</h2>
 <li>PaparazziUAV board</li>
 <li>RGB LEDs</li>
 <li>Illuminating Sensor</li>
-<li>STM32F44RET6 Micro controller</li>
+<li>STM32F44RET6 Micro controller <hr/>
+ </li>
 </ol>
-<h1><a class="anchor" id="about"></a>
-Programming language and installation guide for using in Linux</h1>
-<p>We programmed in Clion using mbed libraries in C++ language. For using mbed libraries, mbed cli needs to install for exporting into IDE.</p>
-<p>Below are the procedure as follows:</p>
+<h2><a class="anchor" id="prog_sec"></a>
+Programming language and installation guide for using in Linux</h2>
+<hr/>
+<p>We programmed in CLion using Mbed libraries in C++ language. For using mbed libraries, mbed cli needs to install for exporting into IDE.</p>
+<p>Below is the procedure as follows:</p>
 <ol type="1">
 <li>Install Python v2.7</li>
 <li>Install Git and Mercurial</li>
@@ -108,13 +136,16 @@ Programming language and installation guide for using in Linux</h1>
 <li>Compile the programm. Run in my_program folder "mbed compile -t GCC_ARM -m NUCLEO_F411RE"</li>
 <li>Flash the microcontroller</li>
 </ol>
-<p>Use another terminal for running the code (for convinence) for gdb terminal</p>
+<p>Use another terminal for running the code (for convenience) for gdb terminal</p>
 <p>(gdb) target extended-remote /dev/ttyACM0 Remote debugging using /dev/ttyACM0 If ACM0 doesnt work need to try for ACM1 and ACM2 (gdb) monitor swdp_scan....For supplying power Target voltage: 3.4V</p>
-<p>Available Targets: No. Att Driver 1 STM32F4xx</p>
-<p>(gdb) attach 1 load the .elf file run if you want to break the code and check we can do the particular check</p>
-<p>Open gtk terminal where one can see the output, set the port (usually ACM0) and change from ASCII to hex to see the output in hex format (in bytes)</p>
-<p><b>Communication with Paparazzi</b></p>
-<p>The message structures is as follows for both receive and send for paparazzi:</p>
+<p>Available Targets: No. Attach Driver 1 STM32F4xx</p>
+<p>(gdb) attach 1 Load the .elf file Run If you want to break the code and check we can do the particular check</p>
+<p>Open gtk terminal where one can see the output set the port (usually ACM0) and change from ASCII to hex to see the output in hex format (In bytes)</p>
+<hr/>
+ <h2><a class="anchor" id="paparazzi_sec"></a>
+Communication with Paparazzi</h2>
+<hr/>
+<p> The message structures are as follows for both receive and send for paparazzi:</p>
 <ol type="1">
 <li>Number of submessages - 1 byte</li>
 <li>Submessages (details below) - N * (1 + 1 + 1 + X) bytes</li>
@@ -149,11 +180,14 @@ Programming language and installation guide for using in Linux</h1>
 </table>
 <p>4 bytes per LED: id, red channel, green channel, blue channel. </p>
 </div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

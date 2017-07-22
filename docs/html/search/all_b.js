@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['ws2812_20detailed_20description',['WS2812 Detailed Description',['../page_name.html',1,'']]],
-  ['write',['write',['../class_w_s2812.html#ab85d6a78bc51929dac48db05f6bc68d4',1,'WS2812']]],
-  ['write_5foffsets',['write_offsets',['../class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68',1,'WS2812']]],
-  ['ws2812',['WS2812',['../class_w_s2812.html',1,'WS2812'],['../class_w_s2812.html#a397fb1e75594024884cb4365d3c725cd',1,'WS2812::WS2812()']]]
+  ['off',['OFF',['../class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55',1,'WS2812']]],
+  ['offset',['offset',['../class_l_e_d_strip.html#a37a3616a79fe3dda93c145d14543199c',1,'LEDStrip']]],
+  ['onpaparazzimsg',['onPaparazziMsg',['../class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436',1,'LEDStrip']]],
+  ['operator_3c',['operator&lt;',['../class_abstract_component.html#a0c2e458144111c5f599c66f168516abc',1,'AbstractComponent']]]
 ];
