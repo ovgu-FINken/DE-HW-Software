@@ -1,0 +1,48 @@
+h$>${\bfseries Distance sensor$<$/h$>$}
+
+IR sensor is a distance measuring sensor unit, composed of an integrated combination of P\+SD (position sensitive detector). The variety of the reflectivity of the object, the environmental temperature and the operating duration are not influenced easily to the distance detection because of adopting the triangulation method. This device outputs the voltage corresponding to the detection distance. So this sensor can also be used as a proximity sensor. The IR sensor is placed on bottom part of the copter which will be used to detect the height of the copter when it flies and it has a lookup table to which has voltage values in mV. As voltage is more the distance will be less. Distance measuring range is 10cm to 150cm. It has long distance measuring type (No external control signal required). The output is Analog type.
+
+Here is the image of IR sensor we used  {\bfseries Measurements}
+
+The below is the graph for the ranges and the number of trials we have taken where we observed that as the range increases accuracy is less.
+
+Here is a graph for calculate distance and real distances vs No. of trials  Here is the graph for the error calculation for each distance.\+We could see that as the distance increases error is increasing 
+
+{\bfseries  Table \+: for distance and error value }
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ Distances(in cm)}&\textbf{ Error value (in \%)  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ Distances(in cm)}&\textbf{ Error value (in \%)  }\\\cline{1-2}
+\endhead
+\PBS\raggedleft 20 &0 \\\cline{1-2}
+\PBS\raggedleft 40 &8.\+90 \\\cline{1-2}
+\PBS\raggedleft 60 &9.\+88 \\\cline{1-2}
+\PBS\raggedleft 80 &18.\+66 \\\cline{1-2}
+\PBS\raggedleft 100 &32.\+45 \\\cline{1-2}
+\end{longtabu}
+We could see that average of 14\% error is present in the IR sensor we used.\+The error can be reduced by low pass filter.
+
+{\bfseries  Table \+:for measurment }
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{6}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ Parameter }&\PBS\centering \textbf{ Symbol }&\PBS\centering \textbf{ Conditions }&\PBS\centering \textbf{ M\+IN.}&\PBS\centering \textbf{ M\+AX.}&\PBS\centering \textbf{ Unit  }\\\cline{1-6}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ Parameter }&\PBS\centering \textbf{ Symbol }&\PBS\centering \textbf{ Conditions }&\PBS\centering \textbf{ M\+IN.}&\PBS\centering \textbf{ M\+AX.}&\PBS\centering \textbf{ Unit  }\\\cline{1-6}
+\endhead
+\PBS\raggedleft Measuring distance range &\PBS\centering {$\Delta$}L &\PBS\centering &\PBS\centering 10 &\PBS\centering 150 &\PBS\centering cm \\\cline{1-6}
+\PBS\raggedleft Output terminal voltage &\PBS\centering Vo &\PBS\centering L=150cm &\PBS\centering 0.\+15&\PBS\centering 1.\+15&\PBS\centering V \\\cline{1-6}
+\PBS\raggedleft Output voltage difference&\PBS\centering {$\Delta$}Vo&\PBS\centering Output change at L change&\PBS\centering &\PBS\centering &\PBS\centering \\\cline{1-6}
+\PBS\raggedleft &\PBS\centering &\PBS\centering (10cm -\/ 150cm) &\PBS\centering 2.\+75&\PBS\centering 3.\+25&\PBS\centering V \\\cline{1-6}
+\end{longtabu}
+Further details about the component, datasheet is in the below link \href{https://www.pololu.com/file/0J812/gp2y0a60szxf_e.pdf}{\tt IR sensor datasheet} 

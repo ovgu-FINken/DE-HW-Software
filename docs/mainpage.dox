@@ -1,0 +1,250 @@
+/*! \mainpage Software Development for FINken
+ *
+ * \section intro_sec Introduction
+ *
+ * Our project is to develop hardware for the FINken 3 robots.
+
+ * We have designed the PCBs where the reference link is given below for the further details  
+ <a href="https://github.com/ovgu-FINken/DE-HW-Hardware/wiki">Hardware link</a> 
+
+ *This document mainly focused on the software part.
+
+ *Currently the FINken III is the newest generation of our copters with more power,better communication and more sensors
+
+*<b>Specifications:</b>
+
+1. Optical flow sensor with sonar ranging towards ground
+   (Optional: Infrared distance sensor towards ground)
+2. Tower of 4 sonar ranging sensor
+3. 802.15.4 based phase-difference ranging between copters and anchors
+4. PaparazziUAV board (Lisa/M 2.1) - with floating point support
+5. 802.15.4 Communication Module to communicate to ground station and between copters
+
+ *
+ * \section Software_sec Software Development
+    __________________________________________________
+ *                     
+ * \subsection comp_sec Components used in our project
+    __________________________________________________               
+
+ *List of components is provided below:
+
+1. Optical flow sensor with sonar ranging towards ground
+2. 8 Sonars ranging sensors
+3. PaparazziUAV board
+4. RGB LEDs
+5. Illuminating Sensor
+6. STM32F44RET6 Micro controller
+
+ * \section about Programming language and installation guide for using in Linux
+
+*We programmed in Clion using mbed libraries in C++ language. For using mbed libraries, mbed cli needs to install for exporting into IDE.
+
+Below are the procedure as follows:
+
+1. Install Python v2.7
+2. Install Git and Mercurial
+3. Install GNU ARM Embedded Toolchain
+Step0: Remove previous version of toolchains, if needed
+		"sudo apt-get remove gcc-arm-none-eabi"
+		"sudo apt-get remove g++-arm-linux-gnueabi"
+		"sudo apt-get remove binutils-arm-none-eabi"
+Step1: Inside Ubuntu, open a terminal and input
+       "sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa"
+
+Step2: Continue to input
+       "sudo apt-get update"
+
+Step3: Continue to input to install toolchain
+       "sudo apt-get install gcc-arm-embedded"
+4. Install mbed-cli
+		"sudo pip install mbed-cli"
+5. Get the program
+6. Select tollchain in mbed-cli. Run in folder my_program/mbed_os
+		"mbed config --global GCC_ARM_PATH /usr/bin/"
+7. Compile the programm. Run in my_program folder
+		"mbed compile -t GCC_ARM -m NUCLEO_F411RE"
+8. Flash the microcontroller
+
+
+Use another terminal for running the code (for convinence) for gdb terminal
+
+(gdb) target extended-remote /dev/ttyACM0
+Remote debugging using /dev/ttyACM0
+If ACM0 doesnt work need to try for ACM1 and ACM2  
+(gdb) monitor swdp_scan....For supplying power
+Target voltage: 3.4V 
+
+Available Targets:
+No. Att Driver
+ 1      STM32F4xx
+
+(gdb) attach 1
+load the .elf file
+run
+if you want to break the code and check we can do the particular check
+
+Open gtk terminal where one can see the output, set the port (usually ACM0) and change from ASCII to hex to see the output in hex format
+(in bytes)
+
+<b>Communication with Paparazzi</b> 
+
+The message structures is as follows for both receive and send for paparazzi:
+
+1. Number of submessages - 1 byte
+2. Submessages (details below) - N * (1 + 1 + 1 + X) bytes
+3. Checksum - 1 byte
+
+Submessages structure is as follows:
+
+1. Type of sensor - 1 byte
+2. Id - 1 byte
+3. Length of data - 1 byte
+4. Data - N bytes (described in length)
+
+The data length for each component is given below
+
+<b>Message to Paparazzi</b>
+
+ |Sensor    |Data |
+ |:-------- |:---:|
+ |Sonar     | 2   |
+ |IRsensor  | 4   |
+ |LEDstrip  | 0   |
+
+<b>Message from Paparazzi</b>
+
+Currently only LEDStrip listen to messages from Paparazzi (by default).
+
+|Sensor    |Data                  |
+|:-------- |:--------------------:|
+|LEDStrip  | 4 bytes*No.of LEDs   |
+
+4 bytes per LED: id, red channel, green channel, blue channel.      
+*/       
+
+/**
+
+* \page page_name WS2812 Detailed Description
+* \subpage WS2812 LED
+
+WS2812B is an intelligent control LED light source which has RGB control chip integrated. The brightness can be adjusted by using the pixel of each color RGB
+Component LED is used for positioning the copter. LED is ON where we can set number of LEDs to glow. Each led can also be set with particular color and brightness too.
+GTK terminal in Linux (Ubuntu) can be used to simulate the behavior of paparazzi response by receiving the data from the microcontroller. We had to give data transfer time to set the led glow
+LED with low driving voltage, environmental protection and energy saving, high brightness, good consistency, low power, long life. 
+Order of the led is fixed and the figure is attached down and if anyone wants to add led will be in continuation of the series provided
+
+Here is image of the LED we used
+   *  \image html ws2812.jpg "WS2812 LED"
+
+Here is image of the LED working on copter
+   *  \image html led.jpg "WS2812 LED" width=800px
+     
+<b>Table : Data transfer Time( TH+TL=1.25&mu;s &plusmn; 600ns)</b>
+
+|   | Explanation	       |Times        |&plusmn;delay  |
+|--:| :---------------------:  | :----------:|:------------- |                
+|T0H| 0 code ,high voltage time|0.4&mu;s     | &plusmn;150ns |
+|T1H| 1 code ,high voltage time|0.8&mu;s     | &plusmn;150ns |
+|T0L| 0 code , low voltage time|0.85&mu;s    | &plusmn;150ns |
+|T1L| 1 code ,low voltage time |0.45&mu;s    | &plusmn;150ns |
+|RES| low voltage time 	       |Above 50&mu;s|               |
+
+
+The refernce link of the datasheet for the further details  
+ <a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf">link text</a> 
+
+
+* \page page_name1 I2CXL-MAX SONAR Detailed description
+* \subpage subpage_name1 MB1232
+
+	MaxSonar sensors are accepted and successfully used in various multi-copters (UAVs, rotorcraft, or quad copters).
+As a user the sensor was comparatively reliable to work on even though errors where there.
+Sensor operation during flight on a quad-copter is a challenging environment for an ultrasonic sensor to operate reliably.
+The most obvious issue is the 
+	1. Amount of wind turbulence the ultrasonic wave must travel
+	2. Acoustic noise is the noise the propellers generate
+These sensors have a high acoustic power output along with real-time auto calibration for changing conditions (voltage and acoustic or electric noise) that ensure users receive the most reliable (in air) ranging data for every reading taken. It operates on power 3V to 5.5V which provides very short to long-range detection and ranging
+We have considered the default starting range as 20cm but it can vary till 765cm. So we have provided the statistical data in the section Measurements.
+
+
+I2C bus communication allows rapid control of multiple sensors with only two wires. We use 8 sonar sensors where these sonars will maintain the copter in the air without any obstruction and will sense the ranging distance in the arena.
+Sensors are placed in such a way that it will detect the distance from all possible sides. Power-up address reset pin available
+
+Here is image of the sonar we used
+   *  \image html sonar.jpg "Sonar"
+
+<b>Measurements</b>
+The below is the graph for the ranges and the number of trials we have taken where we observed that as the range increases accuracy is less
+
+Here is a graph for the calculate distance and real distances vs No. of trials
+   *  \image html sonar_distance.png "Graph for distance accuracy"
+
+Here is the graph for the error calculation for each distance
+   *  \image html errorcalculation-sonar.png "Graph for error calculation for distances measured"
+
+
+<b>Table : for distance and error value</b>
+
+|Distances(in cm) | Error value(in %) |
+|:----------------|:------------------|
+|20               |   0.17            |
+|40	          |   10              |
+|60               |   7.89            |
+|80	          |   7.79            |
+|100              |   3.57            |
+
+We could see the average error of 5.88 percent.As sonar is susceptible to noise from a variety of sources so here is link where it can be used to reduce the error
+ <a href="http://www.maxbotix.com/articles/067.htm">referance link</a>	
+
+The reference link of the datasheet for the further details  
+ <a href="http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf">Sonar datasheet</a>
+
+* \page IR DISTANCE GP2Y0A605: Detailed description
+* \subpage <h><b>Distance sensor</h></b>
+
+IR sensor is a distance measuring sensor unit, composed of an integrated combination of PSD (position sensitive detector). The variety of the reflectivity of the object, the environmental temperature and the operating duration are not influenced easily to the distance detection because of adopting the triangulation method. This device outputs the voltage corresponding to the detection distance. So this sensor can also be used as a proximity sensor.
+The IR sensor is placed on bottom part of the copter which will be used to detect the height of the copter when it flies and it has a lookup table to which has voltage values in mV.
+As voltage is more the distance will be less. Distance measuring range is 10cm to 150cm. It has long distance measuring type (No external control signal required).
+The output is Analog type.
+
+Here is the image of IR sensor we used
+   *  \image html IR_sensor.jpg "IR sensor"
+
+<b>Measurements</b>
+
+The below is the graph for the ranges and the number of trials we have taken where we observed that as the range increases accuracy is less.
+
+Here is a graph for calculate distance and real distances vs No. of trials
+   *  \image html ir_distance.png "Graph for distances(calculated and real)"
+
+Here is the graph for the error calculation for each distance.We could see that as the distance
+increases error is increasing
+   *  \image html errorcalculation-ir_sensor.png  "Graph for error calculation" 
+
+<b> Table : for distance and error value </b>
+
+|Distances(in cm)| Error value (in %)  |
+|---------------:|:--------------------|
+|20              |   0                 |
+|40	         |  8.90               |	
+|60              |  9.88               | 
+|80	         | 18.66               |
+|100             | 32.45               |
+
+We could see that average of 14% error is present in the IR sensor we used.The error can be reduced by low pass filter.
+
+<b> Table :for measurment </b>
+
+|Parameter                |Symbol   | Conditions              | MIN.| MAX.|Unit   |
+|------------------------:|:-------:|:-----------------------:|:---:|:---:|:-----:|
+|Measuring distance range |&Delta;L |                         | 10  | 150 | cm    |
+|Output terminal voltage  |Vo       |L=150cm                  | 0.15| 1.15| V     |
+|Output voltage difference|&Delta;Vo|Output change at L change|     |     |       |
+|                         |         |(10cm - 150cm)           | 2.75| 3.25| V     |
+
+Further details about the component, datasheet is in the below link
+<a href="https://www.pololu.com/file/0J812/gp2y0a60szxf_e.pdf">IR sensor datasheet</a> 
+
+
+*/

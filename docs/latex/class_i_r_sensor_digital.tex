@@ -1,0 +1,62 @@
+\hypertarget{class_i_r_sensor_digital}{}\section{I\+R\+Sensor\+Digital Class Reference}
+\label{class_i_r_sensor_digital}\index{I\+R\+Sensor\+Digital@{I\+R\+Sensor\+Digital}}
+Inheritance diagram for I\+R\+Sensor\+Digital\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_r_sensor_digital}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_i_r_sensor_digital_a43d7d836d07616260611d3cef709dff1}{I\+R\+Sensor\+Digital} (\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const uart\+Msngr, Pin\+Name data\+Pin, float detection\+Range)
+\item 
+bool \hyperlink{class_i_r_sensor_digital_a749b91dae3e83900f6de49fcc908470d}{is\+In\+Range} ()
+\item 
+virtual void \hyperlink{class_i_r_sensor_digital_a8d09a546a1f4b4c6533c324d98a146a9}{update} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_r_sensor_digital_a43d7d836d07616260611d3cef709dff1}\label{class_i_r_sensor_digital_a43d7d836d07616260611d3cef709dff1}} 
+\index{I\+R\+Sensor\+Digital@{I\+R\+Sensor\+Digital}!I\+R\+Sensor\+Digital@{I\+R\+Sensor\+Digital}}
+\index{I\+R\+Sensor\+Digital@{I\+R\+Sensor\+Digital}!I\+R\+Sensor\+Digital@{I\+R\+Sensor\+Digital}}
+\subsubsection{\texorpdfstring{I\+R\+Sensor\+Digital()}{IRSensorDigital()}}
+{\footnotesize\ttfamily I\+R\+Sensor\+Digital\+::\+I\+R\+Sensor\+Digital (\begin{DoxyParamCaption}\item[{\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const}]{uart\+Msngr,  }\item[{Pin\+Name}]{data\+Pin,  }\item[{float}]{detection\+Range }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Pin} & -\/ pin on board, where data pin of IR sensor is connected \\
+\hline
+{\em detection\+Range} & -\/ distance of detection for this sensor \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_r_sensor_digital_a749b91dae3e83900f6de49fcc908470d}\label{class_i_r_sensor_digital_a749b91dae3e83900f6de49fcc908470d}} 
+\index{I\+R\+Sensor\+Digital@{I\+R\+Sensor\+Digital}!is\+In\+Range@{is\+In\+Range}}
+\index{is\+In\+Range@{is\+In\+Range}!I\+R\+Sensor\+Digital@{I\+R\+Sensor\+Digital}}
+\subsubsection{\texorpdfstring{is\+In\+Range()}{isInRange()}}
+{\footnotesize\ttfamily bool I\+R\+Sensor\+Digital\+::is\+In\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+true if sensor is in range 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_r_sensor_digital_a8d09a546a1f4b4c6533c324d98a146a9}\label{class_i_r_sensor_digital_a8d09a546a1f4b4c6533c324d98a146a9}} 
+\index{I\+R\+Sensor\+Digital@{I\+R\+Sensor\+Digital}!update@{update}}
+\index{update@{update}!I\+R\+Sensor\+Digital@{I\+R\+Sensor\+Digital}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void I\+R\+Sensor\+Digital\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+If the value is less than the detection\+Range then it will return the true value. \hyperlink{struct_sub_message}{Sub\+Message} type is I\+R\+D\+I\+G\+I\+T\+AL, Id of the sensor. reinterpret\+\_\+cast is that submessage.\+data will be converted into boolean. Length is size of in\+Range. Appends the message to uart list. 
+
+Implements \hyperlink{class_abstract_component}{Abstract\+Component}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+I\+R\+Sensor\+Digital.\+h\item 
+I\+R\+Sensor\+Digital.\+cpp\end{DoxyCompactItemize}

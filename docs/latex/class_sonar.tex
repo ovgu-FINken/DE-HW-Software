@@ -1,0 +1,64 @@
+\hypertarget{class_sonar}{}\section{Sonar Class Reference}
+\label{class_sonar}\index{Sonar@{Sonar}}
+Inheritance diagram for Sonar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sonar}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sonar_a8199e2b1d48626cc0404708063d7fe42}{Sonar} (\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const uart\+Msngr, uint8\+\_\+t addr, Event\+Queue $\ast$const queue)
+\item 
+virtual void \hyperlink{class_sonar_aaf10dd734528b86b4dea3ab35c4ee4f4}{update} ()
+\item 
+uint16\+\_\+t \hyperlink{class_sonar_a7a641bcfac1967fbc42eea2ab70886dc}{get\+Range} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sonar_a8199e2b1d48626cc0404708063d7fe42}\label{class_sonar_a8199e2b1d48626cc0404708063d7fe42}} 
+\index{Sonar@{Sonar}!Sonar@{Sonar}}
+\index{Sonar@{Sonar}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{Sonar()}{Sonar()}}
+{\footnotesize\ttfamily Sonar\+::\+Sonar (\begin{DoxyParamCaption}\item[{\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const}]{uart\+Msngr,  }\item[{uint8\+\_\+t}]{addr,  }\item[{Event\+Queue $\ast$const}]{queue }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+Msngr} & Pointer to \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} object, that should be used for sending data to Paparazzi \\
+\hline
+{\em addr} & Address of the \hyperlink{class_sonar}{Sonar} \\
+\hline
+{\em queue} & mbed Event\+Queue\\
+\hline
+\end{DoxyParams}
+Constructor for \hyperlink{class_sonar}{Sonar} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sonar_a7a641bcfac1967fbc42eea2ab70886dc}\label{class_sonar_a7a641bcfac1967fbc42eea2ab70886dc}} 
+\index{Sonar@{Sonar}!get\+Range@{get\+Range}}
+\index{get\+Range@{get\+Range}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{get\+Range()}{getRange()}}
+{\footnotesize\ttfamily uint16\+\_\+t Sonar\+::get\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+current range of this sensor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sonar_aaf10dd734528b86b4dea3ab35c4ee4f4}\label{class_sonar_aaf10dd734528b86b4dea3ab35c4ee4f4}} 
+\index{Sonar@{Sonar}!update@{update}}
+\index{update@{update}!Sonar@{Sonar}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Sonar\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Write value to i2c for the sonar. 
+
+Implements \hyperlink{class_abstract_component}{Abstract\+Component}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sonar.\+h\item 
+Sonar.\+cpp\end{DoxyCompactItemize}

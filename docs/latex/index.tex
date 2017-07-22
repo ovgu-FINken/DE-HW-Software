@@ -1,0 +1,125 @@
+\hypertarget{index_intro_sec}{}\section{Introduction}\label{index_intro_sec}
+Our project is to develop hardware for the F\+I\+Nken 3 robots.
+
+We have designed the P\+C\+Bs where the reference link is given below for the further details \href{https://github.com/ovgu-FINken/DE-HW-Hardware/wiki}{\tt Hardware link}
+
+This document mainly focused on the software part.
+
+Currently the F\+I\+Nken I\+II is the newest generation of our copters with more power,better communication and more sensors
+
+{\bfseries Specifications\+:}
+
+
+\begin{DoxyEnumerate}
+\item Optical flow sensor with sonar ranging towards ground (Optional\+: Infrared distance sensor towards ground)
+\item Tower of 4 sonar ranging sensor
+\item 802.\+15.\+4 based phase-\/difference ranging between copters and anchors
+\item Paparazzi\+U\+AV board (Lisa/M 2.\+1) -\/ with floating point support
+\item 802.\+15.\+4 Communication Module to communicate to ground station and between copters
+\end{DoxyEnumerate}\hypertarget{index_Software_sec}{}\section{Software Development}\label{index_Software_sec}
+
+
+\hypertarget{index_comp_sec}{}\subsection{Components used in our project}\label{index_comp_sec}
+
+
+
+
+List of components is provided below\+:
+
+
+\begin{DoxyEnumerate}
+\item Optical flow sensor with sonar ranging towards ground
+\item 8 Sonars ranging sensors
+\item Paparazzi\+U\+AV board
+\item R\+GB L\+E\+Ds
+\item Illuminating Sensor
+\item S\+T\+M32\+F44\+R\+E\+T6 Micro controller
+\end{DoxyEnumerate}\hypertarget{index_about}{}\section{Programming language and installation guide for using in Linux}\label{index_about}
+We programmed in Clion using mbed libraries in C++ language. For using mbed libraries, mbed cli needs to install for exporting into I\+DE.
+
+Below are the procedure as follows\+:
+
+
+\begin{DoxyEnumerate}
+\item Install Python v2.\+7
+\item Install Git and Mercurial
+\item Install G\+NU A\+RM Embedded Toolchain Step0\+: Remove previous version of toolchains, if needed \char`\"{}sudo apt-\/get remove gcc-\/arm-\/none-\/eabi\char`\"{} \char`\"{}sudo apt-\/get remove g++-\/arm-\/linux-\/gnueabi\char`\"{} \char`\"{}sudo apt-\/get remove binutils-\/arm-\/none-\/eabi\char`\"{} Step1\+: Inside Ubuntu, open a terminal and input \char`\"{}sudo add-\/apt-\/repository ppa\+:team-\/gcc-\/arm-\/embedded/ppa\char`\"{}
+\end{DoxyEnumerate}
+
+Step2\+: Continue to input \char`\"{}sudo apt-\/get update\char`\"{}
+
+Step3\+: Continue to input to install toolchain \char`\"{}sudo apt-\/get install gcc-\/arm-\/embedded\char`\"{}
+\begin{DoxyEnumerate}
+\item Install mbed-\/cli \char`\"{}sudo pip install mbed-\/cli\char`\"{}
+\item Get the program
+\item Select tollchain in mbed-\/cli. Run in folder my\+\_\+program/mbed\+\_\+os \char`\"{}mbed config -\/-\/global G\+C\+C\+\_\+\+A\+R\+M\+\_\+\+P\+A\+T\+H /usr/bin/\char`\"{}
+\item Compile the programm. Run in my\+\_\+program folder \char`\"{}mbed compile -\/t G\+C\+C\+\_\+\+A\+R\+M -\/m N\+U\+C\+L\+E\+O\+\_\+\+F411\+R\+E\char`\"{}
+\item Flash the microcontroller
+\end{DoxyEnumerate}
+
+Use another terminal for running the code (for convinence) for gdb terminal
+
+(gdb) target extended-\/remote /dev/tty\+A\+C\+M0 Remote debugging using /dev/tty\+A\+C\+M0 If A\+C\+M0 doesnt work need to try for A\+C\+M1 and A\+C\+M2 (gdb) monitor swdp\+\_\+scan....For supplying power Target voltage\+: 3.\+4V
+
+Available Targets\+: No. Att Driver 1 S\+T\+M32\+F4xx
+
+(gdb) attach 1 load the .elf file run if you want to break the code and check we can do the particular check
+
+Open gtk terminal where one can see the output, set the port (usually A\+C\+M0) and change from A\+S\+C\+II to hex to see the output in hex format (in bytes)
+
+{\bfseries Communication with Paparazzi}
+
+The message structures is as follows for both receive and send for paparazzi\+:
+
+
+\begin{DoxyEnumerate}
+\item Number of submessages -\/ 1 byte
+\item Submessages (details below) -\/ N $\ast$ (1 + 1 + 1 + X) bytes
+\item Checksum -\/ 1 byte
+\end{DoxyEnumerate}
+
+Submessages structure is as follows\+:
+
+
+\begin{DoxyEnumerate}
+\item Type of sensor -\/ 1 byte
+\item Id -\/ 1 byte
+\item Length of data -\/ 1 byte
+\item Data -\/ N bytes (described in length)
+\end{DoxyEnumerate}
+
+The data length for each component is given below
+
+{\bfseries Message to Paparazzi}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Sensor }&\PBS\centering \textbf{ Data  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Sensor }&\PBS\centering \textbf{ Data  }\\\cline{1-2}
+\endhead
+\hyperlink{class_sonar}{Sonar} &\PBS\centering 2 \\\cline{1-2}
+I\+Rsensor &\PBS\centering 4 \\\cline{1-2}
+L\+E\+Dstrip &\PBS\centering 0 \\\cline{1-2}
+\end{longtabu}
+{\bfseries Message from Paparazzi}
+
+Currently only \hyperlink{class_l_e_d_strip}{L\+E\+D\+Strip} listen to messages from Paparazzi (by default).
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Sensor }&\PBS\centering \textbf{ Data  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Sensor }&\PBS\centering \textbf{ Data  }\\\cline{1-2}
+\endhead
+\hyperlink{class_l_e_d_strip}{L\+E\+D\+Strip} &\PBS\centering 4 bytes$\ast$\+No.of L\+E\+Ds \\\cline{1-2}
+\end{longtabu}
+4 bytes per L\+ED\+: id, red channel, green channel, blue channel. 

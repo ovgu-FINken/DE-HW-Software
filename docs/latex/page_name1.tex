@@ -1,0 +1,35 @@
+subpage\+\_\+name1 M\+B1232
+
+Max\+Sonar sensors are accepted and successfully used in various multi-\/copters (U\+A\+Vs, rotorcraft, or quad copters). As a user the sensor was comparatively reliable to work on even though errors where there. Sensor operation during flight on a quad-\/copter is a challenging environment for an ultrasonic sensor to operate reliably. The most obvious issue is the
+\begin{DoxyEnumerate}
+\item Amount of wind turbulence the ultrasonic wave must travel
+\item Acoustic noise is the noise the propellers generate These sensors have a high acoustic power output along with real-\/time auto calibration for changing conditions (voltage and acoustic or electric noise) that ensure users receive the most reliable (in air) ranging data for every reading taken. It operates on power 3V to 5.\+5V which provides very short to long-\/range detection and ranging We have considered the default starting range as 20cm but it can vary till 765cm. So we have provided the statistical data in the section Measurements.
+\end{DoxyEnumerate}
+
+I2C bus communication allows rapid control of multiple sensors with only two wires. We use 8 sonar sensors where these sonars will maintain the copter in the air without any obstruction and will sense the ranging distance in the arena. Sensors are placed in such a way that it will detect the distance from all possible sides. Power-\/up address reset pin available
+
+Here is image of the sonar we used  {\bfseries Measurements} The below is the graph for the ranges and the number of trials we have taken where we observed that as the range increases accuracy is less
+
+Here is a graph for the calculate distance and real distances vs No. of trials  Here is the graph for the error calculation for each distance 
+
+{\bfseries Table \+: for distance and error value}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Distances(in cm) }&\textbf{ Error value(in \%)  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Distances(in cm) }&\textbf{ Error value(in \%)  }\\\cline{1-2}
+\endhead
+20 &0.\+17 \\\cline{1-2}
+40 &10 \\\cline{1-2}
+60 &7.\+89 \\\cline{1-2}
+80 &7.\+79 \\\cline{1-2}
+100 &3.\+57 \\\cline{1-2}
+\end{longtabu}
+We could see the average error of 5.\+88 percent.\+As sonar is susceptible to noise from a variety of sources so here is link where it can be used to reduce the error \href{http://www.maxbotix.com/articles/067.htm}{\tt referance link}
+
+The reference link of the datasheet for the further details \href{http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf}{\tt Sonar datasheet} 

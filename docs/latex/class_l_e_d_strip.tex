@@ -1,0 +1,115 @@
+\hypertarget{class_l_e_d_strip}{}\section{L\+E\+D\+Strip Class Reference}
+\label{class_l_e_d_strip}\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}}
+Inheritance diagram for L\+E\+D\+Strip\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_l_e_d_strip}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_l_e_d_strip_a746e420e05c5d6c45eb2f74eaf5928fc}{L\+E\+D\+Strip} (\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const uart\+Msngr, Pin\+Name pin, int size, int zero\+High, int zero\+Low, int one\+High, int one\+Low)
+\item 
+void \hyperlink{class_l_e_d_strip_abf199367f3caaf9730262c4e7bef6bc1}{set\+Mode} (uint8\+\_\+t mode)
+\item 
+void \hyperlink{class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c}{set\+Color} (unsigned int color)
+\item 
+void \hyperlink{class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7}{set\+Color} (unsigned int color, uint8\+\_\+t led=0)
+\item 
+virtual void \hyperlink{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95}{update} ()
+\item 
+virtual void \hyperlink{class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436}{on\+Paparazzi\+Msg} (\hyperlink{struct_sub_message}{Sub\+Message} $\ast$msg)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_l_e_d_strip_a746e420e05c5d6c45eb2f74eaf5928fc}\label{class_l_e_d_strip_a746e420e05c5d6c45eb2f74eaf5928fc}} 
+\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
+\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
+\subsubsection{\texorpdfstring{L\+E\+D\+Strip()}{LEDStrip()}}
+{\footnotesize\ttfamily L\+E\+D\+Strip\+::\+L\+E\+D\+Strip (\begin{DoxyParamCaption}\item[{\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const}]{uart\+Msngr,  }\item[{Pin\+Name}]{pin,  }\item[{int}]{size,  }\item[{int}]{zero\+High,  }\item[{int}]{zero\+Low,  }\item[{int}]{one\+High,  }\item[{int}]{one\+Low }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+Msngr} & \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} object for communicating with Paparazzi \\
+\hline
+{\em pin} & Output pin. Connect to \char`\"{}\+Din\char`\"{} on the first \hyperlink{class_w_s2812}{W\+S2812} in the strip \\
+\hline
+{\em size} & Number of L\+E\+Ds in your strip \\
+\hline
+{\em zero\+High} & How many N\+O\+Ps to insert to ensure T\+OH is properly generated. See library description for more information. \\
+\hline
+{\em zero\+Low} & How many N\+O\+Ps to insert to ensure T\+OL is properly generated. See library description for more information. \\
+\hline
+{\em one\+High} & How many N\+O\+Ps to insert to ensure T1H is properly generated. See library description for more information. \\
+\hline
+{\em one\+Low} & How many N\+O\+Ps to insert to ensure T1L is properly generated. See library description for more information.\\
+\hline
+\end{DoxyParams}
+Constructor for creating a new L\+ED Strip. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436}\label{class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436}} 
+\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!on\+Paparazzi\+Msg@{on\+Paparazzi\+Msg}}
+\index{on\+Paparazzi\+Msg@{on\+Paparazzi\+Msg}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
+\subsubsection{\texorpdfstring{on\+Paparazzi\+Msg()}{onPaparazziMsg()}}
+{\footnotesize\ttfamily void L\+E\+D\+Strip\+::on\+Paparazzi\+Msg (\begin{DoxyParamCaption}\item[{\hyperlink{struct_sub_message}{Sub\+Message} $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & message struct from Paparazzi\\
+\hline
+\end{DoxyParams}
+Reaction on the message from Paparazzi. Expected message structure\+: type (1 byte), id (1 byte), length (1 byte), data (length byte) Datastructure\+: led id (1 byte), red channel (1 byte), green channel (1 byte), blue channel (1 byte) \hyperlink{struct_sub_message}{Sub\+Message} came from Paparazzi \mbox{\Hypertarget{class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c}\label{class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c}} 
+\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void L\+E\+D\+Strip\+::set\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{color }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & color in R\+GB format, e.\+g. 0x00\+F\+F00\\
+\hline
+\end{DoxyParams}
+Set color to L\+ED Strip. \mbox{\Hypertarget{class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7}\label{class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7}} 
+\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void L\+E\+D\+Strip\+::set\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{color,  }\item[{uint8\+\_\+t}]{led = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & color in R\+GB format, e.\+g. 0x00\+F\+F00 \\
+\hline
+{\em led} & id of the L\+ED to use\\
+\hline
+\end{DoxyParams}
+Set color to only one L\+ED \mbox{\Hypertarget{class_l_e_d_strip_abf199367f3caaf9730262c4e7bef6bc1}\label{class_l_e_d_strip_abf199367f3caaf9730262c4e7bef6bc1}} 
+\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!set\+Mode@{set\+Mode}}
+\index{set\+Mode@{set\+Mode}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
+\subsubsection{\texorpdfstring{set\+Mode()}{setMode()}}
+{\footnotesize\ttfamily void L\+E\+D\+Strip\+::set\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & one of predifined modes\\
+\hline
+\end{DoxyParams}
+Set L\+ED Strip to manual control instead of getting control action from paparazzi, which is set by default. \mbox{\Hypertarget{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95}\label{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95}} 
+\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!update@{update}}
+\index{update@{update}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void L\+E\+D\+Strip\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The update function will be to the L\+E\+Dstrip when the control from paparazzi is received and check the message from paparrazi with respect to id. Then check if the paparazzi message received is not null then go to the method on\+Paparazzi\+Msg to recieve paparazzi message. set write offset passing parameters. while giving the the submessage provide the L\+ED strip Id and append message to the uart messenger 
+
+Implements \hyperlink{class_abstract_component}{Abstract\+Component}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+L\+E\+D\+Strip.\+h\item 
+L\+E\+D\+Strip.\+cpp\end{DoxyCompactItemize}

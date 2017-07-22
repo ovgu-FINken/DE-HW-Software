@@ -1,0 +1,64 @@
+\hypertarget{class_i_r_sensor_analog}{}\section{I\+R\+Sensor\+Analog Class Reference}
+\label{class_i_r_sensor_analog}\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
+Inheritance diagram for I\+R\+Sensor\+Analog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_r_sensor_analog}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_i_r_sensor_analog_af27166832035783b3df081014c4dfb9d}{I\+R\+Sensor\+Analog} (\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const uart\+Msngr, Pin\+Name data\+Pin, std\+::vector$<$ std\+::vector$<$ int $>$ $>$ lookup\+Table)
+\item 
+float \hyperlink{class_i_r_sensor_analog_aa6642b85ec1018980e216eab0dfd27f2}{get\+Range} ()
+\item 
+virtual void \hyperlink{class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328}{update} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_r_sensor_analog_af27166832035783b3df081014c4dfb9d}\label{class_i_r_sensor_analog_af27166832035783b3df081014c4dfb9d}} 
+\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
+\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
+\subsubsection{\texorpdfstring{I\+R\+Sensor\+Analog()}{IRSensorAnalog()}}
+{\footnotesize\ttfamily I\+R\+Sensor\+Analog\+::\+I\+R\+Sensor\+Analog (\begin{DoxyParamCaption}\item[{\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const}]{uart\+Msngr,  }\item[{Pin\+Name}]{pin,  }\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$}]{lookup\+Table }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+Msngr} & \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} object for communicating with Paparazzi \\
+\hline
+{\em data\+Pin} & -\/ pin on board, where data pin of IR sensor is connected \\
+\hline
+{\em lookup\+Table} & -\/ two-\/dimensional array, describing relation between sensor output and distance, set in millimeters\\
+\hline
+\end{DoxyParams}
+Constructor for analog I\+R\+Sensor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_r_sensor_analog_aa6642b85ec1018980e216eab0dfd27f2}\label{class_i_r_sensor_analog_aa6642b85ec1018980e216eab0dfd27f2}} 
+\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!get\+Range@{get\+Range}}
+\index{get\+Range@{get\+Range}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
+\subsubsection{\texorpdfstring{get\+Range()}{getRange()}}
+{\footnotesize\ttfamily float I\+R\+Sensor\+Analog\+::get\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+-\/ range of sensor in meters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328}\label{class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328}} 
+\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!update@{update}}
+\index{update@{update}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void I\+R\+Sensor\+Analog\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Read the sensor value and product with the reference voltage. We can get range from to\+Range() function. Submessage is struct where we get type of the sensor = I\+R\+A\+N\+A\+L\+OG, id of the sensor, data, length of the range size. Uart\+Messenger appends submessage which is in \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger}. 
+
+Implements \hyperlink{class_abstract_component}{Abstract\+Component}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+I\+R\+Sensor\+Analog.\+h\item 
+I\+R\+Sensor\+Analog.\+cpp\end{DoxyCompactItemize}

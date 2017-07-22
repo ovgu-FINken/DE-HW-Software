@@ -1,0 +1,160 @@
+\hypertarget{class_w_s2812}{}\section{W\+S2812 Class Reference}
+\label{class_w_s2812}\index{W\+S2812@{W\+S2812}}
+
+
+Library for the \hyperlink{class_w_s2812}{W\+S2812} R\+GB L\+ED with integrated controller.  
+
+
+
+
+{\ttfamily \#include $<$W\+S2812.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}\label{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642d}} 
+enum {\bfseries Brightness\+Control} \{ {\bfseries O\+FF}, 
+{\bfseries G\+L\+O\+B\+AL}, 
+{\bfseries P\+E\+R\+\_\+\+P\+I\+X\+EL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_w_s2812_a397fb1e75594024884cb4365d3c725cd}{W\+S2812} (Pin\+Name pin, int size, int zero\+High, int zero\+Low, int one\+High, int one\+Low)
+\item 
+\hyperlink{class_w_s2812_a58973dedd9cbc5c3fd3397f07f9a720f}{$\sim$\+W\+S2812} ()
+\item 
+void \hyperlink{class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec}{set\+Delays} (int zero\+High, int zero\+Low, int one\+High, int one\+Low)
+\item 
+void \hyperlink{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}{write\+\_\+offsets} (int buf\mbox{[}$\,$\mbox{]}, int r\+\_\+offset=0, int g\+\_\+offset=0, int b\+\_\+offset=0)
+\item 
+void \hyperlink{class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4}{write} (int buf\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}{use\+II} (Brightness\+Control bc)
+\item 
+void \hyperlink{class_w_s2812_a8b6491617f9beb271d6d5c56ba384fb6}{set\+II} (unsigned char II)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Library for the \hyperlink{class_w_s2812}{W\+S2812} R\+GB L\+ED with integrated controller. 
+
+The \hyperlink{class_w_s2812}{W\+S2812} is controller that is built into a range of L\+E\+Ds 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_w_s2812_a397fb1e75594024884cb4365d3c725cd}\label{class_w_s2812_a397fb1e75594024884cb4365d3c725cd}} 
+\index{W\+S2812@{W\+S2812}!W\+S2812@{W\+S2812}}
+\index{W\+S2812@{W\+S2812}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{W\+S2812()}{WS2812()}}
+{\footnotesize\ttfamily W\+S2812\+::\+W\+S2812 (\begin{DoxyParamCaption}\item[{Pin\+Name}]{pin,  }\item[{int}]{size,  }\item[{int}]{zero\+High,  }\item[{int}]{zero\+Low,  }\item[{int}]{one\+High,  }\item[{int}]{one\+Low }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Output pin. Connect to \char`\"{}\+Din\char`\"{} on the first \hyperlink{class_w_s2812}{W\+S2812} in the strip \\
+\hline
+{\em size} & Number of L\+E\+Ds in your strip \\
+\hline
+{\em zero\+High} & How many N\+O\+Ps to insert to ensure T\+OH is properly generated. See library description for more information. \\
+\hline
+{\em zero\+Low} & How many N\+O\+Ps to insert to ensure T\+OL is properly generated. See library description for more information. \\
+\hline
+{\em one\+High} & How many N\+O\+Ps to insert to ensure T1H is properly generated. See library description for more information. \\
+\hline
+{\em one\+Low} & How many N\+O\+Ps to insert to ensure T1L is properly generated. See library description for more information.\\
+\hline
+\end{DoxyParams}
+Constructor \mbox{\Hypertarget{class_w_s2812_a58973dedd9cbc5c3fd3397f07f9a720f}\label{class_w_s2812_a58973dedd9cbc5c3fd3397f07f9a720f}} 
+\index{W\+S2812@{W\+S2812}!````~W\+S2812@{$\sim$\+W\+S2812}}
+\index{````~W\+S2812@{$\sim$\+W\+S2812}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{$\sim$\+W\+S2812()}{~WS2812()}}
+{\footnotesize\ttfamily W\+S2812\+::$\sim$\+W\+S2812 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys instance. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec}\label{class_w_s2812_a7e1370e6fbb56daa68f1146e7b58d9ec}} 
+\index{W\+S2812@{W\+S2812}!set\+Delays@{set\+Delays}}
+\index{set\+Delays@{set\+Delays}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{set\+Delays()}{setDelays()}}
+{\footnotesize\ttfamily void W\+S2812\+::set\+Delays (\begin{DoxyParamCaption}\item[{int}]{zero\+High,  }\item[{int}]{zero\+Low,  }\item[{int}]{one\+High,  }\item[{int}]{one\+Low }\end{DoxyParamCaption})}
+
+Sets the timing parameters for the bit-\/banged signal
+
+
+\begin{DoxyParams}{Parameters}
+{\em zero\+High} & How many N\+O\+Ps to insert to ensure T\+OH is properly generated. See library description for more information. \\
+\hline
+{\em zero\+Low} & How many N\+O\+Ps to insert to ensure T\+OL is properly generated. See library description for more information. \\
+\hline
+{\em one\+High} & How many N\+O\+Ps to insert to ensure T1H is properly generated. See library description for more information. \\
+\hline
+{\em one\+Low} & How many N\+O\+Ps to insert to ensure T1L is properly generated. See library description for more information.\\
+\hline
+\end{DoxyParams}
+Writes the given buffer to the L\+ED strip with the given offsets. N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section. \mbox{\Hypertarget{class_w_s2812_a8b6491617f9beb271d6d5c56ba384fb6}\label{class_w_s2812_a8b6491617f9beb271d6d5c56ba384fb6}} 
+\index{W\+S2812@{W\+S2812}!set\+II@{set\+II}}
+\index{set\+II@{set\+II}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{set\+I\+I()}{setII()}}
+{\footnotesize\ttfamily void W\+S2812\+::set\+II (\begin{DoxyParamCaption}\item[{unsigned char}]{II }\end{DoxyParamCaption})}
+
+Sets the global brightness level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em II} & The brightness level. Possible values include 0 -\/ 255 (0x00 -\/ 0x\+FF).\\
+\hline
+\end{DoxyParams}
+Sets the global brightness level. \mbox{\Hypertarget{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}\label{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}} 
+\index{W\+S2812@{W\+S2812}!use\+II@{use\+II}}
+\index{use\+II@{use\+II}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{use\+I\+I()}{useII()}}
+{\footnotesize\ttfamily void W\+S2812\+::use\+II (\begin{DoxyParamCaption}\item[{Brightness\+Control}]{bc }\end{DoxyParamCaption})}
+
+Sets the brightness mode
+
+
+\begin{DoxyParams}{Parameters}
+{\em bc} & The brightness control. Defaults to O\+FF. Possible values include O\+FF, G\+L\+O\+B\+AL, and P\+E\+R\+\_\+\+P\+I\+X\+EL\\
+\hline
+\end{DoxyParams}
+Sets the brightness mode \mbox{\Hypertarget{class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4}\label{class_w_s2812_ab85d6a78bc51929dac48db05f6bc68d4}} 
+\index{W\+S2812@{W\+S2812}!write@{write}}
+\index{write@{write}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void W\+S2812\+::write (\begin{DoxyParamCaption}\item[{int}]{buf\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Writes the given buffer to the L\+ED strip N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the \hyperlink{class_pixel_array}{Pixel\+Array} buffer\\
+\hline
+\end{DoxyParams}
+Writes the given buffer to the L\+ED strip N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section. \mbox{\Hypertarget{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}\label{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}} 
+\index{W\+S2812@{W\+S2812}!write\+\_\+offsets@{write\+\_\+offsets}}
+\index{write\+\_\+offsets@{write\+\_\+offsets}!W\+S2812@{W\+S2812}}
+\subsubsection{\texorpdfstring{write\+\_\+offsets()}{write\_offsets()}}
+{\footnotesize\ttfamily void W\+S2812\+::write\+\_\+offsets (\begin{DoxyParamCaption}\item[{int}]{buf\mbox{[}$\,$\mbox{]},  }\item[{int}]{r\+\_\+offset = {\ttfamily 0},  }\item[{int}]{g\+\_\+offset = {\ttfamily 0},  }\item[{int}]{b\+\_\+offset = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Writes the given buffer to the L\+ED strip with the given offsets. N\+O\+TE\+: This function is timing critical, therefore interrupts are disabled during the transmission section.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the \hyperlink{class_pixel_array}{Pixel\+Array} buffer \\
+\hline
+{\em r\+\_\+offset} & The offset where each each pixel pulls its red component. Wraps to beginning if end is reached. \\
+\hline
+{\em g\+\_\+offset} & The offset where each each pixel pulls its green component. Wraps to beginning if end is reached. \\
+\hline
+{\em b\+\_\+offset} & The offset where each each pixel pulls its blue component. Wraps to beginning if end is reached. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+W\+S2812.\+h\item 
+W\+S2812.\+cpp\end{DoxyCompactItemize}

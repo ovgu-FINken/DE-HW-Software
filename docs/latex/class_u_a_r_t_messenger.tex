@@ -1,0 +1,71 @@
+\hypertarget{class_u_a_r_t_messenger}{}\section{U\+A\+R\+T\+Messenger Class Reference}
+\label{class_u_a_r_t_messenger}\index{U\+A\+R\+T\+Messenger@{U\+A\+R\+T\+Messenger}}
+Inheritance diagram for U\+A\+R\+T\+Messenger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_a_r_t_messenger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_u_a_r_t_messenger_a2fcc2d4308e961996cf3dd120f297112}{U\+A\+R\+T\+Messenger} (Pin\+Name tx, Pin\+Name rx)
+\item 
+\mbox{\Hypertarget{class_u_a_r_t_messenger_a7f2c3bdcf3a2b082e52815b97be37281}\label{class_u_a_r_t_messenger_a7f2c3bdcf3a2b082e52815b97be37281}} 
+virtual void {\bfseries update} ()
+\item 
+void \hyperlink{class_u_a_r_t_messenger_ada0967869e320c236a211b405abf128a}{append\+Message} (const \hyperlink{struct_sub_message}{Sub\+Message} \&sub\+Message)
+\item 
+\hyperlink{struct_sub_message}{Sub\+Message} $\ast$ \hyperlink{class_u_a_r_t_messenger_affb33ad31e70001505e14d02e1f8a018}{check\+For\+Msg\+From\+Paparazzi} (int id)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_a_r_t_messenger_a2fcc2d4308e961996cf3dd120f297112}\label{class_u_a_r_t_messenger_a2fcc2d4308e961996cf3dd120f297112}} 
+\index{U\+A\+R\+T\+Messenger@{U\+A\+R\+T\+Messenger}!U\+A\+R\+T\+Messenger@{U\+A\+R\+T\+Messenger}}
+\index{U\+A\+R\+T\+Messenger@{U\+A\+R\+T\+Messenger}!U\+A\+R\+T\+Messenger@{U\+A\+R\+T\+Messenger}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+Messenger()}{UARTMessenger()}}
+{\footnotesize\ttfamily U\+A\+R\+T\+Messenger\+::\+U\+A\+R\+T\+Messenger (\begin{DoxyParamCaption}\item[{Pin\+Name}]{tx,  }\item[{Pin\+Name}]{rx }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx} & transmit pin \\
+\hline
+{\em rx} & receive pin\\
+\hline
+\end{DoxyParams}
+Constructor for \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_a_r_t_messenger_ada0967869e320c236a211b405abf128a}\label{class_u_a_r_t_messenger_ada0967869e320c236a211b405abf128a}} 
+\index{U\+A\+R\+T\+Messenger@{U\+A\+R\+T\+Messenger}!append\+Message@{append\+Message}}
+\index{append\+Message@{append\+Message}!U\+A\+R\+T\+Messenger@{U\+A\+R\+T\+Messenger}}
+\subsubsection{\texorpdfstring{append\+Message()}{appendMessage()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+Messenger\+::append\+Message (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_sub_message}{Sub\+Message} \&}]{sub\+Message }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sub\+Message} & message to be added\\
+\hline
+\end{DoxyParams}
+Append new message for sending to Paparazzi. \mbox{\Hypertarget{class_u_a_r_t_messenger_affb33ad31e70001505e14d02e1f8a018}\label{class_u_a_r_t_messenger_affb33ad31e70001505e14d02e1f8a018}} 
+\index{U\+A\+R\+T\+Messenger@{U\+A\+R\+T\+Messenger}!check\+For\+Msg\+From\+Paparazzi@{check\+For\+Msg\+From\+Paparazzi}}
+\index{check\+For\+Msg\+From\+Paparazzi@{check\+For\+Msg\+From\+Paparazzi}!U\+A\+R\+T\+Messenger@{U\+A\+R\+T\+Messenger}}
+\subsubsection{\texorpdfstring{check\+For\+Msg\+From\+Paparazzi()}{checkForMsgFromPaparazzi()}}
+{\footnotesize\ttfamily \hyperlink{struct_sub_message}{Sub\+Message} $\ast$ U\+A\+R\+T\+Messenger\+::check\+For\+Msg\+From\+Paparazzi (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ id of the component \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sub\+Message$\ast$ if found, nullptr otherwise
+\end{DoxyReturn}
+check if message from paparazzi has something for component with this id 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+U\+A\+R\+T\+Messenger.\+h\item 
+U\+A\+R\+T\+Messenger.\+cpp\end{DoxyCompactItemize}
