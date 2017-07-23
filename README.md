@@ -1,6 +1,5 @@
 # DE-HW-Software
 
-# DE-HW-Software
 Title : Software development of finken-3 copter
 
 Date created : 2017/07/22
