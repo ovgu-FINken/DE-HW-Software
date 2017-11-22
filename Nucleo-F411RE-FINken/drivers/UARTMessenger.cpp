@@ -12,14 +12,13 @@ UARTMessenger::UARTMessenger(PinName tx, PinName rx) : uart(tx, rx, 9600) {
     fromPaparazziCount = 0;
     toPaparazziMsgLength = MIN_MSG_SIZE;
 
-    startByte = 0xFE;
-    stopByte = 0xFF;
+    stopByte = 0xFE;
+    startByte = 0xFD;
+    escapeByte = 0xFC;
 }
 
 void UARTMessenger::update() {
     IRQLock lock;
-
-    memset(toPaparazziMsg, 0, BUF_SIZE);
 
     toPaparazziMsg[0] = toPaparazziCount;
 
@@ -34,20 +33,69 @@ void UARTMessenger::update() {
         }
     }
 
-    calculateChecksum(toPaparazziMsg, toPaparazziMsgLength);
+    calculateChecksum(toPaparazziMsg);
+    toPaparazziMsgLength++;
+
+    // add start, stop and escape bytes to the toPaparazziMsg and save it to toPapparazziMsgEncoded variable
+    encode();
 
     // send the message via UART
-    uart.write(toPaparazziMsg, toPaparazziMsgLength, callback(this, &UARTMessenger::nullFunc));
+    uart.write(toPaparazziMsgEncoded, toPaparazziMsgEncodedLength, callback(this, &UARTMessenger::nullFunc));
 
     // forget old messages from Paparazzi
-    memset(fromPaparazziMsg, 0, BUF_SIZE);
+    memset(toPaparazziMsgEncoded, 0, BUF_SIZE_ENCODED);
+    memset(toPaparazziMsg, 0, BUF_SIZE)
 
     // check if we have message from Paparazzi
-    uart.read(fromPaparazziMsg, BUF_SIZE, callback(this, &UARTMessenger::processPaparazziMsg), SERIAL_EVENT_RX_COMPLETE | SERIAL_EVENT_RX_CHARACTER_MATCH, stopByte);
+    uart.read(fromPaparazziMsgEncoded, BUF_SIZE_ENCODED, callback(this, &UARTMessenger::processPaparazziMsg), SERIAL_EVENT_RX_COMPLETE | SERIAL_EVENT_RX_CHARACTER_MATCH, stopByte);
 
     // forget about old messages to Paparazzi
     toPaparazziCount = 0;
     toPaparazziMsgLength = MIN_MSG_SIZE;
+}
+
+void UARTMessenger::encode() {
+    toPaparazziMsgEncodedLength = toPaparazziMsgLength;
+
+    uint8_t pos = -1;
+    // start byte in the beginning
+    toPaparazziMsgEncoded[++pos] = startByte;
+    
+    for (int i = 0; i < toPaparazziMsgLength; i++) {
+        if (toPaparazziMsg[i] == startByte || toPaparazziMsg[i] == stopByte || toPaparazziMsg[i] == escateByte) {
+            // escape this character - put escape byte before and convert the problematic byte
+            toPaparazziMsgEncoded[++pos] = escapeByte;
+            // use XOR between escape byte and problematic byte for conversion
+            toPaparazziMsgEncoded[++pos] = escapeByte ^ toPaparazziMsg[i];
+
+            toPaparazziMsgEncodedLength++;
+        } else {
+            toPaparazziMsgEncoded[++pos] = toPaparazziMsg[i];
+        }
+    }
+
+    // stop byte in the end
+    toPaparazziMsgEncoded[++pos] = stopByte;
+}
+
+bool UARTMessenger::decode(int size) {
+    uint8_t pos = -1;
+
+    if (fromPaparazziMsgEncoded[0] != startByte || fromPaparazziMsgEncoded[size - 1] != stopByte) {
+        // start or stop byte is not found in the right place
+        return false;
+    }
+
+    for (int i = 1; i < size - 1; i++) {
+        if (fromPaparazziMsgEncoded[i] == escateByte) {
+            // next character is escaped, we need to convert it back
+            fromPaparazziMsg[++pos] = escapeByte ^ fromPaparazziMsgEncoded[++i];
+        } else {
+            fromPaparazziMsg[++pos] = fromPaparazziMsgEncoded[i];
+        }
+    }
+
+    return true;
 }
 
 /**
@@ -95,10 +143,11 @@ void UARTMessenger::calculateChecksum(uint8_t *pkt, uint8_t const length) {
  * Used as callback for mbed read() function.
  */
 void UARTMessenger::processPaparazziMsg(int size) {
-    bool validation = validateChecksum(fromPaparazziMsg, size);
 
-    // ATTENTION: change to 'if (validation)' in real application
-    if (true) {
+    // decode the message to get rid of start, stop and escape bytes, saving result to fromPaparazziMsg variable,
+    // also check if checksum is correct
+    if (decode(size) && validateChecksum(fromPaparazziMsg, size)) {
+
         // Currently it's just overwriting the old messages
         fromPaparazziCount = fromPaparazziMsg[0];
 

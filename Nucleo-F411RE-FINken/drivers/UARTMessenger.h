@@ -6,6 +6,7 @@
 #define MIN_MSG_SIZE 2 // Length itself (one byte) and checksum (one byte) - minimal possible message
 #define MAX_MSG_NUMBER 16
 #define BUF_SIZE 256
+#define BUF_SIZE_ENCODED 512
 
 class UARTMessenger: public AbstractComponent {
 public:
@@ -43,6 +44,10 @@ private:
      */
     void calculateChecksum(uint8_t *pkt, uint8_t const length);
 
+    void encode();
+
+    bool decode(int size);
+
     /**
      * @param size - size of the message
      */
@@ -60,9 +65,13 @@ private:
     uint8_t toPaparazziCount;
     uint8_t fromPaparazziCount;
     uint8_t toPaparazziMsgLength;
+    uint8_t toPaparazziMsgEncodedLength;
     uint8_t toPaparazziMsg[BUF_SIZE];
     uint8_t fromPaparazziMsg[BUF_SIZE];
+    uint8_t toPaparazziMsgEncoded[BUF_SIZE_ENCODED];
+    uint8_t fromPaparazziMsgEncoded[BUF_SIZE_ENCODED];
 
     uint8_t startByte;
     uint8_t stopByte;
+    uint8_t escapeByte;
 };
