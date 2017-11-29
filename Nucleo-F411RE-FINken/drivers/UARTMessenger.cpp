@@ -33,7 +33,7 @@ void UARTMessenger::update() {
         }
     }
 
-    calculateChecksum(toPaparazziMsg);
+    calculateChecksum(toPaparazziMsg, toPaparazziMsgLength);
     toPaparazziMsgLength++;
 
     // add start, stop and escape bytes to the toPaparazziMsg and save it to toPapparazziMsgEncoded variable
@@ -51,7 +51,7 @@ void UARTMessenger::update() {
 
     // forget about old messages to Paparazzi
     toPaparazziCount = 0;
-    toPaparazziMsgLength = MIN_MSG_SIZE;
+    toPaparazziMsgLength = 1; // there is always one byte for number of sub messages
 }
 
 void UARTMessenger::encode() {

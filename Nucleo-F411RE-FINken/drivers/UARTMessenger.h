@@ -3,7 +3,6 @@
 #include "AbstractComponent.h"
 #include "vector"
 
-#define MIN_MSG_SIZE 2 // Length itself (one byte) and checksum (one byte) - minimal possible message
 #define MAX_MSG_NUMBER 16
 #define BUF_SIZE 256
 #define BUF_SIZE_ENCODED 512
