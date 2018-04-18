@@ -60,11 +60,34 @@ int main() {
     // sort all components according to their priority
     //sort(components.begin(), components.end(), [](const AbstractComponentPtr& a, const AbstractComponentPtr& b){return *a < *b;});
 
-    while (true) {
+   
+    
+    uint32_t colors[][3] = {
+      {  0,   0,   0},
+      {255,   0,   0},
+      {  0, 255,   0},
+      {  0,   0, 255},
+      {255, 255, 255}
+    };
+    static constexpr uint32_t colorSize = sizeof(colors)/sizeof(uint32_t)/3;
+    uint32_t brightness=40;
+
+    while (true)
+      for(unsigned int i=0; i<colorSize;i++)
+        for(unsigned int j=i; j<colorSize;j++) {
+
         // Update all components on the board
         for (AbstractComponentPtr& comp : components)
             comp->update();
+        
+        uint32_t *colorA=colors[i], *colorB=colors[j];
+        uint32_t  rA=colorA[0], gA=colorA[1], bA=colorA[2], rB=colorB[0], gB=colorB[1], bB=colorB[2];
 
+        ledStrip.setColor((rA*brightness/255)<<16|(gA*brightness/255)<<8|(bA*brightness/255), 0);
+        ledStrip.setColor((rB*brightness/255)<<16|(gB*brightness/255)<<8|(bB*brightness/255), 1);
+        ledStrip.setColor((rA*brightness/255)<<16|(gA*brightness/255)<<8|(bA*brightness/255), 2);
+        ledStrip.setColor((rB*brightness/255)<<16|(gB*brightness/255)<<8|(bB*brightness/255), 3);
+        
         Thread::wait(1000);
     }
 }
