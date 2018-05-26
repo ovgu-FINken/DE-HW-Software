@@ -78,20 +78,18 @@ Open gtk terminal where one can see the output set the port (usually A\+C\+M0) a
  \hypertarget{index_paparazzi_sec}{}\subsection{Communication with Paparazzi}\label{index_paparazzi_sec}
 
 
- The message structures are as follows for both receive and send for paparazzi\+:
-
-
+ The message structures are as follows for both receive and send for paparazzi\+: 1.\+Start byte
 \begin{DoxyEnumerate}
 \item Number of submessages -\/ 1 byte
 \item Submessages (details below) -\/ N $\ast$ (1 + 1 + 1 + X) bytes
-\item Checksum -\/ 1 byte
+\item Checksum of decoded msg without encoded(strat,stop,escape byte)-\/ 1 byte Stop byte
 \end{DoxyEnumerate}
 
 Submessages structure is as follows\+:
 
 
 \begin{DoxyEnumerate}
-\item Type of sensor -\/ 1 byte
+\item Type of component -\/ 1 byte
 \item Id -\/ 1 byte
 \item Length of data -\/ 1 byte
 \item Data -\/ N bytes (described in length)
@@ -117,7 +115,7 @@ L\+E\+Dstrip &\PBS\centering 0 \\\cline{1-2}
 \end{longtabu}
 {\bfseries Message from Paparazzi}
 
-Currently only \hyperlink{class_l_e_d_strip}{L\+E\+D\+Strip} listen to messages from Paparazzi (by default).
+Currently only \hyperlink{class_l_e_d_strip}{L\+E\+D\+Strip} listen to messages from Paparazzi (by default). Message from papparzzi type of component(which driver send the msg) to led strip
 
 \tabulinesep=1mm
 \begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
@@ -131,4 +129,143 @@ Currently only \hyperlink{class_l_e_d_strip}{L\+E\+D\+Strip} listen to messages 
 \endhead
 \hyperlink{class_l_e_d_strip}{L\+E\+D\+Strip} &\PBS\centering 4 bytes$\ast$\+No.of L\+E\+Ds \\\cline{1-2}
 \end{longtabu}
-4 bytes per L\+ED\+: id, red channel, green channel, blue channel. 
+4 bytes per L\+ED\+: id, red channel, green channel, blue channel.
+
+
+
+ \hypertarget{index_LED_sec}{}\subsection{W\+S2812\+B-\/\+L\+ED}\label{index_LED_sec}
+
+
+ W\+S2812B is an intelligent control L\+ED light source which has R\+GB control chip integrated. The brightness can be adjusted by using the pixel of each color R\+GB Component L\+ED is used for positioning the copter. L\+ED is ON where we can set number of L\+E\+Ds to glow. Each led can also be set with particular color and brightness too. G\+TK terminal in Linux (Ubuntu) can be used to simulate the behavior of paparazzi response by receiving the data from the microcontroller. We had to give data transfer time to set the led glow L\+ED with low driving voltage, environmental protection and energy saving, high brightness, good consistency, low power, long life. Order of the led is fixed and the figure is attached down and if anyone wants to add led will be in continuation of the series provided
+
+Here is image of the L\+ED we used 
+
+Here is image of the L\+ED working on copter 
+
+{\bfseries Table \+: Data transfer Time( T\+H+\+TL=1.\+25{$\mu$}s {$\pm$} 600ns)}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ }&\PBS\centering \textbf{ Explanation }&\PBS\centering \textbf{ Times }&\textbf{ {$\pm$}delay  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ }&\PBS\centering \textbf{ Explanation }&\PBS\centering \textbf{ Times }&\textbf{ {$\pm$}delay  }\\\cline{1-4}
+\endhead
+\PBS\raggedleft T0H&\PBS\centering 0 code ,high voltage time&\PBS\centering 0.\+4{$\mu$}s &{$\pm$}150ns \\\cline{1-4}
+\PBS\raggedleft T1H&\PBS\centering 1 code ,high voltage time&\PBS\centering 0.\+8{$\mu$}s &{$\pm$}150ns \\\cline{1-4}
+\PBS\raggedleft T0L&\PBS\centering 0 code , low voltage time&\PBS\centering 0.\+85{$\mu$}s &{$\pm$}150ns \\\cline{1-4}
+\PBS\raggedleft T1L&\PBS\centering 1 code ,low voltage time &\PBS\centering 0.\+45{$\mu$}s &{$\pm$}150ns \\\cline{1-4}
+\PBS\raggedleft R\+ES&\PBS\centering low voltage time &\PBS\centering Above 50{$\mu$}s&\\\cline{1-4}
+\end{longtabu}
+
+
+The reference link of the datasheet for the further details \href{https://cdn-shop.adafruit.com/datasheets/WS2812.pdf}{\tt W\+S2812-\/\+L\+ED Datasheet}
+
+
+
+ \hypertarget{index_Sonar_sec}{}\subsection{I2\+C\+X\+L-\/\+M\+A\+X S\+O\+N\+AR}\label{index_Sonar_sec}
+
+
+
+
+Max\+Sonar sensors are accepted and successfully used in various multi-\/copters (U\+A\+Vs, rotorcraft, or quad copters). As a user the sensor was comparatively reliable to work on even though errors where there. Sensor operation during flight on a quad-\/copter is a challenging environment for an ultrasonic sensor to operate reliably. The most obvious issue is the
+\begin{DoxyEnumerate}
+\item Amount of wind turbulence the ultrasonic wave must travel
+\item Acoustic noise is the noise the propellers generate These sensors have a high acoustic power output along with real-\/time auto calibration for changing conditions (voltage and acoustic or electric noise) that ensure users receive the most reliable (in air) ranging data for every reading taken. It operates on power 3V to 5.\+5V which provides very short to long-\/range detection and ranging We have considered the default starting range as 20cm but it can vary till 765cm. So we have provided the statistical data in the section Measurements.
+\end{DoxyEnumerate}
+
+I2C bus communication allows rapid control of multiple sensors with only two wires. We use 8 sonar sensors where these sonars will maintain the copter in the air without any obstruction and will sense the ranging distance in the arena. Sensors are placed in such a way that it will detect the distance from all possible sides. Power-\/up address reset pin available
+
+Here is image of the sonar we used 
+
+{\bfseries Measurements\+:} The below graph depicts the distance ranges and the number of trials we have taken,where we observed that as the range increases accuracy is less
+
+Here is a graph for the calculate distance and real distances vs No. of trials  Here is the graph for the error calculation for each distance 
+
+{\bfseries Table\+: for distance and error value}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Distances (in cm) }&\textbf{ Error value (in \%)  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Distances (in cm) }&\textbf{ Error value (in \%)  }\\\cline{1-2}
+\endhead
+20 &0.\+17 \\\cline{1-2}
+40 &10 \\\cline{1-2}
+60 &7.\+89 \\\cline{1-2}
+80 &7.\+79 \\\cline{1-2}
+100 &3.\+57 \\\cline{1-2}
+\end{longtabu}
+We could see the average error of 5.\+88\%.As sonar is susceptible to noise from a variety of sources so here is link where it can be used to reduce the error \href{http://www.maxbotix.com/articles/067.htm}{\tt referance link}
+
+The reference link of the datasheet for the further details \href{http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf}{\tt Sonar datasheet} 
+
+ \hypertarget{index_IR}{}\subsection{D\+I\+S\+T\+A\+N\+C\+E S\+E\+N\+S\+OR}\label{index_IR}
+
+
+ P\+R\+O\+X\+I\+M\+IY S\+E\+N\+S\+OR details\+:
+
+IR sensor is a distance measuring sensor unit, composed of an integrated combination of P\+SD (position sensitive detector). The variety of the reflectivity of the object, the environmental temperature and the operating duration are not influenced easily to the distance detection because of adopting the triangulation method. This device outputs the voltage corresponding to the detection distance. So this sensor can also be used as a proximity sensor. The IR sensor is placed on bottom part of the copter which will be used to detect the height of the copter when it flies and it has a lookup table to which has voltage values in mV. As voltage is more the distance will be less. Distance measuring range is 10cm to 150cm. It has long distance measuring type (No external control signal required). The output is Analog type.
+
+Here is the image of IR sensor we used 
+
+{\bfseries Measurements\+:} The below graph depicts the distance ranges and the number of trials we have taken where we observed that as the range increases accuracy is less. As the voltage increases the distance will be decreases and vice versa.
+
+Here is a graph for calculate distance and real distances vs. No. of trials and the voltage vs. number of trials  Here is the graph for the error calculation for each distance. We could see that as the distance increases error is increasing 
+
+{\bfseries  Table\+: for distance and error value }
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ Distances (in cm)}&\textbf{ Error value (in \%)  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ Distances (in cm)}&\textbf{ Error value (in \%)  }\\\cline{1-2}
+\endhead
+\PBS\raggedleft 20 &0 \\\cline{1-2}
+\PBS\raggedleft 40 &8.\+90 \\\cline{1-2}
+\PBS\raggedleft 60 &9.\+88 \\\cline{1-2}
+\PBS\raggedleft 80 &18.\+66 \\\cline{1-2}
+\PBS\raggedleft 100 &32.\+45 \\\cline{1-2}
+\end{longtabu}
+We could see that average of 14\% error is present in the IR sensor we used. The error can be reduced by low pass filter.
+
+{\bfseries  Table\+: for measurement }
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{6}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ Parameter }&\PBS\centering \textbf{ Symbol }&\PBS\centering \textbf{ Conditions }&\PBS\centering \textbf{ M\+IN.}&\PBS\centering \textbf{ M\+AX.}&\PBS\centering \textbf{ Unit  }\\\cline{1-6}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\raggedleft \textbf{ Parameter }&\PBS\centering \textbf{ Symbol }&\PBS\centering \textbf{ Conditions }&\PBS\centering \textbf{ M\+IN.}&\PBS\centering \textbf{ M\+AX.}&\PBS\centering \textbf{ Unit  }\\\cline{1-6}
+\endhead
+\PBS\raggedleft Measuring distance range &\PBS\centering {$\Delta$}L &\PBS\centering &\PBS\centering 10 &\PBS\centering 150 &\PBS\centering cm \\\cline{1-6}
+\PBS\raggedleft Output terminal voltage &\PBS\centering Vo &\PBS\centering L=150cm &\PBS\centering 0.\+15&\PBS\centering 1.\+15&\PBS\centering V \\\cline{1-6}
+\PBS\raggedleft Output voltage difference&\PBS\centering {$\Delta$}Vo&\PBS\centering Output change at L change&\PBS\centering &\PBS\centering &\PBS\centering \\\cline{1-6}
+\PBS\raggedleft &\PBS\centering &\PBS\centering (10cm -\/ 150cm) &\PBS\centering 2.\+75&\PBS\centering 3.\+25&\PBS\centering V \\\cline{1-6}
+\end{longtabu}
+Further details about the component, datasheet is in the below link \href{https://www.pololu.com/file/0J812/gp2y0a60szxf_e.pdf}{\tt IR sensor datasheet}
+
+
+
+ \hypertarget{index_architecture_sec}{}\subsection{Software Arcitecture}\label{index_architecture_sec}
+
+
+
+
+Initialization of components which are connected in the bot and first parameter is U\+A\+RT messages and pripority is can be set for each component there is vector to store the componenets and then uart is initizalied by passing the parameter U\+S\+B\+T\+X(transmittter) and U\+S\+B\+R\+X(\+Receiver) \hyperlink{class_sonar}{Sonar} is initiated with the message and its pin number and the event queue to get the values of each sonars and soterd in components as a message emplace-\/back(Appends a new element to the end of the container) IR Sensor is initiated with paramaters of uart message,its pin connceterd in the bot and the lookup table(which contains the voltage,which is sensor output and the distance) L\+ED strip is initiated with parameters pin number,size of leds to be kept on and zero high ,zero low,one high and one low Sort the componenets according to priority and update componenent on board
+
+Clear view of the architecture is in shown below   

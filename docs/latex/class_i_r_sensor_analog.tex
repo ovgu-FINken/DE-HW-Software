@@ -4,78 +4,22 @@
 
 {\ttfamily \#include $<$I\+R\+Sensor\+Analog.\+h$>$}
 
-
-
-Inheritance diagram for I\+R\+Sensor\+Analog\+:\nopagebreak
-\begin{figure}[H]
+Inheritance diagram for I\+R\+Sensor\+Analog\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=183pt]{class_i_r_sensor_analog__inherit__graph}
-\end{center}
-\end{figure}
-
-
-Collaboration diagram for I\+R\+Sensor\+Analog\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_i_r_sensor_analog__coll__graph}
+\includegraphics[height=2.000000cm]{class_i_r_sensor_analog}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_i_r_sensor_analog_af27166832035783b3df081014c4dfb9d}{I\+R\+Sensor\+Analog} (\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const uart\+Msngr, Pin\+Name \hyperlink{class_i_r_sensor_analog_a248c6a3f0a6a4e4867fd70c0ac0b3d76}{data\+Pin}, std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookup\+Table})
-\begin{DoxyCompactList}\small\item\em Constructor for analog I\+R\+Sensor. \end{DoxyCompactList}\item 
+\hyperlink{class_i_r_sensor_analog_af27166832035783b3df081014c4dfb9d}{I\+R\+Sensor\+Analog} (\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const uart\+Msngr, Pin\+Name data\+Pin, std\+::vector$<$ std\+::vector$<$ int $>$ $>$ lookup\+Table)
+\item 
 float \hyperlink{class_i_r_sensor_analog_aa6642b85ec1018980e216eab0dfd27f2}{get\+Range} ()
 \item 
 virtual void \hyperlink{class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328}{update} ()
-\begin{DoxyCompactList}\small\item\em Read the sensor value and product with the reference voltage. \end{DoxyCompactList}\item 
-void \hyperlink{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}{set\+Priority} (int p)
-\begin{DoxyCompactList}\small\item\em Set priority to the component, used for updating order. \end{DoxyCompactList}\item 
-int \hyperlink{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}{get\+Priority} ()
-\item 
-bool \hyperlink{class_abstract_component_a0c2e458144111c5f599c66f168516abc}{operator$<$} (const \hyperlink{class_abstract_component}{Abstract\+Component} \&another) const
-\begin{DoxyCompactList}\small\item\em Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-int \hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id}
-\item 
-int \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority} = 0
 \end{DoxyCompactItemize}
-\subsection*{Static Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-static int \hyperlink{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}{s\+\_\+id} = 0
-\begin{DoxyCompactList}\small\item\em The id for each component will be created in a sequence order staring with 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-float \hyperlink{class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699}{to\+Range} (float sensor\+Output)
-\begin{DoxyCompactList}\small\item\em Calculates distance from voltage output and lookup table. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const \hyperlink{class_i_r_sensor_analog_abdd70ea1abffd1323989af062dab0aeb}{uart\+Messenger}
-\item 
-\hyperlink{struct_sub_message}{Sub\+Message} \hyperlink{class_i_r_sensor_analog_a6f3d8032be77b223aa78381c713197c3}{sub\+Message}
-\item 
-Pin\+Name \hyperlink{class_i_r_sensor_analog_a248c6a3f0a6a4e4867fd70c0ac0b3d76}{data\+Pin}
-\item 
-Analog\+In \hyperlink{class_i_r_sensor_analog_a90a5052f0d0f71bf2518fac4b5dd9dc0}{sensor}
-\item 
-std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookup\+Table}
-\item 
-float \hyperlink{class_i_r_sensor_analog_a7463c4bbf714764667ac9d7527ced012}{range}
-\end{DoxyCompactItemize}
-
-
-\subsection{Detailed Description}
-
-
-Definition at line 9 of file I\+R\+Sensor\+Analog.\+h.
-
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -83,11 +27,7 @@ Definition at line 9 of file I\+R\+Sensor\+Analog.\+h.
 \index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
 \index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
 \subsubsection{\texorpdfstring{I\+R\+Sensor\+Analog()}{IRSensorAnalog()}}
-{\footnotesize\ttfamily I\+R\+Sensor\+Analog\+::\+I\+R\+Sensor\+Analog (\begin{DoxyParamCaption}\item[{\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const}]{uart\+Msngr,  }\item[{Pin\+Name}]{data\+Pin,  }\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$}]{lookup\+Table }\end{DoxyParamCaption})}
-
-
-
-Constructor for analog I\+R\+Sensor. 
+{\footnotesize\ttfamily I\+R\+Sensor\+Analog\+::\+I\+R\+Sensor\+Analog (\begin{DoxyParamCaption}\item[{\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const}]{uart\+Msngr,  }\item[{Pin\+Name}]{pin,  }\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$}]{lookup\+Table }\end{DoxyParamCaption})}
 
 
 \begin{DoxyParams}{Parameters}
@@ -95,53 +35,12 @@ Constructor for analog I\+R\+Sensor.
 \hline
 {\em data\+Pin} & -\/ pin on board, where data pin of IR sensor is connected \\
 \hline
-{\em lookup\+Table} & -\/ two-\/dimensional array, describing relation between sensor output and distance, set in millimeters \\
+{\em lookup\+Table} & -\/ two-\/dimensional array, describing relation between sensor output and distance, set in millimeters\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line 9 of file I\+R\+Sensor\+Analog.\+cpp.
-
-
-\begin{DoxyCode}
-9                                                                                                            
-            : \hyperlink{class_i_r_sensor_analog_abdd70ea1abffd1323989af062dab0aeb}{uartMessenger}(uartMsngr), \hyperlink{class_i_r_sensor_analog_a248c6a3f0a6a4e4867fd70c0ac0b3d76}{dataPin}(pin), \hyperlink{class_i_r_sensor_analog_a90a5052f0d0f71bf2518fac4b5dd9dc0}{sensor}(
-      \hyperlink{class_i_r_sensor_analog_a248c6a3f0a6a4e4867fd70c0ac0b3d76}{dataPin}) \{
-10     \textcolor{keywordtype}{id} = ++\hyperlink{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}{s\_id};
-11     this->\hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable} = \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable};
-12     \hyperlink{class_i_r_sensor_analog_a7463c4bbf714764667ac9d7527ced012}{range} = 0;
-13 \}
-\end{DoxyCode}
-
+Constructor for analog I\+R\+Sensor 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}\label{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!get\+Priority@{get\+Priority}}
-\index{get\+Priority@{get\+Priority}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{get\+Priority()}{getPriority()}}
-{\footnotesize\ttfamily int Abstract\+Component\+::get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
-
-\begin{DoxyReturn}{Returns}
-priority of the component 
-\end{DoxyReturn}
-
-
-Definition at line 25 of file Abstract\+Component.\+h.
-
-
-\begin{DoxyCode}
-25                       \{
-26         \textcolor{keywordflow}{return} \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority};
-27     \}
-\end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=334pt]{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_i_r_sensor_analog_aa6642b85ec1018980e216eab0dfd27f2}\label{class_i_r_sensor_analog_aa6642b85ec1018980e216eab0dfd27f2}} 
 \index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!get\+Range@{get\+Range}}
 \index{get\+Range@{get\+Range}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
@@ -151,271 +50,15 @@ Here is the call graph for this function\+:
 \begin{DoxyReturn}{Returns}
 -\/ range of sensor in meters 
 \end{DoxyReturn}
-
-
-Definition at line 66 of file I\+R\+Sensor\+Analog.\+cpp.
-
-
-\begin{DoxyCode}
-66                                \{
-67     \textcolor{keywordflow}{return} \hyperlink{class_i_r_sensor_analog_a7463c4bbf714764667ac9d7527ced012}{range};
-68 \}
-\end{DoxyCode}
-\mbox{\Hypertarget{class_abstract_component_a0c2e458144111c5f599c66f168516abc}\label{class_abstract_component_a0c2e458144111c5f599c66f168516abc}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!operator$<$@{operator$<$}}
-\index{operator$<$@{operator$<$}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
-{\footnotesize\ttfamily bool Abstract\+Component\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_abstract_component}{Abstract\+Component} \&}]{another }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
-
-
-
-Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em another} & component for comparison \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true if id is smaller then the id of another component 
-\end{DoxyReturn}
-
-
-Definition at line 8 of file Abstract\+Component.\+cpp.
-
-
-\begin{DoxyCode}
-8                                                                         \{
-9     \textcolor{keywordflow}{return} \textcolor{keywordtype}{id} < another.\hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id};
-10 \}
-\end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=334pt]{class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}\label{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!set\+Priority@{set\+Priority}}
-\index{set\+Priority@{set\+Priority}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{set\+Priority()}{setPriority()}}
-{\footnotesize\ttfamily void Abstract\+Component\+::set\+Priority (\begin{DoxyParamCaption}\item[{int}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
-
-
-
-Set priority to the component, used for updating order. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em p} & priority \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 18 of file Abstract\+Component.\+h.
-
-
-\begin{DoxyCode}
-18                             \{
-19         \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority} = p;
-20     \}
-\end{DoxyCode}
-\mbox{\Hypertarget{class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699}\label{class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!to\+Range@{to\+Range}}
-\index{to\+Range@{to\+Range}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{to\+Range()}{toRange()}}
-{\footnotesize\ttfamily float I\+R\+Sensor\+Analog\+::to\+Range (\begin{DoxyParamCaption}\item[{float}]{sensor\+Output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Calculates distance from voltage output and lookup table. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em sensor\+Output} & output of the sensor -\/ voltage \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-float value of a range between min and max values from lookup table 
-\end{DoxyReturn}
-
-
-Definition at line 39 of file I\+R\+Sensor\+Analog.\+cpp.
-
-
-\begin{DoxyCode}
-39                                                 \{
-40     \textcolor{keywordtype}{float} distance = 0;
-41 
-42     \textcolor{comment}{// left border of lookup table}
-43     \textcolor{keywordflow}{if} (sensorOutput <= \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[0][0]) \{
-44         distance = \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[0][1];
-45         \textcolor{keywordflow}{return} distance;
-46     \}
-47 
-48     \textcolor{comment}{// right border of lookup table}
-49     \textcolor{keywordflow}{if} (sensorOutput >= \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[\hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}.size()-1][0]) \{
-50         distance = \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[\hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}.size()-1][1];
-51         \textcolor{keywordflow}{return} distance;
-52     \}
-53 
-54     \textcolor{comment}{// inside the table}
-55     \textcolor{keywordtype}{int} i=0;
-56     \textcolor{keywordflow}{while} (sensorOutput > \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[++i][0]) \{
-57         \textcolor{comment}{//iterate until we get to the first value in lookup table, that is bigger then our sensor output}
-58     \}
-59     \textcolor{comment}{// w: something in range [0;1], for position in interval between i - 1 and i}
-60     \textcolor{keywordtype}{float} w = (float) (sensorOutput - \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[i-1][0]) / (
-      \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[i][0] - \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[i-1][0]);
-61     distance = (1 - w) * \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[i-1][1] + w * \hyperlink{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}{lookupTable}[i][1];
-62 
-63     \textcolor{keywordflow}{return} distance;
-64 \}
-\end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328}\label{class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328}} 
 \index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!update@{update}}
 \index{update@{update}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
 \subsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void I\+R\+Sensor\+Analog\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-
-
-Read the sensor value and product with the reference voltage. 
-
-We can get range from \hyperlink{class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699}{to\+Range()} function. Submessage is struct where we get type of the sensor = I\+R\+A\+N\+A\+L\+OG, id of the sensor, data, length of the range size. Uart\+Messenger appends submessage which is in \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger}. 
+Read the sensor value and product with the reference voltage. We can get range from to\+Range() function. Submessage is struct where we get type of the sensor = I\+R\+A\+N\+A\+L\+OG, id of the sensor, data, length of the range size. Uart\+Messenger appends submessage which is in \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger}. 
 
 Implements \hyperlink{class_abstract_component_af25a90b8ab213762221c3b358d9873f3}{Abstract\+Component}.
-
-
-
-Definition at line 21 of file I\+R\+Sensor\+Analog.\+cpp.
-
-
-\begin{DoxyCode}
-21                             \{
-22     \textcolor{keywordtype}{float} value = \hyperlink{class_i_r_sensor_analog_a90a5052f0d0f71bf2518fac4b5dd9dc0}{sensor}.read() * \hyperlink{_i_r_sensor_analog_8cpp_a93b7d2c4ba7f352176468cb2b3a26ebd}{REFERENCE\_VOLTAGE};
-23     \hyperlink{class_i_r_sensor_analog_a7463c4bbf714764667ac9d7527ced012}{range} = \hyperlink{class_i_r_sensor_analog_a33ed6c82b3cb6720bfdd6f7598c54699}{toRange}(value);
-24 
-25     \hyperlink{class_i_r_sensor_analog_a6f3d8032be77b223aa78381c713197c3}{subMessage}.\hyperlink{struct_sub_message_a064f1d26d553da776dc749d37a18a499}{type} = \hyperlink{_sub_message_8h_a81f78fc173dedefe5a049c0aa3eed2c0af743186003faa7fbcb5ba26dfce5c1f4}{IRANALOG};
-26     \hyperlink{class_i_r_sensor_analog_a6f3d8032be77b223aa78381c713197c3}{subMessage}.\hyperlink{struct_sub_message_af3acc450c0686d7a9d15ccd9d548cb6d}{id} = \hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id};
-27     \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{float}*\textcolor{keyword}{>}(\hyperlink{class_i_r_sensor_analog_a6f3d8032be77b223aa78381c713197c3}{subMessage}.\hyperlink{struct_sub_message_a7d923c5cdaa380c27d7c4cf60ea7c1be}{data})[0] = \hyperlink{class_i_r_sensor_analog_a7463c4bbf714764667ac9d7527ced012}{range};
-28     \hyperlink{class_i_r_sensor_analog_a6f3d8032be77b223aa78381c713197c3}{subMessage}.\hyperlink{struct_sub_message_a276e06f5335ca7857c21ac8c0e51bd6d}{length} = \textcolor{keyword}{sizeof}(\hyperlink{class_i_r_sensor_analog_a7463c4bbf714764667ac9d7527ced012}{range});
-29 
-30     \hyperlink{class_i_r_sensor_analog_abdd70ea1abffd1323989af062dab0aeb}{uartMessenger}->\hyperlink{class_u_a_r_t_messenger_ada0967869e320c236a211b405abf128a}{appendMessage}(\hyperlink{class_i_r_sensor_analog_a6f3d8032be77b223aa78381c713197c3}{subMessage});
-31 \}
-\end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_i_r_sensor_analog_a919942de7c5fc3af5da9a2b32e31d328_cgraph}
-\end{center}
-\end{figure}
-
-
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_i_r_sensor_analog_a248c6a3f0a6a4e4867fd70c0ac0b3d76}\label{class_i_r_sensor_analog_a248c6a3f0a6a4e4867fd70c0ac0b3d76}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!data\+Pin@{data\+Pin}}
-\index{data\+Pin@{data\+Pin}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{data\+Pin}{dataPin}}
-{\footnotesize\ttfamily Pin\+Name I\+R\+Sensor\+Analog\+::data\+Pin\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 30 of file I\+R\+Sensor\+Analog.\+h.
-
-\mbox{\Hypertarget{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}\label{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!id@{id}}
-\index{id@{id}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{id}{id}}
-{\footnotesize\ttfamily int Abstract\+Component\+::id\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
-
-
-
-Definition at line 39 of file Abstract\+Component.\+h.
-
-\mbox{\Hypertarget{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}\label{class_i_r_sensor_analog_a981d91e0de8f658d5c15ac5bfbe8ed6c}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!lookup\+Table@{lookup\+Table}}
-\index{lookup\+Table@{lookup\+Table}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{lookup\+Table}{lookupTable}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$int$>$ $>$ I\+R\+Sensor\+Analog\+::lookup\+Table\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 32 of file I\+R\+Sensor\+Analog.\+h.
-
-\mbox{\Hypertarget{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}\label{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!priority@{priority}}
-\index{priority@{priority}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{priority}{priority}}
-{\footnotesize\ttfamily int Abstract\+Component\+::priority = 0\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
-
-
-
-Definition at line 40 of file Abstract\+Component.\+h.
-
-\mbox{\Hypertarget{class_i_r_sensor_analog_a7463c4bbf714764667ac9d7527ced012}\label{class_i_r_sensor_analog_a7463c4bbf714764667ac9d7527ced012}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!range@{range}}
-\index{range@{range}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{range}{range}}
-{\footnotesize\ttfamily float I\+R\+Sensor\+Analog\+::range\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 33 of file I\+R\+Sensor\+Analog.\+h.
-
-\mbox{\Hypertarget{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}\label{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!s\+\_\+id@{s\+\_\+id}}
-\index{s\+\_\+id@{s\+\_\+id}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{s\+\_\+id}{s\_id}}
-{\footnotesize\ttfamily int Abstract\+Component\+::s\+\_\+id = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
-
-
-
-The id for each component will be created in a sequence order staring with 1. 
-
-
-
-Definition at line 38 of file Abstract\+Component.\+h.
-
-\mbox{\Hypertarget{class_i_r_sensor_analog_a90a5052f0d0f71bf2518fac4b5dd9dc0}\label{class_i_r_sensor_analog_a90a5052f0d0f71bf2518fac4b5dd9dc0}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!sensor@{sensor}}
-\index{sensor@{sensor}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{sensor}{sensor}}
-{\footnotesize\ttfamily Analog\+In I\+R\+Sensor\+Analog\+::sensor\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 31 of file I\+R\+Sensor\+Analog.\+h.
-
-\mbox{\Hypertarget{class_i_r_sensor_analog_a6f3d8032be77b223aa78381c713197c3}\label{class_i_r_sensor_analog_a6f3d8032be77b223aa78381c713197c3}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!sub\+Message@{sub\+Message}}
-\index{sub\+Message@{sub\+Message}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{sub\+Message}{subMessage}}
-{\footnotesize\ttfamily \hyperlink{struct_sub_message}{Sub\+Message} I\+R\+Sensor\+Analog\+::sub\+Message\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 29 of file I\+R\+Sensor\+Analog.\+h.
-
-\mbox{\Hypertarget{class_i_r_sensor_analog_abdd70ea1abffd1323989af062dab0aeb}\label{class_i_r_sensor_analog_abdd70ea1abffd1323989af062dab0aeb}} 
-\index{I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}!uart\+Messenger@{uart\+Messenger}}
-\index{uart\+Messenger@{uart\+Messenger}!I\+R\+Sensor\+Analog@{I\+R\+Sensor\+Analog}}
-\subsubsection{\texorpdfstring{uart\+Messenger}{uartMessenger}}
-{\footnotesize\ttfamily \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger}$\ast$ const I\+R\+Sensor\+Analog\+::uart\+Messenger\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 28 of file I\+R\+Sensor\+Analog.\+h.
 
 
 

@@ -4,81 +4,28 @@
 
 {\ttfamily \#include $<$L\+E\+D\+Strip.\+h$>$}
 
-
-
-Inheritance diagram for L\+E\+D\+Strip\+:\nopagebreak
-\begin{figure}[H]
+Inheritance diagram for L\+E\+D\+Strip\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=183pt]{class_l_e_d_strip__inherit__graph}
-\end{center}
-\end{figure}
-
-
-Collaboration diagram for L\+E\+D\+Strip\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_l_e_d_strip__coll__graph}
+\includegraphics[height=2.000000cm]{class_l_e_d_strip}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_l_e_d_strip_a746e420e05c5d6c45eb2f74eaf5928fc}{L\+E\+D\+Strip} (\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const uart\+Msngr, Pin\+Name pin, int size, int zero\+High, int zero\+Low, int one\+High, int one\+Low)
-\begin{DoxyCompactList}\small\item\em Constructor for creating a new L\+ED Strip. \end{DoxyCompactList}\item 
-void \hyperlink{class_l_e_d_strip_abf199367f3caaf9730262c4e7bef6bc1}{set\+Mode} (uint8\+\_\+t \hyperlink{class_l_e_d_strip_ac209f99d6a633cd4c672fc16a991f4f8}{mode})
-\begin{DoxyCompactList}\small\item\em Set L\+ED Strip to manual control instead of getting control action from paparazzi, which is set by default. \end{DoxyCompactList}\item 
+\item 
+void \hyperlink{class_l_e_d_strip_abf199367f3caaf9730262c4e7bef6bc1}{set\+Mode} (uint8\+\_\+t mode)
+\item 
 void \hyperlink{class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c}{set\+Color} (unsigned int color)
-\begin{DoxyCompactList}\small\item\em Set color to L\+ED Strip. \end{DoxyCompactList}\item 
+\item 
 void \hyperlink{class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7}{set\+Color} (unsigned int color, uint8\+\_\+t led=0)
-\begin{DoxyCompactList}\small\item\em Set color to only one L\+ED. \end{DoxyCompactList}\item 
+\item 
 virtual void \hyperlink{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95}{update} ()
-\begin{DoxyCompactList}\small\item\em The update function will be to the L\+E\+Dstrip when the control from paparazzi is received and check the message from paparrazi with respect to id. \end{DoxyCompactList}\item 
+\item 
 virtual void \hyperlink{class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436}{on\+Paparazzi\+Msg} (\hyperlink{struct_sub_message}{Sub\+Message} $\ast$msg)
-\begin{DoxyCompactList}\small\item\em Reaction on the message from Paparazzi. \end{DoxyCompactList}\item 
-void \hyperlink{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}{set\+Priority} (int p)
-\begin{DoxyCompactList}\small\item\em Set priority to the component, used for updating order. \end{DoxyCompactList}\item 
-int \hyperlink{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}{get\+Priority} ()
-\item 
-bool \hyperlink{class_abstract_component_a0c2e458144111c5f599c66f168516abc}{operator$<$} (const \hyperlink{class_abstract_component}{Abstract\+Component} \&another) const
-\begin{DoxyCompactList}\small\item\em Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-int \hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id}
-\item 
-int \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority} = 0
 \end{DoxyCompactItemize}
-\subsection*{Static Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-static int \hyperlink{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}{s\+\_\+id} = 0
-\begin{DoxyCompactList}\small\item\em The id for each component will be created in a sequence order staring with 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const \hyperlink{class_l_e_d_strip_a4387042fe2a80bcd5dc3e9d7524800ae}{uart\+Messenger}
-\item 
-\hyperlink{struct_sub_message}{Sub\+Message} \hyperlink{class_l_e_d_strip_a25cf156735c1629b92b8dfe7a54e9b41}{sub\+Message}
-\item 
-\hyperlink{class_w_s2812}{W\+S2812} \hyperlink{class_l_e_d_strip_a81c4bffd481d09defe63642c9e69ed17}{ws}
-\item 
-\hyperlink{class_pixel_array}{Pixel\+Array} \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}
-\item 
-int \hyperlink{class_l_e_d_strip_af1987ffe7252fa35b42ad3698c3de454}{strip\+Size}
-\item 
-int \hyperlink{class_l_e_d_strip_a37a3616a79fe3dda93c145d14543199c}{offset}
-\item 
-uint8\+\_\+t \hyperlink{class_l_e_d_strip_ac209f99d6a633cd4c672fc16a991f4f8}{mode}
-\end{DoxyCompactItemize}
-
-
-\subsection{Detailed Description}
-
-
-Definition at line 8 of file L\+E\+D\+Strip.\+h.
-
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -87,10 +34,6 @@ Definition at line 8 of file L\+E\+D\+Strip.\+h.
 \index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
 \subsubsection{\texorpdfstring{L\+E\+D\+Strip()}{LEDStrip()}}
 {\footnotesize\ttfamily L\+E\+D\+Strip\+::\+L\+E\+D\+Strip (\begin{DoxyParamCaption}\item[{\hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger} $\ast$const}]{uart\+Msngr,  }\item[{Pin\+Name}]{pin,  }\item[{int}]{size,  }\item[{int}]{zero\+High,  }\item[{int}]{zero\+Low,  }\item[{int}]{one\+High,  }\item[{int}]{one\+Low }\end{DoxyParamCaption})}
-
-
-
-Constructor for creating a new L\+ED Strip. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -106,61 +49,12 @@ Constructor for creating a new L\+ED Strip.
 \hline
 {\em one\+High} & How many N\+O\+Ps to insert to ensure T1H is properly generated. See library description for more information. \\
 \hline
-{\em one\+Low} & How many N\+O\+Ps to insert to ensure T1L is properly generated. See library description for more information. \\
+{\em one\+Low} & How many N\+O\+Ps to insert to ensure T1L is properly generated. See library description for more information.\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line 8 of file L\+E\+D\+Strip.\+cpp.
-
-
-\begin{DoxyCode}
-9                                : \hyperlink{class_l_e_d_strip_a4387042fe2a80bcd5dc3e9d7524800ae}{uartMessenger}(uartMsngr), \hyperlink{class_l_e_d_strip_a81c4bffd481d09defe63642c9e69ed17}{ws}(pin, size, zeroHigh, zeroLow, 
-      oneHigh, oneLow), \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}(size) \{
-10     \textcolor{keywordtype}{id} = ++\hyperlink{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}{s\_id};
-11     \hyperlink{class_l_e_d_strip_a81c4bffd481d09defe63642c9e69ed17}{ws}.\hyperlink{class_w_s2812_acb221ea7ba9cfb40a43b7778f0dffa5d}{useII}(\hyperlink{class_w_s2812_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55}{WS2812::OFF}); \textcolor{comment}{// off intensity scaling}
-12     \hyperlink{class_l_e_d_strip_af1987ffe7252fa35b42ad3698c3de454}{stripSize} = size;
-13     \hyperlink{class_l_e_d_strip_a37a3616a79fe3dda93c145d14543199c}{offset} = 0;
-14     \hyperlink{class_l_e_d_strip_ac209f99d6a633cd4c672fc16a991f4f8}{mode} = 0;
-15 \}
-\end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=297pt]{class_l_e_d_strip_a746e420e05c5d6c45eb2f74eaf5928fc_cgraph}
-\end{center}
-\end{figure}
-
+Constructor for creating a new L\+ED Strip. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}\label{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!get\+Priority@{get\+Priority}}
-\index{get\+Priority@{get\+Priority}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{get\+Priority()}{getPriority()}}
-{\footnotesize\ttfamily int Abstract\+Component\+::get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
-
-\begin{DoxyReturn}{Returns}
-priority of the component 
-\end{DoxyReturn}
-
-
-Definition at line 25 of file Abstract\+Component.\+h.
-
-
-\begin{DoxyCode}
-25                       \{
-26         \textcolor{keywordflow}{return} \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority};
-27     \}
-\end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=334pt]{class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436}\label{class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436}} 
 \index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!on\+Paparazzi\+Msg@{on\+Paparazzi\+Msg}}
 \index{on\+Paparazzi\+Msg@{on\+Paparazzi\+Msg}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
@@ -168,374 +62,54 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily void L\+E\+D\+Strip\+::on\+Paparazzi\+Msg (\begin{DoxyParamCaption}\item[{\hyperlink{struct_sub_message}{Sub\+Message} $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
-
-Reaction on the message from Paparazzi. 
-
-
 \begin{DoxyParams}{Parameters}
 {\em msg} & message struct from Paparazzi\\
 \hline
 \end{DoxyParams}
-Expected message structure\+: type (1 byte), id (1 byte), length (1 byte), data (length byte) Datastructure\+: led id (1 byte), red channel (1 byte), green channel (1 byte), blue channel (1 byte) \hyperlink{struct_sub_message}{Sub\+Message} came from Paparazzi 
-
-Definition at line 86 of file L\+E\+D\+Strip.\+cpp.
-
-
-\begin{DoxyCode}
-86                                              \{
-87     \textcolor{keywordtype}{int} pos = -1;
-88     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < msg->\hyperlink{struct_sub_message_a276e06f5335ca7857c21ac8c0e51bd6d}{length} / 4; i++) \{
-89         uint8\_t led = msg->\hyperlink{struct_sub_message_a7d923c5cdaa380c27d7c4cf60ea7c1be}{data}[++pos];
-90         \textcolor{keywordflow}{if} (msg->\hyperlink{struct_sub_message_a276e06f5335ca7857c21ac8c0e51bd6d}{length} == 4 && led > \hyperlink{class_l_e_d_strip_af1987ffe7252fa35b42ad3698c3de454}{stripSize}) \{
-91             \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_a9ddfdd1a01a9877e4bfcf5a462412fd2}{SetAllR}(msg->\hyperlink{struct_sub_message_a7d923c5cdaa380c27d7c4cf60ea7c1be}{data}[++pos]);
-92             \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_a88f25ee1b266e2dc0ef7ae90ff4bd12d}{SetAllG}(msg->\hyperlink{struct_sub_message_a7d923c5cdaa380c27d7c4cf60ea7c1be}{data}[++pos]);
-93             \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_a3b17271fdc21503236ca6ca8e37d501b}{SetAllB}(msg->\hyperlink{struct_sub_message_a7d923c5cdaa380c27d7c4cf60ea7c1be}{data}[++pos]);
-94         \} \textcolor{keywordflow}{else} \{
-95             \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_abd4253e7c76f3775f31e09dfe318e3a5}{SetR}(led, msg->\hyperlink{struct_sub_message_a7d923c5cdaa380c27d7c4cf60ea7c1be}{data}[++pos]);
-96             \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_a60ea8084ec95df0d51f46c9b0ff308d5}{SetG}(led, msg->\hyperlink{struct_sub_message_a7d923c5cdaa380c27d7c4cf60ea7c1be}{data}[++pos]);
-97             \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_a560a654c59614fd5a6c17adb10083a78}{SetB}(led, msg->\hyperlink{struct_sub_message_a7d923c5cdaa380c27d7c4cf60ea7c1be}{data}[++pos]);
-98         \}
-99     \}
-100     \textcolor{keywordflow}{return};
-101 \}
-\end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=341pt]{class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_abstract_component_a0c2e458144111c5f599c66f168516abc}\label{class_abstract_component_a0c2e458144111c5f599c66f168516abc}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!operator$<$@{operator$<$}}
-\index{operator$<$@{operator$<$}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
-{\footnotesize\ttfamily bool Abstract\+Component\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_abstract_component}{Abstract\+Component} \&}]{another }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
-
-
-
-Overloaded comparison operator \textquotesingle{}$<$\textquotesingle{}. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em another} & component for comparison \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true if id is smaller then the id of another component 
-\end{DoxyReturn}
-
-
-Definition at line 8 of file Abstract\+Component.\+cpp.
-
-
-\begin{DoxyCode}
-8                                                                         \{
-9     \textcolor{keywordflow}{return} \textcolor{keywordtype}{id} < another.\hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id};
-10 \}
-\end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=334pt]{class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c}\label{class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c}} 
+Reaction on the message from Paparazzi. Expected message structure\+: type (1 byte), id (1 byte), length (1 byte), data (length byte) Datastructure\+: led id (1 byte), red channel (1 byte), green channel (1 byte), blue channel (1 byte) \hyperlink{struct_sub_message}{Sub\+Message} came from Paparazzi \mbox{\Hypertarget{class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c}\label{class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c}} 
 \index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!set\+Color@{set\+Color}}
 \index{set\+Color@{set\+Color}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
 \subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void L\+E\+D\+Strip\+::set\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{color }\end{DoxyParamCaption})}
 
 
-
-Set color to L\+ED Strip. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em color} & color in R\+GB format, e.\+g. 0x00\+F\+F00 \\
+{\em color} & color in R\+GB format, e.\+g. 0x00\+F\+F00\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line 27 of file L\+E\+D\+Strip.\+cpp.
-
-
-\begin{DoxyCode}
-27                                           \{
-28     \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_afcfe32b74beeced27f928f42131d77c1}{Set}(0, color);
-29 \}
-\end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7}\label{class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7}} 
+Set color to L\+ED Strip. \mbox{\Hypertarget{class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7}\label{class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7}} 
 \index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!set\+Color@{set\+Color}}
 \index{set\+Color@{set\+Color}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
 \subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void L\+E\+D\+Strip\+::set\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{color,  }\item[{uint8\+\_\+t}]{led = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
-
-Set color to only one L\+ED. 
-
-
 \begin{DoxyParams}{Parameters}
 {\em color} & color in R\+GB format, e.\+g. 0x00\+F\+F00 \\
 \hline
-{\em led} & id of the L\+ED to use \\
+{\em led} & id of the L\+ED to use\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line 34 of file L\+E\+D\+Strip.\+cpp.
-
-
-\begin{DoxyCode}
-34                                                        \{
-35     \hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_afcfe32b74beeced27f928f42131d77c1}{Set}(led, color);
-36 \}
-\end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_l_e_d_strip_abf199367f3caaf9730262c4e7bef6bc1}\label{class_l_e_d_strip_abf199367f3caaf9730262c4e7bef6bc1}} 
+Set color to only one L\+ED \mbox{\Hypertarget{class_l_e_d_strip_abf199367f3caaf9730262c4e7bef6bc1}\label{class_l_e_d_strip_abf199367f3caaf9730262c4e7bef6bc1}} 
 \index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!set\+Mode@{set\+Mode}}
 \index{set\+Mode@{set\+Mode}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
 \subsubsection{\texorpdfstring{set\+Mode()}{setMode()}}
 {\footnotesize\ttfamily void L\+E\+D\+Strip\+::set\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
 
 
-
-Set L\+ED Strip to manual control instead of getting control action from paparazzi, which is set by default. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em mode} & one of predifined modes \\
+{\em mode} & one of predifined modes\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line 20 of file L\+E\+D\+Strip.\+cpp.
-
-
-\begin{DoxyCode}
-20                                    \{
-21     this->\hyperlink{class_l_e_d_strip_ac209f99d6a633cd4c672fc16a991f4f8}{mode} = \hyperlink{class_l_e_d_strip_ac209f99d6a633cd4c672fc16a991f4f8}{mode};
-22 \}
-\end{DoxyCode}
-\mbox{\Hypertarget{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}\label{class_abstract_component_a58a59a9ea6c3b4c86fb3bf98ff1eaaef}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!set\+Priority@{set\+Priority}}
-\index{set\+Priority@{set\+Priority}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{set\+Priority()}{setPriority()}}
-{\footnotesize\ttfamily void Abstract\+Component\+::set\+Priority (\begin{DoxyParamCaption}\item[{int}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
-
-
-
-Set priority to the component, used for updating order. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em p} & priority \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 18 of file Abstract\+Component.\+h.
-
-
-\begin{DoxyCode}
-18                             \{
-19         \hyperlink{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}{priority} = p;
-20     \}
-\end{DoxyCode}
-\mbox{\Hypertarget{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95}\label{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95}} 
+Set L\+ED Strip to manual control instead of getting control action from paparazzi, which is set by default. \mbox{\Hypertarget{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95}\label{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95}} 
 \index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!update@{update}}
 \index{update@{update}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
 \subsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void L\+E\+D\+Strip\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-
-
-The update function will be to the L\+E\+Dstrip when the control from paparazzi is received and check the message from paparrazi with respect to id. 
-
-Then check if the paparazzi message received is not null then go to the method on\+Paparazzi\+Msg to recieve paparazzi message. set write offset passing parameters. while giving the the submessage provide the L\+ED strip Id and append message to the uart messenger 
+The update function will be to the L\+E\+Dstrip when the control from paparazzi is received and check the message from paparrazi with respect to id. Then check if the paparazzi message received is not null then go to the method on\+Paparazzi\+Msg to recieve paparazzi message. set write offset passing parameters. while giving the the submessage provide the L\+ED strip Id and append message to the uart messenger 
 
 Implements \hyperlink{class_abstract_component_af25a90b8ab213762221c3b358d9873f3}{Abstract\+Component}.
-
-
-
-Definition at line 44 of file L\+E\+D\+Strip.\+cpp.
-
-
-\begin{DoxyCode}
-44                       \{
-45     \textcolor{keywordflow}{switch} (\hyperlink{class_l_e_d_strip_ac209f99d6a633cd4c672fc16a991f4f8}{mode}) \{
-46         \textcolor{keywordflow}{case} 0: \{
-47             \textcolor{comment}{// Control from Paparazzi}
-48 
-49             \hyperlink{struct_sub_message}{SubMessage} *paparazziMsg = \hyperlink{class_l_e_d_strip_a4387042fe2a80bcd5dc3e9d7524800ae}{uartMessenger}->
-      \hyperlink{class_u_a_r_t_messenger_affb33ad31e70001505e14d02e1f8a018}{checkForMsgFromPaparazzi}(\textcolor{keywordtype}{id});
-50             \textcolor{keywordflow}{if} (paparazziMsg != \textcolor{keyword}{nullptr}) \{
-51                 \hyperlink{class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436}{onPaparazziMsg}(paparazziMsg);
-52                 \hyperlink{class_l_e_d_strip_a81c4bffd481d09defe63642c9e69ed17}{ws}.\hyperlink{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}{write\_offsets}(\hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_a987f1dc053a5cf25d78d5cfe037088d3}{getBuf}(), 0, 0, 0);
-53             \}
-54 
-55             \textcolor{comment}{//  Need to send the id of the LEDStrip first to be able to communicate.}
-56             \hyperlink{class_l_e_d_strip_a25cf156735c1629b92b8dfe7a54e9b41}{subMessage}.\hyperlink{struct_sub_message_a064f1d26d553da776dc749d37a18a499}{type} = \hyperlink{_sub_message_8h_a81f78fc173dedefe5a049c0aa3eed2c0affd2d0d3f226452ef4313ef1080ea581}{LEDSTRIP};
-57             \hyperlink{class_l_e_d_strip_a25cf156735c1629b92b8dfe7a54e9b41}{subMessage}.\hyperlink{struct_sub_message_af3acc450c0686d7a9d15ccd9d548cb6d}{id} = \hyperlink{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}{id};
-58             \hyperlink{class_l_e_d_strip_a25cf156735c1629b92b8dfe7a54e9b41}{subMessage}.\hyperlink{struct_sub_message_a276e06f5335ca7857c21ac8c0e51bd6d}{length} = 0;
-59 
-60             \hyperlink{class_l_e_d_strip_a4387042fe2a80bcd5dc3e9d7524800ae}{uartMessenger}->\hyperlink{class_u_a_r_t_messenger_ada0967869e320c236a211b405abf128a}{appendMessage}(\hyperlink{class_l_e_d_strip_a25cf156735c1629b92b8dfe7a54e9b41}{subMessage});
-61         \}
-62             \textcolor{keywordflow}{break};
-63         \textcolor{keywordflow}{case} 1: \{
-64             \textcolor{comment}{// All colors are set manually in advance}
-65 
-66             \hyperlink{class_l_e_d_strip_a81c4bffd481d09defe63642c9e69ed17}{ws}.\hyperlink{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}{write\_offsets}(\hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_a987f1dc053a5cf25d78d5cfe037088d3}{getBuf}(), 0, 0, 0);
-67         \}
-68         \textcolor{keywordflow}{case} 2: \{
-69             \textcolor{comment}{// Running red LED}
-70 
-71             \hyperlink{class_l_e_d_strip_a81c4bffd481d09defe63642c9e69ed17}{ws}.\hyperlink{class_w_s2812_a578fd0b278445bd6f84e260a69b18a68}{write\_offsets}(\hyperlink{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}{px}.\hyperlink{class_pixel_array_a987f1dc053a5cf25d78d5cfe037088d3}{getBuf}(), \hyperlink{class_l_e_d_strip_a37a3616a79fe3dda93c145d14543199c}{offset}, 
-      \hyperlink{class_l_e_d_strip_a37a3616a79fe3dda93c145d14543199c}{offset}, \hyperlink{class_l_e_d_strip_a37a3616a79fe3dda93c145d14543199c}{offset});
-72             offset = (offset + 1) % \hyperlink{class_l_e_d_strip_af1987ffe7252fa35b42ad3698c3de454}{stripSize};
-73             \textcolor{keywordflow}{break};
-74         \}
-75         \textcolor{keywordflow}{default}:
-76             \textcolor{keywordflow}{break};
-77     \}
-78 \}
-\end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95_cgraph}
-\end{center}
-\end{figure}
-
-
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}\label{class_abstract_component_a9c9c548149681b1a1dd935e66ed5dd11}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!id@{id}}
-\index{id@{id}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{id}{id}}
-{\footnotesize\ttfamily int Abstract\+Component\+::id\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
-
-
-
-Definition at line 39 of file Abstract\+Component.\+h.
-
-\mbox{\Hypertarget{class_l_e_d_strip_ac209f99d6a633cd4c672fc16a991f4f8}\label{class_l_e_d_strip_ac209f99d6a633cd4c672fc16a991f4f8}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!mode@{mode}}
-\index{mode@{mode}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{mode}{mode}}
-{\footnotesize\ttfamily uint8\+\_\+t L\+E\+D\+Strip\+::mode\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 51 of file L\+E\+D\+Strip.\+h.
-
-\mbox{\Hypertarget{class_l_e_d_strip_a37a3616a79fe3dda93c145d14543199c}\label{class_l_e_d_strip_a37a3616a79fe3dda93c145d14543199c}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!offset@{offset}}
-\index{offset@{offset}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{offset}{offset}}
-{\footnotesize\ttfamily int L\+E\+D\+Strip\+::offset\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 50 of file L\+E\+D\+Strip.\+h.
-
-\mbox{\Hypertarget{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}\label{class_abstract_component_aff57dfa5f31be093a06b55560e33fb95}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!priority@{priority}}
-\index{priority@{priority}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{priority}{priority}}
-{\footnotesize\ttfamily int Abstract\+Component\+::priority = 0\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
-
-
-
-Definition at line 40 of file Abstract\+Component.\+h.
-
-\mbox{\Hypertarget{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}\label{class_l_e_d_strip_aa8a8764862dbb64aedc0b53cfe3fc22b}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!px@{px}}
-\index{px@{px}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{px}{px}}
-{\footnotesize\ttfamily \hyperlink{class_pixel_array}{Pixel\+Array} L\+E\+D\+Strip\+::px\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 48 of file L\+E\+D\+Strip.\+h.
-
-\mbox{\Hypertarget{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}\label{class_abstract_component_a99ce3e5fe7d73dac569b874c15fcaf0d}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!s\+\_\+id@{s\+\_\+id}}
-\index{s\+\_\+id@{s\+\_\+id}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{s\+\_\+id}{s\_id}}
-{\footnotesize\ttfamily int Abstract\+Component\+::s\+\_\+id = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
-
-
-
-The id for each component will be created in a sequence order staring with 1. 
-
-
-
-Definition at line 38 of file Abstract\+Component.\+h.
-
-\mbox{\Hypertarget{class_l_e_d_strip_af1987ffe7252fa35b42ad3698c3de454}\label{class_l_e_d_strip_af1987ffe7252fa35b42ad3698c3de454}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!strip\+Size@{strip\+Size}}
-\index{strip\+Size@{strip\+Size}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{strip\+Size}{stripSize}}
-{\footnotesize\ttfamily int L\+E\+D\+Strip\+::strip\+Size\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 49 of file L\+E\+D\+Strip.\+h.
-
-\mbox{\Hypertarget{class_l_e_d_strip_a25cf156735c1629b92b8dfe7a54e9b41}\label{class_l_e_d_strip_a25cf156735c1629b92b8dfe7a54e9b41}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!sub\+Message@{sub\+Message}}
-\index{sub\+Message@{sub\+Message}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{sub\+Message}{subMessage}}
-{\footnotesize\ttfamily \hyperlink{struct_sub_message}{Sub\+Message} L\+E\+D\+Strip\+::sub\+Message\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 46 of file L\+E\+D\+Strip.\+h.
-
-\mbox{\Hypertarget{class_l_e_d_strip_a4387042fe2a80bcd5dc3e9d7524800ae}\label{class_l_e_d_strip_a4387042fe2a80bcd5dc3e9d7524800ae}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!uart\+Messenger@{uart\+Messenger}}
-\index{uart\+Messenger@{uart\+Messenger}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{uart\+Messenger}{uartMessenger}}
-{\footnotesize\ttfamily \hyperlink{class_u_a_r_t_messenger}{U\+A\+R\+T\+Messenger}$\ast$ const L\+E\+D\+Strip\+::uart\+Messenger\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 45 of file L\+E\+D\+Strip.\+h.
-
-\mbox{\Hypertarget{class_l_e_d_strip_a81c4bffd481d09defe63642c9e69ed17}\label{class_l_e_d_strip_a81c4bffd481d09defe63642c9e69ed17}} 
-\index{L\+E\+D\+Strip@{L\+E\+D\+Strip}!ws@{ws}}
-\index{ws@{ws}!L\+E\+D\+Strip@{L\+E\+D\+Strip}}
-\subsubsection{\texorpdfstring{ws}{ws}}
-{\footnotesize\ttfamily \hyperlink{class_w_s2812}{W\+S2812} L\+E\+D\+Strip\+::ws\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 47 of file L\+E\+D\+Strip.\+h.
 
 
 

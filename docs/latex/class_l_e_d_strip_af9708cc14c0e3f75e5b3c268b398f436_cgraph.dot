@@ -1,0 +1,19 @@
+digraph "LEDStrip::onPaparazziMsg"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="LEDStrip::onPaparazziMsg",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="PixelArray::SetAllR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="PixelArray::SetAllG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="PixelArray::SetAllB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="PixelArray::SetR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="PixelArray::SetG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5"];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="PixelArray::SetB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78"];
+}

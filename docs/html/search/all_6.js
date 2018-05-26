@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['getbuf',['getBuf',['../class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3',1,'PixelArray']]],
-  ['getpriority',['getPriority',['../class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1',1,'AbstractComponent']]],
-  ['getrange',['getRange',['../class_i_r_sensor_analog.html#aa6642b85ec1018980e216eab0dfd27f2',1,'IRSensorAnalog::getRange()'],['../class_sonar.html#a7a641bcfac1967fbc42eea2ab70886dc',1,'Sonar::getRange()']]],
-  ['global',['GLOBAL',['../class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642daa7deeb0d0cec915ba197b48ca887ed45',1,'WS2812']]]
+  ['id',['id',['../class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11',1,'AbstractComponent::id()'],['../struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d',1,'SubMessage::id()']]],
+  ['iranalog',['IRANALOG',['../_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0af743186003faa7fbcb5ba26dfce5c1f4',1,'SubMessage.h']]],
+  ['irdigital',['IRDIGITAL',['../_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0aaee95c16a1b18903d850fbab47d73b9d',1,'SubMessage.h']]],
+  ['irqlock',['IRQLock',['../class_i_r_q_lock.html',1,'IRQLock'],['../class_i_r_q_lock.html#aa9ab20f118027e26c7748d0333a9581e',1,'IRQLock::IRQLock()']]],
+  ['irqlock_2eh',['IRQLock.h',['../_i_r_q_lock_8h.html',1,'']]],
+  ['irsensoranalog',['IRSensorAnalog',['../class_i_r_sensor_analog.html',1,'IRSensorAnalog'],['../class_i_r_sensor_analog.html#af27166832035783b3df081014c4dfb9d',1,'IRSensorAnalog::IRSensorAnalog()']]],
+  ['irsensoranalog_2ecpp',['IRSensorAnalog.cpp',['../_i_r_sensor_analog_8cpp.html',1,'']]],
+  ['irsensoranalog_2eh',['IRSensorAnalog.h',['../_i_r_sensor_analog_8h.html',1,'']]],
+  ['irsensordigital',['IRSensorDigital',['../class_i_r_sensor_digital.html',1,'IRSensorDigital'],['../class_i_r_sensor_digital.html#a43d7d836d07616260611d3cef709dff1',1,'IRSensorDigital::IRSensorDigital()']]],
+  ['irsensordigital_2ecpp',['IRSensorDigital.cpp',['../_i_r_sensor_digital_8cpp.html',1,'']]],
+  ['irsensordigital_2eh',['IRSensorDigital.h',['../_i_r_sensor_digital_8h.html',1,'']]],
+  ['isinrange',['isInRange',['../class_i_r_sensor_digital.html#a749b91dae3e83900f6de49fcc908470d',1,'IRSensorDigital']]]
 ];

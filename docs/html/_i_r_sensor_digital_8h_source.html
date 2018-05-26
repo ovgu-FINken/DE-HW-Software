@@ -5,17 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Hardware Development of FINken III quadcopter: IRSensorDigital.h Source File</title>
+<title>My Project: IRSensorDigital.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -28,10 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Hardware Development of FINken III quadcopter
-   &#160;<span id="projectnumber">V1.0</span>
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -52,20 +43,6 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('_i_r_sensor_digital_8h_source.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -85,31 +62,21 @@ $(document).ready(function(){initNavTree('_i_r_sensor_digital_8h_source.html',''
 <div class="title">IRSensorDigital.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_i_r_sensor_digital_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_abstract_component_8h.html">AbstractComponent.h</a>&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_a_r_t_messenger_8h.html">UARTMessenger.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_i_r_sensor_digital.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_r_sensor_digital.html">IRSensorDigital</a>: <span class="keyword">public</span> <a class="code" href="class_abstract_component.html">AbstractComponent</a> {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_i_r_sensor_digital.html#a43d7d836d07616260611d3cef709dff1">IRSensorDigital</a>(<a class="code" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *<span class="keyword">const</span> uartMsngr, PinName <a class="code" href="class_i_r_sensor_digital.html#a4dcc356ed96053c03b4fd247b9ffc928">dataPin</a>, <span class="keywordtype">float</span> <a class="code" href="class_i_r_sensor_digital.html#abb7c9c63c4aa193dd828d0ee56850478">detectionRange</a>);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_i_r_sensor_digital.html#a749b91dae3e83900f6de49fcc908470d">isInRange</a>();</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_r_sensor_digital.html#a8d09a546a1f4b4c6533c324d98a146a9">update</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_i_r_sensor_digital.html#a4890a7142a916a4d1ef70d7ebbe79f77">   23</a></span>&#160;    <a class="code" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *<span class="keyword">const</span> <a class="code" href="class_i_r_sensor_digital.html#a4890a7142a916a4d1ef70d7ebbe79f77">uartMessenger</a>;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_i_r_sensor_digital.html#a930d64f72308a44d9be143d1eb8c77a1">   24</a></span>&#160;    <a class="code" href="struct_sub_message.html">SubMessage</a> <a class="code" href="class_i_r_sensor_digital.html#a930d64f72308a44d9be143d1eb8c77a1">subMessage</a>;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_i_r_sensor_digital.html#a4dcc356ed96053c03b4fd247b9ffc928">   25</a></span>&#160;    PinName <a class="code" href="class_i_r_sensor_digital.html#a4dcc356ed96053c03b4fd247b9ffc928">dataPin</a>;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_i_r_sensor_digital.html#a8b0c7fe2d6e9f575d589342648868235">   26</a></span>&#160;    AnalogIn <a class="code" href="class_i_r_sensor_digital.html#a8b0c7fe2d6e9f575d589342648868235">sensor</a>;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_i_r_sensor_digital.html#abb7c9c63c4aa193dd828d0ee56850478">   27</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_i_r_sensor_digital.html#abb7c9c63c4aa193dd828d0ee56850478">detectionRange</a>;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_i_r_sensor_digital.html#abeaf8c370c70ac755170a77c92788c57">   28</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_i_r_sensor_digital.html#abeaf8c370c70ac755170a77c92788c57">inRange</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div><div class="ttc" id="_u_a_r_t_messenger_8h_html"><div class="ttname"><a href="_u_a_r_t_messenger_8h.html">UARTMessenger.h</a></div></div>
-<div class="ttc" id="struct_sub_message_html"><div class="ttname"><a href="struct_sub_message.html">SubMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00010">SubMessage.h:10</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html_a8b0c7fe2d6e9f575d589342648868235"><div class="ttname"><a href="class_i_r_sensor_digital.html#a8b0c7fe2d6e9f575d589342648868235">IRSensorDigital::sensor</a></div><div class="ttdeci">AnalogIn sensor</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8h_source.html#l00026">IRSensorDigital.h:26</a></div></div>
-<div class="ttc" id="class_abstract_component_html"><div class="ttname"><a href="class_abstract_component.html">AbstractComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00008">AbstractComponent.h:8</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html_a4dcc356ed96053c03b4fd247b9ffc928"><div class="ttname"><a href="class_i_r_sensor_digital.html#a4dcc356ed96053c03b4fd247b9ffc928">IRSensorDigital::dataPin</a></div><div class="ttdeci">PinName dataPin</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8h_source.html#l00025">IRSensorDigital.h:25</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html_a4890a7142a916a4d1ef70d7ebbe79f77"><div class="ttname"><a href="class_i_r_sensor_digital.html#a4890a7142a916a4d1ef70d7ebbe79f77">IRSensorDigital::uartMessenger</a></div><div class="ttdeci">UARTMessenger *const uartMessenger</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8h_source.html#l00023">IRSensorDigital.h:23</a></div></div>
+<a href="_i_r_sensor_digital_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_abstract_component_8h.html">AbstractComponent.h</a>&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_a_r_t_messenger_8h.html">UARTMessenger.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_i_r_sensor_digital.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_r_sensor_digital.html">IRSensorDigital</a>: <span class="keyword">public</span> <a class="code" href="class_abstract_component.html">AbstractComponent</a> {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_i_r_sensor_digital.html#a43d7d836d07616260611d3cef709dff1">IRSensorDigital</a>(<a class="code" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *<span class="keyword">const</span> uartMsngr, PinName dataPin, <span class="keywordtype">float</span> detectionRange);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_i_r_sensor_digital.html#a749b91dae3e83900f6de49fcc908470d">isInRange</a>();</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_r_sensor_digital.html#a8d09a546a1f4b4c6533c324d98a146a9">update</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *<span class="keyword">const</span> uartMessenger;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="struct_sub_message.html">SubMessage</a> subMessage;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    PinName dataPin;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    AnalogIn sensor;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> detectionRange;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> inRange;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div><div class="ttc" id="_u_a_r_t_messenger_8h_html"><div class="ttname"><a href="_u_a_r_t_messenger_8h.html">UARTMessenger.h</a></div></div>
+<div class="ttc" id="struct_sub_message_html"><div class="ttname"><a href="struct_sub_message.html">SubMessage</a></div><div class="ttdef"><b>Definition:</b> SubMessage.h:10</div></div>
+<div class="ttc" id="class_abstract_component_html"><div class="ttname"><a href="class_abstract_component.html">AbstractComponent</a></div><div class="ttdef"><b>Definition:</b> AbstractComponent.h:8</div></div>
 <div class="ttc" id="_abstract_component_8h_html"><div class="ttname"><a href="_abstract_component_8h.html">AbstractComponent.h</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html_abb7c9c63c4aa193dd828d0ee56850478"><div class="ttname"><a href="class_i_r_sensor_digital.html#abb7c9c63c4aa193dd828d0ee56850478">IRSensorDigital::detectionRange</a></div><div class="ttdeci">float detectionRange</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8h_source.html#l00027">IRSensorDigital.h:27</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html_a8d09a546a1f4b4c6533c324d98a146a9"><div class="ttname"><a href="class_i_r_sensor_digital.html#a8d09a546a1f4b4c6533c324d98a146a9">IRSensorDigital::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdoc">If the value is less than the detectionRange then it will return the true value. </div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8cpp_source.html#l00016">IRSensorDigital.cpp:16</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html"><div class="ttname"><a href="class_i_r_sensor_digital.html">IRSensorDigital</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8h_source.html#l00006">IRSensorDigital.h:6</a></div></div>
-<div class="ttc" id="class_u_a_r_t_messenger_html"><div class="ttname"><a href="class_u_a_r_t_messenger.html">UARTMessenger</a></div><div class="ttdef"><b>Definition:</b> <a href="_u_a_r_t_messenger_8h_source.html#l00010">UARTMessenger.h:10</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html_a43d7d836d07616260611d3cef709dff1"><div class="ttname"><a href="class_i_r_sensor_digital.html#a43d7d836d07616260611d3cef709dff1">IRSensorDigital::IRSensorDigital</a></div><div class="ttdeci">IRSensorDigital(UARTMessenger *const uartMsngr, PinName dataPin, float detectionRange)</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8cpp_source.html#l00003">IRSensorDigital.cpp:3</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html_a749b91dae3e83900f6de49fcc908470d"><div class="ttname"><a href="class_i_r_sensor_digital.html#a749b91dae3e83900f6de49fcc908470d">IRSensorDigital::isInRange</a></div><div class="ttdeci">bool isInRange()</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8cpp_source.html#l00032">IRSensorDigital.cpp:32</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html_abeaf8c370c70ac755170a77c92788c57"><div class="ttname"><a href="class_i_r_sensor_digital.html#abeaf8c370c70ac755170a77c92788c57">IRSensorDigital::inRange</a></div><div class="ttdeci">bool inRange</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8h_source.html#l00028">IRSensorDigital.h:28</a></div></div>
-<div class="ttc" id="class_i_r_sensor_digital_html_a930d64f72308a44d9be143d1eb8c77a1"><div class="ttname"><a href="class_i_r_sensor_digital.html#a930d64f72308a44d9be143d1eb8c77a1">IRSensorDigital::subMessage</a></div><div class="ttdeci">SubMessage subMessage</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_sensor_digital_8h_source.html#l00024">IRSensorDigital.h:24</a></div></div>
+<div class="ttc" id="class_i_r_sensor_digital_html_a8d09a546a1f4b4c6533c324d98a146a9"><div class="ttname"><a href="class_i_r_sensor_digital.html#a8d09a546a1f4b4c6533c324d98a146a9">IRSensorDigital::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdef"><b>Definition:</b> IRSensorDigital.cpp:16</div></div>
+<div class="ttc" id="class_i_r_sensor_digital_html"><div class="ttname"><a href="class_i_r_sensor_digital.html">IRSensorDigital</a></div><div class="ttdef"><b>Definition:</b> IRSensorDigital.h:6</div></div>
+<div class="ttc" id="class_u_a_r_t_messenger_html"><div class="ttname"><a href="class_u_a_r_t_messenger.html">UARTMessenger</a></div><div class="ttdef"><b>Definition:</b> UARTMessenger.h:10</div></div>
+<div class="ttc" id="class_i_r_sensor_digital_html_a43d7d836d07616260611d3cef709dff1"><div class="ttname"><a href="class_i_r_sensor_digital.html#a43d7d836d07616260611d3cef709dff1">IRSensorDigital::IRSensorDigital</a></div><div class="ttdeci">IRSensorDigital(UARTMessenger *const uartMsngr, PinName dataPin, float detectionRange)</div><div class="ttdef"><b>Definition:</b> IRSensorDigital.cpp:3</div></div>
+<div class="ttc" id="class_i_r_sensor_digital_html_a749b91dae3e83900f6de49fcc908470d"><div class="ttname"><a href="class_i_r_sensor_digital.html#a749b91dae3e83900f6de49fcc908470d">IRSensorDigital::isInRange</a></div><div class="ttdeci">bool isInRange()</div><div class="ttdef"><b>Definition:</b> IRSensorDigital.cpp:32</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="_i_r_sensor_digital_8h.html">IRSensorDigital.h</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queue',['queue',['../class_sonar.html#af0431d160853c8313eba0fd0e1ce8346',1,'Sonar']]]
+  ['width',['width',['../mainpage_8dox.html#a38379a0c0a612d5867fcb9640959f340',1,'mainpage.dox']]]
 ];

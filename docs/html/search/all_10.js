@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['timeout',['timeout',['../class_sonar.html#a4b3cc5317263c63dd58195f3c2c94da6',1,'Sonar']]],
-  ['topaparazzicount',['toPaparazziCount',['../class_u_a_r_t_messenger.html#ae47f334cdd266ae4cde0715154f0ace3',1,'UARTMessenger']]],
-  ['topaparazzimsg',['toPaparazziMsg',['../class_u_a_r_t_messenger.html#ad564c1e74510c03c7cb4ec5b7c57a802',1,'UARTMessenger']]],
-  ['topaparazzimsglength',['toPaparazziMsgLength',['../class_u_a_r_t_messenger.html#ae2a77be89a1f84b466eab4753929b902',1,'UARTMessenger']]],
-  ['torange',['toRange',['../class_i_r_sensor_analog.html#a33ed6c82b3cb6720bfdd6f7598c54699',1,'IRSensorAnalog']]],
-  ['type',['type',['../struct_sub_message.html#a064f1d26d553da776dc749d37a18a499',1,'SubMessage']]]
+  ['_7eirqlock',['~IRQLock',['../class_i_r_q_lock.html#a77ab3c6555d123ef45e2e50e4eab81fb',1,'IRQLock']]],
+  ['_7epixelarray',['~PixelArray',['../class_pixel_array.html#a9f4d10fcbd08290dfdecafb2ed4ad687',1,'PixelArray']]],
+  ['_7ews2812',['~WS2812',['../class_w_s2812.html#a58973dedd9cbc5c3fd3397f07f9a720f',1,'WS2812']]]
 ];

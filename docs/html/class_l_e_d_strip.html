@@ -5,17 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Hardware Development of FINken III quadcopter: LEDStrip Class Reference</title>
+<title>My Project: LEDStrip Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -28,10 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Hardware Development of FINken III quadcopter
-   &#160;<span id="projectnumber">V1.0</span>
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">DE-HW-SOFWARE</div>
   </td>
  </tr>
  </tbody>
@@ -51,21 +42,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_l_e_d_strip.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,12 +56,10 @@ $(document).ready(function(){initNavTree('class_l_e_d_strip.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_l_e_d_strip-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LEDStrip Class Reference</div>  </div>
@@ -96,87 +70,47 @@ $(document).ready(function(){initNavTree('class_l_e_d_strip.html','');});
 <div class="dynheader">
 Inheritance diagram for LEDStrip:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_l_e_d_strip__inherit__graph.png" border="0" usemap="#_l_e_d_strip_inherit__map" alt="Inheritance graph"/></div>
-<map name="_l_e_d_strip_inherit__map" id="_l_e_d_strip_inherit__map">
-<area shape="rect" id="node2" href="class_abstract_component.html" title="AbstractComponent" alt="" coords="5,5,143,32"/>
+ <div class="center">
+  <img src="class_l_e_d_strip.png" usemap="#LEDStrip_map" alt=""/>
+  <map id="LEDStrip_map" name="LEDStrip_map">
+<area href="class_abstract_component.html" alt="AbstractComponent" shape="rect" coords="0,0,122,24"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for LEDStrip:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_l_e_d_strip__coll__graph.png" border="0" usemap="#_l_e_d_strip_coll__map" alt="Collaboration graph"/></div>
-<map name="_l_e_d_strip_coll__map" id="_l_e_d_strip_coll__map">
-<area shape="rect" id="node2" href="class_abstract_component.html" title="AbstractComponent" alt="" coords="5,5,143,32"/>
-<area shape="rect" id="node6" href="class_u_a_r_t_messenger.html" title="UARTMessenger" alt="" coords="95,109,215,136"/>
-<area shape="rect" id="node3" href="class_w_s2812.html" title="Library for the WS2812 RGB LED with integrated controller. " alt="" coords="427,109,499,136"/>
-<area shape="rect" id="node4" href="class_pixel_array.html" title="Library for the WS2812 RGB LED with integrated controller. " alt="" coords="523,109,606,136"/>
-<area shape="rect" id="node5" href="struct_sub_message.html" title="SubMessage" alt="" coords="221,5,319,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a746e420e05c5d6c45eb2f74eaf5928fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#a746e420e05c5d6c45eb2f74eaf5928fc">LEDStrip</a> (<a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *const uartMsngr, PinName pin, int size, int zeroHigh, int zeroLow, int oneHigh, int oneLow)</td></tr>
-<tr class="memdesc:a746e420e05c5d6c45eb2f74eaf5928fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for creating a new LED Strip.  <a href="#a746e420e05c5d6c45eb2f74eaf5928fc">More...</a><br /></td></tr>
 <tr class="separator:a746e420e05c5d6c45eb2f74eaf5928fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf199367f3caaf9730262c4e7bef6bc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#abf199367f3caaf9730262c4e7bef6bc1">setMode</a> (uint8_t <a class="el" href="class_l_e_d_strip.html#ac209f99d6a633cd4c672fc16a991f4f8">mode</a>)</td></tr>
-<tr class="memdesc:abf199367f3caaf9730262c4e7bef6bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set LED Strip to manual control instead of getting control action from paparazzi, which is set by default.  <a href="#abf199367f3caaf9730262c4e7bef6bc1">More...</a><br /></td></tr>
+<tr class="memitem:abf199367f3caaf9730262c4e7bef6bc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#abf199367f3caaf9730262c4e7bef6bc1">setMode</a> (uint8_t mode)</td></tr>
 <tr class="separator:abf199367f3caaf9730262c4e7bef6bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310b381acdd83a01ddb6e2debebbbc7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#a310b381acdd83a01ddb6e2debebbbc7c">setColor</a> (unsigned int color)</td></tr>
-<tr class="memdesc:a310b381acdd83a01ddb6e2debebbbc7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color to LED Strip.  <a href="#a310b381acdd83a01ddb6e2debebbbc7c">More...</a><br /></td></tr>
 <tr class="separator:a310b381acdd83a01ddb6e2debebbbc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f9d9c2784c9ad893163f7f17e603ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#a1f9d9c2784c9ad893163f7f17e603ce7">setColor</a> (unsigned int color, uint8_t led=0)</td></tr>
-<tr class="memdesc:a1f9d9c2784c9ad893163f7f17e603ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color to only one LED.  <a href="#a1f9d9c2784c9ad893163f7f17e603ce7">More...</a><br /></td></tr>
 <tr class="separator:a1f9d9c2784c9ad893163f7f17e603ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc57d90870bb0e9c0d05e7ba6ca76c95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95">update</a> ()</td></tr>
-<tr class="memdesc:abc57d90870bb0e9c0d05e7ba6ca76c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The update function will be to the LEDstrip when the control from paparazzi is received and check the message from paparrazi with respect to id.  <a href="#abc57d90870bb0e9c0d05e7ba6ca76c95">More...</a><br /></td></tr>
 <tr class="separator:abc57d90870bb0e9c0d05e7ba6ca76c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9708cc14c0e3f75e5b3c268b398f436"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436">onPaparazziMsg</a> (<a class="el" href="struct_sub_message.html">SubMessage</a> *msg)</td></tr>
-<tr class="memdesc:af9708cc14c0e3f75e5b3c268b398f436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reaction on the message from Paparazzi.  <a href="#af9708cc14c0e3f75e5b3c268b398f436">More...</a><br /></td></tr>
 <tr class="separator:af9708cc14c0e3f75e5b3c268b398f436"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a59a9ea6c3b4c86fb3bf98ff1eaaef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a58a59a9ea6c3b4c86fb3bf98ff1eaaef">setPriority</a> (int p)</td></tr>
-<tr class="memdesc:a58a59a9ea6c3b4c86fb3bf98ff1eaaef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set priority to the component, used for updating order.  <a href="#a58a59a9ea6c3b4c86fb3bf98ff1eaaef">More...</a><br /></td></tr>
-<tr class="separator:a58a59a9ea6c3b4c86fb3bf98ff1eaaef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0b440d1d642ff1292ec3c544d75a8f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1">getPriority</a> ()</td></tr>
-<tr class="separator:ac0b440d1d642ff1292ec3c544d75a8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c2e458144111c5f599c66f168516abc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a0c2e458144111c5f599c66f168516abc">operator&lt;</a> (const <a class="el" href="class_abstract_component.html">AbstractComponent</a> &amp;another) const</td></tr>
-<tr class="memdesc:a0c2e458144111c5f599c66f168516abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded comparison operator '&lt;'.  <a href="#a0c2e458144111c5f599c66f168516abc">More...</a><br /></td></tr>
-<tr class="separator:a0c2e458144111c5f599c66f168516abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_abstract_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_abstract_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_abstract_component.html">AbstractComponent</a></td></tr>
+<tr class="memitem:a58a59a9ea6c3b4c86fb3bf98ff1eaaef inherit pub_methods_class_abstract_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a58a59a9ea6c3b4c86fb3bf98ff1eaaef">setPriority</a> (int p)</td></tr>
+<tr class="separator:a58a59a9ea6c3b4c86fb3bf98ff1eaaef inherit pub_methods_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b440d1d642ff1292ec3c544d75a8f1 inherit pub_methods_class_abstract_component"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1">getPriority</a> ()</td></tr>
+<tr class="separator:ac0b440d1d642ff1292ec3c544d75a8f1 inherit pub_methods_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2e458144111c5f599c66f168516abc inherit pub_methods_class_abstract_component"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a0c2e458144111c5f599c66f168516abc">operator&lt;</a> (const <a class="el" href="class_abstract_component.html">AbstractComponent</a> &amp;another) const</td></tr>
+<tr class="separator:a0c2e458144111c5f599c66f168516abc inherit pub_methods_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a9c9c548149681b1a1dd935e66ed5dd11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">id</a></td></tr>
-<tr class="separator:a9c9c548149681b1a1dd935e66ed5dd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff57dfa5f31be093a06b55560e33fb95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">priority</a> = 0</td></tr>
-<tr class="separator:aff57dfa5f31be093a06b55560e33fb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a99ce3e5fe7d73dac569b874c15fcaf0d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a99ce3e5fe7d73dac569b874c15fcaf0d">s_id</a> = 0</td></tr>
-<tr class="memdesc:a99ce3e5fe7d73dac569b874c15fcaf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id for each component will be created in a sequence order staring with 1.  <a href="#a99ce3e5fe7d73dac569b874c15fcaf0d">More...</a><br /></td></tr>
-<tr class="separator:a99ce3e5fe7d73dac569b874c15fcaf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a4387042fe2a80bcd5dc3e9d7524800ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#a4387042fe2a80bcd5dc3e9d7524800ae">uartMessenger</a></td></tr>
-<tr class="separator:a4387042fe2a80bcd5dc3e9d7524800ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25cf156735c1629b92b8dfe7a54e9b41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_sub_message.html">SubMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#a25cf156735c1629b92b8dfe7a54e9b41">subMessage</a></td></tr>
-<tr class="separator:a25cf156735c1629b92b8dfe7a54e9b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81c4bffd481d09defe63642c9e69ed17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_w_s2812.html">WS2812</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#a81c4bffd481d09defe63642c9e69ed17">ws</a></td></tr>
-<tr class="separator:a81c4bffd481d09defe63642c9e69ed17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8a8764862dbb64aedc0b53cfe3fc22b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_pixel_array.html">PixelArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a></td></tr>
-<tr class="separator:aa8a8764862dbb64aedc0b53cfe3fc22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1987ffe7252fa35b42ad3698c3de454"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#af1987ffe7252fa35b42ad3698c3de454">stripSize</a></td></tr>
-<tr class="separator:af1987ffe7252fa35b42ad3698c3de454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37a3616a79fe3dda93c145d14543199c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#a37a3616a79fe3dda93c145d14543199c">offset</a></td></tr>
-<tr class="separator:a37a3616a79fe3dda93c145d14543199c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac209f99d6a633cd4c672fc16a991f4f8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_e_d_strip.html#ac209f99d6a633cd4c672fc16a991f4f8">mode</a></td></tr>
-<tr class="separator:ac209f99d6a633cd4c672fc16a991f4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_abstract_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_abstract_component')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_abstract_component.html">AbstractComponent</a></td></tr>
+<tr class="memitem:a9c9c548149681b1a1dd935e66ed5dd11 inherit pro_attribs_class_abstract_component"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">id</a></td></tr>
+<tr class="separator:a9c9c548149681b1a1dd935e66ed5dd11 inherit pro_attribs_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff57dfa5f31be093a06b55560e33fb95 inherit pro_attribs_class_abstract_component"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">priority</a> = 0</td></tr>
+<tr class="separator:aff57dfa5f31be093a06b55560e33fb95 inherit pro_attribs_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_class_abstract_component"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_abstract_component')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_abstract_component.html">AbstractComponent</a></td></tr>
+<tr class="memitem:a99ce3e5fe7d73dac569b874c15fcaf0d inherit pro_static_attribs_class_abstract_component"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_component.html#a99ce3e5fe7d73dac569b874c15fcaf0d">s_id</a> = 0</td></tr>
+<tr class="separator:a99ce3e5fe7d73dac569b874c15fcaf0d inherit pro_static_attribs_class_abstract_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8h_source.html#l00008">8</a> of file <a class="el" href="_l_e_d_strip_8h_source.html">LEDStrip.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a746e420e05c5d6c45eb2f74eaf5928fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a746e420e05c5d6c45eb2f74eaf5928fc">&#9670;&nbsp;</a></span>LEDStrip()</h2>
 
@@ -232,8 +166,6 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Constructor for creating a new LED Strip. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uartMsngr</td><td><a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a> object for communicating with Paparazzi </td></tr>
@@ -242,70 +174,15 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">zeroHigh</td><td>How many NOPs to insert to ensure TOH is properly generated. See library description for more information. </td></tr>
     <tr><td class="paramname">zeroLow</td><td>How many NOPs to insert to ensure TOL is properly generated. See library description for more information. </td></tr>
     <tr><td class="paramname">oneHigh</td><td>How many NOPs to insert to ensure T1H is properly generated. See library description for more information. </td></tr>
-    <tr><td class="paramname">oneLow</td><td>How many NOPs to insert to ensure T1L is properly generated. See library description for more information. </td></tr>
+    <tr><td class="paramname">oneLow</td><td>How many NOPs to insert to ensure T1L is properly generated. See library description for more information.</td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8cpp_source.html#l00008">8</a> of file <a class="el" href="_l_e_d_strip_8cpp_source.html">LEDStrip.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                               : <a class="code" href="class_l_e_d_strip.html#a4387042fe2a80bcd5dc3e9d7524800ae">uartMessenger</a>(uartMsngr), <a class="code" href="class_l_e_d_strip.html#a81c4bffd481d09defe63642c9e69ed17">ws</a>(pin, size, zeroHigh, zeroLow, oneHigh, oneLow), <a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>(size) {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">id</span> = ++<a class="code" href="class_abstract_component.html#a99ce3e5fe7d73dac569b874c15fcaf0d">s_id</a>;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_l_e_d_strip.html#a81c4bffd481d09defe63642c9e69ed17">ws</a>.<a class="code" href="class_w_s2812.html#acb221ea7ba9cfb40a43b7778f0dffa5d">useII</a>(<a class="code" href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">WS2812::OFF</a>); <span class="comment">// off intensity scaling</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_l_e_d_strip.html#af1987ffe7252fa35b42ad3698c3de454">stripSize</a> = size;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_l_e_d_strip.html#a37a3616a79fe3dda93c145d14543199c">offset</a> = 0;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_l_e_d_strip.html#ac209f99d6a633cd4c672fc16a991f4f8">mode</a> = 0;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div><div class="ttc" id="class_abstract_component_html_a99ce3e5fe7d73dac569b874c15fcaf0d"><div class="ttname"><a href="class_abstract_component.html#a99ce3e5fe7d73dac569b874c15fcaf0d">AbstractComponent::s_id</a></div><div class="ttdeci">static int s_id</div><div class="ttdoc">The id for each component will be created in a sequence order staring with 1. </div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00038">AbstractComponent.h:38</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_aa8a8764862dbb64aedc0b53cfe3fc22b"><div class="ttname"><a href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">LEDStrip::px</a></div><div class="ttdeci">PixelArray px</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00048">LEDStrip.h:48</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_a4387042fe2a80bcd5dc3e9d7524800ae"><div class="ttname"><a href="class_l_e_d_strip.html#a4387042fe2a80bcd5dc3e9d7524800ae">LEDStrip::uartMessenger</a></div><div class="ttdeci">UARTMessenger *const uartMessenger</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00045">LEDStrip.h:45</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_af1987ffe7252fa35b42ad3698c3de454"><div class="ttname"><a href="class_l_e_d_strip.html#af1987ffe7252fa35b42ad3698c3de454">LEDStrip::stripSize</a></div><div class="ttdeci">int stripSize</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00049">LEDStrip.h:49</a></div></div>
-<div class="ttc" id="class_w_s2812_html_a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55"><div class="ttname"><a href="class_w_s2812.html#a14186f70863bf4f3a35b2cc21b15642da3937d959838b5887619b403a2f717d55">WS2812::OFF</a></div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8h_source.html#l00016">WS2812.h:16</a></div></div>
-<div class="ttc" id="class_w_s2812_html_acb221ea7ba9cfb40a43b7778f0dffa5d"><div class="ttname"><a href="class_w_s2812.html#acb221ea7ba9cfb40a43b7778f0dffa5d">WS2812::useII</a></div><div class="ttdeci">void useII(BrightnessControl bc)</div><div class="ttdoc">Sets the brightness mode. </div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8cpp_source.html#l00135">WS2812.cpp:135</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_a37a3616a79fe3dda93c145d14543199c"><div class="ttname"><a href="class_l_e_d_strip.html#a37a3616a79fe3dda93c145d14543199c">LEDStrip::offset</a></div><div class="ttdeci">int offset</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00050">LEDStrip.h:50</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_a81c4bffd481d09defe63642c9e69ed17"><div class="ttname"><a href="class_l_e_d_strip.html#a81c4bffd481d09defe63642c9e69ed17">LEDStrip::ws</a></div><div class="ttdeci">WS2812 ws</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00047">LEDStrip.h:47</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_ac209f99d6a633cd4c672fc16a991f4f8"><div class="ttname"><a href="class_l_e_d_strip.html#ac209f99d6a633cd4c672fc16a991f4f8">LEDStrip::mode</a></div><div class="ttdeci">uint8_t mode</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00051">LEDStrip.h:51</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_l_e_d_strip_a746e420e05c5d6c45eb2f74eaf5928fc_cgraph.png" border="0" usemap="#class_l_e_d_strip_a746e420e05c5d6c45eb2f74eaf5928fc_cgraph" alt=""/></div>
-<map name="class_l_e_d_strip_a746e420e05c5d6c45eb2f74eaf5928fc_cgraph" id="class_l_e_d_strip_a746e420e05c5d6c45eb2f74eaf5928fc_cgraph">
-<area shape="rect" id="node2" href="class_w_s2812.html#acb221ea7ba9cfb40a43b7778f0dffa5d" title="Sets the brightness mode. " alt="" coords="188,5,295,32"/>
-</map>
-</div>
+<p>Constructor for creating a new LED Strip. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac0b440d1d642ff1292ec3c544d75a8f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0b440d1d642ff1292ec3c544d75a8f1">&#9670;&nbsp;</a></span>getPriority()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AbstractComponent::getPriority </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>priority of the component </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00025">25</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                      {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">priority</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div><div class="ttc" id="class_abstract_component_html_aff57dfa5f31be093a06b55560e33fb95"><div class="ttname"><a href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">AbstractComponent::priority</a></div><div class="ttdeci">int priority</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00040">AbstractComponent.h:40</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph.png" border="0" usemap="#class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph" alt=""/></div>
-<map name="class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph" id="class_abstract_component_ac0b440d1d642ff1292ec3c544d75a8f1_cgraph">
-<area shape="rect" id="node2" href="class_abstract_component.html#a0c2e458144111c5f599c66f168516abc" title="Overloaded comparison operator &#39;&lt;&#39;. " alt="" coords="199,5,344,47"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="af9708cc14c0e3f75e5b3c268b398f436"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9708cc14c0e3f75e5b3c268b398f436">&#9670;&nbsp;</a></span>onPaparazziMsg()</h2>
 
@@ -329,95 +206,13 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Reaction on the message from Paparazzi. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>message struct from Paparazzi</td></tr>
   </table>
   </dd>
 </dl>
-<p>Expected message structure: type (1 byte), id (1 byte), length (1 byte), data (length byte) Datastructure: led id (1 byte), red channel (1 byte), green channel (1 byte), blue channel (1 byte) <a class="el" href="struct_sub_message.html">SubMessage</a> came from Paparazzi </p>
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8cpp_source.html#l00086">86</a> of file <a class="el" href="_l_e_d_strip_8cpp_source.html">LEDStrip.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                             {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">int</span> pos = -1;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; msg-&gt;<a class="code" href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">length</a> / 4; i++) {</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        uint8_t led = msg-&gt;<a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>[++pos];</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> (msg-&gt;<a class="code" href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">length</a> == 4 &amp;&amp; led &gt; <a class="code" href="class_l_e_d_strip.html#af1987ffe7252fa35b42ad3698c3de454">stripSize</a>) {</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2">SetAllR</a>(msg-&gt;<a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>[++pos]);</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d">SetAllG</a>(msg-&gt;<a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>[++pos]);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b">SetAllB</a>(msg-&gt;<a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>[++pos]);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5">SetR</a>(led, msg-&gt;<a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>[++pos]);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5">SetG</a>(led, msg-&gt;<a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>[++pos]);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78">SetB</a>(led, msg-&gt;<a class="code" href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">data</a>[++pos]);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div><div class="ttc" id="class_pixel_array_html_abd4253e7c76f3775f31e09dfe318e3a5"><div class="ttname"><a href="class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5">PixelArray::SetR</a></div><div class="ttdeci">void SetR(int, unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00095">PixelArray.cpp:95</a></div></div>
-<div class="ttc" id="class_pixel_array_html_a3b17271fdc21503236ca6ca8e37d501b"><div class="ttname"><a href="class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b">PixelArray::SetAllB</a></div><div class="ttdeci">void SetAllB(unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00069">PixelArray.cpp:69</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_aa8a8764862dbb64aedc0b53cfe3fc22b"><div class="ttname"><a href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">LEDStrip::px</a></div><div class="ttdeci">PixelArray px</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00048">LEDStrip.h:48</a></div></div>
-<div class="ttc" id="class_pixel_array_html_a560a654c59614fd5a6c17adb10083a78"><div class="ttname"><a href="class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78">PixelArray::SetB</a></div><div class="ttdeci">void SetB(int, unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00109">PixelArray.cpp:109</a></div></div>
-<div class="ttc" id="class_pixel_array_html_a88f25ee1b266e2dc0ef7ae90ff4bd12d"><div class="ttname"><a href="class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d">PixelArray::SetAllG</a></div><div class="ttdeci">void SetAllG(unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00057">PixelArray.cpp:57</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_af1987ffe7252fa35b42ad3698c3de454"><div class="ttname"><a href="class_l_e_d_strip.html#af1987ffe7252fa35b42ad3698c3de454">LEDStrip::stripSize</a></div><div class="ttdeci">int stripSize</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00049">LEDStrip.h:49</a></div></div>
-<div class="ttc" id="class_pixel_array_html_a60ea8084ec95df0d51f46c9b0ff308d5"><div class="ttname"><a href="class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5">PixelArray::SetG</a></div><div class="ttdeci">void SetG(int, unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00102">PixelArray.cpp:102</a></div></div>
-<div class="ttc" id="struct_sub_message_html_a276e06f5335ca7857c21ac8c0e51bd6d"><div class="ttname"><a href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">SubMessage::length</a></div><div class="ttdeci">uint8_t length</div><div class="ttdoc">Length of the data in this submessage in bytes. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00028">SubMessage.h:28</a></div></div>
-<div class="ttc" id="struct_sub_message_html_a7d923c5cdaa380c27d7c4cf60ea7c1be"><div class="ttname"><a href="struct_sub_message.html#a7d923c5cdaa380c27d7c4cf60ea7c1be">SubMessage::data</a></div><div class="ttdeci">uint8_t data[16]</div><div class="ttdoc">Byte array with data. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00033">SubMessage.h:33</a></div></div>
-<div class="ttc" id="class_pixel_array_html_a9ddfdd1a01a9877e4bfcf5a462412fd2"><div class="ttname"><a href="class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2">PixelArray::SetAllR</a></div><div class="ttdeci">void SetAllR(unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00046">PixelArray.cpp:46</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_cgraph.png" border="0" usemap="#class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_cgraph" alt=""/></div>
-<map name="class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_cgraph" id="class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_cgraph">
-<area shape="rect" id="node2" href="class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2" title="PixelArray::SetAllR" alt="" coords="232,5,367,32"/>
-<area shape="rect" id="node4" href="class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d" title="PixelArray::SetAllG" alt="" coords="232,56,367,83"/>
-<area shape="rect" id="node5" href="class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b" title="PixelArray::SetAllB" alt="" coords="232,107,367,133"/>
-<area shape="rect" id="node6" href="class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5" title="PixelArray::SetR" alt="" coords="240,157,359,184"/>
-<area shape="rect" id="node7" href="class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5" title="PixelArray::SetG" alt="" coords="239,208,359,235"/>
-<area shape="rect" id="node8" href="class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78" title="PixelArray::SetB" alt="" coords="240,259,359,285"/>
-<area shape="rect" id="node3" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="415,125,571,166"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_icgraph.png" border="0" usemap="#class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_icgraph" alt=""/></div>
-<map name="class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_icgraph" id="class_l_e_d_strip_af9708cc14c0e3f75e5b3c268b398f436_icgraph">
-<area shape="rect" id="node2" href="class_l_e_d_strip.html#abc57d90870bb0e9c0d05e7ba6ca76c95" title="The update function will be to the LEDstrip when the control from paparazzi is received and check the..." alt="" coords="232,5,353,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a0c2e458144111c5f599c66f168516abc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c2e458144111c5f599c66f168516abc">&#9670;&nbsp;</a></span>operator<()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool AbstractComponent::operator&lt; </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_abstract_component.html">AbstractComponent</a> &amp;&#160;</td>
-          <td class="paramname"><em>another</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Overloaded comparison operator '&lt;'. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">another</td><td>component for comparison </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if id is smaller then the id of another component </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_abstract_component_8cpp_source.html#l00008">8</a> of file <a class="el" href="_abstract_component_8cpp_source.html">AbstractComponent.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                                                        {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> <span class="keywordtype">id</span> &lt; another.<a class="code" href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">id</a>;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div><div class="ttc" id="class_abstract_component_html_a9c9c548149681b1a1dd935e66ed5dd11"><div class="ttname"><a href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">AbstractComponent::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00039">AbstractComponent.h:39</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph.png" border="0" usemap="#class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph" alt=""/></div>
-<map name="class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph" id="class_abstract_component_a0c2e458144111c5f599c66f168516abc_icgraph">
-<area shape="rect" id="node2" href="class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1" title="AbstractComponent::\lgetPriority" alt="" coords="199,5,344,47"/>
-</map>
-</div>
+<p>Reaction on the message from Paparazzi. Expected message structure: type (1 byte), id (1 byte), length (1 byte), data (length byte) Datastructure: led id (1 byte), red channel (1 byte), green channel (1 byte), blue channel (1 byte) <a class="el" href="struct_sub_message.html">SubMessage</a> came from Paparazzi </p>
 
 </div>
 </div>
@@ -436,27 +231,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Set color to LED Strip. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">color</td><td>color in RGB format, e.g. 0x00FF00 </td></tr>
+    <tr><td class="paramname">color</td><td>color in RGB format, e.g. 0x00FF00</td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8cpp_source.html#l00027">27</a> of file <a class="el" href="_l_e_d_strip_8cpp_source.html">LEDStrip.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                          {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1">Set</a>(0, color);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="ttc" id="class_l_e_d_strip_html_aa8a8764862dbb64aedc0b53cfe3fc22b"><div class="ttname"><a href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">LEDStrip::px</a></div><div class="ttdeci">PixelArray px</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00048">LEDStrip.h:48</a></div></div>
-<div class="ttc" id="class_pixel_array_html_afcfe32b74beeced27f928f42131d77c1"><div class="ttname"><a href="class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1">PixelArray::Set</a></div><div class="ttdeci">void Set(int, unsigned int)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00078">PixelArray.cpp:78</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c_cgraph.png" border="0" usemap="#class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c_cgraph" alt=""/></div>
-<map name="class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c_cgraph" id="class_l_e_d_strip_a310b381acdd83a01ddb6e2debebbbc7c_cgraph">
-<area shape="rect" id="node2" href="class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1" title="PixelArray::Set" alt="" coords="184,5,295,32"/>
-<area shape="rect" id="node3" href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d" title="PixelArray::__set_pixel" alt="" coords="343,5,499,32"/>
-</map>
-</div>
+<p>Set color to LED Strip. </p>
 
 </div>
 </div>
@@ -485,28 +266,14 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Set color to only one LED. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">color</td><td>color in RGB format, e.g. 0x00FF00 </td></tr>
-    <tr><td class="paramname">led</td><td>id of the LED to use </td></tr>
+    <tr><td class="paramname">led</td><td>id of the LED to use</td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8cpp_source.html#l00034">34</a> of file <a class="el" href="_l_e_d_strip_8cpp_source.html">LEDStrip.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                                       {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1">Set</a>(led, color);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="ttc" id="class_l_e_d_strip_html_aa8a8764862dbb64aedc0b53cfe3fc22b"><div class="ttname"><a href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">LEDStrip::px</a></div><div class="ttdeci">PixelArray px</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00048">LEDStrip.h:48</a></div></div>
-<div class="ttc" id="class_pixel_array_html_afcfe32b74beeced27f928f42131d77c1"><div class="ttname"><a href="class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1">PixelArray::Set</a></div><div class="ttdeci">void Set(int, unsigned int)</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00078">PixelArray.cpp:78</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7_cgraph.png" border="0" usemap="#class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7_cgraph" alt=""/></div>
-<map name="class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7_cgraph" id="class_l_e_d_strip_a1f9d9c2784c9ad893163f7f17e603ce7_cgraph">
-<area shape="rect" id="node2" href="class_pixel_array.html#afcfe32b74beeced27f928f42131d77c1" title="PixelArray::Set" alt="" coords="184,5,295,32"/>
-<area shape="rect" id="node3" href="class_pixel_array.html#a4b1a6582bc3bab1f67aebd1f97a5595d" title="PixelArray::__set_pixel" alt="" coords="343,5,499,32"/>
-</map>
-</div>
+<p>Set color to only one LED </p>
 
 </div>
 </div>
@@ -525,55 +292,14 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>one of predifined modes</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>Set LED Strip to manual control instead of getting control action from paparazzi, which is set by default. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>one of predifined modes </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8cpp_source.html#l00020">20</a> of file <a class="el" href="_l_e_d_strip_8cpp_source.html">LEDStrip.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                   {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    this-&gt;<a class="code" href="class_l_e_d_strip.html#ac209f99d6a633cd4c672fc16a991f4f8">mode</a> = <a class="code" href="class_l_e_d_strip.html#ac209f99d6a633cd4c672fc16a991f4f8">mode</a>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="ttc" id="class_l_e_d_strip_html_ac209f99d6a633cd4c672fc16a991f4f8"><div class="ttname"><a href="class_l_e_d_strip.html#ac209f99d6a633cd4c672fc16a991f4f8">LEDStrip::mode</a></div><div class="ttdeci">uint8_t mode</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00051">LEDStrip.h:51</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a58a59a9ea6c3b4c86fb3bf98ff1eaaef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58a59a9ea6c3b4c86fb3bf98ff1eaaef">&#9670;&nbsp;</a></span>setPriority()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AbstractComponent::setPriority </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set priority to the component, used for updating order. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p</td><td>priority </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00018">18</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                            {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">priority</a> = p;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div><div class="ttc" id="class_abstract_component_html_aff57dfa5f31be093a06b55560e33fb95"><div class="ttname"><a href="class_abstract_component.html#aff57dfa5f31be093a06b55560e33fb95">AbstractComponent::priority</a></div><div class="ttdeci">int priority</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00040">AbstractComponent.h:40</a></div></div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="abc57d90870bb0e9c0d05e7ba6ca76c95"></a>
@@ -598,311 +324,22 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>The update function will be to the LEDstrip when the control from paparazzi is received and check the message from paparrazi with respect to id. </p>
-<p>Then check if the paparazzi message received is not null then go to the method onPaparazziMsg to recieve paparazzi message. set write offset passing parameters. while giving the the submessage provide the LED strip Id and append message to the uart messenger </p>
+<p>The update function will be to the LEDstrip when the control from paparazzi is received and check the message from paparrazi with respect to id. Then check if the paparazzi message received is not null then go to the method onPaparazziMsg to recieve paparazzi message. set write offset passing parameters. while giving the the submessage provide the LED strip Id and append message to the uart messenger </p>
 
 <p>Implements <a class="el" href="class_abstract_component.html#af25a90b8ab213762221c3b358d9873f3">AbstractComponent</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8cpp_source.html#l00044">44</a> of file <a class="el" href="_l_e_d_strip_8cpp_source.html">LEDStrip.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                      {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="class_l_e_d_strip.html#ac209f99d6a633cd4c672fc16a991f4f8">mode</a>) {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">case</span> 0: {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="comment">// Control from Paparazzi</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="struct_sub_message.html">SubMessage</a> *paparazziMsg = <a class="code" href="class_l_e_d_strip.html#a4387042fe2a80bcd5dc3e9d7524800ae">uartMessenger</a>-&gt;<a class="code" href="class_u_a_r_t_messenger.html#affb33ad31e70001505e14d02e1f8a018">checkForMsgFromPaparazzi</a>(<span class="keywordtype">id</span>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> (paparazziMsg != <span class="keyword">nullptr</span>) {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <a class="code" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436">onPaparazziMsg</a>(paparazziMsg);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="class_l_e_d_strip.html#a81c4bffd481d09defe63642c9e69ed17">ws</a>.<a class="code" href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68">write_offsets</a>(<a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3">getBuf</a>(), 0, 0, 0);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">//  Need to send the id of the LEDStrip first to be able to communicate.</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="class_l_e_d_strip.html#a25cf156735c1629b92b8dfe7a54e9b41">subMessage</a>.<a class="code" href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">type</a> = <a class="code" href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0affd2d0d3f226452ef4313ef1080ea581">LEDSTRIP</a>;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="class_l_e_d_strip.html#a25cf156735c1629b92b8dfe7a54e9b41">subMessage</a>.<a class="code" href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">id</a> = <a class="code" href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">id</a>;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="class_l_e_d_strip.html#a25cf156735c1629b92b8dfe7a54e9b41">subMessage</a>.<a class="code" href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">length</a> = 0;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_l_e_d_strip.html#a4387042fe2a80bcd5dc3e9d7524800ae">uartMessenger</a>-&gt;<a class="code" href="class_u_a_r_t_messenger.html#ada0967869e320c236a211b405abf128a">appendMessage</a>(<a class="code" href="class_l_e_d_strip.html#a25cf156735c1629b92b8dfe7a54e9b41">subMessage</a>);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">case</span> 1: {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="comment">// All colors are set manually in advance</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="class_l_e_d_strip.html#a81c4bffd481d09defe63642c9e69ed17">ws</a>.<a class="code" href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68">write_offsets</a>(<a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3">getBuf</a>(), 0, 0, 0);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">case</span> 2: {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">// Running red LED</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="class_l_e_d_strip.html#a81c4bffd481d09defe63642c9e69ed17">ws</a>.<a class="code" href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68">write_offsets</a>(<a class="code" href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">px</a>.<a class="code" href="class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3">getBuf</a>(), <a class="code" href="class_l_e_d_strip.html#a37a3616a79fe3dda93c145d14543199c">offset</a>, <a class="code" href="class_l_e_d_strip.html#a37a3616a79fe3dda93c145d14543199c">offset</a>, <a class="code" href="class_l_e_d_strip.html#a37a3616a79fe3dda93c145d14543199c">offset</a>);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            offset = (offset + 1) % <a class="code" href="class_l_e_d_strip.html#af1987ffe7252fa35b42ad3698c3de454">stripSize</a>;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">default</span>:</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div><div class="ttc" id="struct_sub_message_html"><div class="ttname"><a href="struct_sub_message.html">SubMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00010">SubMessage.h:10</a></div></div>
-<div class="ttc" id="class_u_a_r_t_messenger_html_affb33ad31e70001505e14d02e1f8a018"><div class="ttname"><a href="class_u_a_r_t_messenger.html#affb33ad31e70001505e14d02e1f8a018">UARTMessenger::checkForMsgFromPaparazzi</a></div><div class="ttdeci">SubMessage * checkForMsgFromPaparazzi(int id)</div><div class="ttdoc">check if message from paparazzi has something for component with this id </div><div class="ttdef"><b>Definition:</b> <a href="_u_a_r_t_messenger_8cpp_source.html#l00130">UARTMessenger.cpp:130</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_a25cf156735c1629b92b8dfe7a54e9b41"><div class="ttname"><a href="class_l_e_d_strip.html#a25cf156735c1629b92b8dfe7a54e9b41">LEDStrip::subMessage</a></div><div class="ttdeci">SubMessage subMessage</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00046">LEDStrip.h:46</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_aa8a8764862dbb64aedc0b53cfe3fc22b"><div class="ttname"><a href="class_l_e_d_strip.html#aa8a8764862dbb64aedc0b53cfe3fc22b">LEDStrip::px</a></div><div class="ttdeci">PixelArray px</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00048">LEDStrip.h:48</a></div></div>
-<div class="ttc" id="struct_sub_message_html_af3acc450c0686d7a9d15ccd9d548cb6d"><div class="ttname"><a href="struct_sub_message.html#af3acc450c0686d7a9d15ccd9d548cb6d">SubMessage::id</a></div><div class="ttdeci">uint8_t id</div><div class="ttdoc">Unique id of the component. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00023">SubMessage.h:23</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_a4387042fe2a80bcd5dc3e9d7524800ae"><div class="ttname"><a href="class_l_e_d_strip.html#a4387042fe2a80bcd5dc3e9d7524800ae">LEDStrip::uartMessenger</a></div><div class="ttdeci">UARTMessenger *const uartMessenger</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00045">LEDStrip.h:45</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_af1987ffe7252fa35b42ad3698c3de454"><div class="ttname"><a href="class_l_e_d_strip.html#af1987ffe7252fa35b42ad3698c3de454">LEDStrip::stripSize</a></div><div class="ttdeci">int stripSize</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00049">LEDStrip.h:49</a></div></div>
-<div class="ttc" id="class_w_s2812_html_a578fd0b278445bd6f84e260a69b18a68"><div class="ttname"><a href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68">WS2812::write_offsets</a></div><div class="ttdeci">void write_offsets(int buf[], int r_offset=0, int g_offset=0, int b_offset=0)</div><div class="ttdoc">Writes the given buffer to the LED strip with the given offsets. </div><div class="ttdef"><b>Definition:</b> <a href="_w_s2812_8cpp_source.html#l00096">WS2812.cpp:96</a></div></div>
-<div class="ttc" id="class_abstract_component_html_a9c9c548149681b1a1dd935e66ed5dd11"><div class="ttname"><a href="class_abstract_component.html#a9c9c548149681b1a1dd935e66ed5dd11">AbstractComponent::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="_abstract_component_8h_source.html#l00039">AbstractComponent.h:39</a></div></div>
-<div class="ttc" id="struct_sub_message_html_a276e06f5335ca7857c21ac8c0e51bd6d"><div class="ttname"><a href="struct_sub_message.html#a276e06f5335ca7857c21ac8c0e51bd6d">SubMessage::length</a></div><div class="ttdeci">uint8_t length</div><div class="ttdoc">Length of the data in this submessage in bytes. </div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00028">SubMessage.h:28</a></div></div>
-<div class="ttc" id="_sub_message_8h_html_a81f78fc173dedefe5a049c0aa3eed2c0affd2d0d3f226452ef4313ef1080ea581"><div class="ttname"><a href="_sub_message_8h.html#a81f78fc173dedefe5a049c0aa3eed2c0affd2d0d3f226452ef4313ef1080ea581">LEDSTRIP</a></div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00007">SubMessage.h:7</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_a37a3616a79fe3dda93c145d14543199c"><div class="ttname"><a href="class_l_e_d_strip.html#a37a3616a79fe3dda93c145d14543199c">LEDStrip::offset</a></div><div class="ttdeci">int offset</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00050">LEDStrip.h:50</a></div></div>
-<div class="ttc" id="struct_sub_message_html_a064f1d26d553da776dc749d37a18a499"><div class="ttname"><a href="struct_sub_message.html#a064f1d26d553da776dc749d37a18a499">SubMessage::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdoc">type of the message: 0 - Sonar 1 - IR Sensor analog 2 - IR Sensor digital 3 - LED Strip ...</div><div class="ttdef"><b>Definition:</b> <a href="_sub_message_8h_source.html#l00018">SubMessage.h:18</a></div></div>
-<div class="ttc" id="class_u_a_r_t_messenger_html_ada0967869e320c236a211b405abf128a"><div class="ttname"><a href="class_u_a_r_t_messenger.html#ada0967869e320c236a211b405abf128a">UARTMessenger::appendMessage</a></div><div class="ttdeci">void appendMessage(const SubMessage &amp;subMessage)</div><div class="ttdoc">Append new message for sending to Paparazzi. </div><div class="ttdef"><b>Definition:</b> <a href="_u_a_r_t_messenger_8cpp_source.html#l00056">UARTMessenger.cpp:56</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_a81c4bffd481d09defe63642c9e69ed17"><div class="ttname"><a href="class_l_e_d_strip.html#a81c4bffd481d09defe63642c9e69ed17">LEDStrip::ws</a></div><div class="ttdeci">WS2812 ws</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00047">LEDStrip.h:47</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_af9708cc14c0e3f75e5b3c268b398f436"><div class="ttname"><a href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436">LEDStrip::onPaparazziMsg</a></div><div class="ttdeci">virtual void onPaparazziMsg(SubMessage *msg)</div><div class="ttdoc">Reaction on the message from Paparazzi. </div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8cpp_source.html#l00086">LEDStrip.cpp:86</a></div></div>
-<div class="ttc" id="class_pixel_array_html_a987f1dc053a5cf25d78d5cfe037088d3"><div class="ttname"><a href="class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3">PixelArray::getBuf</a></div><div class="ttdeci">int * getBuf()</div><div class="ttdef"><b>Definition:</b> <a href="_pixel_array_8cpp_source.html#l00117">PixelArray.cpp:117</a></div></div>
-<div class="ttc" id="class_l_e_d_strip_html_ac209f99d6a633cd4c672fc16a991f4f8"><div class="ttname"><a href="class_l_e_d_strip.html#ac209f99d6a633cd4c672fc16a991f4f8">LEDStrip::mode</a></div><div class="ttdeci">uint8_t mode</div><div class="ttdef"><b>Definition:</b> <a href="_l_e_d_strip_8h_source.html#l00051">LEDStrip.h:51</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95_cgraph.png" border="0" usemap="#class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95_cgraph" alt=""/></div>
-<map name="class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95_cgraph" id="class_l_e_d_strip_abc57d90870bb0e9c0d05e7ba6ca76c95_cgraph">
-<area shape="rect" id="node2" href="class_u_a_r_t_messenger.html#affb33ad31e70001505e14d02e1f8a018" title="check if message from paparazzi has something for component with this id " alt="" coords="183,91,389,133"/>
-<area shape="rect" id="node3" href="class_l_e_d_strip.html#af9708cc14c0e3f75e5b3c268b398f436" title="Reaction on the message from Paparazzi. " alt="" coords="197,157,375,184"/>
-<area shape="rect" id="node11" href="class_w_s2812.html#a578fd0b278445bd6f84e260a69b18a68" title="Writes the given buffer to the LED strip with the given offsets. " alt="" coords="210,208,362,235"/>
-<area shape="rect" id="node13" href="class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3" title="PixelArray::getBuf" alt="" coords="223,259,349,285"/>
-<area shape="rect" id="node14" href="class_u_a_r_t_messenger.html#ada0967869e320c236a211b405abf128a" title="Append new message for sending to Paparazzi. " alt="" coords="175,309,397,336"/>
-<area shape="rect" id="node4" href="class_pixel_array.html#a9ddfdd1a01a9877e4bfcf5a462412fd2" title="PixelArray::SetAllR" alt="" coords="447,5,581,32"/>
-<area shape="rect" id="node6" href="class_pixel_array.html#a88f25ee1b266e2dc0ef7ae90ff4bd12d" title="PixelArray::SetAllG" alt="" coords="447,56,581,83"/>
-<area shape="rect" id="node7" href="class_pixel_array.html#a3b17271fdc21503236ca6ca8e37d501b" title="PixelArray::SetAllB" alt="" coords="447,107,581,133"/>
-<area shape="rect" id="node8" href="class_pixel_array.html#abd4253e7c76f3775f31e09dfe318e3a5" title="PixelArray::SetR" alt="" coords="455,157,573,184"/>
-<area shape="rect" id="node9" href="class_pixel_array.html#a60ea8084ec95df0d51f46c9b0ff308d5" title="PixelArray::SetG" alt="" coords="454,208,574,235"/>
-<area shape="rect" id="node10" href="class_pixel_array.html#a560a654c59614fd5a6c17adb10083a78" title="PixelArray::SetB" alt="" coords="455,259,573,285"/>
-<area shape="rect" id="node5" href="class_pixel_array.html#a42c6681bf771332826ecc9ad2a8cea02" title="PixelArray::__set_pixel\l_component" alt="" coords="631,125,787,166"/>
-<area shape="rect" id="node12" href="class_w_s2812.html#adfe7d119deac16639f987130f5db724e" title="WS2812::__loadBuf" alt="" coords="445,309,583,336"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9c9c548149681b1a1dd935e66ed5dd11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c9c548149681b1a1dd935e66ed5dd11">&#9670;&nbsp;</a></span>id</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AbstractComponent::id</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00039">39</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
-
-</div>
-</div>
-<a id="ac209f99d6a633cd4c672fc16a991f4f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac209f99d6a633cd4c672fc16a991f4f8">&#9670;&nbsp;</a></span>mode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t LEDStrip::mode</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8h_source.html#l00051">51</a> of file <a class="el" href="_l_e_d_strip_8h_source.html">LEDStrip.h</a>.</p>
-
-</div>
-</div>
-<a id="a37a3616a79fe3dda93c145d14543199c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37a3616a79fe3dda93c145d14543199c">&#9670;&nbsp;</a></span>offset</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int LEDStrip::offset</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8h_source.html#l00050">50</a> of file <a class="el" href="_l_e_d_strip_8h_source.html">LEDStrip.h</a>.</p>
-
-</div>
-</div>
-<a id="aff57dfa5f31be093a06b55560e33fb95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff57dfa5f31be093a06b55560e33fb95">&#9670;&nbsp;</a></span>priority</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AbstractComponent::priority = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00040">40</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
-
-</div>
-</div>
-<a id="aa8a8764862dbb64aedc0b53cfe3fc22b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8a8764862dbb64aedc0b53cfe3fc22b">&#9670;&nbsp;</a></span>px</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_pixel_array.html">PixelArray</a> LEDStrip::px</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8h_source.html#l00048">48</a> of file <a class="el" href="_l_e_d_strip_8h_source.html">LEDStrip.h</a>.</p>
-
-</div>
-</div>
-<a id="a99ce3e5fe7d73dac569b874c15fcaf0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99ce3e5fe7d73dac569b874c15fcaf0d">&#9670;&nbsp;</a></span>s_id</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AbstractComponent::s_id = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The id for each component will be created in a sequence order staring with 1. </p>
-
-<p class="definition">Definition at line <a class="el" href="_abstract_component_8h_source.html#l00038">38</a> of file <a class="el" href="_abstract_component_8h_source.html">AbstractComponent.h</a>.</p>
-
-</div>
-</div>
-<a id="af1987ffe7252fa35b42ad3698c3de454"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1987ffe7252fa35b42ad3698c3de454">&#9670;&nbsp;</a></span>stripSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int LEDStrip::stripSize</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8h_source.html#l00049">49</a> of file <a class="el" href="_l_e_d_strip_8h_source.html">LEDStrip.h</a>.</p>
-
-</div>
-</div>
-<a id="a25cf156735c1629b92b8dfe7a54e9b41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25cf156735c1629b92b8dfe7a54e9b41">&#9670;&nbsp;</a></span>subMessage</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_sub_message.html">SubMessage</a> LEDStrip::subMessage</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8h_source.html#l00046">46</a> of file <a class="el" href="_l_e_d_strip_8h_source.html">LEDStrip.h</a>.</p>
-
-</div>
-</div>
-<a id="a4387042fe2a80bcd5dc3e9d7524800ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4387042fe2a80bcd5dc3e9d7524800ae">&#9670;&nbsp;</a></span>uartMessenger</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_u_a_r_t_messenger.html">UARTMessenger</a>* const LEDStrip::uartMessenger</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8h_source.html#l00045">45</a> of file <a class="el" href="_l_e_d_strip_8h_source.html">LEDStrip.h</a>.</p>
-
-</div>
-</div>
-<a id="a81c4bffd481d09defe63642c9e69ed17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81c4bffd481d09defe63642c9e69ed17">&#9670;&nbsp;</a></span>ws</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_w_s2812.html">WS2812</a> LEDStrip::ws</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_l_e_d_strip_8h_source.html#l00047">47</a> of file <a class="el" href="_l_e_d_strip_8h_source.html">LEDStrip.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_l_e_d_strip_8h_source.html">LEDStrip.h</a></li>
-<li><a class="el" href="_l_e_d_strip_8cpp_source.html">LEDStrip.cpp</a></li>
+<li><a class="el" href="_l_e_d_strip_8cpp.html">LEDStrip.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_l_e_d_strip.html">LEDStrip</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

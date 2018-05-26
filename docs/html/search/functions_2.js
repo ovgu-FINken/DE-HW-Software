@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['calculatechecksum',['calculateChecksum',['../class_u_a_r_t_messenger.html#a21e6194acf3039eafdbb4e4c3b7876a3',1,'UARTMessenger']]],
-  ['checkformsgfrompaparazzi',['checkForMsgFromPaparazzi',['../class_u_a_r_t_messenger.html#affb33ad31e70001505e14d02e1f8a018',1,'UARTMessenger']]]
+  ['getbuf',['getBuf',['../class_pixel_array.html#a987f1dc053a5cf25d78d5cfe037088d3',1,'PixelArray']]],
+  ['getpriority',['getPriority',['../class_abstract_component.html#ac0b440d1d642ff1292ec3c544d75a8f1',1,'AbstractComponent']]],
+  ['getrange',['getRange',['../class_i_r_sensor_analog.html#aa6642b85ec1018980e216eab0dfd27f2',1,'IRSensorAnalog::getRange()'],['../class_sonar.html#a7a641bcfac1967fbc42eea2ab70886dc',1,'Sonar::getRange()']]]
 ];

@@ -93,14 +93,15 @@ Open gtk terminal where one can see the output set the port (usually ACM0) and c
  * \subsection paparazzi_sec Communication with Paparazzi
  __________________________________________________ 
 The message structures are as follows for both receive and send for paparazzi:
-
+1.Start byte
 1. Number of submessages - 1 byte
 2. Submessages (details below) - N * (1 + 1 + 1 + X) bytes
-3. Checksum - 1 byte
+3. Checksum of decoded msg without encoded(strat,stop,escape byte)- 1 byte
+Stop byte
 
 Submessages structure is as follows:
 
-1. Type of sensor - 1 byte
+1. Type of component - 1 byte
 2. Id - 1 byte
 3. Length of data - 1 byte
 4. Data - N bytes (described in length)
@@ -118,19 +119,18 @@ The data length for each component is given below
 <b>Message from Paparazzi</b>
 
 Currently only LEDStrip listen to messages from Paparazzi (by default).
+Message from papparzzi type of component(which driver send the msg) to led strip
+
 
 |Sensor    |Data                  |
 |:-------- |:--------------------:|
 |LEDStrip  | 4 bytes*No.of LEDs   |
 
 4 bytes per LED: id, red channel, green channel, blue channel.      
-*/       
 
-/**
-
-* \page page_name WS2812-LED
-* \subpage WS2812B-LED details:
-
+ __________________________________________________ 
+* \subsection LED_sec WS2812B-LED
+ __________________________________________________ 
 WS2812B is an intelligent control LED light source which has RGB control chip integrated. The brightness can be adjusted by using the pixel of each color RGB
 Component LED is used for positioning the copter. LED is ON where we can set number of LEDs to glow. Each led can also be set with particular color and brightness too.
 GTK terminal in Linux (Ubuntu) can be used to simulate the behavior of paparazzi response by receiving the data from the microcontroller. We had to give data transfer time to set the led glow
@@ -158,9 +158,10 @@ Here is image of the LED working on copter
 The reference link of the datasheet for the further details  
  <a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf">WS2812-LED Datasheet</a> 
 
+ __________________________________________________ 
+* \subsection Sonar_sec I2CXL-MAX SONAR
+ __________________________________________________ 
 
-* \page page_name1 I2CXL-MAX SONAR
-* \subpage I2C-SONAR details:
 
 MaxSonar sensors are accepted and successfully used in various multi-copters (UAVs, rotorcraft, or quad copters).
 As a user the sensor was comparatively reliable to work on even though errors where there.
@@ -203,9 +204,10 @@ We could see the average error of 5.88%.As sonar is susceptible to noise from a 
 
 The reference link of the datasheet for the further details  
  <a href="http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf">Sonar datasheet</a>
-
-* \page IR DISTANCE SENSOR
-* \subpage PROXIMIY SENSOR details:
+ __________________________________________________ 
+* \subsection IR DISTANCE SENSOR
+ __________________________________________________ 
+* PROXIMIY SENSOR details:
 
 IR sensor is a distance measuring sensor unit, composed of an integrated combination of PSD (position sensitive detector). The variety of the reflectivity of the object, the environmental temperature and the operating duration are not influenced easily to the distance detection because of adopting the triangulation method. This device outputs the voltage corresponding to the detection distance. So this sensor can also be used as a proximity sensor.
 The IR sensor is placed on bottom part of the copter which will be used to detect the height of the copter when it flies and it has a lookup table to which has voltage values in mV.
@@ -249,5 +251,20 @@ We could see that average of 14% error is present in the IR sensor we used. The 
 Further details about the component, datasheet is in the below link
 <a href="https://www.pololu.com/file/0J812/gp2y0a60szxf_e.pdf">IR sensor datasheet</a> 
 
+ __________________________________________________ 
+* \subsection architecture_sec Software Arcitecture
+ __________________________________________________ 
+
+*Initialization of components which are connected in the bot and first parameter is UART messages and pripority is can be set for each component
+*there is vector to store the componenets and then uart is initizalied by passing the parameter  USBTX(transmittter) and USBRX(Receiver)
+*Sonar is initiated with the message and its pin number and the event queue to get the values of each sonars and soterd in components as a message
+emplace-back(Appends a new element to the end of the container)
+*IR Sensor is initiated with paramaters of uart message,its pin connceterd in the bot and the lookup table(which contains the voltage,which is sensor output and the distance)
+*LED strip is initiated with parameters pin number,size of leds to be kept on and zero high ,zero low,one high and one low 
+*Sort the componenets according to priority and update componenent on board
+
+Clear view of the architecture is in shown below
+ *  \image html architecture_main.jpg "Architecture" width=400px
+ *  \image html software_overview.jpg "Overview" width=400px 
 
 */

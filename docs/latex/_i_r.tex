@@ -45,4 +45,10 @@ We could see that average of 14\% error is present in the IR sensor we used. The
 \PBS\raggedleft Output voltage difference&\PBS\centering {$\Delta$}Vo&\PBS\centering Output change at L change&\PBS\centering &\PBS\centering &\PBS\centering \\\cline{1-6}
 \PBS\raggedleft &\PBS\centering &\PBS\centering (10cm -\/ 150cm) &\PBS\centering 2.\+75&\PBS\centering 3.\+25&\PBS\centering V \\\cline{1-6}
 \end{longtabu}
-Further details about the component, datasheet is in the below link \href{https://www.pololu.com/file/0J812/gp2y0a60szxf_e.pdf}{\tt IR sensor datasheet} 
+Further details about the component, datasheet is in the below link \href{https://www.pololu.com/file/0J812/gp2y0a60szxf_e.pdf}{\tt IR sensor datasheet}
+
+{\bfseries Software Arcitecture }
+
+Initialization of components which are connected in the bot and first parameter is U\+A\+RT messages and pripority is can be set for each component there is vector to store the componenets and then uart is initizalied by passing the parameter U\+S\+B\+T\+X(transmittter) and U\+S\+B\+R\+X(\+Receiver) \hyperlink{class_sonar}{Sonar} is initiated with the message and its pin number and the event queue to get the values of each sonars and soterd in components as a message emplace-\/back(Appends a new element to the end of the container) IR Sensor is initiated with paramaters of uart message,its pin connceterd in the bot and the lookup table(which contains the voltage,which is sensor output and the distance) L\+ED strip is initiated with parameters pin number,size of leds to be kept on and zero high ,zero low,one high and one low Sort the componenets according to priority and update componenent on board
+
+Clear view of the architecture is in shown below   
