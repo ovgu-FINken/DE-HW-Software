@@ -62,7 +62,7 @@ int main() {
 
    
     
-    uint32_t colors[][3] = {
+    /*uint32_t colors[][3] = {
       {  0,   0,   0},
       {255,   0,   0},
       {  0, 255,   0},
@@ -89,5 +89,5 @@ int main() {
         ledStrip.setColor((rB*brightness/255)<<16|(gB*brightness/255)<<8|(bB*brightness/255), 3);
         
         Thread::wait(1000);
-    }
+    }*/
 }
